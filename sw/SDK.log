@@ -1,0 +1,34 @@
+12:40:02.142 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:46:59.605 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+12:47:04.192 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:47:04.292 INFO  - PS initialization will be done as it is not done before. 
+12:47:04.292 INFO  - Running PS initialization.... 
+12:47:04.752 INFO  - ps7_init is completed. 
+12:47:04.852 INFO  - ps7_post_config is completed. 
+12:47:04.962 INFO  - PS Initialization is complete. 
+13:14:52.174 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:28:44.538 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:28:46.335 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:35:25.933 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:35:28.672 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:41:42.966 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:41:44.750 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:43:25.970 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:43:28.501 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:44:04.018 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:44:06.017 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:44:44.754 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:44:46.432 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:45:57.338 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:45:58.699 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:47:20.008 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:47:21.659 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:47:50.953 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:47:52.639 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:49:47.122 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:49:48.882 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:57:21.608 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+13:57:21.617 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
