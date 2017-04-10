@@ -87,9 +87,13 @@
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
     <SET ID="ExternalPorts" IS_EXPANDED="TRUE"/>
+    <SET ID="axi_spi_0" IS_EXPANDED="TRUE">
+      <SET ID="S_AXI" IS_EXPANDED="TRUE"/>
+      <SET ID="spi_0" IS_EXPANDED="TRUE"/>
+    </SET>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="axi_spi_0_MISO_pin" PARENT="ExternalPorts"/>
+        <VARIABLE ID="axi_spi_0"/>
       </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
@@ -99,7 +103,7 @@
       <VARIABLE ID="LEDs_8Bits" ROW_INDEX="4"/>
       <VARIABLE ID="BTNs_5Bits" ROW_INDEX="3"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="2"/>
-      <VARIABLE ID="axi_spi_0" ROW_INDEX="6"/>
+      <VARIABLE ID="axi_spi_0" IS_EXPANDED="TRUE" ROW_INDEX="6"/>
     </SEQUENCES>
   </SET>
 

@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Apr 07 12:38:42 2017
+Mon Apr 10 12:42:32 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -72,8 +72,8 @@ Pinout by Pin Number:
 |AB6       |                                    |IOB33S   |IO_L17N_T2_13          |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
 |AB7       |                                    |IOB33M   |IO_L17P_T2_13          |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
 |AB8       |                                    |         |GND                    |         |                 |              |          |         |           |         |         |          |           |                |
-|AB9       |axi_spi_0_MOSI_pin                  |IOB33    |IO_L9N_T1_DQS_13       |BIDIR    |LVCMOS33         |13            |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
-|AB10      |axi_spi_0_MISO_pin                  |IOB33    |IO_L9P_T1_DQS_13       |BIDIR    |LVCMOS33         |13            |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
+|AB9       |axi_spi_0_MISO_pin                  |IOB33    |IO_L9N_T1_DQS_13       |BIDIR    |LVCMOS33         |13            |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
+|AB10      |axi_spi_0_MOSI_pin                  |IOB33    |IO_L9P_T1_DQS_13       |BIDIR    |LVCMOS33         |13            |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AB11      |axi_spi_0_SS_pin<1>                 |IOB33    |IO_L8N_T1_13           |TRISTATE |LVCMOS33         |13            |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
 |AB12      |                                    |IOB33S   |IO_L7N_T1_13           |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
 |AB13      |                                    |         |VCCO_33                |         |                 |33            |          |         |           |         |3.30     |          |           |                |

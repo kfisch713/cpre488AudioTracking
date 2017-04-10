@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Apr 07 12:38:12 2017
+// Written by: Map P.20131013 on Mon Apr 10 12:42:03 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -33,7 +33,7 @@ COMP "processing_system7_0_DDR_Addr<2>" LOCATE = SITE "K4" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<1>" LOCATE = SITE "M5" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<0>" LOCATE = SITE "M4" LEVEL 1;
 COMP "processing_system7_0_DDR_WEB_pin" LOCATE = SITE "R4" LEVEL 1;
-COMP "axi_spi_0_MOSI_pin" LOCATE = SITE "AB9" LEVEL 1;
+COMP "axi_spi_0_MOSI_pin" LOCATE = SITE "AB10" LEVEL 1;
 COMP "BTNs_5Bits_TRI_IO<3>" LOCATE = SITE "R18" LEVEL 1;
 COMP "BTNs_5Bits_TRI_IO<4>" LOCATE = SITE "T18" LEVEL 1;
 COMP "BTNs_5Bits_TRI_IO<1>" LOCATE = SITE "R16" LEVEL 1;
@@ -108,7 +108,7 @@ COMP "processing_system7_0_DDR_DQ<15>" LOCATE = SITE "K3" LEVEL 1;
 COMP "processing_system7_0_DDR_DQ<19>" LOCATE = SITE "T1" LEVEL 1;
 COMP "axi_spi_0_SS_pin<0>" LOCATE = SITE "Y11" LEVEL 1;
 COMP "axi_spi_0_SS_pin<1>" LOCATE = SITE "AB11" LEVEL 1;
-COMP "axi_spi_0_MISO_pin" LOCATE = SITE "AB10" LEVEL 1;
+COMP "axi_spi_0_MISO_pin" LOCATE = SITE "AB9" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<13>" LOCATE = SITE "F4" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<14>" LOCATE = SITE "G4" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<11>" LOCATE = SITE "G5" LEVEL 1;

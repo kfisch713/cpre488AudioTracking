@@ -1,5 +1,5 @@
 
-<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Fri Apr 07 11:08:52 2017">
+<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Mon Apr 10 11:17:23 2017">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="xc7z020" PACKAGE="clg484" PART="xc7z020clg484-1" SOURCE="//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/system.xmp" SPEEDGRADE="-1"/>
 
@@ -4242,6 +4242,36 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" IOS="spi_0" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="28" NAME="SPISEL" SIGNAME="net_gnd">
+          <DESCRIPTION>Local SPI Slave Select Active LOW Input</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="net_gnd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MHS_INDEX="2" MPD_INDEX="33" NAME="SCK" SIGNAME="axi_spi_0_SCK" TRI_I="SCK_I" TRI_O="SCK_O" TRI_T="SCK_T">
+          <DESCRIPTION>SPI Bus Clock</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="axi_spi_0_SCK_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MHS_INDEX="3" MPD_INDEX="35" NAME="MOSI" SIGNAME="axi_spi_0_MOSI" TRI_I="MOSI_I" TRI_O="MOSI_O" TRI_T="MOSI_T">
+          <DESCRIPTION>Master Out Slave In</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="axi_spi_0_MOSI_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" ENDIAN="LITTLE" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" LEFT="1" LSB="0" MHS_INDEX="4" MPD_INDEX="36" MSB="1" NAME="SS" RIGHT="0" SIGNAME="axi_spi_0_SS" TRI_I="SS_I" TRI_O="SS_O" TRI_T="SS_T" VECFORMULA="[(C_NUM_SS_BITS-1):0]">
+          <DESCRIPTION>Slave Select Vector</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="axi_spi_0_SS_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MHS_INDEX="5" MPD_INDEX="34" NAME="MISO" SIGNAME="axi_spi_0_MISO" TRI_I="MISO_I" TRI_O="MISO_O" TRI_T="MISO_T">
+          <DESCRIPTION>Master In Slave Out</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="axi_spi_0_MISO_pin"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="I" MPD_INDEX="1" NAME="S_AXI_ARESETN" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARESET_OUT_N"/>
@@ -4359,12 +4389,6 @@
         <PORT DIR="O" IOS="spi_0" MPD_INDEX="27" NAME="MOSI_T" SIGNAME="__NOC__">
           <CONNECTIONS/>
         </PORT>
-        <PORT DIR="I" IOS="spi_0" IS_INSTANTIATED="TRUE" MPD_INDEX="28" NAME="SPISEL" SIGNAME="net_gnd">
-          <DESCRIPTION>Local SPI Slave Select Active LOW Input</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="net_gnd"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" ENDIAN="LITTLE" IOS="spi_0" LEFT="1" LSB="0" MPD_INDEX="29" MSB="1" NAME="SS_I" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_NUM_SS_BITS-1):0]">
           <CONNECTIONS/>
         </PORT>
@@ -4376,30 +4400,6 @@
         </PORT>
         <PORT DIR="O" MPD_INDEX="32" NAME="IP2INTC_Irpt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="__NOC__">
           <CONNECTIONS/>
-        </PORT>
-        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MPD_INDEX="33" NAME="SCK" SIGNAME="axi_spi_0_SCK" TRI_I="SCK_I" TRI_O="SCK_O" TRI_T="SCK_T">
-          <DESCRIPTION>SPI Bus Clock</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="axi_spi_0_SCK_pin"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MPD_INDEX="34" NAME="MISO" SIGNAME="axi_spi_0_MISO" TRI_I="MISO_I" TRI_O="MISO_O" TRI_T="MISO_T">
-          <DESCRIPTION>Master In Slave Out</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="axi_spi_0_MISO_pin"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MPD_INDEX="35" NAME="MOSI" SIGNAME="axi_spi_0_MOSI" TRI_I="MOSI_I" TRI_O="MOSI_O" TRI_T="MOSI_T">
-          <DESCRIPTION>Master Out Slave In</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="axi_spi_0_MOSI_pin"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="IO" ENDIAN="LITTLE" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" LEFT="1" LSB="0" MPD_INDEX="36" MSB="1" NAME="SS" RIGHT="0" SIGNAME="axi_spi_0_SS" TRI_I="SS_I" TRI_O="SS_O" TRI_T="SS_T" VECFORMULA="[(C_NUM_SS_BITS-1):0]">
-          <DESCRIPTION>Slave Select Vector</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="axi_spi_0_SS_pin"/>
-          </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
@@ -4430,6 +4430,11 @@
       <IOINTERFACES>
         <IOINTERFACE MPD_INDEX="0" NAME="spi_0" TYPE="XIL_SPI_V1_hide">
           <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="SPISEL"/>
+            <PORTMAP DIR="IO" PHYSICAL="SCK"/>
+            <PORTMAP DIR="IO" PHYSICAL="MOSI"/>
+            <PORTMAP DIR="IO" PHYSICAL="SS"/>
+            <PORTMAP DIR="IO" PHYSICAL="MISO"/>
             <PORTMAP DIR="I" PHYSICAL="SCK_I"/>
             <PORTMAP DIR="O" PHYSICAL="SCK_O"/>
             <PORTMAP DIR="O" PHYSICAL="SCK_T"/>
@@ -4439,14 +4444,9 @@
             <PORTMAP DIR="I" PHYSICAL="MOSI_I"/>
             <PORTMAP DIR="O" PHYSICAL="MOSI_O"/>
             <PORTMAP DIR="O" PHYSICAL="MOSI_T"/>
-            <PORTMAP DIR="I" PHYSICAL="SPISEL"/>
             <PORTMAP DIR="I" PHYSICAL="SS_I"/>
             <PORTMAP DIR="O" PHYSICAL="SS_O"/>
             <PORTMAP DIR="O" PHYSICAL="SS_T"/>
-            <PORTMAP DIR="IO" PHYSICAL="SCK"/>
-            <PORTMAP DIR="IO" PHYSICAL="MISO"/>
-            <PORTMAP DIR="IO" PHYSICAL="MOSI"/>
-            <PORTMAP DIR="IO" PHYSICAL="SS"/>
           </PORTMAPS>
         </IOINTERFACE>
       </IOINTERFACES>

@@ -28,11 +28,11 @@ NET SWs_8Bits_TRI_IO[7] LOC = "M15"  |  IOSTANDARD = "LVCMOS25";
 
 #JA Top Row
 NET axi_spi_0_SCK_pin LOC = "AA9" 	|  IOSTANDARD = "LVCMOS33"; # pin 4 on microphone
-NET axi_spi_0_MOSI_pin LOC = "Y10" 	|  IOSTANDARD = "LVCMOS33"; # pin 3 on microphone
-NET axi_spi_0_MISO_pin LOC = "AA11" |  IOSTANDARD = "LVCMOS33"; # pin 2 on microphone
+NET axi_spi_0_MOSI_pin LOC = "AA11" |  IOSTANDARD = "LVCMOS33"; # pin 3 on microphone
+NET axi_spi_0_MISO_pin LOC = "Y10" 	|  IOSTANDARD = "LVCMOS33"; # pin 2 on microphone
 NET axi_spi_0_SS_pin[0] LOC = "Y11" 	|  IOSTANDARD = "LVCMOS33"; # pin 1 on microphone
 #JA Bottom Row
 NET axi_spi_0_SCK_pin LOC = "AA8" 	|  IOSTANDARD = "LVCMOS33"; # pin 4 on microphone
-NET axi_spi_0_MOSI_pin LOC = "AB9" 	|  IOSTANDARD = "LVCMOS33"; # pin 3 on microphone
-NET axi_spi_0_MISO_pin LOC = "AB10" |  IOSTANDARD = "LVCMOS33"; # pin 2 on microphone
-NET axi_spi_0_SS_pin[1] LOC = "AB11" 	|  IOSTANDARD = "LVCMOS33"; # pin 1 on microphone
+NET axi_spi_0_MOSI_pin LOC = "AB10"	|  IOSTANDARD = "LVCMOS33"; # pin 3 on microphone
+NET axi_spi_0_MISO_pin LOC = "AB9" 	|  IOSTANDARD = "LVCMOS33"; # pin 2 on microphone
+NET axi_spi_0_SS_pin[1] LOC = "AB11"	|  IOSTANDARD = "LVCMOS33"; # pin 1 on microphone

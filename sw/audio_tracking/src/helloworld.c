@@ -36,6 +36,7 @@
 #include "xspi.h"
 #include "xspi_l.h"
 #include "xparameters.h"
+#include <stdint.h>
 
 // XPAR_SPI_0_BASEADDR
 // XPAR_SPI_0_DEVICE_ID
@@ -73,13 +74,14 @@
 //			   XSpi_StatusHandler FuncPtr);
 // void XSpi_InterruptHandler(void *InstancePtr);
 
-#define LEFT_MICROPHONE 0
+#define LEFT_MICROPHONE 2
 #define RIGHT_MICROPHONE 1
 
 char *SWs = (char *)XPAR_SWS_8BITS_BASEADDR;
 char *BTNs = (char *)XPAR_BTNS_5BITS_BASEADDR;
 
 #define KILL_SWITCH 7
+#define RECV_BUFFER_LENGTH 32
 
 enum button_val {
 	BTN_L,
@@ -103,16 +105,33 @@ XSpi spi0;
 
 int main()
 {
+	int ss;
+	int status;
+	uint8_t recv[RECV_BUFFER_LENGTH];
+
     init_platform();
     XSpi_Config config;
     init_spi(&config);
     print("Hello Quad Cities, but mostly Davenport\n\r");
+    XSpi_SetSlaveSelect(&spi0, RIGHT_MICROPHONE);
 
     while (!SW(KILL_SWITCH)) {
     	XSpi_SetSlaveSelect(&spi0, RIGHT_MICROPHONE);
+    	ss = XSpi_GetSlaveSelect(&spi0);
+    	printf("ss: %d\n", ss);
     	sleep(5);
     	XSpi_SetSlaveSelect(&spi0, LEFT_MICROPHONE);
+    	ss = XSpi_GetSlaveSelect(&spi0);
+    	printf("ss: %d\n", ss);
     	sleep(5);
+
+//    	status = XSpi_Transfer(&spi0, spi0.RecvBufferPtr, spi0.RecvBufferPtr, 2);
+//    	if (status != XST_SUCCESS){
+//    		printf("ERROR status: %d\n", status);
+//    	}
+//    	else{
+//    		printf("data recv: %d\n", (uint16_t)recv);
+//    	}
     }
 
 
@@ -152,9 +171,19 @@ int init_spi(XSpi_Config * config) {
 
 	XSpi_Start(&spi0);
 
-
 	cr = XSpi_GetControlReg(&spi0);
 	xil_printf("Control reg is now 0x%X\n", cr);
+
+	XSpi_IntrGlobalDisable(&spi0);
+	xil_printf("Global Interrupt flag disabled\n");
+
+	if(spi0.IsReady){
+		xil_printf("SPI is ready\n");
+	}
+	else{
+		xil_printf("SPI is not ready. ABORT MISSION!\n");
+	}
+
 
 	return XST_SUCCESS;
 }

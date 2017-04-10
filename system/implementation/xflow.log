@@ -4,6 +4,8 @@ xflow.exe -wd implementation -p xc7z020clg484-1 -implement xflow.opt system.ngc
  
 PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/zynq/data/zynq.acd>
 with local file <C:/Xilinx/14.7/ISE_DS/ISE/zynq/data/zynq.acd>
+.... Copying flowfile C:/Xilinx/14.7/ISE_DS/ISE/xilinx/data/fpga.flw into
+working directory U:/Desktop/cpre488AudioTracking/system/implementation 
 
 Using Flow File: U:/Desktop/cpre488AudioTracking/system/implementation/fpga.flw
  
@@ -321,52 +323,52 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 18 secs 
+Total REAL time at the beginning of Placer: 19 secs 
 Total CPU  time at the beginning of Placer: 16 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:e1e297cf) REAL time: 20 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e1e276ac) REAL time: 20 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:e1e297cf) REAL time: 20 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e1e276ac) REAL time: 20 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:e1e297cf) REAL time: 20 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e1e276ac) REAL time: 20 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:aaed64ef) REAL time: 23 secs 
+(Checksum:aaed43cc) REAL time: 23 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:aaed64ef) REAL time: 23 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:aaed43cc) REAL time: 23 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:aaed64ef) REAL time: 23 secs 
+Phase 6.3  Local Placement Optimization (Checksum:aaed43cc) REAL time: 23 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:aaed64ef) REAL time: 23 secs 
+Phase 7.5  Local Placement Optimization (Checksum:aaed43cc) REAL time: 24 secs 
 
 Phase 8.8  Global Placement
 .................
 ..................................................................................................................................................................................
 .........................................................................
-Phase 8.8  Global Placement (Checksum:3f03ab49) REAL time: 25 secs 
+Phase 8.8  Global Placement (Checksum:3f038a26) REAL time: 26 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:3f03ab49) REAL time: 25 secs 
+Phase 9.5  Local Placement Optimization (Checksum:3f038a26) REAL time: 26 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:16395063) REAL time: 27 secs 
+Phase 10.18  Placement Optimization (Checksum:16392f40) REAL time: 28 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:16395063) REAL time: 27 secs 
+Phase 11.5  Local Placement Optimization (Checksum:16392f40) REAL time: 28 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:16395063) REAL time: 27 secs 
+Phase 12.34  Placement Validation (Checksum:16392f40) REAL time: 28 secs 
 
-Total REAL time to Placer completion: 27 secs 
-Total CPU  time to Placer completion: 24 secs 
+Total REAL time to Placer completion: 28 secs 
+Total CPU  time to Placer completion: 25 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -464,9 +466,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.32
 
-Peak Memory Usage:  876 MB
+Peak Memory Usage:  873 MB
 Total REAL time to MAP completion:  29 secs 
-Total CPU time to MAP completion:   25 secs 
+Total CPU time to MAP completion:   26 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.
@@ -569,19 +571,19 @@ Phase  1  : 6382 unrouted;      REAL time: 11 secs
 
 Phase  2  : 4016 unrouted;      REAL time: 11 secs 
 
-Phase  3  : 1347 unrouted;      REAL time: 12 secs 
+Phase  3  : 1351 unrouted;      REAL time: 12 secs 
 
-Phase  4  : 1347 unrouted; (Setup:0, Hold:13001, Component Switching Limit:0)     REAL time: 14 secs 
+Phase  4  : 1351 unrouted; (Setup:0, Hold:13001, Component Switching Limit:0)     REAL time: 15 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 15 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 16 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 15 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 16 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 15 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 16 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 15 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 16 secs 
 
 Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 16 secs 
 Total REAL time to Router completion: 16 secs 
@@ -647,7 +649,7 @@ All signals are completely routed.
 WARNING:Par:283 - There are 7 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 Total REAL time to PAR completion: 31 secs 
-Total CPU time to PAR completion: 16 secs 
+Total CPU time to PAR completion: 17 secs 
 
 Peak Memory Usage:  734 MB
 
@@ -715,7 +717,7 @@ Design statistics:
    Minimum period:   8.283ns (Maximum frequency: 120.729MHz)
 
 
-Analysis completed Fri Apr 07 12:38:59 2017
+Analysis completed Mon Apr 10 12:42:50 2017
 --------------------------------------------------------------------------------
 
 Generating Report ...

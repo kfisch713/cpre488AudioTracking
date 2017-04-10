@@ -32,3 +32,72 @@
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 13:57:21.617 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:03:45.098 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+11:04:17.523 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:04:17.633 INFO  - PS initialization will be done as it is not done before. 
+11:04:17.633 INFO  - Running PS initialization.... 
+11:04:18.053 INFO  - ps7_init is completed. 
+11:04:18.153 INFO  - ps7_post_config is completed. 
+11:04:18.263 INFO  - PS Initialization is complete. 
+11:22:49.158 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+11:24:49.144 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:24:51.134 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+11:25:08.126 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:25:40.948 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+11:25:46.959 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:25:47.069 INFO  - PS initialization will be done as it is not done before. 
+11:25:47.069 INFO  - Running PS initialization.... 
+11:25:47.509 INFO  - ps7_init is completed. 
+11:25:47.609 INFO  - ps7_post_config is completed. 
+11:25:47.719 INFO  - PS Initialization is complete. 
+12:29:23.598 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+12:29:23.612 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:29:29.433 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:31:38.889 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:32:31.077 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:43:28.328 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:46:26.940 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:46:53.842 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+12:47:12.640 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:47:12.740 INFO  - PS initialization will be done as it is not done before. 
+12:47:12.740 INFO  - Running PS initialization.... 
+12:47:13.180 INFO  - ps7_init is completed. 
+12:47:13.280 INFO  - ps7_post_config is completed. 
+12:47:13.380 INFO  - PS Initialization is complete. 
+12:59:41.515 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:07:09.898 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:09:20.750 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:14:21.260 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:15:37.581 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:15:41.935 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:16:37.654 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:18:08.579 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:19:00.118 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:26:16.820 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:26:23.943 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Unable to determine ELF start address: UNABLE to Open File
+    : U:/Desktop/cpre488AudioTracking/sw/audio_tracking/Debug/audio_tracking.elf
+
+	at com.xilinx.sdk.targetmanager.internal.TM.getStartAddress(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+13:26:40.379 ERROR - Port COM19 is already in use. 
+13:26:40.789 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:26:54.114 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:29:40.789 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:32:50.272 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:33:35.208 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:35:19.683 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:35:22.467 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:37:52.643 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:53:55.528 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+13:53:55.541 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
