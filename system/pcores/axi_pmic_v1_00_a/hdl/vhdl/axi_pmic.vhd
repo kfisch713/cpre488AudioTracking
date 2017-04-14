@@ -139,14 +139,10 @@ entity axi_pmic is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
 	 Pmic_clk								: in std_logic;
-	 Pmic_rst								: in std_logic;
 	 Pmic_sdata								: in std_logic;
-	 Pmic_start								: in std_logic;
 	 
 	 Pmic_sclk								: out std_logic;
 	 Pmic_ncs								: out std_logic;
-	 Pmic_data								: out std_logic_vector(11 downto 0);
-	 Pmic_done								: out std_logic;
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -351,14 +347,10 @@ begin
     (
       -- MAP USER PORTS BELOW THIS LINE ------------------
 		 Pmic_clk								=> Pmic_clk,
-		 Pmic_rst								=> Pmic_rst,
 		 Pmic_sdata								=> Pmic_sdata,
-		 Pmic_start								=> Pmic_start,
 		 
 		 Pmic_sclk								=> Pmic_sclk,
 		 Pmic_ncs								=> Pmic_ncs,
-		 Pmic_data								=> Pmic_data,
-		 Pmic_done								=> Pmic_done,
       -- MAP USER PORTS ABOVE THIS LINE ------------------
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,

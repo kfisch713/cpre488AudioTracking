@@ -26,6 +26,27 @@
 <msg type="warning" file="LIT" num="702" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;processing_system7_0_PS_PORB&quot;</arg> is not constrained (LOC) to a specific location.
 </msg>
 
+<msg type="warning" file="LIT" num="701" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;Pmic_sdata&quot;</arg> has an undefined IOSTANDARD.
+</msg>
+
+<msg type="warning" file="LIT" num="702" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;Pmic_sdata&quot;</arg> is not constrained (LOC) to a specific location.
+</msg>
+
+<msg type="warning" file="LIT" num="701" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;Pmic_sclk&quot;</arg> has an undefined IOSTANDARD.
+</msg>
+
+<msg type="warning" file="LIT" num="702" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;Pmic_sclk&quot;</arg> is not constrained (LOC) to a specific location.
+</msg>
+
+<msg type="warning" file="LIT" num="701" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;Pmic_ncs&quot;</arg> has an undefined IOSTANDARD.
+</msg>
+
+<msg type="warning" file="LIT" num="702" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;Pmic_ncs&quot;</arg> is not constrained (LOC) to a specific location.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">Pmic_sdata_IBUF</arg> has no load.
+</msg>
+
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_S_WID&lt;11&gt;</arg> has no load.
 </msg>
 
@@ -68,34 +89,19 @@
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_S_AWLOCK&lt;1&gt;</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WDATA&lt;119&gt;</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WDATA&lt;118&gt;</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WDATA&lt;117&gt;</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WDATA&lt;116&gt;</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WDATA&lt;115&gt;</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WDATA&lt;114&gt;</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WDATA&lt;113&gt;</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WDATA&lt;112&gt;</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WSTRB&lt;11&gt;</arg> has no load.
 </msg>
 
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WSTRB&lt;10&gt;</arg> has no load.
 </msg>
 
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WSTRB&lt;13&gt;</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_WSTRB&lt;0&gt;</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">processing_system7_0_FCLK_CLK3</arg> has no load.
 </msg>
 
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_ARADDR&lt;127&gt;</arg> has no load.
@@ -167,9 +173,6 @@
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_ARADDR&lt;105&gt;</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_ARADDR&lt;104&gt;</arg> has no load.
-</msg>
-
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_ARADDR&lt;103&gt;</arg> has no load.
 </msg>
 
@@ -179,10 +182,19 @@
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0_M_ARADDR&lt;96&gt;</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi_spi_0_SS_I&lt;1&gt;</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N155</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi_spi_0_SS_I&lt;0&gt;</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N156</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N157</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N158</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N159</arg> has no load.
 </msg>
 
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N160</arg> has no load.
@@ -533,6 +545,12 @@
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N275</arg> has no load.
 </msg>
 
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N276</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N277</arg> has no load.
+</msg>
+
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N278</arg> has no load.
 </msg>
 
@@ -540,27 +558,6 @@
 </msg>
 
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N280</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N281</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N282</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N283</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N284</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N285</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N286</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N287</arg> has no load.
 </msg>
 
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">processing_system7_0/GPIO_O&lt;63&gt;</arg> has no load.
@@ -4040,9 +4037,6 @@
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">processing_system7_0/DMA3_RSTN</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">processing_system7_0/FCLK_CLK3</arg> has no load.
-</msg>
-
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">processing_system7_0/FCLK_CLK2</arg> has no load.
 </msg>
 
@@ -4349,25 +4343,16 @@
 <msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/axi_r_prog_empty</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi_spi_0/IP2INTC_Irpt</arg> has no load.
+<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">Pmic_sdata</arg> connected to top level port <arg fmt="%s" index="2">Pmic_sdata</arg> has been removed.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.TRANSMIT_FIFO_I/Addr_Counters[3].MUXCY_L_I/LO</arg> has no load.
+<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">Pmic_sclk</arg> connected to top level port <arg fmt="%s" index="2">Pmic_sclk</arg> has been removed.
 </msg>
 
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.RECEIVE_FIFO_I/Addr_Counters[3].MUXCY_L_I/LO</arg> has no load.
+<msg type="warning" file="MapLib" num="701" delta="new" >Signal <arg fmt="%s" index="1">Pmic_ncs</arg> connected to top level port <arg fmt="%s" index="2">Pmic_ncs</arg> has been removed.
 </msg>
 
 <msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
-</msg>
-
-<msg type="warning" file="Pack" num="2549" delta="new" >The register &quot;<arg fmt="%s" index="1">axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/SPI_TRISTATE_CONTROL_IV</arg>&quot; has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The output signal for register symbol axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/SPI_TRISTATE_CONTROL_IV requires general routing to fabric, but the register can only be routed to ILOGIC, ODELAY, and IOB.</arg>
-</msg>
-
-<msg type="warning" file="Pack" num="2549" delta="new" >The register &quot;<arg fmt="%s" index="1">axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/SPI_TRISTATE_CONTROL_IV</arg>&quot; has the property IOB=TRUE, but was not packed into the OLOGIC component. <arg fmt="%z" index="2">The output signal for register symbol axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/SPI_TRISTATE_CONTROL_IV requires general routing to fabric, but the register can only be routed to ILOGIC, ODELAY, and IOB.</arg>
-</msg>
-
-<msg type="warning" file="Pack" num="2780" delta="new" >The register &quot;<arg fmt="%s" index="1">axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/SPISEL_REG</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
 </msg>
 
 <msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
@@ -4387,10 +4372,10 @@
 <msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
@@ -4399,10 +4384,10 @@
 <msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/s_axid&lt;0&gt;</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
 </messages>

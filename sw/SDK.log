@@ -101,3 +101,35 @@
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 13:53:55.541 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:00:14.238 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+13:00:16.624 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+13:00:17.464 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+13:00:18.209 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+13:00:21.200 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+13:00:21.230 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+13:00:21.660 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+13:00:21.690 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+13:00:21.890 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+13:00:24.647 INFO  - Updating hardware inferred compiler options for audio_tracking. 
+13:00:24.667 INFO  - Clearing existing target manager status. 
+13:02:28.074 INFO  - Project system_bsp was a BSP project. Please update references. 
+13:02:28.074 ERROR - SDK has detected that project system_bsp has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+13:10:41.062 ERROR - SDK has detected that project system_hw_platform has been deleted (or renamed).
+This project was referenced by a BSP project, which will now fail to compile properly.
+
+We recommend that you create a new BSP project pointing to a valid hardware project. Alternatively, you can fix the project references in the BSP, and update the path to the hardware specification file in 'libgen.options', and in ELF check options in dependant applications. 
+13:11:30.275 INFO  - Project system_bsp was a BSP project. Please update references. 
+13:11:30.285 ERROR - SDK has detected that project system_bsp has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+13:12:23.216 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:12:35.113 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+13:27:27.316 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+13:34:25.844 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:34:25.944 INFO  - PS initialization will be done as it is not done before. 
+13:34:25.944 INFO  - Running PS initialization.... 
+13:34:26.404 INFO  - ps7_init is completed. 
+13:34:26.504 INFO  - ps7_post_config is completed. 
+13:34:26.604 INFO  - PS Initialization is complete. 
+13:36:25.522 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:39:43.732 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

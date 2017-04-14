@@ -33,10 +33,9 @@ entity system is
     processing_system7_0_DDR_DQS_n : inout std_logic_vector(3 downto 0);
     processing_system7_0_DDR_VRN : inout std_logic;
     processing_system7_0_DDR_VRP : inout std_logic;
-    axi_spi_0_SCK_pin : inout std_logic;
-    axi_spi_0_MOSI_pin : inout std_logic;
-    axi_spi_0_SS_pin : inout std_logic_vector(1 downto 0);
-    axi_spi_0_MISO_pin : inout std_logic
+    Pmic_sclk : out std_logic;
+    Pmic_ncs : out std_logic;
+    Pmic_sdata : in std_logic
   );
 end system;
 
@@ -1022,41 +1021,31 @@ architecture STRUCTURE of system is
     );
   end component;
 
-  component system_axi_spi_0_wrapper is
+  component system_axi_pmic_0_wrapper is
     port (
       S_AXI_ACLK : in std_logic;
       S_AXI_ARESETN : in std_logic;
       S_AXI_AWADDR : in std_logic_vector(31 downto 0);
       S_AXI_AWVALID : in std_logic;
-      S_AXI_AWREADY : out std_logic;
       S_AXI_WDATA : in std_logic_vector(31 downto 0);
       S_AXI_WSTRB : in std_logic_vector(3 downto 0);
       S_AXI_WVALID : in std_logic;
-      S_AXI_WREADY : out std_logic;
-      S_AXI_BRESP : out std_logic_vector(1 downto 0);
-      S_AXI_BVALID : out std_logic;
       S_AXI_BREADY : in std_logic;
       S_AXI_ARADDR : in std_logic_vector(31 downto 0);
       S_AXI_ARVALID : in std_logic;
+      S_AXI_RREADY : in std_logic;
       S_AXI_ARREADY : out std_logic;
       S_AXI_RDATA : out std_logic_vector(31 downto 0);
       S_AXI_RRESP : out std_logic_vector(1 downto 0);
       S_AXI_RVALID : out std_logic;
-      S_AXI_RREADY : in std_logic;
-      SCK_I : in std_logic;
-      SCK_O : out std_logic;
-      SCK_T : out std_logic;
-      MISO_I : in std_logic;
-      MISO_O : out std_logic;
-      MISO_T : out std_logic;
-      MOSI_I : in std_logic;
-      MOSI_O : out std_logic;
-      MOSI_T : out std_logic;
-      SPISEL : in std_logic;
-      SS_I : in std_logic_vector(1 downto 0);
-      SS_O : out std_logic_vector(1 downto 0);
-      SS_T : out std_logic;
-      IP2INTC_Irpt : out std_logic
+      S_AXI_WREADY : out std_logic;
+      S_AXI_BRESP : out std_logic_vector(1 downto 0);
+      S_AXI_BVALID : out std_logic;
+      S_AXI_AWREADY : out std_logic;
+      Pmic_clk : in std_logic;
+      Pmic_sdata : in std_logic;
+      Pmic_sclk : out std_logic;
+      Pmic_ncs : out std_logic
     );
   end component;
 
@@ -1133,18 +1122,9 @@ architecture STRUCTURE of system is
   signal axi4lite_0_S_WREADY : std_logic_vector(0 to 0);
   signal axi4lite_0_S_WSTRB : std_logic_vector(3 downto 0);
   signal axi4lite_0_S_WVALID : std_logic_vector(0 to 0);
-  signal axi_spi_0_MISO_I : std_logic;
-  signal axi_spi_0_MISO_O : std_logic;
-  signal axi_spi_0_MISO_T : std_logic;
-  signal axi_spi_0_MOSI_I : std_logic;
-  signal axi_spi_0_MOSI_O : std_logic;
-  signal axi_spi_0_MOSI_T : std_logic;
-  signal axi_spi_0_SCK_I : std_logic;
-  signal axi_spi_0_SCK_O : std_logic;
-  signal axi_spi_0_SCK_T : std_logic;
-  signal axi_spi_0_SS_I : std_logic_vector(1 downto 0);
-  signal axi_spi_0_SS_O : std_logic_vector(1 downto 0);
-  signal axi_spi_0_SS_T : std_logic;
+  signal axi_pmic_0_Pmic_ncs : std_logic;
+  signal axi_pmic_0_Pmic_sclk : std_logic;
+  signal axi_pmic_0_Pmic_sdata : std_logic;
   signal net_gnd0 : std_logic;
   signal net_gnd1 : std_logic_vector(0 to 0);
   signal net_gnd2 : std_logic_vector(1 downto 0);
@@ -1160,6 +1140,7 @@ architecture STRUCTURE of system is
   signal pgassign1 : std_logic_vector(3 downto 0);
   signal processing_system7_0_DDR_WEB : std_logic;
   signal processing_system7_0_FCLK_CLK0 : std_logic_vector(0 to 0);
+  signal processing_system7_0_FCLK_CLK3 : std_logic;
   signal processing_system7_0_FCLK_RESET0_N_0 : std_logic;
 
   attribute BOX_TYPE : STRING;
@@ -1168,13 +1149,16 @@ architecture STRUCTURE of system is
   attribute BOX_TYPE of system_leds_8bits_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_btns_5bits_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_processing_system7_0_wrapper : component is "user_black_box";
-  attribute BOX_TYPE of system_axi_spi_0_wrapper : component is "user_black_box";
+  attribute BOX_TYPE of system_axi_pmic_0_wrapper : component is "user_black_box";
 
 begin
 
   -- Internal assignments
 
   processing_system7_0_DDR_WEB_pin <= processing_system7_0_DDR_WEB;
+  Pmic_sclk <= axi_pmic_0_Pmic_sclk;
+  Pmic_ncs <= axi_pmic_0_Pmic_ncs;
+  axi_pmic_0_Pmic_sdata <= Pmic_sdata;
   pgassign1(3 downto 3) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign1(2 downto 2) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign1(1 downto 1) <= processing_system7_0_FCLK_CLK0(0 to 0);
@@ -2092,7 +2076,7 @@ begin
       FTMT_P2F_TRIGACK => net_gnd4,
       FTMT_P2F_TRIG => open,
       FTMT_P2F_DEBUG => open,
-      FCLK_CLK3 => open,
+      FCLK_CLK3 => processing_system7_0_FCLK_CLK3,
       FCLK_CLK2 => open,
       FCLK_CLK1 => open,
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0(0),
@@ -2167,41 +2151,31 @@ begin
       IRQ_P2F_CAN1 => open
     );
 
-  axi_spi_0 : system_axi_spi_0_wrapper
+  axi_pmic_0 : system_axi_pmic_0_wrapper
     port map (
       S_AXI_ACLK => pgassign1(3),
       S_AXI_ARESETN => axi4lite_0_M_ARESETN(3),
       S_AXI_AWADDR => axi4lite_0_M_AWADDR(127 downto 96),
       S_AXI_AWVALID => axi4lite_0_M_AWVALID(3),
-      S_AXI_AWREADY => axi4lite_0_M_AWREADY(3),
       S_AXI_WDATA => axi4lite_0_M_WDATA(127 downto 96),
       S_AXI_WSTRB => axi4lite_0_M_WSTRB(15 downto 12),
       S_AXI_WVALID => axi4lite_0_M_WVALID(3),
-      S_AXI_WREADY => axi4lite_0_M_WREADY(3),
-      S_AXI_BRESP => axi4lite_0_M_BRESP(7 downto 6),
-      S_AXI_BVALID => axi4lite_0_M_BVALID(3),
       S_AXI_BREADY => axi4lite_0_M_BREADY(3),
       S_AXI_ARADDR => axi4lite_0_M_ARADDR(127 downto 96),
       S_AXI_ARVALID => axi4lite_0_M_ARVALID(3),
+      S_AXI_RREADY => axi4lite_0_M_RREADY(3),
       S_AXI_ARREADY => axi4lite_0_M_ARREADY(3),
       S_AXI_RDATA => axi4lite_0_M_RDATA(127 downto 96),
       S_AXI_RRESP => axi4lite_0_M_RRESP(7 downto 6),
       S_AXI_RVALID => axi4lite_0_M_RVALID(3),
-      S_AXI_RREADY => axi4lite_0_M_RREADY(3),
-      SCK_I => axi_spi_0_SCK_I,
-      SCK_O => axi_spi_0_SCK_O,
-      SCK_T => axi_spi_0_SCK_T,
-      MISO_I => axi_spi_0_MISO_I,
-      MISO_O => axi_spi_0_MISO_O,
-      MISO_T => axi_spi_0_MISO_T,
-      MOSI_I => axi_spi_0_MOSI_I,
-      MOSI_O => axi_spi_0_MOSI_O,
-      MOSI_T => axi_spi_0_MOSI_T,
-      SPISEL => net_gnd0,
-      SS_I => axi_spi_0_SS_I,
-      SS_O => axi_spi_0_SS_O,
-      SS_T => axi_spi_0_SS_T,
-      IP2INTC_Irpt => open
+      S_AXI_WREADY => axi4lite_0_M_WREADY(3),
+      S_AXI_BRESP => axi4lite_0_M_BRESP(7 downto 6),
+      S_AXI_BVALID => axi4lite_0_M_BVALID(3),
+      S_AXI_AWREADY => axi4lite_0_M_AWREADY(3),
+      Pmic_clk => processing_system7_0_FCLK_CLK3,
+      Pmic_sdata => axi_pmic_0_Pmic_sdata,
+      Pmic_sclk => axi_pmic_0_Pmic_sclk,
+      Pmic_ncs => axi_pmic_0_Pmic_ncs
     );
 
   iobuf_0 : IOBUF
@@ -2306,46 +2280,6 @@ begin
       IO => BTNs_5Bits_TRI_IO(0),
       O => BTNs_5Bits_TRI_IO_I(0),
       T => BTNs_5Bits_TRI_IO_T(0)
-    );
-
-  iobuf_13 : IOBUF
-    port map (
-      I => axi_spi_0_SCK_O,
-      IO => axi_spi_0_SCK_pin,
-      O => axi_spi_0_SCK_I,
-      T => axi_spi_0_SCK_T
-    );
-
-  iobuf_14 : IOBUF
-    port map (
-      I => axi_spi_0_MOSI_O,
-      IO => axi_spi_0_MOSI_pin,
-      O => axi_spi_0_MOSI_I,
-      T => axi_spi_0_MOSI_T
-    );
-
-  iobuf_15 : IOBUF
-    port map (
-      I => axi_spi_0_SS_O(1),
-      IO => axi_spi_0_SS_pin(1),
-      O => axi_spi_0_SS_I(1),
-      T => axi_spi_0_SS_T
-    );
-
-  iobuf_16 : IOBUF
-    port map (
-      I => axi_spi_0_SS_O(0),
-      IO => axi_spi_0_SS_pin(0),
-      O => axi_spi_0_SS_I(0),
-      T => axi_spi_0_SS_T
-    );
-
-  iobuf_17 : IOBUF
-    port map (
-      I => axi_spi_0_MISO_O,
-      IO => axi_spi_0_MISO_pin,
-      O => axi_spi_0_MISO_I,
-      T => axi_spi_0_MISO_T
     );
 
 end architecture STRUCTURE;

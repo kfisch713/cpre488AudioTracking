@@ -1397,7 +1397,7 @@ module system_processing_system7_0_wrapper
       .C_FCLK_CLK0_BUF ( "TRUE" ),
       .C_FCLK_CLK1_BUF ( "FALSE" ),
       .C_FCLK_CLK2_BUF ( "FALSE" ),
-      .C_FCLK_CLK3_BUF ( "FALSE" )
+      .C_FCLK_CLK3_BUF ( "TRUE" )
     )
     processing_system7_0 (
       .CAN0_PHY_TX ( CAN0_PHY_TX ),

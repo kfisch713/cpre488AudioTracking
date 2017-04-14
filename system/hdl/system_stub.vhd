@@ -33,10 +33,9 @@ entity system_stub is
     processing_system7_0_DDR_DQS_n : inout std_logic_vector(3 downto 0);
     processing_system7_0_DDR_VRN : inout std_logic;
     processing_system7_0_DDR_VRP : inout std_logic;
-    axi_spi_0_SCK_pin : inout std_logic;
-    axi_spi_0_MOSI_pin : inout std_logic;
-    axi_spi_0_SS_pin : inout std_logic_vector(1 downto 0);
-    axi_spi_0_MISO_pin : inout std_logic
+    Pmic_sclk : out std_logic;
+    Pmic_ncs : out std_logic;
+    Pmic_sdata : in std_logic
   );
 end system_stub;
 
@@ -68,10 +67,9 @@ architecture STRUCTURE of system_stub is
       processing_system7_0_DDR_DQS_n : inout std_logic_vector(3 downto 0);
       processing_system7_0_DDR_VRN : inout std_logic;
       processing_system7_0_DDR_VRP : inout std_logic;
-      axi_spi_0_SCK_pin : inout std_logic;
-      axi_spi_0_MOSI_pin : inout std_logic;
-      axi_spi_0_SS_pin : inout std_logic_vector(1 downto 0);
-      axi_spi_0_MISO_pin : inout std_logic
+      Pmic_sclk : out std_logic;
+      Pmic_ncs : out std_logic;
+      Pmic_sdata : in std_logic
     );
   end component;
 
@@ -106,10 +104,9 @@ begin
       processing_system7_0_DDR_DQS_n => processing_system7_0_DDR_DQS_n,
       processing_system7_0_DDR_VRN => processing_system7_0_DDR_VRN,
       processing_system7_0_DDR_VRP => processing_system7_0_DDR_VRP,
-      axi_spi_0_SCK_pin => axi_spi_0_SCK_pin,
-      axi_spi_0_MOSI_pin => axi_spi_0_MOSI_pin,
-      axi_spi_0_SS_pin => axi_spi_0_SS_pin,
-      axi_spi_0_MISO_pin => axi_spi_0_MISO_pin
+      Pmic_sclk => Pmic_sclk,
+      Pmic_ncs => Pmic_ncs,
+      Pmic_sdata => Pmic_sdata
     );
 
 end architecture STRUCTURE;

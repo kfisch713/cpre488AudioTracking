@@ -2,8 +2,8 @@ Release 14.7 ngdbuild P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
--intstyle ise -dd _ngo -nt timestamp -i -p xc7z020-clg484-1 axi_pmic.ngc
-axi_pmic.ngd
+-intstyle ise -dd _ngo -nt timestamp -uc axi_pmic.ucf -p xc7z020-clg484-1
+axi_pmic.ngc axi_pmic.ngd
 
 Reading NGO file
 "U:/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/devl/projnav/a
@@ -11,6 +11,7 @@ xi_pmic.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "axi_pmic.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 Done...
@@ -28,7 +29,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 235668 kilobytes
+Total memory usage is 235504 kilobytes
 
 Writing NGD file "axi_pmic.ngd" ...
 Total REAL time to NGDBUILD completion:  4 sec

@@ -35,10 +35,9 @@
  PORT processing_system7_0_DDR_DQS_n = processing_system7_0_DDR_DQS_n, DIR = IO, VEC = [3:0]
  PORT processing_system7_0_DDR_VRN = processing_system7_0_DDR_VRN, DIR = IO
  PORT processing_system7_0_DDR_VRP = processing_system7_0_DDR_VRP, DIR = IO
- PORT axi_spi_0_SCK_pin = axi_spi_0_SCK, DIR = IO
- PORT axi_spi_0_MOSI_pin = axi_spi_0_MOSI, DIR = IO
- PORT axi_spi_0_SS_pin = axi_spi_0_SS, DIR = IO, VEC = [1:0]
- PORT axi_spi_0_MISO_pin = axi_spi_0_MISO, DIR = IO
+ PORT Pmic_sclk = axi_pmic_0_Pmic_sclk, DIR = O, SIGIS = CLK
+ PORT Pmic_ncs = axi_pmic_0_Pmic_ncs, DIR = O
+ PORT Pmic_sdata = axi_pmic_0_Pmic_sdata, DIR = I
 
 
 BEGIN axi_interconnect
@@ -175,23 +174,20 @@ BEGIN processing_system7
  PORT FCLK_CLK0 = processing_system7_0_FCLK_CLK0
  PORT FCLK_RESET0_N = processing_system7_0_FCLK_RESET0_N_0
  PORT M_AXI_GP0_ACLK = processing_system7_0_FCLK_CLK0
+ PORT FCLK_CLK3 = processing_system7_0_FCLK_CLK3
 END
 
-BEGIN axi_spi
- PARAMETER INSTANCE = axi_spi_0
- PARAMETER HW_VER = 1.02.a
+BEGIN axi_pmic
+ PARAMETER INSTANCE = axi_pmic_0
+ PARAMETER HW_VER = 1.00.a
  PARAMETER C_INTERCONNECT_S_AXI_READ_FIFO_DEPTH = 32
- PARAMETER C_NUM_TRANSFER_BITS = 16
- PARAMETER C_NUM_SS_BITS = 2
- PARAMETER C_BASEADDR = 0x42000000
- PARAMETER C_HIGHADDR = 0x4200ffff
- PARAMETER C_SCK_RATIO = 16
+ PARAMETER C_BASEADDR = 0x7c400000
+ PARAMETER C_HIGHADDR = 0x7c40ffff
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
- PORT SPISEL = net_gnd
- PORT SCK = axi_spi_0_SCK
- PORT MOSI = axi_spi_0_MOSI
- PORT SS = axi_spi_0_SS
- PORT MISO = axi_spi_0_MISO
+ PORT Pmic_clk = processing_system7_0_FCLK_CLK3
+ PORT Pmic_sclk = axi_pmic_0_Pmic_sclk
+ PORT Pmic_ncs = axi_pmic_0_Pmic_ncs
+ PORT Pmic_sdata = axi_pmic_0_Pmic_sdata
 END
 

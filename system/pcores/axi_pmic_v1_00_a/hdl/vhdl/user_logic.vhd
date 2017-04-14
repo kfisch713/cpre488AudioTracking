@@ -98,14 +98,10 @@ entity user_logic is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
 	 Pmic_clk								: in std_logic;
-	 Pmic_rst								: in std_logic;
 	 Pmic_sdata								: in std_logic;
-	 Pmic_start								: in std_logic;
 	 
 	 Pmic_sclk								: out std_logic;
 	 Pmic_ncs								: out std_logic;
-	 Pmic_data								: out std_logic_vector(11 downto 0);
-	 Pmic_done								: out std_logic;
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -136,9 +132,6 @@ end entity user_logic;
 ------------------------------------------------------------------------------
 
 architecture IMP of user_logic is
-
-  --USER signal declarations added here, as needed for user logic
-
   ------------------------------------------
   -- Signals for user logic slave model s/w accessible register example
   ------------------------------------------
@@ -180,11 +173,38 @@ architecture IMP of user_logic is
   signal slv_read_ack                   : std_logic;
   signal slv_write_ack                  : std_logic;
 
+
+  constant ZERO : integer := 0;
+  --USER logic implementation added here
+  signal sig_Pmic_data     	: std_logic_vector(11 downto 0);
+  signal sig_Pmic_done			: std_logic;
+  signal sig_Pmic_start 		: std_logic;
+
+  --USER signal declarations added here, as needed for user logic
+	component pmic is
+		 Port    (  
+			Pmic_clk      	: in std_logic;         
+			ZERO      	: in std_logic;
+			Pmic_sdata  	: in std_logic;
+			Pmic_sclk     	: out std_logic;
+			Pmic_ncs      	: out std_logic;
+         sig_Pmic_data     	: out std_logic_vector(11 downto 0);
+			sig_Pmic_start		: in std_logic; 
+			sig_Pmic_done     	: out std_logic);
+	end component;
+	
+	
+	
 begin
 
-  --USER logic implementation added here
-  
-  
+
+  Manage_Slv_Regs : process(Bus2IP_Clk, sig_Pmic_data, sig_Pmic_done, slv_reg1)
+  begin
+		slv_reg0 <= x"00000" & sig_Pmic_data;
+		slv_reg2(0) <= sig_Pmic_done;
+		
+		sig_Pmic_start <= slv_reg1(0);
+  end process Manage_Slv_Regs;
 
   ------------------------------------------
   -- Example code to read/write user logic slave model s/w accessible registers
@@ -215,9 +235,9 @@ begin
 
     if Bus2IP_Clk'event and Bus2IP_Clk = '1' then
       if Bus2IP_Resetn = '0' then
-        slv_reg0 <= (others => '0');
+        --slv_reg0 <= (others => '0');
         slv_reg1 <= (others => '0');
-        slv_reg2 <= (others => '0');
+        --slv_reg2 <= (others => '0');
         slv_reg3 <= (others => '0');
         slv_reg4 <= (others => '0');
         slv_reg5 <= (others => '0');
@@ -252,7 +272,7 @@ begin
           when "10000000000000000000000000000000" =>
             for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
               if ( Bus2IP_BE(byte_index) = '1' ) then
-                slv_reg0(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
+                --slv_reg0(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
               end if;
             end loop;
           when "01000000000000000000000000000000" =>
@@ -264,7 +284,7 @@ begin
           when "00100000000000000000000000000000" =>
             for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
               if ( Bus2IP_BE(byte_index) = '1' ) then
-                slv_reg2(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
+                --slv_reg2(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
               end if;
             end loop;
           when "00010000000000000000000000000000" =>

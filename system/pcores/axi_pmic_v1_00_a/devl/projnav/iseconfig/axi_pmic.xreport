@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-04-13T17:38:45</DateModified>
+  <DateModified>2017-04-14T10:50:52</DateModified>
   <ModuleName>axi_pmic</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>U:/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/devl/projnav/iseconfig/axi_pmic.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>U:/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/devl/projnav</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>U:/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/devl/projnav\</ImplementationReportsDirectory>
   <DateInitialized>2017-04-13T17:38:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

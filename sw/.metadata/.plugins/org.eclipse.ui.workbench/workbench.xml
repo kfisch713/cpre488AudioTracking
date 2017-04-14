@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="208" y="208">
 <fastViewData fastViewLocation="1024"/>
@@ -37,34 +37,23 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="U:/Desktop/cpre488AudioTracking/sw/audio_tracking/src/helloworld.c" title="helloworld.c" tooltip="audio_tracking/src/helloworld.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/audio_tracking/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3808" selectionTopPixel="1602"/>
+<editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="U:/Documents/cpre488AudioTracking/sw/system_hw_platform/system.xml" title="system.xml" tooltip="system_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_hw_platform/system.xml"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xspi.h" partName="xspi.h" path="U:/Desktop/cpre488AudioTracking/sw/system_bsp/ps7_cortexa9_0/include/xspi.h" title="xspi.h" tooltip="system_bsp/ps7_cortexa9_0/include/xspi.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/include/xspi.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="20562" selectionTopPixel="11645"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" partName="xparameters.h" path="U:/Desktop/cpre488AudioTracking/sw/system_bsp/ps7_cortexa9_0/include/xparameters.h" title="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="20" selectionOffset="1219" selectionTopPixel="17"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xspi_options.c" partName="xspi_options.c" path="U:/Desktop/cpre488AudioTracking/sw/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi_options.c" title="xspi_options.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi_options.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi_options.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3789" selectionTopPixel="459"/>
-</editor>
-<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="U:/Desktop/cpre488AudioTracking/sw/system_bsp/system.mss" title="system.mss" tooltip="system_bsp/system.mss" workbook="DefaultEditorWorkbook">
+<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="U:/Documents/cpre488AudioTracking/sw/system_bsp/system.mss" title="system.mss" tooltip="system_bsp/system.mss" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/system.mss"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xspi.c" partName="xspi.c" path="U:/Desktop/cpre488AudioTracking/sw/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c" title="xspi.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="12129" selectionTopPixel="4012"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="U:/Documents/cpre488AudioTracking/sw/AudioTracking/src/helloworld.c" title="helloworld.c" tooltip="AudioTracking/src/helloworld.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AudioTracking/src/helloworld.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1740" selectionTopPixel="599"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" partName="xparameters.h" path="U:/Documents/cpre488AudioTracking/sw/system_bsp/ps7_cortexa9_0/include/xparameters.h" title="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="24" selectionOffset="611" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -83,7 +72,6 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
 <category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings"/>
 </expanded>
@@ -183,7 +171,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.68421054" ratioLeft="637" ratioRight="294" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.6659506" ratioLeft="620" ratioRight="311" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -218,161 +206,66 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/system_hw_platform/system.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/system_bsp/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/audio_tracking/src/helloworld.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xspi.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi_options.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AudioTracking/src/helloworld.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
 </editors>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3800" y="0"/>
+<item historyLabel="system.xml" index="0"/>
+<item historyLabel="system.mss" index="1"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="xspi.c" index="2">
-<position info="not_deleted" x="33727" y="19"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="1430" y="11"/>
 </item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
+<item historyLabel="xparameters.h" index="3">
+<position info="not_deleted" x="611" y="24"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3800" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="1790" y="24"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3079" y="0"/>
+<item historyLabel="xparameters.h" index="3">
+<position info="not_deleted" x="611" y="24"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3573" y="13"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="1790" y="24"/>
 </item>
-<item historyLabel="xspi.c" index="2">
-<position info="not_deleted" x="21393" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="1966" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3573" y="13"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="1372" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="2730" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2061" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3573" y="13"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="1397" y="0"/>
 </item>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="21386" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2083" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3577" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2088" y="0"/>
 </item>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="20885" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2134" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3670" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2135" y="0"/>
 </item>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="21739" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2191" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3670" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2154" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3789" y="0"/>
+<item historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2047" y="0"/>
 </item>
-<item historyLabel="system.mss" index="0"/>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="21036" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3408" y="0"/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3583" y="0"/>
-</item>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="21231" y="13"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3657" y="0"/>
-</item>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="20874" y="16"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3806" y="0"/>
-</item>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="20874" y="16"/>
-</item>
-<item historyLabel="xspi_options.c" index="5">
-<position info="not_deleted" x="5184" y="0"/>
-</item>
-<item historyLabel="xparameters.h" index="6">
-<position info="not_deleted" x="1219" y="20"/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="4803" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="4803" y="0"/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3553" y="0"/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
-</item>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="20874" y="16"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3635" y="0"/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3637" y="0"/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3635" y="0"/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="21676" y="5"/>
-</item>
-<item historyLabel="xspi.h" index="3">
-<position info="not_deleted" x="20562" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3635" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="4613" y="0"/>
-</item>
-<item historyLabel="xspi.c" index="4">
-<position info="not_deleted" x="12129" y="10"/>
-</item>
-<item active="true" historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="4613" y="0"/>
+<item active="true" historyLabel="helloworld.c" index="2">
+<position info="not_deleted" x="2060" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -391,23 +284,26 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xspi.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c">
-<persistable path="/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h">
+<persistable path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="AudioTracking/src/helloworld.c">
+<persistable path="/AudioTracking/src/helloworld.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="system_bsp/system.mss">
 <persistable path="/system_bsp/system.mss"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="ps7_init.html" tooltip="system_hw_platform/ps7_init.html">
-<persistable path="/system_hw_platform/ps7_init.html"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="system_hw_platform/system.xml">
 <persistable path="/system_hw_platform/system.xml"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xspi.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c">
+<persistable path="/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="ps7_init.html" tooltip="system_hw_platform/ps7_init.html">
+<persistable path="/system_hw_platform/ps7_init.html"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xspi_options.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi_options.c">
 <persistable path="/system_bsp/ps7_cortexa9_0/libsrc/spi_v3_06_a/src/xspi_options.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h">
-<persistable path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xspi_l.h" tooltip="system_bsp/ps7_cortexa9_0/include/xspi_l.h">
 <persistable path="/system_bsp/ps7_cortexa9_0/include/xspi_l.h"/>

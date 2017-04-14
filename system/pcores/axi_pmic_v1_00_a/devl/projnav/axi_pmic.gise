@@ -23,11 +23,13 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="axi_pmic.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="axi_pmic.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="axi_pmic.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="axi_pmic.lso"/>
@@ -45,6 +47,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="axi_pmic.twr" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="axi_pmic.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="axi_pmic.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="axi_pmic.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="axi_pmic.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="axi_pmic.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="axi_pmic_envsettings.html"/>
@@ -62,6 +65,7 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="axi_pmic_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="axi_pmic_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="axi_pmic_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -96,12 +100,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1492124699" xil_pn:in_ck="3590742048709563855" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-1977849986394851859" xil_pn:start_ts="1492124670">
+    <transform xil_pn:end_ts="1492192077" xil_pn:in_ck="3590742048709563855" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-1977849986394851859" xil_pn:start_ts="1492192050">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="axi_pmic.lso"/>
       <outfile xil_pn:name="axi_pmic.ngc"/>
@@ -114,23 +115,33 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1492124415" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4040598819252393877" xil_pn:start_ts="1492124415">
+    <transform xil_pn:end_ts="1492186943" xil_pn:in_ck="5091385543008201462" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4040598819252393877" xil_pn:start_ts="1492186943">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1492124706" xil_pn:in_ck="5091385543008193968" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6000108565808468831" xil_pn:start_ts="1492124699">
+    <transform xil_pn:end_ts="1492189746" xil_pn:in_ck="4089230113499136166" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6000108565808468831" xil_pn:start_ts="1492189739">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="axi_pmic.bld"/>
       <outfile xil_pn:name="axi_pmic.ngd"/>
       <outfile xil_pn:name="axi_pmic_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1492124732" xil_pn:in_ck="5091385543008193969" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="6343818628637911857" xil_pn:start_ts="1492124706">
+    <transform xil_pn:end_ts="1492189769" xil_pn:in_ck="5757119628452121127" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="6343818628637911857" xil_pn:start_ts="1492189746">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="axi_pmic.pcf"/>
       <outfile xil_pn:name="axi_pmic_map.map"/>
@@ -141,9 +152,13 @@
       <outfile xil_pn:name="axi_pmic_summary.xml"/>
       <outfile xil_pn:name="axi_pmic_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1492124772" xil_pn:in_ck="-7235654703241605814" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="378965794422880756" xil_pn:start_ts="1492124732">
+    <transform xil_pn:end_ts="1492189814" xil_pn:in_ck="1646458452486759488" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="378965794422880756" xil_pn:start_ts="1492189769">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="axi_pmic.ncd"/>
       <outfile xil_pn:name="axi_pmic.pad"/>
@@ -155,9 +170,23 @@
       <outfile xil_pn:name="axi_pmic_pad.txt"/>
       <outfile xil_pn:name="axi_pmic_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1492124772" xil_pn:in_ck="5091385543008193837" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1492124761">
+    <transform xil_pn:end_ts="1492189829" xil_pn:in_ck="5091385543008193837" xil_pn:name="TRANEXT_bitFile_zynq" xil_pn:prop_ck="-8808622799194500101" xil_pn:start_ts="1492189820">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="axi_pmic.bgn"/>
+      <outfile xil_pn:name="axi_pmic.ut"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1492189814" xil_pn:in_ck="6956632539172725667" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1492189802">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="axi_pmic.twr"/>
       <outfile xil_pn:name="axi_pmic.twx"/>
