@@ -36,6 +36,7 @@
 #include "xil_printf.h"
 #include "platform.h"
 #include "xparameters.h"
+#include "xtime_l.h"
 
 char *SWs = (char *)XPAR_SWS_8BITS_BASEADDR;
 char *BTNs = (char *)XPAR_BTNS_5BITS_BASEADDR;
@@ -62,24 +63,84 @@ int * SLV_REG(unsigned int x){
 	return ((int *)((XPAR_AXI_PMIC_0_BASEADDR) + (x * 4)));
 }
 
+int sleep_ms(unsigned int milliseconds)
+{
+  XTime tEnd, tCur;
+
+  XTime_GetTime(&tCur);
+  tEnd  = tCur + (((XTime) milliseconds) * ((1.0/XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ) * 0.001));
+  do
+  {
+    XTime_GetTime(&tCur);
+  } while (tCur < tEnd);
+
+  return 0;
+}
+
+//781250
+
+int sleep_read_spi()
+{
+  XTime tEnd, tCur;
+
+  XTime_GetTime(&tCur);
+
+  tEnd  = tCur + 64;
+  do
+  {
+    XTime_GetTime(&tCur);
+  } while (tCur < tEnd);
+
+
+  return 0;
+}
+
+uint16_t read_mic(){
+	*SLV_REG(1) = 0;
+	//XTime_GetTime(&t2);
+	//sleep_ms(1);
+	sleep_read_spi();
+	//XTime_GetTime(&t1);
+	*SLV_REG(1) = 1;
+
+	//printf("%llu\n", t1-t2);
+	return *SLV_REG(0);
+}
+
 int main()
 {
     init_platform();
     uint16_t adc_val;
-
+    XTime t1, t2;
+    XTime_GetTime(&t1);
     *SLV_REG(1) = 1;
 
     while(!SW(KILL_SWITCH)) {
-    	adc_val = *SLV_REG(0);
+
+    	adc_val = read_mic();
+
     	xil_printf("adc val = %5d, reg1 = %5d, reg2 = %5d\n", adc_val, *SLV_REG(1), *SLV_REG(2));
 
-    	if(*SLV_REG(2) > 0) {
-    		xil_printf("done reading from pmic\n");
-    		*SLV_REG(2) = 0;
-    	} else {
-    		*SLV_REG(1) = 1;
-    	}
+//    	if(*SLV_REG(2) > 0) {
+//    		xil_printf("done reading from pmic\n");
+//    		*SLV_REG(2) = 0;
+//    	} else {
+//    		*SLV_REG(1) = 1;
+//    	}
+
+//    	int i;
+//    	for(i=0; i<32; i++){
+//    		printf("%2d=%5d, ", i, *SLV_REG(i));
+//    	}
+//    	printf("\n");
+
+//    	*SLV_REG(1) = 1;
+//    	sleep(1);
+//    	*SLV_REG(1) = 0;
+//    	sleep(1);
     }
 
     return 0;
 }
+
+

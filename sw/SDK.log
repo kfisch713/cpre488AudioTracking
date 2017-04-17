@@ -133,3 +133,61 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 13:34:26.604 INFO  - PS Initialization is complete. 
 13:36:25.522 INFO  - Processor reset is completed for ps7_cortexa9_0 
 13:39:43.732 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:06:32.592 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+11:07:00.646 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:07:00.746 INFO  - PS initialization will be done as it is not done before. 
+11:07:00.746 INFO  - Running PS initialization.... 
+11:07:01.226 INFO  - ps7_init is completed. 
+11:07:01.326 INFO  - ps7_post_config is completed. 
+11:07:01.436 INFO  - PS Initialization is complete. 
+11:33:38.198 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+11:35:51.281 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+11:35:55.726 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:35:55.826 INFO  - PS initialization will be done as it is not done before. 
+11:35:55.826 INFO  - Running PS initialization.... 
+11:35:56.286 INFO  - ps7_init is completed. 
+11:35:56.396 INFO  - ps7_post_config is completed. 
+11:35:56.496 INFO  - PS Initialization is complete. 
+12:50:05.208 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:50:17.526 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:50:53.059 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:51:05.904 ERROR - SDK has detected that project system_hw_platform has been deleted (or renamed).
+This project was referenced by a BSP project, which will now fail to compile properly.
+
+We recommend that you create a new BSP project pointing to a valid hardware project. Alternatively, you can fix the project references in the BSP, and update the path to the hardware specification file in 'libgen.options', and in ELF check options in dependant applications. 
+12:51:57.438 INFO  - Project system_bsp was a BSP project. Please update references. 
+12:51:57.438 ERROR - SDK has detected that project system_bsp has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+12:52:24.419 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+12:55:11.419 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+12:55:16.721 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:56:05.385 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:08:31.189 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:08:34.433 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:11:54.419 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:12:15.201 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:13:06.531 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:13:11.933 ERROR - Unexpected error while launching program. java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.TM.terminateCurrentLaunch(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
+
+13:13:16.681 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:15:02.994 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:17:49.979 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:18:20.581 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:20:29.784 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:21:23.653 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:21:44.431 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:22:00.288 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:24:19.456 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:24:39.535 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:26:25.345 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:40:10.196 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:43:55.963 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:47:37.100 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:52:21.746 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:53:20.952 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:56:07.892 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:56:10.200 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:59:45.495 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:00:39.323 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

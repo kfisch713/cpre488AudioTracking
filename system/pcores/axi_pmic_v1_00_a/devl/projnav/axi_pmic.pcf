@@ -1,10 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Apr 14 12:09:26 2017
+// Written by: Map P.20131013 on Mon Apr 17 12:11:51 2017
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "Pmic_ncs" LOCATE = SITE "Y11" LEVEL 1;
 COMP "Pmic_sdata" LOCATE = SITE "Y10" LEVEL 1;
 COMP "Pmic_sclk" LOCATE = SITE "AA9" LEVEL 1;
-COMP "Pmic_ncs" LOCATE = SITE "Y11" LEVEL 1;
 SCHEMATIC END;
 

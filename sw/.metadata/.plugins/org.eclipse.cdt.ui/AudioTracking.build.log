@@ -1,6 +1,6 @@
-13:36:22 **** Incremental Build of configuration Debug for project AudioTracking ****
+13:59:44 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 make: Nothing to be done for `all'.
 
-13:36:22 Build Finished (took 190ms)
+13:59:44 Build Finished (took 130ms)
 

@@ -4,6 +4,7 @@ vhdl proc_common_v3_00_a "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcor
 vhdl proc_common_v3_00_a "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd"
 vhdl proc_common_v3_00_a "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd"
 vhdl axi_lite_ipif_v1_01_a "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd"
+vhdl work "PmodMicRefComp.vhd"
 vhdl axi_lite_ipif_v1_01_a "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd"
 vhdl axi_pmic_v1_00_a "../../hdl/vhdl/user_logic.vhd"
 vhdl proc_common_v3_00_a "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd"

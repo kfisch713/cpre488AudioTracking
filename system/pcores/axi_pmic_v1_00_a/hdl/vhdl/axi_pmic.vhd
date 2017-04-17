@@ -346,11 +346,11 @@ begin
     port map
     (
       -- MAP USER PORTS BELOW THIS LINE ------------------
-		 Pmic_clk								=> Pmic_clk,
-		 Pmic_sdata								=> Pmic_sdata,
+		Pmic_clk								=> Pmic_clk,
+		Pmic_sdata							=> Pmic_sdata,
 		 
-		 Pmic_sclk								=> Pmic_sclk,
-		 Pmic_ncs								=> Pmic_ncs,
+		Pmic_sclk							=> Pmic_sclk,
+		Pmic_ncs								=> Pmic_ncs,
       -- MAP USER PORTS ABOVE THIS LINE ------------------
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,

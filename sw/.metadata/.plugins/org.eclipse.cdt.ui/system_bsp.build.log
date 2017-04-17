@@ -1,4 +1,4 @@
-13:16:47 **** Build of project system_bsp ****
+12:53:29 **** Build of project system_bsp ****
 make -k all 
 libgen -hw ../system_hw_platform/system.xml\
 	       \
@@ -44,5 +44,5 @@ arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
 Running execs_generate.
 'Finished building libraries'
 
-13:18:01 Build Finished (took 1m:13s.900ms)
+12:54:32 Build Finished (took 1m:3s.532ms)
 

@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="ConstraintSystem:300" num="0" >In file: axi_pmic.ucf(6): Syntax error.  Ensure that the previous constraint specification was terminated with &apos;;&apos;.
+</msg>
+
 </messages>
 

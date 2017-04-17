@@ -5,7 +5,7 @@ C:\Xilinx\14.7\ISE_DS\ISE\.
    "axi_pmic" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
 Opened constraints file axi_pmic.pcf.
 
-Fri Apr 14 12:10:28 2017
+Mon Apr 17 12:12:46 2017
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g Binary:no -g CRC:Enable -g ProgPin:PullUp -g InitPin:Pullup -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g Disable_JTAG:No -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_XADC:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g Match_cycle:Auto -g Security:None -g ICAP_select:Auto -g DonePipe:Yes -g DriveDone:No axi_pmic.ncd 
 
@@ -20,26 +20,42 @@ ERROR:Bitgen:342 - This design contains pins which have locations (LOC) that are
    creation with unspecified I/O location or standards, you may apply the
    following bitgen switch: -g UnconstrainedPins:Allow
 This message applies to the following I/O ports:
-   S_AXI_RDATA<13>
-   S_AXI_ARADDR<0>
-   S_AXI_ARADDR<2>
-   S_AXI_RDATA<15>
-   S_AXI_ARADDR<4>
-   S_AXI_ARADDR<3>
-   S_AXI_ARADDR<6>
-   S_AXI_ARADDR<5>
-   S_AXI_ARADDR<7>
-   S_AXI_AWADDR<6>
-   S_AXI_ARADDR<8>
-   S_AXI_AWADDR<8>
-   S_AXI_AWADDR<5>
-   S_AXI_AWADDR<7>
-   S_AXI_RRESP<0>
    S_AXI_AWADDR<1>
-   S_AXI_AWADDR<4>
-   S_AXI_AWADDR<3>
-   S_AXI_AWADDR<2>
-   S_AXI_AWADDR<0>
+   S_AXI_AWVALID
+   S_AXI_RREADY
+   S_AXI_WDATA<3>
+   S_AXI_WVALID
+   S_AXI_WDATA<2>
+   S_AXI_WDATA<0>
+   S_AXI_BVALID
+   S_AXI_WDATA<1>
+   S_AXI_ARREADY
+   S_AXI_RVALID
+   S_AXI_BRESP<1>
+   S_AXI_BREADY
+   S_AXI_AWREADY
+   S_AXI_WREADY
+   S_AXI_BRESP<0>
+   S_AXI_ARESETN
+   S_AXI_RRESP<0>
+   S_AXI_RRESP<1>
+   S_AXI_RDATA<0>
+   S_AXI_RDATA<1>
+   S_AXI_RDATA<2>
+   S_AXI_RDATA<3>
+   S_AXI_RDATA<4>
+   S_AXI_RDATA<5>
+   S_AXI_RDATA<6>
+   S_AXI_RDATA<7>
+   S_AXI_RDATA<8>
+   S_AXI_RDATA<9>
+   S_AXI_RDATA<10>
+   S_AXI_RDATA<11>
+   S_AXI_RDATA<12>
+   S_AXI_RDATA<13>
+   S_AXI_RDATA<14>
+   S_AXI_RDATA<15>
+   S_AXI_RDATA<16>
    S_AXI_RDATA<17>
    S_AXI_RDATA<18>
    S_AXI_RDATA<19>
@@ -52,44 +68,29 @@ This message applies to the following I/O ports:
    S_AXI_RDATA<26>
    S_AXI_RDATA<27>
    S_AXI_RDATA<28>
-   S_AXI_RDATA<16>
    S_AXI_RDATA<29>
    S_AXI_RDATA<30>
    S_AXI_RDATA<31>
-   S_AXI_RRESP<1>
-   S_AXI_AWREADY
-   S_AXI_ARREADY
-   S_AXI_RVALID
-   S_AXI_BVALID
-   S_AXI_WDATA<0>
-   S_AXI_WDATA<1>
-   S_AXI_WDATA<2>
-   S_AXI_WDATA<3>
-   S_AXI_RREADY
-   S_AXI_ARESETN
-   S_AXI_WREADY
-   S_AXI_ARVALID
-   S_AXI_AWVALID
-   S_AXI_WVALID
-   S_AXI_BREADY
-   S_AXI_BRESP<1>
+   S_AXI_ARADDR<0>
    S_AXI_ARADDR<1>
-   S_AXI_RDATA<1>
-   S_AXI_BRESP<0>
-   S_AXI_RDATA<0>
-   S_AXI_RDATA<3>
-   S_AXI_RDATA<2>
-   S_AXI_RDATA<4>
-   S_AXI_RDATA<6>
-   S_AXI_RDATA<8>
-   S_AXI_RDATA<5>
-   S_AXI_RDATA<7>
-   S_AXI_RDATA<10>
-   S_AXI_RDATA<12>
-   S_AXI_RDATA<11>
-   S_AXI_RDATA<14>
-   S_AXI_RDATA<9>
+   S_AXI_ARADDR<2>
+   S_AXI_ARADDR<3>
+   S_AXI_ARADDR<4>
+   S_AXI_ARADDR<5>
+   S_AXI_ARADDR<6>
+   S_AXI_ARADDR<7>
+   S_AXI_ARADDR<8>
+   S_AXI_AWADDR<0>
+   S_AXI_AWADDR<4>
+   S_AXI_AWADDR<2>
+   S_AXI_AWADDR<3>
+   S_AXI_AWADDR<8>
+   S_AXI_AWADDR<5>
+   S_AXI_AWADDR<6>
+   S_AXI_AWADDR<7>
+   S_AXI_ARVALID
    S_AXI_ACLK
+   Pmic_clk
 INFO:Bitgen:40 - Replacing "Auto" with "NoWait" for option "Match_cycle".  Most
    commonly, bitgen has determined and will use a specific value instead of the
    generic command-line value of "Auto".  Alternately, this message appears if

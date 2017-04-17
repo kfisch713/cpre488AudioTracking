@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: axi_pmic.prj
 
@@ -123,6 +123,9 @@ Parsing architecture <imp> of entity <counter_f>.
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd" into library axi_lite_ipif_v1_01_a
 Parsing entity <address_decoder>.
 Parsing architecture <IMP> of entity <address_decoder>.
+Parsing VHDL file "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\devl\projnav\PmodMicRefComp.vhd" into library work
+Parsing entity <PmodMICRefComp>.
+Parsing architecture <PmodMic> of entity <pmodmicrefcomp>.
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" into library axi_lite_ipif_v1_01_a
 Parsing entity <slave_attachment>.
 Parsing architecture <imp> of entity <slave_attachment>.
@@ -221,10 +224,11 @@ INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores
 Elaborating entity <soft_reset> (architecture <implementation>) with generics from library <proc_common_v3_00_a>.
 
 Elaborating entity <user_logic> (architecture <IMP>) with generics from library <axi_pmic_v1_00_a>.
-WARNING:HDLCompiler:1127 - "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\hdl\vhdl\user_logic.vhd" Line 201: Assignment to sig_pmic_start ignored, since the identifier is never used
+WARNING:HDLCompiler:871 - "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\hdl\vhdl\user_logic.vhd" Line 177: Using initial value '0' for zero since it is never assigned
+
+Elaborating entity <PmodMICRefComp> (architecture <PmodMic>) from library <work>.
+INFO:HDLCompiler:679 - "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\devl\projnav\PmodMicRefComp.vhd" Line 245. Case statement is complete. others clause is never selected
 WARNING:HDLCompiler:634 - "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\hdl\vhdl\user_logic.vhd" Line 140: Net <slv_reg2[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\hdl\vhdl\user_logic.vhd" Line 179: Net <sig_Pmic_data[11]> does not have a driver.
-WARNING:HDLCompiler:634 - "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\hdl\vhdl\user_logic.vhd" Line 180: Net <sig_Pmic_done> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -713,11 +717,7 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
         C_SLV_DWIDTH = 32
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:647 - Input <Pmic_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <Pmic_sdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <slv_reg2<31:1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <sig_Pmic_data> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <sig_Pmic_done> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 32-bit register for signal <slv_reg3>.
     Found 32-bit register for signal <slv_reg4>.
     Found 32-bit register for signal <slv_reg5>.
@@ -753,21 +753,51 @@ WARNING:Xst:653 - Signal <sig_Pmic_done> is used but never assigned. This source
 	inferred 961 Multiplexer(s).
 Unit <user_logic> synthesized.
 
+Synthesizing Unit <PmodMICRefComp>.
+    Related source file is "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\devl\projnav\PmodMicRefComp.vhd".
+    Found 16-bit register for signal <temp>.
+    Found 4-bit register for signal <shiftCounter>.
+    Found 12-bit register for signal <DATA>.
+    Found 2-bit register for signal <current_state>.
+    Found 2-bit register for signal <clk_counter>.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_div (rising_edge)                          |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <clk_counter[1]_GND_51_o_add_0_OUT> created at line 117.
+    Found 4-bit adder for signal <shiftCounter[3]_GND_51_o_add_2_OUT> created at line 145.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <PmodMICRefComp> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 4-bit adder                                           : 1
-# Registers                                            : 74
+# Adders/Subtractors                                   : 3
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 2
+# Registers                                            : 78
  1-bit register                                        : 39
- 2-bit register                                        : 3
+ 12-bit register                                       : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 4
  32-bit register                                       : 31
- 4-bit register                                        : 1
-# Multiplexers                                         : 998
- 1-bit 2-to-1 multiplexer                              : 995
+ 4-bit register                                        : 2
+# Multiplexers                                         : 1000
+ 1-bit 2-to-1 multiplexer                              : 997
  32-bit 2-to-1 multiplexer                             : 3
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 
 =========================================================================
 
@@ -777,23 +807,37 @@ Macro Statistics
 
 WARNING:Xst:1293 - FF/Latch <s_axi_bresp_i_0> has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <s_axi_rresp_i_0> has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <temp_12> of sequential type is unconnected in block <P1>.
+WARNING:Xst:2677 - Node <temp_13> of sequential type is unconnected in block <P1>.
+WARNING:Xst:2677 - Node <temp_14> of sequential type is unconnected in block <P1>.
+WARNING:Xst:2677 - Node <temp_15> of sequential type is unconnected in block <P1>.
+
+Synthesizing (advanced) Unit <PmodMICRefComp>.
+The following registers are absorbed into counter <clk_counter>: 1 register on signal <clk_counter>.
+The following registers are absorbed into counter <shiftCounter>: 1 register on signal <shiftCounter>.
+Unit <PmodMICRefComp> synthesized (advanced).
 
 Synthesizing (advanced) Unit <slave_attachment>.
 The following registers are absorbed into counter <INCLUDE_DPHASE_TIMER.dpto_cnt>: 1 register on signal <INCLUDE_DPHASE_TIMER.dpto_cnt>.
 Unit <slave_attachment> synthesized (advanced).
+WARNING:Xst:2677 - Node <temp_12> of sequential type is unconnected in block <PmodMICRefComp>.
+WARNING:Xst:2677 - Node <temp_13> of sequential type is unconnected in block <PmodMICRefComp>.
+WARNING:Xst:2677 - Node <temp_14> of sequential type is unconnected in block <PmodMICRefComp>.
+WARNING:Xst:2677 - Node <temp_15> of sequential type is unconnected in block <PmodMICRefComp>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 1
- 4-bit up counter                                      : 1
-# Registers                                            : 1046
- Flip-Flops                                            : 1046
-# Multiplexers                                         : 964
- 1-bit 2-to-1 multiplexer                              : 961
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 1070
+ Flip-Flops                                            : 1070
+# Multiplexers                                         : 966
+ 1-bit 2-to-1 multiplexer                              : 963
  32-bit 2-to-1 multiplexer                             : 3
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 
 =========================================================================
 
@@ -814,6 +858,15 @@ Optimizing FSM <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/FSM_0> on signal <state[1:2]>
  sm_read  | 01
  sm_write | 10
  sm_resp  | 11
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <USER_LOGIC_I/P1/FSM_1> on signal <current_state[1:3]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 001
+ shiftin  | 010
+ syncdata | 100
 ----------------------
 
 Optimizing unit <axi_pmic> ...
@@ -887,8 +940,10 @@ INFO:Xst:2261 - The FF/Latch <ce_out_i_0> in Unit <address_decoder> is equivalen
 
 Optimizing unit <user_logic> ...
 
+Optimizing unit <PmodMICRefComp> ...
+
 Optimizing unit <soft_reset> ...
-WARNING:Xst:1710 - FF/Latch <USER_LOGIC_I/slv_reg12_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <USER_LOGIC_I/P1/current_state_FSM_FFd2> has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -917,7 +972,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_26> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -946,7 +1001,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_31> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -975,7 +1030,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg10_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg10_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg10_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg10_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg12_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_31> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1004,7 +1059,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg16_18> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg11_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg16_17> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg16_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg16_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1033,7 +1088,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg15_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg15_23> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg15_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg17_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg15_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg17_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg17_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg17_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1062,7 +1117,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg16_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg16_20> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg16_19> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg14_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg16_18> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg14_23> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg14_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg14_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1091,7 +1146,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg15_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg13_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg15_20> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg15_19> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg15_18> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1120,7 +1175,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg14_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg14_26> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg14_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg14_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_20> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_19> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1149,7 +1204,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg4_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg4_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg4_26> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg6_19> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg4_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg6_18> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg6_17> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg6_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1178,7 +1233,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_23> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_26> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1207,7 +1262,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg4_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg4_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg4_23> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg4_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1236,7 +1291,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_31> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg9_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg3_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg9_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg9_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg9_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1265,7 +1320,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg8_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg8_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg8_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg10_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg8_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg10_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg10_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg10_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1294,7 +1349,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg9_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg9_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg9_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg7_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg9_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg7_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg7_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg7_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1323,7 +1378,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg6_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg6_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg6_20> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg8_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg6_19> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg8_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg8_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg8_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1352,6 +1407,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg7_19> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg7_18> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg7_17> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg7_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg27_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg27_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg27_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1468,35 +1524,9 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg25_23> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg25_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg25_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_31> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_26> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_23> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_20> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_19> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_18> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_17> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_31> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1523,9 +1553,35 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_31> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_26> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_23> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_22> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_21> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_20> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_19> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_18> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_17> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1555,12 +1611,12 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg28_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg28_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg28_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg30_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg1_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_31> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1584,7 +1640,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg29_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg20_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg20_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg20_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg20_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1613,7 +1668,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg19_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg19_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg19_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg19_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1642,7 +1697,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg20_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg20_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg20_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg18_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg20_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg18_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg18_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg18_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1671,7 +1726,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg17_18> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg17_17> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg17_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg19_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg17_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg19_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg19_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg19_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1700,6 +1755,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg18_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg18_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg18_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg18_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg23_26> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg23_25> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg23_24> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1758,7 +1814,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg23_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg23_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg23_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_31> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_30> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1787,6 +1842,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg21_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_29> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_28> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_27> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1802,20 +1858,44 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_re
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_17> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_16> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_15> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_14> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_13> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_12> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg22_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_0> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_1> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_2> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_3> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_4> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_5> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_6> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_7> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_8> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_9> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/temp_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_10> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/P1/DATA_11> (without init value) has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0> has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1> has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2> has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
@@ -1848,6 +1928,11 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <AXI_LITE_IPIF_I/I_S
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_29> has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_30> has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31> has a constant value of 0 in block <axi_pmic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <USER_LOGIC_I/P1/shiftCounter_3> of sequential type is unconnected in block <axi_pmic>.
+WARNING:Xst:2677 - Node <USER_LOGIC_I/P1/shiftCounter_2> of sequential type is unconnected in block <axi_pmic>.
+WARNING:Xst:2677 - Node <USER_LOGIC_I/P1/shiftCounter_1> of sequential type is unconnected in block <axi_pmic>.
+WARNING:Xst:2677 - Node <USER_LOGIC_I/P1/shiftCounter_0> of sequential type is unconnected in block <axi_pmic>.
+WARNING:Xst:2677 - Node <USER_LOGIC_I/P1/current_state_FSM_FFd3> of sequential type is unconnected in block <axi_pmic>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <USER_LOGIC_I/slv_reg31_9> is unconnected in block <axi_pmic>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <USER_LOGIC_I/slv_reg31_8> is unconnected in block <axi_pmic>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <USER_LOGIC_I/slv_reg31_7> is unconnected in block <axi_pmic>.
@@ -1893,8 +1978,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 22
- Flip-Flops                                            : 22
+# Registers                                            : 24
+ Flip-Flops                                            : 24
 
 =========================================================================
 
@@ -1917,23 +2002,24 @@ Top Level Output File Name         : axi_pmic.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 38
+# BELS                             : 42
 #      GND                         : 1
-#      INV                         : 1
-#      LUT2                        : 9
+#      INV                         : 3
+#      LUT2                        : 10
 #      LUT3                        : 3
 #      LUT4                        : 3
 #      LUT5                        : 10
 #      LUT6                        : 8
 #      MUXF7                       : 3
-# FlipFlops/Latches                : 22
-#      FD                          : 8
+#      VCC                         : 1
+# FlipFlops/Latches                : 24
+#      FD                          : 10
 #      FDR                         : 14
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 69
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 71
 #      IBUF                        : 28
-#      OBUF                        : 41
+#      OBUF                        : 43
 
 Device utilization summary:
 ---------------------------
@@ -1942,23 +2028,23 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              22  out of  106400     0%  
- Number of Slice LUTs:                   34  out of  53200     0%  
-    Number used as Logic:                34  out of  53200     0%  
+ Number of Slice Registers:              24  out of  106400     0%  
+ Number of Slice LUTs:                   37  out of  53200     0%  
+    Number used as Logic:                37  out of  53200     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     35
-   Number with an unused Flip Flop:      13  out of     35    37%  
-   Number with an unused LUT:             1  out of     35     2%  
-   Number of fully used LUT-FF pairs:    21  out of     35    60%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:     38
+   Number with an unused Flip Flop:      14  out of     38    36%  
+   Number with an unused LUT:             1  out of     38     2%  
+   Number of fully used LUT-FF pairs:    23  out of     38    60%  
+   Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                         152
- Number of bonded IOBs:                  70  out of    200    35%  
+ Number of bonded IOBs:                  73  out of    200    36%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1982,6 +2068,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 S_AXI_ACLK                         | BUFGP                  | 22    |
+Pmic_clk                           | BUFGP                  | 2     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -2023,6 +2110,28 @@ Delay:               1.494ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      1.494ns (0.399ns logic, 1.095ns route)
                                        (26.7% logic, 73.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Pmic_clk'
+  Clock period: 1.164ns (frequency: 859.106MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.164ns (Levels of Logic = 1)
+  Source:            USER_LOGIC_I/P1/clk_counter_0 (FF)
+  Destination:       USER_LOGIC_I/P1/clk_counter_0 (FF)
+  Source Clock:      Pmic_clk rising
+  Destination Clock: Pmic_clk rising
+
+  Data Path: USER_LOGIC_I/P1/clk_counter_0 to USER_LOGIC_I/P1/clk_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.282   0.405  USER_LOGIC_I/P1/clk_counter_0 (USER_LOGIC_I/P1/clk_counter_0)
+     INV:I->O              1   0.067   0.399  USER_LOGIC_I/P1/Mcount_clk_counter_xor<0>11_INV_0 (USER_LOGIC_I/P1/Result<0>)
+     FD:D                      0.011          USER_LOGIC_I/P1/clk_counter_0
+    ----------------------------------------
+    Total                      1.164ns (0.360ns logic, 0.804ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'S_AXI_ACLK'
@@ -2068,9 +2177,37 @@ Offset:              1.416ns (Levels of Logic = 2)
                                        (23.7% logic, 76.3% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Pmic_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.153ns (Levels of Logic = 2)
+  Source:            USER_LOGIC_I/P1/clk_counter_1 (FF)
+  Destination:       Pmic_sclk (PAD)
+  Source Clock:      Pmic_clk rising
+
+  Data Path: USER_LOGIC_I/P1/clk_counter_1 to Pmic_sclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.282   0.405  USER_LOGIC_I/P1/clk_counter_1 (USER_LOGIC_I/P1/clk_counter_1)
+     INV:I->O              1   0.067   0.399  USER_LOGIC_I/P1/SCLK1_INV_0 (Pmic_sclk_OBUF)
+     OBUF:I->O                 0.000          Pmic_sclk_OBUF (Pmic_sclk)
+    ----------------------------------------
+    Total                      1.153ns (0.349ns logic, 0.804ns route)
+                                       (30.3% logic, 69.7% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
+
+Clock to Setup on destination clock Pmic_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Pmic_clk       |    1.164|         |         |         |
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock S_AXI_ACLK
 ---------------+---------+---------+---------+---------+
@@ -2083,14 +2220,14 @@ S_AXI_ACLK     |    1.494|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 24.72 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.71 secs
  
 --> 
 
-Total memory usage is 464708 kilobytes
+Total memory usage is 468164 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 1083 (   0 filtered)
+Number of warnings : 1115 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 

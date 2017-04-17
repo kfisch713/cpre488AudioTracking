@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 TABLE OF CONTENTS
@@ -571,29 +571,37 @@ Optimizing unit <system> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 2.
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <axi_pmic_0> is equivalent to the following 2 FFs/Latches : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_2> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9> in Unit <axi_pmic_0> is equivalent to the following 2 FFs/Latches : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_1> <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_2> 
 INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_2> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24_2> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21_2> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_27> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_27_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22> in Unit <axi_pmic_0> is equivalent to the following 2 FFs/Latches : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_1> <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_2> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_31> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_31_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26_2> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21_1> 
 INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1> in Unit <axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <axi_pmic_0> is equivalent to the following 2 FFs/Latches : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_2> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9> in Unit <axi_pmic_0> is equivalent to the following 2 FFs/Latches : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_1> <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_2> 
 INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_2> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24_2> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21_2> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16_1> 
-INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_27> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_27_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22> in Unit <axi_pmic_0> is equivalent to the following 2 FFs/Latches : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_1> <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_2> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_31> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_31_1> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26_2> 
+INFO:Xst:2260 - The FF/Latch <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21> in Unit <axi_pmic_0> is equivalent to the following FF/Latch : <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21_1> 
 INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1> in Unit <axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> 
@@ -631,34 +639,34 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2366
+# BELS                             : 2440
 #      GND                         : 8
-#      INV                         : 108
+#      INV                         : 111
 #      LUT1                        : 6
-#      LUT2                        : 112
-#      LUT3                        : 623
-#      LUT4                        : 386
-#      LUT5                        : 227
-#      LUT6                        : 806
+#      LUT2                        : 121
+#      LUT3                        : 608
+#      LUT4                        : 325
+#      LUT5                        : 349
+#      LUT6                        : 823
 #      MUXCY                       : 23
-#      MUXF7                       : 57
+#      MUXF7                       : 56
 #      VCC                         : 6
 #      XORCY                       : 4
-# FlipFlops/Latches                : 1539
-#      FD                          : 127
+# FlipFlops/Latches                : 1574
+#      FD                          : 134
 #      FDC                         : 17
 #      FDCE                        : 19
-#      FDE                         : 180
+#      FDE                         : 204
 #      FDP                         : 13
 #      FDR                         : 93
-#      FDRE                        : 1069
+#      FDRE                        : 1073
 #      FDSE                        : 21
 # RAMS                             : 8
 #      RAM32M                      : 8
 # Shift Registers                  : 21
 #      SRLC16E                     : 21
-# Clock Buffers                    : 2
-#      BUFG                        : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 3
 # IO Buffers                       : 27
 #      IBUF                        : 4
 #      IOBUF                       : 13
@@ -673,26 +681,26 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1539  out of  106400     1%  
- Number of Slice LUTs:                 2321  out of  53200     4%  
-    Number used as Logic:              2268  out of  53200     4%  
+ Number of Slice Registers:            1574  out of  106400     1%  
+ Number of Slice LUTs:                 2396  out of  53200     4%  
+    Number used as Logic:              2343  out of  53200     4%  
     Number used as Memory:               53  out of  17400     0%  
        Number used as RAM:               32
        Number used as SRL:               21
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2952
-   Number with an unused Flip Flop:    1413  out of   2952    47%  
-   Number with an unused LUT:           631  out of   2952    21%  
-   Number of fully used LUT-FF pairs:   908  out of   2952    30%  
-   Number of unique control sets:        77
+ Number of LUT Flip Flop pairs used:   3090
+   Number with an unused Flip Flop:    1516  out of   3090    49%  
+   Number with an unused LUT:           694  out of   3090    22%  
+   Number of fully used LUT-FF pairs:   880  out of   3090    28%  
+   Number of unique control sets:        83
 
 IO Utilization: 
  Number of IOs:                         154
  Number of bonded IOBs:                  27  out of    200    13%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
 
 ---------------------------
 Partition Resource Summary:
@@ -715,7 +723,9 @@ Clock Information:
 ----------------------------------------------------------------+------------------------+-------+
 Clock Signal                                                    | Clock buffer(FF name)  | Load  |
 ----------------------------------------------------------------+------------------------+-------+
-processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>| BUFG                   | 1568  |
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>| BUFG                   | 1571  |
+axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1>            | BUFG                   | 30    |
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<3>| BUFG                   | 2     |
 ----------------------------------------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -726,9 +736,9 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 5.822ns (Maximum Frequency: 171.775MHz)
+   Minimum period: 5.727ns (Maximum Frequency: 174.612MHz)
    Minimum input arrival time before clock: 5.768ns
-   Maximum output required time after clock: 4.713ns
+   Maximum output required time after clock: 4.618ns
    Maximum combinational path delay: 4.659ns
 
 Timing Details:
@@ -737,10 +747,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
-  Clock period: 5.822ns (frequency: 171.775MHz)
-  Total number of paths / destination ports: 97012 / 3705
+  Clock period: 5.727ns (frequency: 174.612MHz)
+  Total number of paths / destination ports: 105738 / 3676
 -------------------------------------------------------------------------
-Delay:               5.822ns (Levels of Logic = 12)
+Delay:               5.727ns (Levels of Logic = 12)
   Source:            axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
   Destination:       axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0 (FF)
   Source Clock:      processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
@@ -750,9 +760,9 @@ Delay:               5.822ns (Levels of Logic = 12)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q             393   0.282   0.645  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg)
-     LUT2:I1->O            2   0.053   0.745  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<6>1 (axi_pmic_0/ipif_Bus2IP_WrCE<26>)
-     LUT6:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done4 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3)
+     FD:C->Q             436   0.282   0.654  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg)
+     LUT2:I1->O            2   0.053   0.641  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<18>1 (axi_pmic_0/ipif_Bus2IP_WrCE<14>)
+     LUT6:I2->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done6 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done5)
      LUT6:I5->O            6   0.053   0.635  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done8 (S_AXI_AWREADY)
      end scope: 'axi_pmic_0:S_AXI_WREADY'
      begin scope: 'axi4lite_0:M_AXI_WREADY<3>'
@@ -767,12 +777,56 @@ Delay:               5.822ns (Levels of Logic = 12)
      LUT6:I5->O            1   0.053   0.000  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0_glue_set (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0_glue_set)
      FDR:D                     0.011          axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
     ----------------------------------------
-    Total                      5.822ns (0.984ns logic, 4.838ns route)
-                                       (16.9% logic, 83.1% route)
+    Total                      5.727ns (0.984ns logic, 4.743ns route)
+                                       (17.2% logic, 82.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1>'
+  Clock period: 1.767ns (frequency: 565.931MHz)
+  Total number of paths / destination ports: 88 / 61
+-------------------------------------------------------------------------
+Delay:               1.767ns (Levels of Logic = 1)
+  Source:            axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 (FF)
+  Destination:       axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/shiftCounter_3 (FF)
+  Source Clock:      axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1> rising
+  Destination Clock: axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1> rising
+
+  Data Path: axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 to axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/shiftCounter_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.282   0.610  axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 (axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2)
+     LUT2:I0->O           16   0.053   0.497  axi_pmic_0/USER_LOGIC_I/P1/_n00511 (axi_pmic_0/USER_LOGIC_I/P1/_n0051)
+     FDRE:R                    0.325          axi_pmic_0/USER_LOGIC_I/P1/shiftCounter_0
+    ----------------------------------------
+    Total                      1.767ns (0.660ns logic, 1.107ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<3>'
+  Clock period: 1.164ns (frequency: 859.106MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.164ns (Levels of Logic = 1)
+  Source:            axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0 (FF)
+  Destination:       axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0 (FF)
+  Source Clock:      processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<3> rising
+  Destination Clock: processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<3> rising
+
+  Data Path: axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0 to axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.282   0.405  axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0 (axi_pmic_0/USER_LOGIC_I/P1/clk_counter<0>)
+     INV:I->O              1   0.067   0.399  axi_pmic_0/USER_LOGIC_I/P1/Mcount_clk_counter_xor<0>11_INV_0 (axi_pmic_0/USER_LOGIC_I/P1/Result<0>)
+     FD:D                      0.011          axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0
+    ----------------------------------------
+    Total                      1.164ns (0.360ns logic, 0.804ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
-  Total number of paths / destination ports: 1836 / 1316
+  Total number of paths / destination ports: 1859 / 1319
 -------------------------------------------------------------------------
 Offset:              5.768ns (Levels of Logic = 15)
   Source:            processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WDATA3 (PAD)
@@ -790,7 +844,7 @@ Offset:              5.768ns (Levels of Logic = 15)
      end scope: 'axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst:M_AXI_WDATA<3>'
      end scope: 'axi4lite_0:M_AXI_WDATA<99>'
      begin scope: 'axi_pmic_0:S_AXI_WDATA<3>'
-     LUT5:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3_SW0 (N616)
+     LUT5:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3_SW0 (N797)
      LUT6:I5->O            1   0.053   0.739  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done2)
      LUT6:I0->O            6   0.053   0.635  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done8 (S_AXI_AWREADY)
      end scope: 'axi_pmic_0:S_AXI_WREADY'
@@ -810,10 +864,30 @@ Offset:              5.768ns (Levels of Logic = 15)
                                        (27.4% logic, 72.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
-  Total number of paths / destination ports: 333 / 87
+Timing constraint: Default OFFSET IN BEFORE for Clock 'axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1>'
+  Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.713ns (Levels of Logic = 10)
+Offset:              0.410ns (Levels of Logic = 2)
+  Source:            Pmic_sdata (PAD)
+  Destination:       axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/temp_0 (FF)
+  Destination Clock: axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1> rising
+
+  Data Path: Pmic_sdata to axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/temp_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.000   0.399  Pmic_sdata_IBUF (Pmic_sdata_IBUF)
+     begin scope: 'axi_pmic_0:Pmic_sdata'
+     FDE:D                     0.011          axi_pmic_0/USER_LOGIC_I/P1/temp_0
+    ----------------------------------------
+    Total                      0.410ns (0.011ns logic, 0.399ns route)
+                                       (2.7% logic, 97.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Total number of paths / destination ports: 328 / 87
+-------------------------------------------------------------------------
+Offset:              4.618ns (Levels of Logic = 10)
   Source:            axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
   Destination:       processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WREADY (PAD)
   Source Clock:      processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
@@ -822,9 +896,9 @@ Offset:              4.713ns (Levels of Logic = 10)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q             393   0.282   0.645  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg)
-     LUT2:I1->O            2   0.053   0.745  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<6>1 (axi_pmic_0/ipif_Bus2IP_WrCE<26>)
-     LUT6:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done4 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3)
+     FD:C->Q             436   0.282   0.654  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg)
+     LUT2:I1->O            2   0.053   0.641  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<18>1 (axi_pmic_0/ipif_Bus2IP_WrCE<14>)
+     LUT6:I2->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done6 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done5)
      LUT6:I5->O            6   0.053   0.635  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done8 (S_AXI_AWREADY)
      end scope: 'axi_pmic_0:S_AXI_WREADY'
      begin scope: 'axi4lite_0:M_AXI_WREADY<3>'
@@ -838,8 +912,29 @@ Offset:              4.713ns (Levels of Logic = 10)
      begin scope: 'processing_system7_0:M_AXI_GP0_WREADY'
     PS7:MAXIGP0WREADY          0.000          processing_system7_0/PS7_i
     ----------------------------------------
-    Total                      4.713ns (0.814ns logic, 3.899ns route)
-                                       (17.3% logic, 82.7% route)
+    Total                      4.618ns (0.814ns logic, 3.804ns route)
+                                       (17.6% logic, 82.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1>'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.344ns (Levels of Logic = 3)
+  Source:            axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 (FF)
+  Destination:       Pmic_ncs (PAD)
+  Source Clock:      axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1> rising
+
+  Data Path: axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 to Pmic_ncs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.282   0.610  axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 (axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2)
+     LUT2:I0->O            1   0.053   0.399  axi_pmic_0/USER_LOGIC_I/P1/Mmux_nCS11 (Pmic_ncs)
+     end scope: 'axi_pmic_0:Pmic_ncs'
+     OBUF:I->O                 0.000          Pmic_ncs_OBUF (Pmic_ncs)
+    ----------------------------------------
+    Total                      1.344ns (0.335ns logic, 1.009ns route)
+                                       (24.9% logic, 75.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -860,7 +955,7 @@ Delay:               4.659ns (Levels of Logic = 13)
      end scope: 'axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst:M_AXI_WDATA<3>'
      end scope: 'axi4lite_0:M_AXI_WDATA<99>'
      begin scope: 'axi_pmic_0:S_AXI_WDATA<3>'
-     LUT5:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3_SW0 (N616)
+     LUT5:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3_SW0 (N797)
      LUT6:I5->O            1   0.053   0.739  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done2)
      LUT6:I0->O            6   0.053   0.635  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done8 (S_AXI_AWREADY)
      end scope: 'axi_pmic_0:S_AXI_WREADY'
@@ -883,25 +978,43 @@ Delay:               4.659ns (Levels of Logic = 13)
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1>
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1>            |    1.767|         |         |         |
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|    0.845|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>
 ----------------------------------------------------------------+---------+---------+---------+---------+
                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------+---------+---------+---------+---------+
-processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|    5.822|         |         |         |
+axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter<1>            |    2.802|         |         |         |
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|    5.727|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<3>
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<3>|    1.164|         |         |         |
 ----------------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 14.04 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.16 secs
  
 --> 
 
-Total memory usage is 530244 kilobytes
+Total memory usage is 532292 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    8 (   0 filtered)
-Number of infos    :  456 (   0 filtered)
+Number of infos    :  464 (   0 filtered)
 

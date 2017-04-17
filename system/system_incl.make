@@ -122,6 +122,7 @@ C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl
 C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd \
 C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd \
 C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd \
+pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMICRefComp.vhd \
 pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd \
 pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd
 

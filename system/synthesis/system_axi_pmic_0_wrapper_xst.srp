@@ -427,6 +427,9 @@ Parsing architecture <imp> of entity <slave_attachment>.
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v1_01_a
 Parsing entity <axi_lite_ipif>.
 Parsing architecture <imp> of entity <axi_lite_ipif>.
+Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd" into library axi_pmic_v1_00_a
+Parsing entity <PmodMICRefComp>.
+Parsing architecture <PmodMic> of entity <pmodmicrefcomp>.
 Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" into library axi_pmic_v1_00_a
 Parsing entity <user_logic>.
 Parsing architecture <IMP> of entity <user_logic>.
@@ -523,10 +526,11 @@ INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores
 Elaborating entity <soft_reset> (architecture <implementation>) with generics from library <proc_common_v3_00_a>.
 
 Elaborating entity <user_logic> (architecture <IMP>) with generics from library <axi_pmic_v1_00_a>.
-WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 201: Assignment to sig_pmic_start ignored, since the identifier is never used
+WARNING:HDLCompiler:871 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 177: Using initial value '0' for zero since it is never assigned
+
+Elaborating entity <PmodMICRefComp> (architecture <PmodMic>) from library <axi_pmic_v1_00_a>.
+INFO:HDLCompiler:679 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd" Line 245. Case statement is complete. others clause is never selected
 WARNING:HDLCompiler:634 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 140: Net <slv_reg2[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 179: Net <sig_Pmic_data[11]> does not have a driver.
-WARNING:HDLCompiler:634 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 180: Net <sig_Pmic_done> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -1033,11 +1037,7 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
         C_SLV_DWIDTH = 32
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
-WARNING:Xst:647 - Input <Pmic_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <Pmic_sdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <slv_reg2<31:1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <sig_Pmic_data> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <sig_Pmic_done> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 32-bit register for signal <slv_reg3>.
     Found 32-bit register for signal <slv_reg4>.
     Found 32-bit register for signal <slv_reg5>.
@@ -1073,21 +1073,51 @@ WARNING:Xst:653 - Signal <sig_Pmic_done> is used but never assigned. This source
 	inferred 961 Multiplexer(s).
 Unit <user_logic> synthesized.
 
+Synthesizing Unit <PmodMICRefComp>.
+    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd".
+    Found 16-bit register for signal <temp>.
+    Found 4-bit register for signal <shiftCounter>.
+    Found 12-bit register for signal <DATA>.
+    Found 2-bit register for signal <current_state>.
+    Found 2-bit register for signal <clk_counter>.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_div (rising_edge)                          |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <clk_counter[1]_GND_53_o_add_0_OUT> created at line 117.
+    Found 4-bit adder for signal <shiftCounter[3]_GND_53_o_add_2_OUT> created at line 145.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <PmodMICRefComp> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 4-bit adder                                           : 1
-# Registers                                            : 74
+# Adders/Subtractors                                   : 3
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 2
+# Registers                                            : 78
  1-bit register                                        : 39
- 2-bit register                                        : 3
+ 12-bit register                                       : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 4
  32-bit register                                       : 31
- 4-bit register                                        : 1
-# Multiplexers                                         : 998
- 1-bit 2-to-1 multiplexer                              : 995
+ 4-bit register                                        : 2
+# Multiplexers                                         : 1000
+ 1-bit 2-to-1 multiplexer                              : 997
  32-bit 2-to-1 multiplexer                             : 3
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 
 =========================================================================
 
@@ -1096,22 +1126,32 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <PmodMICRefComp>.
+The following registers are absorbed into counter <clk_counter>: 1 register on signal <clk_counter>.
+The following registers are absorbed into counter <shiftCounter>: 1 register on signal <shiftCounter>.
+Unit <PmodMICRefComp> synthesized (advanced).
+
 Synthesizing (advanced) Unit <slave_attachment>.
 The following registers are absorbed into counter <INCLUDE_DPHASE_TIMER.dpto_cnt>: 1 register on signal <INCLUDE_DPHASE_TIMER.dpto_cnt>.
 Unit <slave_attachment> synthesized (advanced).
+WARNING:Xst:2677 - Node <temp_12> of sequential type is unconnected in block <PmodMICRefComp>.
+WARNING:Xst:2677 - Node <temp_13> of sequential type is unconnected in block <PmodMICRefComp>.
+WARNING:Xst:2677 - Node <temp_14> of sequential type is unconnected in block <PmodMICRefComp>.
+WARNING:Xst:2677 - Node <temp_15> of sequential type is unconnected in block <PmodMICRefComp>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 1
- 4-bit up counter                                      : 1
-# Registers                                            : 1046
- Flip-Flops                                            : 1046
-# Multiplexers                                         : 964
- 1-bit 2-to-1 multiplexer                              : 961
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 1070
+ Flip-Flops                                            : 1070
+# Multiplexers                                         : 966
+ 1-bit 2-to-1 multiplexer                              : 963
  32-bit 2-to-1 multiplexer                             : 3
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 
 =========================================================================
 
@@ -1131,6 +1171,15 @@ Optimizing FSM <axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/FSM_0> on signal <
  sm_write | 10
  sm_resp  | 11
 ----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <axi_pmic_0/USER_LOGIC_I/P1/FSM_1> on signal <current_state[1:3]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 001
+ shiftin  | 010
+ syncdata | 100
+----------------------
 
 Optimizing unit <system_axi_pmic_0_wrapper> ...
 
@@ -1142,23 +1191,29 @@ Optimizing unit <address_decoder> ...
 
 Optimizing unit <user_logic> ...
 
+Optimizing unit <PmodMICRefComp> ...
+
 Optimizing unit <soft_reset> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block system_axi_pmic_0_wrapper, actual ratio is 3.
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg has been replicated 2 time(s)
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11 has been replicated 1 time(s)
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12 has been replicated 1 time(s)
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16 has been replicated 1 time(s)
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_19 has been replicated 1 time(s)
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_20 has been replicated 1 time(s)
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21 has been replicated 2 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21 has been replicated 1 time(s)
 FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22 has been replicated 2 time(s)
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24 has been replicated 2 time(s)
 FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26 has been replicated 2 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_27 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_29 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_31 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32 has been replicated 1 time(s)
 FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4 has been replicated 1 time(s)
-FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8 has been replicated 1 time(s)
+FlipFlop axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -1166,8 +1221,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1065
- Flip-Flops                                            : 1065
+# Registers                                            : 1100
+ Flip-Flops                                            : 1100
 
 =========================================================================
 
@@ -1190,20 +1245,23 @@ Top Level Output File Name         : system_axi_pmic_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1628
+# BELS                             : 1702
 #      GND                         : 1
-#      INV                         : 2
-#      LUT2                        : 61
-#      LUT3                        : 495
-#      LUT4                        : 278
-#      LUT5                        : 168
-#      LUT6                        : 610
-#      MUXF7                       : 12
+#      INV                         : 5
+#      LUT2                        : 70
+#      LUT3                        : 480
+#      LUT4                        : 217
+#      LUT5                        : 290
+#      LUT6                        : 627
+#      MUXF7                       : 11
 #      VCC                         : 1
-# FlipFlops/Latches                : 1065
-#      FD                          : 54
+# FlipFlops/Latches                : 1100
+#      FD                          : 61
+#      FDE                         : 24
 #      FDR                         : 18
-#      FDRE                        : 993
+#      FDRE                        : 997
+# Clock Buffers                    : 1
+#      BUFG                        : 1
 
 Device utilization summary:
 ---------------------------
@@ -1212,22 +1270,23 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1065  out of  106400     1%  
- Number of Slice LUTs:                 1614  out of  53200     3%  
-    Number used as Logic:              1614  out of  53200     3%  
+ Number of Slice Registers:            1100  out of  106400     1%  
+ Number of Slice LUTs:                 1689  out of  53200     3%  
+    Number used as Logic:              1689  out of  53200     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2005
-   Number with an unused Flip Flop:     940  out of   2005    46%  
-   Number with an unused LUT:           391  out of   2005    19%  
-   Number of fully used LUT-FF pairs:   674  out of   2005    33%  
-   Number of unique control sets:        20
+ Number of LUT Flip Flop pairs used:   2138
+   Number with an unused Flip Flop:    1038  out of   2138    48%  
+   Number with an unused LUT:           449  out of   2138    21%  
+   Number of fully used LUT-FF pairs:   651  out of   2138    30%  
+   Number of unique control sets:        26
 
 IO Utilization: 
  Number of IOs:                         152
  Number of bonded IOBs:                   0  out of    200     0%  
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1247,11 +1306,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+-------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                             | Load  |
------------------------------------+-------------------------------------------------------------------+-------+
-S_AXI_ACLK                         | NONE(axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1)| 1065  |
------------------------------------+-------------------------------------------------------------------+-------+
+----------------------------------------+-------------------------------------------------------------------+-------+
+Clock Signal                            | Clock buffer(FF name)                                             | Load  |
+----------------------------------------+-------------------------------------------------------------------+-------+
+S_AXI_ACLK                              | NONE(axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1)| 1068  |
+axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1| BUFG                                                              | 30    |
+Pmic_clk                                | NONE(axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1)                    | 2     |
+----------------------------------------+-------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1262,9 +1323,9 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 4.214ns (Maximum Frequency: 237.302MHz)
+   Minimum period: 4.127ns (Maximum Frequency: 242.297MHz)
    Minimum input arrival time before clock: 2.820ns
-   Maximum output required time after clock: 3.042ns
+   Maximum output required time after clock: 3.085ns
    Maximum combinational path delay: 1.637ns
 
 Timing Details:
@@ -1273,34 +1334,78 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'S_AXI_ACLK'
-  Clock period: 4.214ns (frequency: 237.302MHz)
-  Total number of paths / destination ports: 78284 / 2675
+  Clock period: 4.127ns (frequency: 242.297MHz)
+  Total number of paths / destination ports: 86189 / 2646
 -------------------------------------------------------------------------
-Delay:               4.214ns (Levels of Logic = 6)
-  Source:            axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1 (FF)
+Delay:               4.127ns (Levels of Logic = 6)
+  Source:            axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_1 (FF)
   Destination:       axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31 (FF)
   Source Clock:      S_AXI_ACLK rising
   Destination Clock: S_AXI_ACLK rising
 
-  Data Path: axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1 to axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31
+  Data Path: axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_1 to axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               8   0.282   0.771  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1)
-     LUT5:I0->O            3   0.053   0.499  axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_128_o<31>111 (axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_128_o<31>11)
-     LUT4:I2->O           65   0.053   0.645  axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_145_o<31>11 (axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_145_o<31>1)
-     LUT6:I4->O           33   0.053   0.566  axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_145_o<31>21 (axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_145_o<31>2)
-     LUT6:I5->O           32   0.053   0.638  axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_147_o<31>1 (axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_147_o)
-     LUT6:I4->O            1   0.053   0.485  axi_pmic_0/Mmux_ipif_IP2Bus_Data124_SW0 (N144)
-     LUT6:I4->O            1   0.053   0.000  axi_pmic_0/Mmux_ipif_IP2Bus_Data124 (axi_pmic_0/ipif_IP2Bus_Data<0>)
-     FDRE:D                    0.011          axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0
+     FD:C->Q               1   0.282   0.635  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_1 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_1)
+     LUT4:I0->O            8   0.053   0.648  axi_pmic_0/USER_LOGIC_I/Mmux_IP2Bus_Data11011 (axi_pmic_0/USER_LOGIC_I/Mmux_IP2Bus_Data1101)
+     LUT6:I3->O           69   0.053   0.574  axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_155_o<31>151 (axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_151_o<31>2)
+     LUT6:I5->O           64   0.053   0.645  axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_155_o<31>1 (axi_pmic_0/USER_LOGIC_I/GND_52_o_slv_reg_read_sel[31]_equal_155_o<31>1)
+     LUT6:I4->O            1   0.053   0.602  axi_pmic_0/Mmux_ipif_IP2Bus_Data48 (axi_pmic_0/Mmux_ipif_IP2Bus_Data47)
+     LUT6:I3->O            1   0.053   0.413  axi_pmic_0/Mmux_ipif_IP2Bus_Data414_SW0_SW0 (N183)
+     LUT6:I5->O            1   0.053   0.000  axi_pmic_0/Mmux_ipif_IP2Bus_Data414 (axi_pmic_0/ipif_IP2Bus_Data<12>)
+     FDRE:D                    0.011          axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_12
     ----------------------------------------
-    Total                      4.214ns (0.611ns logic, 3.603ns route)
-                                       (14.5% logic, 85.5% route)
+    Total                      4.127ns (0.611ns logic, 3.516ns route)
+                                       (14.8% logic, 85.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1'
+  Clock period: 1.767ns (frequency: 565.931MHz)
+  Total number of paths / destination ports: 88 / 61
+-------------------------------------------------------------------------
+Delay:               1.767ns (Levels of Logic = 1)
+  Source:            axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 (FF)
+  Destination:       axi_pmic_0/USER_LOGIC_I/P1/shiftCounter_3 (FF)
+  Source Clock:      axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1 rising
+  Destination Clock: axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1 rising
+
+  Data Path: axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 to axi_pmic_0/USER_LOGIC_I/P1/shiftCounter_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.282   0.610  axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 (axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2)
+     LUT2:I0->O           16   0.053   0.497  axi_pmic_0/USER_LOGIC_I/P1/_n00511 (axi_pmic_0/USER_LOGIC_I/P1/_n0051)
+     FDRE:R                    0.325          axi_pmic_0/USER_LOGIC_I/P1/shiftCounter_0
+    ----------------------------------------
+    Total                      1.767ns (0.660ns logic, 1.107ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Pmic_clk'
+  Clock period: 1.164ns (frequency: 859.106MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.164ns (Levels of Logic = 1)
+  Source:            axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0 (FF)
+  Destination:       axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0 (FF)
+  Source Clock:      Pmic_clk rising
+  Destination Clock: Pmic_clk rising
+
+  Data Path: axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0 to axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.282   0.405  axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0 (axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0)
+     INV:I->O              1   0.067   0.399  axi_pmic_0/USER_LOGIC_I/P1/Mcount_clk_counter_xor<0>11_INV_0 (axi_pmic_0/USER_LOGIC_I/P1/Result<0>)
+     FD:D                      0.011          axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0
+    ----------------------------------------
+    Total                      1.164ns (0.360ns logic, 0.804ns route)
+                                       (30.9% logic, 69.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'S_AXI_ACLK'
-  Total number of paths / destination ports: 3291 / 1989
+  Total number of paths / destination ports: 3400 / 1992
 -------------------------------------------------------------------------
 Offset:              2.820ns (Levels of Logic = 5)
   Source:            S_AXI_WDATA<3> (PAD)
@@ -1311,37 +1416,74 @@ Offset:              2.820ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT5:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3_SW0 (N616)
+     LUT5:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3_SW0 (N797)
      LUT6:I5->O            1   0.053   0.739  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done2)
      LUT6:I0->O            3   0.053   0.499  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done8 (S_AXI_AWREADY)
-     LUT4:I2->O           40   0.053   0.567  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr1 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr)
-     LUT4:I3->O            1   0.053   0.000  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32_rstpot (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32_rstpot)
+     LUT4:I2->O           38   0.053   0.567  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr1 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr)
+     LUT4:I3->O            2   0.053   0.000  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32_rstpot (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32_rstpot)
      FD:D                      0.011          axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32
     ----------------------------------------
     Total                      2.820ns (0.602ns logic, 2.218ns route)
                                        (21.3% logic, 78.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
-  Total number of paths / destination ports: 187 / 39
+Timing constraint: Default OFFSET IN BEFORE for Clock 'axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1'
+  Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              3.042ns (Levels of Logic = 4)
-  Source:            axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22 (FF)
-  Destination:       S_AXI_ARREADY (PAD)
-  Source Clock:      S_AXI_ACLK rising
+Offset:              0.011ns (Levels of Logic = 0)
+  Source:            Pmic_sdata (PAD)
+  Destination:       axi_pmic_0/USER_LOGIC_I/P1/temp_0 (FF)
+  Destination Clock: axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1 rising
 
-  Data Path: axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22 to S_AXI_ARREADY
+  Data Path: Pmic_sdata to axi_pmic_0/USER_LOGIC_I/P1/temp_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              71   0.282   0.646  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22)
-     LUT2:I0->O           34   0.053   0.755  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<22>1 (axi_pmic_0/ipif_Bus2IP_RdCE<10>)
-     LUT6:I3->O            1   0.053   0.635  axi_pmic_0/USER_LOGIC_I/slv_read_ack<0>6 (axi_pmic_0/USER_LOGIC_I/slv_read_ack<0>5)
-     LUT6:I2->O            5   0.053   0.512  axi_pmic_0/USER_LOGIC_I/slv_read_ack<0>7 (axi_pmic_0/user_IP2Bus_RdAck)
+     FDE:D                     0.011          axi_pmic_0/USER_LOGIC_I/P1/temp_0
+    ----------------------------------------
+    Total                      0.011ns (0.011ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
+  Total number of paths / destination ports: 185 / 39
+-------------------------------------------------------------------------
+Offset:              3.085ns (Levels of Logic = 4)
+  Source:            axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
+  Destination:       S_AXI_ARREADY (PAD)
+  Source Clock:      S_AXI_ACLK rising
+
+  Data Path: axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg to S_AXI_ARREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q             436   0.282   0.654  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg)
+     LUT2:I1->O           16   0.053   0.700  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<25>1 (axi_pmic_0/ipif_Bus2IP_RdCE<7>)
+     LUT6:I3->O            1   0.053   0.725  axi_pmic_0/USER_LOGIC_I/slv_read_ack<0>6 (axi_pmic_0/USER_LOGIC_I/slv_read_ack<0>5)
+     LUT6:I1->O            5   0.053   0.512  axi_pmic_0/USER_LOGIC_I/slv_read_ack<0>7 (axi_pmic_0/user_IP2Bus_RdAck)
      LUT2:I0->O            0   0.053   0.000  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1 (S_AXI_ARREADY)
     ----------------------------------------
-    Total                      3.042ns (0.494ns logic, 2.548ns route)
-                                       (16.2% logic, 83.8% route)
+    Total                      3.085ns (0.494ns logic, 2.591ns route)
+                                       (16.0% logic, 84.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              0.945ns (Levels of Logic = 1)
+  Source:            axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 (FF)
+  Destination:       Pmic_ncs (PAD)
+  Source Clock:      axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1 rising
+
+  Data Path: axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 to Pmic_ncs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.282   0.610  axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2 (axi_pmic_0/USER_LOGIC_I/P1/current_state_FSM_FFd2)
+     LUT2:I0->O            0   0.053   0.000  axi_pmic_0/USER_LOGIC_I/P1/Mmux_nCS11 (Pmic_ncs)
+    ----------------------------------------
+    Total                      0.945ns (0.335ns logic, 0.610ns route)
+                                       (35.4% logic, 64.6% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -1355,7 +1497,7 @@ Delay:               1.637ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT5:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3_SW0 (N616)
+     LUT5:I0->O            1   0.053   0.413  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3_SW0 (N797)
      LUT6:I5->O            1   0.053   0.739  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3 (axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done2)
      LUT6:I0->O            3   0.053   0.000  axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done8 (S_AXI_AWREADY)
     ----------------------------------------
@@ -1367,25 +1509,43 @@ Delay:               1.637ns (Levels of Logic = 3)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock S_AXI_ACLK
+Clock to Setup on destination clock Pmic_clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-S_AXI_ACLK     |    4.214|         |         |         |
+Pmic_clk       |    1.164|         |         |         |
 ---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock S_AXI_ACLK
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+S_AXI_ACLK                              |    4.127|         |         |         |
+axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1|    2.802|         |         |         |
+----------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+S_AXI_ACLK                              |    0.845|         |         |         |
+axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1|    1.767|         |         |         |
+----------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.67 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.19 secs
  
 --> 
 
-Total memory usage is 477956 kilobytes
+Total memory usage is 480004 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   27 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 

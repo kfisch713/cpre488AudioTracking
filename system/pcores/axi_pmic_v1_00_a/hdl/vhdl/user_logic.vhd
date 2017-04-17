@@ -174,28 +174,41 @@ architecture IMP of user_logic is
   signal slv_write_ack                  : std_logic;
 
 
-  constant ZERO : integer := 0;
+  signal ZERO : std_logic := '0';
   --USER logic implementation added here
   signal sig_Pmic_data     	: std_logic_vector(11 downto 0);
   signal sig_Pmic_done			: std_logic;
   signal sig_Pmic_start 		: std_logic;
 
   --USER signal declarations added here, as needed for user logic
-	component pmic is
+	component PmodMICRefComp is
 		 Port    (  
-			Pmic_clk      	: in std_logic;         
-			ZERO      	: in std_logic;
-			Pmic_sdata  	: in std_logic;
-			Pmic_sclk     	: out std_logic;
-			Pmic_ncs      	: out std_logic;
-         sig_Pmic_data     	: out std_logic_vector(11 downto 0);
-			sig_Pmic_start		: in std_logic; 
-			sig_Pmic_done     	: out std_logic);
+  --General usage
+    CLK      : in std_logic;         
+    RST      : in std_logic;
+     
+  --Pmod interface signals
+    SDATA   : in std_logic;
+    SCLK     : out std_logic;
+    nCS      : out std_logic;
+        
+    --User interface signals
+    DATA    : out std_logic_vector(11 downto 0);
+    START    : in std_logic; 
+    DONE     : out std_logic);
 	end component;
 	
 	
-	
 begin
+	P1: PmodMICRefComp port map (
+			Pmic_clk,
+			ZERO,
+			Pmic_sdata,
+			Pmic_sclk,
+			Pmic_ncs,
+         sig_Pmic_data,
+			sig_Pmic_start,
+			sig_Pmic_done);
 
 
   Manage_Slv_Regs : process(Bus2IP_Clk, sig_Pmic_data, sig_Pmic_done, slv_reg1)

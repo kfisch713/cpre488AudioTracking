@@ -2149,3 +2149,891 @@ arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
 13:36:22 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 make: Nothing to be done for `all'.
+11:06:57 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+11:35:54 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+12:50:35 **** Auto Build of project system_bsp ****
+make -k all 
+'Finished building libraries'
+12:51:07 **** Auto Build of project system_bsp ****
+make -k all 
+'Finished building libraries'
+12:51:59 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+12:53:29 **** Build of project system_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+12:54:33 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+12:55:15 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+12:56:04 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:08:30 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:11:43 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  62540	   2272	  29852	  94664	  171c8	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:11:51 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:12:05 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  62540	   2272	  29852	  94664	  171c8	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:12:13 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:12:50 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25300	   1104	  29780	  56184	   db78	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:13:05 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:13:15 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:14:55 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25300	   1104	  29780	  56184	   db78	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:15:00 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:17:39 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  62952	   2272	  29852	  95076	  17364	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:17:48 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:18:14 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  62944	   2272	  29852	  95068	  1735c	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:18:19 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:20:06 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22772	   1104	  29780	  53656	   d198	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:20:11 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22772	   1104	  29780	  53656	   d198	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:20:25 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25300	   1104	  29780	  56184	   db78	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:20:26 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:21:20 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:21:37 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25300	   1104	  29780	  56184	   db78	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:21:41 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:21:58 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:23:25 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22812	   1104	  29780	  53696	   d1c0	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:23:37 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:6: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+../src/helloworld.c:68:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22892	   1104	  29780	  53776	   d210	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:24:14 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22892	   1104	  29780	  53776	   d210	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:24:16 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:24:30 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:14: warning: unused variable 'adc_val' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22900	   1104	  29780	  53784	   d218	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:24:37 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:26:16 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25420	   1104	  29780	  56304	   dbf0	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:26:24 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:36:16 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sleep':
+../src/helloworld.c:71:28: error: 'milli' undeclared (first use in this function)
+../src/helloworld.c:71:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+13:38:46 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sleep_ms':
+../src/helloworld.c:71:28: error: 'milli' undeclared (first use in this function)
+../src/helloworld.c:71:28: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:6: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+make: *** [src/helloworld.o] Error 1
+13:39:05 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sleep_ms':
+../src/helloworld.c:71:28: error: 'milli' undeclared (first use in this function)
+../src/helloworld.c:71:28: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:6: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+make: *** [src/helloworld.o] Error 1
+13:39:23 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:6: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25504	   1104	  29780	  56388	   dc44	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:39:26 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:6: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26604	   1104	  29780	  57488	   e090	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:40:04 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26532	   1104	  29780	  57416	   e048	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:40:07 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:43:34 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26636	   1104	  29780	  57520	   e0b0	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:43:49 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26628	   1104	  29780	  57512	   e0a8	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:43:54 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:45:49 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sleep_read_spi':
+../src/helloworld.c:94:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'XTime' [-Wformat]
+../src/helloworld.c:94:3: warning: format '%d' expects argument of type 'int', but argument 2 has type 'XTime' [-Wformat]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65980	   2272	  29852	  98104	  17f38	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:46:13 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sleep_read_spi':
+../src/helloworld.c:94:3: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'XTime' [-Wformat]
+../src/helloworld.c:94:3: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'XTime' [-Wformat]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65980	   2272	  29852	  98104	  17f38	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:46:30 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65980	   2272	  29852	  98104	  17f38	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:46:59 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sleep_ms':
+../src/helloworld.c:72:3: error: expected ';' before 'tEnd'
+make: *** [src/helloworld.o] Error 1
+13:47:02 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66020	   2272	  29852	  98144	  17f60	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:47:11 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66028	   2272	  29852	  98152	  17f68	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:47:32 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66044	   2272	  29852	  98168	  17f78	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:47:34 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:48:54 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26636	   1104	  29780	  57520	   e0b0	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:49:00 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26628	   1104	  29780	  57512	   e0a8	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:51:22 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:14: warning: variable 'adc_val' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:115:12: warning: 't2' may be used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63876	   2272	  29852	  96000	  17700	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:52:14 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:14: warning: variable 'adc_val' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63884	   2272	  29852	  96008	  17708	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:52:18 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:53:14 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:14: warning: variable 'adc_val' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63892	   2272	  29852	  96016	  17710	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:53:18 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:55:46 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:14: warning: variable 'adc_val' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63884	   2272	  29852	  96008	  17708	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:55:56 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:14: warning: variable 'adc_val' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63884	   2272	  29852	  96008	  17708	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:56:05 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65900	   2272	  29852	  98024	  17ee8	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:56:07 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+13:59:13 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:12: warning: 't2' may be used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65900	   2272	  29852	  98024	  17ee8	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:59:35 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:114:15: warning: unused variable 't2' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26564	   1104	  29780	  57448	   e068	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:59:41 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:114:15: warning: unused variable 't2' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: AudioTracking.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AudioTracking.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26564	   1104	  29780	  57448	   e068	AudioTracking.elf
+'Finished building: AudioTracking.elf.size'
+' '
+13:59:44 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.

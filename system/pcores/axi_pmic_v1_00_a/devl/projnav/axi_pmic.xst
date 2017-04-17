@@ -1,9 +1,6 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn axi_pmic.prj
--ofn axi_pmic
--ofmt NGC
+set -tmpdir "U:/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/devl/projnav/xst/projnav.tmp"
+set -xsthdpdir "U:/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/devl/projnav/xst"
+run -compileonly yes
 -p xc7z020-1-clg484
 -top axi_pmic
 -opt_mode Speed
@@ -50,3 +47,4 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn axi_pmic.prj

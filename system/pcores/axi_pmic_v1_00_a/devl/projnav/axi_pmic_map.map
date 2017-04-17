@@ -10,7 +10,7 @@ Target Device  : xc7z020
 Target Package : clg484
 Target Speed   : -1
 Mapper Version : zynq -- $Revision: 1.55 $
-Mapped Date    : Fri Apr 14 12:09:06 2017
+Mapped Date    : Mon Apr 17 12:11:29 2017
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
@@ -38,56 +38,56 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 13 secs 
-Total CPU  time at the beginning of Placer: 12 secs 
+Total REAL time at the beginning of Placer: 15 secs 
+Total CPU  time at the beginning of Placer: 14 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3bb9e) REAL time: 14 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:1d180a) REAL time: 16 secs 
 
 Phase 2.7  Design Feasibility Check
-INFO:Place:834 - Only a subset of IOs are locked. Out of 73 IOs, 3 are locked
-   and 70 are not locked. If you would like to print the names of these IOs,
+INFO:Place:834 - Only a subset of IOs are locked. Out of 74 IOs, 3 are locked
+   and 71 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:3bb9e) REAL time: 14 secs 
+Phase 2.7  Design Feasibility Check (Checksum:1d180a) REAL time: 16 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:3bb9e) REAL time: 14 secs 
+Phase 3.31  Local Placement Optimization (Checksum:1d180a) REAL time: 16 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-......
+....
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:eae10cd5) REAL time: 17 secs 
+(Checksum:d2539ab2) REAL time: 19 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:eae10cd5) REAL time: 17 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:d2539ab2) REAL time: 19 secs 
 
 Phase 6.3  Local Placement Optimization
-......
-Phase 6.3  Local Placement Optimization (Checksum:8c9c516d) REAL time: 18 secs 
+.....
+Phase 6.3  Local Placement Optimization (Checksum:d7db9f51) REAL time: 20 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:82012ebb) REAL time: 18 secs 
+Phase 7.5  Local Placement Optimization (Checksum:d7db9f51) REAL time: 20 secs 
 
 Phase 8.8  Global Placement
 ..
+.......................
 ................
-................
-Phase 8.8  Global Placement (Checksum:a273c2d7) REAL time: 18 secs 
+Phase 8.8  Global Placement (Checksum:15ef94e7) REAL time: 21 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:a273c2d7) REAL time: 18 secs 
+Phase 9.5  Local Placement Optimization (Checksum:15ef94e7) REAL time: 21 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:e3298300) REAL time: 19 secs 
+Phase 10.18  Placement Optimization (Checksum:fc26f091) REAL time: 22 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:e3298300) REAL time: 19 secs 
+Phase 11.5  Local Placement Optimization (Checksum:fc26f091) REAL time: 22 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:e3298300) REAL time: 19 secs 
+Phase 12.34  Placement Validation (Checksum:fc26f091) REAL time: 22 secs 
 
-Total REAL time to Placer completion: 19 secs 
-Total CPU  time to Placer completion: 19 secs 
+Total REAL time to Placer completion: 22 secs 
+Total CPU  time to Placer completion: 21 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:2500 - This design does not have a PS7 block.
@@ -95,10 +95,86 @@ WARNING:PhysDesignRules:2500 - This design does not have a PS7 block.
    correct operation of the processing_system7.
 WARNING:PhysDesignRules:367 - The signal <Pmic_sdata_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:368 - The signal <Pmic_sclk_OBUF> is incomplete. The
-   signal is not driven by any source pin in the design.
-WARNING:PhysDesignRules:368 - The signal <Pmic_ncs_OBUF> is incomplete. The
-   signal is not driven by any source pin in the design.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARADDR<6> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARREADY is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARADDR<7> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_RVALID is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARADDR<8> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<0> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<1> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWVALID is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<2> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<3> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<4> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_BREADY is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<5> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<6> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<7> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB S_AXI_BRESP<0> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<8> is either not constrained
    (LOC) to a specific location and/or has an undefined I/O Standard
    (IOSTANDARD). This condition may seriously affect the device and will be an
@@ -259,6 +335,11 @@ WARNING:PhysDesignRules:2452 - The IOB S_AXI_RDATA<31> is either not constrained
    (IOSTANDARD). This condition may seriously affect the device and will be an
    error in bitstream creation. It should be corrected by properly specifying
    the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB Pmic_clk is either not constrained (LOC)
+   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
+   This condition may seriously affect the device and will be an error in
+   bitstream creation. It should be corrected by properly specifying the pin
+   location and I/O Standard.
 WARNING:PhysDesignRules:2452 - The IOB S_AXI_RDATA<16> is either not constrained
    (LOC) to a specific location and/or has an undefined I/O Standard
    (IOSTANDARD). This condition may seriously affect the device and will be an
@@ -369,102 +450,22 @@ WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARADDR<5> is either not constrained
    (IOSTANDARD). This condition may seriously affect the device and will be an
    error in bitstream creation. It should be corrected by properly specifying
    the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARADDR<6> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARREADY is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARADDR<7> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_RVALID is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_ARADDR<8> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<0> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<1> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWVALID is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<2> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<3> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<4> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_BREADY is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<5> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<6> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_AWADDR<7> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB S_AXI_BRESP<0> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:   76
+Number of warnings:   75
 Slice Logic Utilization:
-  Number of Slice Registers:                    22 out of 106,400    1%
-    Number used as Flip Flops:                  22
+  Number of Slice Registers:                    24 out of 106,400    1%
+    Number used as Flip Flops:                  24
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         27 out of  53,200    1%
-    Number used as logic:                       27 out of  53,200    1%
-      Number using O6 output only:              20
+  Number of Slice LUTs:                         29 out of  53,200    1%
+    Number used as logic:                       29 out of  53,200    1%
+      Number using O6 output only:              22
       Number using O5 output only:               0
       Number using O5 and O6:                    7
       Number used as ROM:                        0
@@ -473,13 +474,13 @@ Slice Logic Utilization:
 
 Slice Logic Distribution:
   Number of occupied Slices:                    13 out of  13,300    1%
-  Number of LUT Flip Flop pairs used:           28
-    Number with an unused Flip Flop:            11 out of      28   39%
-    Number with an unused LUT:                   1 out of      28    3%
-    Number of fully used LUT-FF pairs:          16 out of      28   57%
-    Number of unique control sets:               3
+  Number of LUT Flip Flop pairs used:           30
+    Number with an unused Flip Flop:            11 out of      30   36%
+    Number with an unused LUT:                   1 out of      30    3%
+    Number of fully used LUT-FF pairs:          18 out of      30   60%
+    Number of unique control sets:               4
     Number of slice register sites lost
-      to control set restrictions:              10 out of 106,400    1%
+      to control set restrictions:              16 out of 106,400    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -490,19 +491,22 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        73 out of     200   36%
-    Number of LOCed IOBs:                        3 out of      73    4%
+  Number of bonded IOBs:                        74 out of     200   37%
+    Number of LOCed IOBs:                        3 out of      74    4%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     140    0%
   Number of RAMB18E1/FIFO18E1s:                  0 out of     280    0%
-  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
-    Number used as BUFGs:                        1
+  Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
+    Number used as BUFGs:                        2
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     200    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     200    0%
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
-  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     200    0%
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        1 out of     200    1%
+    Number used as OLOGICE2s:                    1
+    Number used as OLOGICE3s:                    0
+    Number used as OSERDESE2s:                   0
   Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      16    0%
   Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      16    0%
   Number of BSCANs:                              0 out of       4    0%
@@ -525,11 +529,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.40
+Average Fanout of Non-Clock Nets:                2.34
 
-Peak Memory Usage:  840 MB
-Total REAL time to MAP completion:  21 secs 
-Total CPU time to MAP completion:   20 secs 
+Peak Memory Usage:  838 MB
+Total REAL time to MAP completion:  23 secs 
+Total CPU time to MAP completion:   22 secs 
 
 Mapping completed.
 See MAP report file "axi_pmic_map.mrp" for details.

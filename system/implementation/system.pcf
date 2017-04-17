@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Apr 14 12:55:01 2017
+// Written by: Map P.20131013 on Mon Apr 17 12:47:54 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -110,6 +110,9 @@ COMP "processing_system7_0_DDR_Addr<11>" LOCATE = SITE "G5" LEVEL 1;
 COMP "processing_system7_0_DDR_CKE" LOCATE = SITE "V3" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<12>" LOCATE = SITE "H4" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<10>" LOCATE = SITE "J3" LEVEL 1;
+COMP "Pmic_sdata" LOCATE = SITE "Y10" LEVEL 1;
+COMP "Pmic_ncs" LOCATE = SITE "Y11" LEVEL 1;
+COMP "Pmic_sclk" LOCATE = SITE "AA9" LEVEL 1;
 COMP "processing_system7_0_MIO<26>" LOCATE = SITE "A13" LEVEL 1;
 COMP "processing_system7_0_MIO<25>" LOCATE = SITE "F12" LEVEL 1;
 COMP "processing_system7_0_MIO<28>" LOCATE = SITE "A12" LEVEL 1;
@@ -151,7 +154,7 @@ COMP "processing_system7_0_MIO<32>" LOCATE = SITE "C7" LEVEL 1;
 COMP "processing_system7_0_MIO<31>" LOCATE = SITE "F9" LEVEL 1;
 COMP "processing_system7_0_MIO<34>" LOCATE = SITE "B12" LEVEL 1;
 COMP "processing_system7_0_MIO<33>" LOCATE = SITE "G13" LEVEL 1;
-PIN processing_system7_0/processing_system7_0/PS7_i_pins<357> = BEL
+PIN processing_system7_0/processing_system7_0/PS7_i_pins<358> = BEL
         "processing_system7_0/processing_system7_0/PS7_i" PINNAME MAXIGP0ACLK;
 TIMEGRP clk_fpga_0 = BEL
         "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
@@ -231,39 +234,7 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
         BEL
         "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
-        BEL "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_31" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_30" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_29" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_28" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_27" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_26" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_25" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_24" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_23" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_22" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_21" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_20" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_19" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_18" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_17" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_16" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_15" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_14" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_13" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_12" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_11" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_10" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_9" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_8" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_7" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_6" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_5" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_4" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_3" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_2" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_1" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_0" BEL
-        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg31_31" BEL
+        BEL "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg31_31" BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg31_30" BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg31_29" BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg31_28" BEL
@@ -327,6 +298,38 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg30_2" BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg30_1" BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg30_0" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_31" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_30" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_29" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_28" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_27" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_26" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_25" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_24" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_23" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_22" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_21" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_20" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_19" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_18" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_17" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_16" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_15" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_14" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_13" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_12" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_11" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_10" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_9" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_8" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_7" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_6" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_5" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_4" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_3" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_2" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_1" BEL
+        "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg1_0" BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg29_31" BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg29_30" BEL
         "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/slv_reg29_29" BEL
@@ -1276,37 +1279,43 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21_1"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_29_1"
+        BEL
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26_1"
+        BEL
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15_1"
+        BEL
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14_1"
         BEL
         "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_1"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24_1"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21_1"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_19_1"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_31_1"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25_1"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32_1"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_20_1"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26_2"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21_2"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3_1"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_2"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_27_1"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24_2"
-        BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
-        BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12_1"
-        BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_2"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_1"
         BEL
         "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4_1"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8_1"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16_1"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_2"
         BEL
-        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11_1"
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_2"
+        BEL
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25_1"
+        BEL
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13_1"
+        BEL
+        "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30_1"
         BEL
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[3].register_slice_inst/reset"
         BEL
@@ -1955,7 +1964,7 @@ TIMEGRP clk_fpga_0 = BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_3" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_4" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_4" PIN
-        "processing_system7_0/processing_system7_0/PS7_i_pins<357>" BEL
+        "processing_system7_0/processing_system7_0/PS7_i_pins<358>" BEL
         "axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMA_D1"
         BEL
         "axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMA"
@@ -2049,6 +2058,8 @@ TIMEGRP clk_fpga_0 = BEL
         "axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1"
         BEL
         "axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD";
+TIMEGRP clk_fpga_3 = BEL "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1"
+        BEL "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0";
 TIMEGRP axi4lite_0_reset_resync = BEL
         "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2"
         BEL
@@ -2060,5 +2071,6 @@ PATH TS_axi4lite_0_reset_resync_path = FROM TIMEGRP "axi4lite_0_reset_source"
         TO TIMEGRP "axi4lite_0_reset_resync";
 PATH "TS_axi4lite_0_reset_resync_path" TIG;
 TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH 50%;
+TS_clk_fpga_3 = PERIOD TIMEGRP "clk_fpga_3" 50 MHz HIGH 50%;
 SCHEMATIC END;
 
