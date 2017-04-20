@@ -24,6 +24,7 @@
       <VARIABLE ID="BTNs_5Bits" ROW_INDEX="2"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="1"/>
       <VARIABLE ID="axi_pmic_0" ROW_INDEX="5"/>
+      <VARIABLE ID="axi_pmic_1" ROW_INDEX="6"/>
     </SEQUENCES>
   </SET>
 
@@ -85,19 +86,18 @@
       <VARIABLE COL_INDEX="11" COL_WIDTH="359" IS_VISIBLE="TRUE" VIEWDISP="Differential Polarity" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
-    <SET ID="ExternalPorts" IS_EXPANDED="TRUE"/>
-    <SET ID="axi_pmic_0" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
-      <VARIABLE ID="ExternalPorts" IS_EXPANDED="TRUE" ROW_INDEX="0"/>
+      <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
       <VARIABLE ID="axi4lite_0" ROW_INDEX="1"/>
       <VARIABLE ID="SWs_8Bits" ROW_INDEX="5"/>
       <VARIABLE ID="LEDs_8Bits" ROW_INDEX="4"/>
       <VARIABLE ID="BTNs_5Bits" ROW_INDEX="3"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="2"/>
-      <VARIABLE ID="axi_pmic_0" IS_EXPANDED="TRUE" ROW_INDEX="6"/>
+      <VARIABLE ID="axi_pmic_0" ROW_INDEX="6"/>
+      <VARIABLE ID="axi_pmic_1" ROW_INDEX="7"/>
     </SEQUENCES>
   </SET>
 
@@ -181,7 +181,7 @@
     <SET ID="processing_system7_0" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="axi_pmic_0"/>
+        <VARIABLE ID="axi_pmic_1"/>
       </SELECTIONS>
     </STATUS>
   </SET>

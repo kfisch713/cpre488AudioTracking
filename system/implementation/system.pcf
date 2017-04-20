@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Apr 17 12:47:54 2017
+// Written by: Map P.20131013 on Thu Apr 20 16:33:18 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -33,6 +33,7 @@ COMP "processing_system7_0_DDR_Addr<2>" LOCATE = SITE "K4" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<1>" LOCATE = SITE "M5" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<0>" LOCATE = SITE "M4" LEVEL 1;
 COMP "processing_system7_0_DDR_WEB_pin" LOCATE = SITE "R4" LEVEL 1;
+COMP "Pmic_sclk_1" LOCATE = SITE "AA8" LEVEL 1;
 COMP "BTNs_5Bits_TRI_IO<3>" LOCATE = SITE "R18" LEVEL 1;
 COMP "BTNs_5Bits_TRI_IO<4>" LOCATE = SITE "T18" LEVEL 1;
 COMP "BTNs_5Bits_TRI_IO<1>" LOCATE = SITE "R16" LEVEL 1;
@@ -51,6 +52,7 @@ COMP "SWs_8Bits_TRI_IO<1>" LOCATE = SITE "G22" LEVEL 1;
 COMP "SWs_8Bits_TRI_IO<2>" LOCATE = SITE "H22" LEVEL 1;
 COMP "SWs_8Bits_TRI_IO<3>" LOCATE = SITE "F21" LEVEL 1;
 COMP "SWs_8Bits_TRI_IO<4>" LOCATE = SITE "H19" LEVEL 1;
+COMP "Pmic_sdata_1" LOCATE = SITE "AB9" LEVEL 1;
 COMP "processing_system7_0_DDR_RAS_n" LOCATE = SITE "R5" LEVEL 1;
 COMP "processing_system7_0_DDR_BankAddr<1>" LOCATE = SITE "L6" LEVEL 1;
 COMP "processing_system7_0_DDR_BankAddr<2>" LOCATE = SITE "M6" LEVEL 1;
@@ -110,6 +112,7 @@ COMP "processing_system7_0_DDR_Addr<11>" LOCATE = SITE "G5" LEVEL 1;
 COMP "processing_system7_0_DDR_CKE" LOCATE = SITE "V3" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<12>" LOCATE = SITE "H4" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<10>" LOCATE = SITE "J3" LEVEL 1;
+COMP "Pmic_ncs_1" LOCATE = SITE "AB11" LEVEL 1;
 COMP "Pmic_sdata" LOCATE = SITE "Y10" LEVEL 1;
 COMP "Pmic_ncs" LOCATE = SITE "Y11" LEVEL 1;
 COMP "Pmic_sclk" LOCATE = SITE "AA9" LEVEL 1;
@@ -1317,6 +1320,1168 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_pmic_0/axi_pmic_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30_1"
         BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_30"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_29"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_28"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_27"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_26"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_25"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_24"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_23"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_22"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_21"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_20"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_19"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_18"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_17"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_16"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_15"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_14"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_13"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_12"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_11"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_10"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_9"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_8"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_7"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_6"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_5"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_4"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_3"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
+        BEL "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg31_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg30_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg1_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg29_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg28_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg27_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg26_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg25_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg24_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg23_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg22_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg21_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg20_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg19_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg18_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg17_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg16_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg15_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg14_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg13_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg12_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg11_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg10_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg9_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg8_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg7_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg6_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg5_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg4_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_31" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_30" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_29" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_28" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_27" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_26" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_25" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_24" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_23" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_22" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_21" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_20" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_19" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_18" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_17" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_16" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_15" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_14" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_13" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_12" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_11" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_10" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_9" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_8" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_7" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_6" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_5" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_4" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_3" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_2" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/slv_reg3_0" BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
+        BEL "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/FF_WRACK" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/RESET_FLOPS[7].RST_FLOPS" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/RESET_FLOPS[6].RST_FLOPS" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/RESET_FLOPS[5].RST_FLOPS" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/RESET_FLOPS[4].RST_FLOPS" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/RESET_FLOPS[3].RST_FLOPS" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/RESET_FLOPS[2].RST_FLOPS" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/RESET_FLOPS[1].RST_FLOPS" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/RESET_FLOPS[0].RST_FLOPS" BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_1"
+        BEL "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/sw_rst_cond_d1" BEL
+        "axi_pmic_1/axi_pmic_1/SOFT_RESET_I/reset_trig" BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_31"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_29"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_28"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_27"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_23"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_20"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_19"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_18"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_17"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_29_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_21_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_31_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_32_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_26_2"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_27_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_22_2"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9_2"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_25_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13_1"
+        BEL
+        "axi_pmic_1/axi_pmic_1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_30_1"
+        BEL
+        "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[4].register_slice_inst/reset"
+        BEL
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[3].register_slice_inst/reset"
         BEL
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[2].register_slice_inst/reset"
@@ -1347,6 +2512,8 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/areset_d_1"
         BEL
+        "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[4].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/areset_d_1"
+        BEL
         "axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[0].clock_conv_inst/m_axi_reset_out_n_i"
         BEL
         "axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[1].clock_conv_inst/m_axi_reset_out_n_i"
@@ -1355,11 +2522,15 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/m_axi_reset_out_n_i"
         BEL
+        "axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_2"
         BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1"
         BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0"
+        BEL
+        "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_5"
         BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_4"
         BEL
@@ -1498,6 +2669,12 @@ TIMEGRP clk_fpga_0 = BEL
         "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/read_active"
         BEL
         "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/busy"
+        BEL
+        "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[4].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_active"
+        BEL
+        "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[4].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/read_active"
+        BEL
+        "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[4].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/busy"
         BEL
         "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0"
         BEL
@@ -2059,7 +3236,9 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD";
 TIMEGRP clk_fpga_3 = BEL "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1"
-        BEL "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0";
+        BEL "axi_pmic_0/axi_pmic_0/USER_LOGIC_I/P1/clk_counter_0" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/P1/clk_counter_1" BEL
+        "axi_pmic_1/axi_pmic_1/USER_LOGIC_I/P1/clk_counter_0";
 TIMEGRP axi4lite_0_reset_resync = BEL
         "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2"
         BEL

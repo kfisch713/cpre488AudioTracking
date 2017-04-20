@@ -35,7 +35,10 @@ entity system_stub is
     processing_system7_0_DDR_VRP : inout std_logic;
     Pmic_sclk : out std_logic;
     Pmic_ncs : out std_logic;
-    Pmic_sdata : in std_logic
+    Pmic_sdata : in std_logic;
+    Pmic_sdata_1 : in std_logic;
+    Pmic_sclk_1 : out std_logic;
+    Pmic_ncs_1 : out std_logic
   );
 end system_stub;
 
@@ -69,7 +72,10 @@ architecture STRUCTURE of system_stub is
       processing_system7_0_DDR_VRP : inout std_logic;
       Pmic_sclk : out std_logic;
       Pmic_ncs : out std_logic;
-      Pmic_sdata : in std_logic
+      Pmic_sdata : in std_logic;
+      Pmic_sdata_1 : in std_logic;
+      Pmic_sclk_1 : out std_logic;
+      Pmic_ncs_1 : out std_logic
     );
   end component;
 
@@ -106,7 +112,10 @@ begin
       processing_system7_0_DDR_VRP => processing_system7_0_DDR_VRP,
       Pmic_sclk => Pmic_sclk,
       Pmic_ncs => Pmic_ncs,
-      Pmic_sdata => Pmic_sdata
+      Pmic_sdata => Pmic_sdata,
+      Pmic_sdata_1 => Pmic_sdata_1,
+      Pmic_sclk_1 => Pmic_sclk_1,
+      Pmic_ncs_1 => Pmic_ncs_1
     );
 
 end architecture STRUCTURE;

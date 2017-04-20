@@ -3037,3 +3037,15 @@ arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
 13:59:44 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 make: Nothing to be done for `all'.
+16:27:32 **** Build of project system_bsp ****
+make -k all 
+make: *** No rule to make target `all'.
+16:27:33 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.
+16:27:38 **** Auto Build of project system_bsp ****
+make -k all 
+make: *** No rule to make target `all'.
+16:27:51 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+make: Nothing to be done for `all'.

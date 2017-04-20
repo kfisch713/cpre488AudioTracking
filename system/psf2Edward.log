@@ -467,6 +467,7 @@ Address Map for Processor ps7_cortexa9_0
   (0x41220000-0x4122ffff) LEDs_8Bits	ps7_axi_interconnect_0->axi4lite_0
   (0x41240000-0x4124ffff) BTNs_5Bits	ps7_axi_interconnect_0->axi4lite_0
   (0x7c400000-0x7c40ffff) axi_pmic_0	ps7_axi_interconnect_0->axi4lite_0
+  (0x7c420000-0x7c42ffff) axi_pmic_1	ps7_axi_interconnect_0->axi4lite_0
   (0xe0001000-0xe0001fff) ps7_uart_1	ps7_axi_interconnect_0
   (0xe0002000-0xe0002fff) ps7_usb_0	ps7_axi_interconnect_0
   (0xe000a000-0xe000afff) ps7_gpio_0	ps7_axi_interconnect_0
@@ -504,6 +505,7 @@ Address Map for Processor ps7_cortexa9_1
   (0x41220000-0x4122ffff) LEDs_8Bits	ps7_axi_interconnect_0->axi4lite_0
   (0x41240000-0x4124ffff) BTNs_5Bits	ps7_axi_interconnect_0->axi4lite_0
   (0x7c400000-0x7c40ffff) axi_pmic_0	ps7_axi_interconnect_0->axi4lite_0
+  (0x7c420000-0x7c42ffff) axi_pmic_1	ps7_axi_interconnect_0->axi4lite_0
   (0xe0001000-0xe0001fff) ps7_uart_1	ps7_axi_interconnect_0
   (0xe0002000-0xe0002fff) ps7_usb_0	ps7_axi_interconnect_0
   (0xe000a000-0xe000afff) ps7_gpio_0	ps7_axi_interconnect_0

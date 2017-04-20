@@ -122,7 +122,7 @@ C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl
 C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd \
 C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd \
 C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd \
-pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMICRefComp.vhd \
+pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd \
 pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd \
 pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd
 
@@ -131,7 +131,8 @@ implementation/system_sws_8bits_wrapper.ngc \
 implementation/system_leds_8bits_wrapper.ngc \
 implementation/system_btns_5bits_wrapper.ngc \
 implementation/system_processing_system7_0_wrapper.ngc \
-implementation/system_axi_pmic_0_wrapper.ngc
+implementation/system_axi_pmic_0_wrapper.ngc \
+implementation/system_axi_pmic_1_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

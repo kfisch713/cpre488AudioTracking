@@ -76,11 +76,12 @@ Address Map for Processor processing_system7_0
   (0x41220000-0x4122ffff) LEDs_8Bits	axi4lite_0
   (0x41240000-0x4124ffff) BTNs_5Bits	axi4lite_0
   (0x7c400000-0x7c40ffff) axi_pmic_0	axi4lite_0
+  (0x7c420000-0x7c42ffff) axi_pmic_1	axi4lite_0
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 4 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 5 slave(s) 
 
 Checking port drivers...
 
@@ -129,6 +130,21 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:axi_gpio INSTANCE:sws_8bits -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 54 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:leds_8bits -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 68 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:btns_5bits -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 82 - Copying cache
+implementation netlist
+IPNAME:processing_system7 INSTANCE:processing_system7_0 -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 96 - Copying cache
+implementation netlist
+IPNAME:axi_pmic INSTANCE:axi_pmic_0 -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 183 - Copying cache
+implementation netlist
 
 Elaborating instances ...
 
@@ -152,26 +168,19 @@ INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
 INSTANCE:axi4lite_0 - U:\Documents\cpre488AudioTracking\system\system.mhs line
-43 - Running XST synthesis
-INSTANCE:sws_8bits - U:\Documents\cpre488AudioTracking\system\system.mhs line 51
-- Running XST synthesis
-INSTANCE:leds_8bits - U:\Documents\cpre488AudioTracking\system\system.mhs line
-65 - Running XST synthesis
-INSTANCE:btns_5bits - U:\Documents\cpre488AudioTracking\system\system.mhs line
-79 - Running XST synthesis
-INSTANCE:processing_system7_0 -
-U:\Documents\cpre488AudioTracking\system\system.mhs line 93 - Running XST
-synthesis
+46 - Running XST synthesis
 INSTANCE:axi_pmic_0 - U:\Documents\cpre488AudioTracking\system\system.mhs line
-180 - Running XST synthesis
+183 - Running XST synthesis
+INSTANCE:axi_pmic_1 - U:\Documents\cpre488AudioTracking\system\system.mhs line
+197 - Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
-U:\Documents\cpre488AudioTracking\system\system.mhs line 43 - Running NGCBUILD
+U:\Documents\cpre488AudioTracking\system\system.mhs line 46 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 212.00 seconds
+Total run time: 193.00 seconds

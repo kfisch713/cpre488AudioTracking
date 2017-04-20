@@ -191,3 +191,14 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 13:56:10.200 INFO  - Processor reset is completed for ps7_cortexa9_0 
 13:59:45.495 INFO  - Processor reset is completed for ps7_cortexa9_0 
 14:00:39.323 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:27:16.308 INFO  - Project system_bsp was a BSP project. Please update references. 
+16:27:16.318 ERROR - SDK has detected that project system_bsp has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+16:27:36.707 ERROR - SDK has detected that project system_hw_platform has been deleted (or renamed).
+This project was referenced by a BSP project, which will now fail to compile properly.
+
+We recommend that you create a new BSP project pointing to a valid hardware project. Alternatively, you can fix the project references in the BSP, and update the path to the hardware specification file in 'libgen.options', and in ELF check options in dependant applications. 
+16:27:50.115 INFO  - Project system_bsp was a BSP project. Please update references. 
+16:27:50.115 ERROR - SDK has detected that project system_bsp has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+16:37:58.657 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 

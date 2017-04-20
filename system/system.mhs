@@ -38,6 +38,9 @@
  PORT Pmic_sclk = axi_pmic_0_Pmic_sclk, DIR = O, SIGIS = CLK
  PORT Pmic_ncs = axi_pmic_0_Pmic_ncs, DIR = O
  PORT Pmic_sdata = axi_pmic_0_Pmic_sdata, DIR = I
+ PORT Pmic_sdata_1 = axi_pmic_1_Pmic_sdata, DIR = I
+ PORT Pmic_sclk_1 = axi_pmic_1_Pmic_sclk, DIR = O, SIGIS = CLK
+ PORT Pmic_ncs_1 = axi_pmic_1_Pmic_ncs, DIR = O
 
 
 BEGIN axi_interconnect
@@ -189,5 +192,18 @@ BEGIN axi_pmic
  PORT Pmic_sclk = axi_pmic_0_Pmic_sclk
  PORT Pmic_ncs = axi_pmic_0_Pmic_ncs
  PORT Pmic_sdata = axi_pmic_0_Pmic_sdata
+END
+
+BEGIN axi_pmic
+ PARAMETER INSTANCE = axi_pmic_1
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x7c420000
+ PARAMETER C_HIGHADDR = 0x7c42ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+ PORT Pmic_clk = processing_system7_0_FCLK_CLK3
+ PORT Pmic_sdata = axi_pmic_1_Pmic_sdata
+ PORT Pmic_sclk = axi_pmic_1_Pmic_sclk
+ PORT Pmic_ncs = axi_pmic_1_Pmic_ncs
 END
 
