@@ -42,6 +42,9 @@ char *SWs = (char *)XPAR_SWS_8BITS_BASEADDR;
 char *BTNs = (char *)XPAR_BTNS_5BITS_BASEADDR;
 
 #define KILL_SWITCH 7
+#define MIC_SPACING 0.010
+#define SPEED_OF_SOUND 343.2
+#define tau MIC_SPACING / SPEED_OF_SOUND
 
 enum button_val {
 	BTN_L,
@@ -59,8 +62,12 @@ int BTN(unsigned int x) {
 	return ((*BTNs >> x) & 0x01);
 }
 
-int * SLV_REG(unsigned int x){
+int * SLV_REG0(unsigned int x){
 	return ((int *)((XPAR_AXI_PMIC_0_BASEADDR) + (x * 4)));
+}
+
+int * SLV_REG1(unsigned int x){
+	return ((int *)((XPAR_AXI_PMIC_1_BASEADDR) + (x * 4)));
 }
 
 int sleep_ms(unsigned int milliseconds)
@@ -76,8 +83,6 @@ int sleep_ms(unsigned int milliseconds)
 
   return 0;
 }
-
-//781250
 
 int sleep_read_spi()
 {
@@ -95,49 +100,65 @@ int sleep_read_spi()
   return 0;
 }
 
-uint16_t read_mic(){
-	*SLV_REG(1) = 0;
-	//XTime_GetTime(&t2);
-	//sleep_ms(1);
+void read_mic(uint16_t* mic0, uint16_t* mic1){
+	*SLV_REG0(1) = 0;
+	*SLV_REG1(1) = 0;
 	sleep_read_spi();
-	//XTime_GetTime(&t1);
-	*SLV_REG(1) = 1;
+	*SLV_REG0(1) = 1;
+	*SLV_REG1(1) = 1;
 
-	//printf("%llu\n", t1-t2);
-	return *SLV_REG(0);
+	*mic0 = *SLV_REG0(0);
+	*mic1 = *SLV_REG1(0);
+
+	return;
 }
 
 int main()
 {
     init_platform();
-    uint16_t adc_val;
+    uint16_t adc_val0, adc_val1, old_adc_val0, old_adc_val1;
     XTime t1, t2;
+    unsigned long int i = 0;
+    uint8_t look_for_peek = 0;
+    double freq0;
+
     XTime_GetTime(&t1);
-    *SLV_REG(1) = 1;
+    *SLV_REG0(1) = 1;
+    *SLV_REG1(1) = 1;
+
+
+    read_mic(&old_adc_val0, &old_adc_val1);
 
     while(!SW(KILL_SWITCH)) {
+    	if(SW(0)) i=0;
+    	read_mic(&adc_val0, &adc_val1);
 
-    	adc_val = read_mic();
-
-    	xil_printf("adc val = %5d, reg1 = %5d, reg2 = %5d\n", adc_val, *SLV_REG(1), *SLV_REG(2));
-
-//    	if(*SLV_REG(2) > 0) {
-//    		xil_printf("done reading from pmic\n");
-//    		*SLV_REG(2) = 0;
-//    	} else {
-//    		*SLV_REG(1) = 1;
+//
+//    	//upward trend for mic 1
+//    	if(old_adc_val0 < adc_val0){
+//    		look_for_peek = 1;
 //    	}
-
-//    	int i;
-//    	for(i=0; i<32; i++){
-//    		printf("%2d=%5d, ", i, *SLV_REG(i));
+//    	//downward trend for mic 2
+//    	if(look_for_peek){
+//    		if(old_adc_val0 > adc_val0){
+//    			look_for_peek = 0;
+//
+//    			//printf("t1= %llu, t2= %llu\n", t1, t2);
+//
+//    			//memcpy(&t2, &t1, 16);
+//    			t2 = t1;
+//    			XTime_GetTime(&t1);
+//    		}
 //    	}
-//    	printf("\n");
+//
+    	freq0 = 1.0 / ( ((double)t1 - (double)t2)*0.001 );
+    	//xil_printf("adc val = %5d, reg1 = %5d, reg2 = %5d\n", adc_val, *SLV_REG(1), *SLV_REG(2));
+    	printf("mic0 = %5d, mic1 = %5d, freq0 = %5lf, %llu, %llu\n", adc_val0, adc_val1, freq0, t1, t2);
 
-//    	*SLV_REG(1) = 1;
-//    	sleep(1);
-//    	*SLV_REG(1) = 0;
-//    	sleep(1);
+    	//Use this to print to .csv
+    	//xil_printf("%d, %d, %d\r\n", i++, adc_val0, adc_val1);
+
+    	old_adc_val0 = adc_val0;
     }
 
     return 0;

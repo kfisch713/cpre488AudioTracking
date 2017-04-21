@@ -6,4 +6,6 @@
 			<item value="com.xilinx.sdk.ui.category.newWizards"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+	</section>
 </section>

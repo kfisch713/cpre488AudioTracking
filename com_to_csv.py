@@ -11,7 +11,7 @@ import sys
 if __name__=='__main__':
     print ("Starting")
     try:
-        ser = serial.Serial(port='COM7', baudrate=9600, timeout=1)
+        ser = serial.Serial(port='COM19', baudrate=115200, timeout=1)
         print("connected to: " + ser.portstr)
         
         f = open('output.csv', 'w')
