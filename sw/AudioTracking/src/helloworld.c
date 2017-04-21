@@ -37,6 +37,7 @@
 #include "platform.h"
 #include "xparameters.h"
 #include "xtime_l.h"
+#include <math.h>
 
 char *SWs = (char *)XPAR_SWS_8BITS_BASEADDR;
 char *BTNs = (char *)XPAR_BTNS_5BITS_BASEADDR;
@@ -90,7 +91,7 @@ int sleep_read_spi()
 
   XTime_GetTime(&tCur);
 
-  tEnd  = tCur + 64;
+  tEnd  = tCur + 1;
   do
   {
     XTime_GetTime(&tCur);
@@ -103,7 +104,7 @@ int sleep_read_spi()
 void read_mic(uint16_t* mic0, uint16_t* mic1){
 	*SLV_REG0(1) = 0;
 	*SLV_REG1(1) = 0;
-	sleep_read_spi();
+	//sleep_read_spi();
 	*SLV_REG0(1) = 1;
 	*SLV_REG1(1) = 1;
 
@@ -117,12 +118,16 @@ int main()
 {
     init_platform();
     uint16_t adc_val0, adc_val1, old_adc_val0, old_adc_val1;
-    XTime t1, t2;
+    volatile XTime t1, t0;
     unsigned long int i = 0;
-    uint8_t look_for_peek = 0;
+    uint8_t look_for_peek_0 = 0, look_for_peek_1 = 0;
     double freq0;
+    double angle = 0;
+    double intermediate = 0;
 
+    XTime_GetTime(&t0);
     XTime_GetTime(&t1);
+
     *SLV_REG0(1) = 1;
     *SLV_REG1(1) = 1;
 
@@ -133,32 +138,46 @@ int main()
     	if(SW(0)) i=0;
     	read_mic(&adc_val0, &adc_val1);
 
-//
-//    	//upward trend for mic 1
-//    	if(old_adc_val0 < adc_val0){
-//    		look_for_peek = 1;
-//    	}
-//    	//downward trend for mic 2
-//    	if(look_for_peek){
-//    		if(old_adc_val0 > adc_val0){
-//    			look_for_peek = 0;
-//
-//    			//printf("t1= %llu, t2= %llu\n", t1, t2);
-//
-//    			//memcpy(&t2, &t1, 16);
-//    			t2 = t1;
-//    			XTime_GetTime(&t1);
-//    		}
-//    	}
-//
-    	freq0 = 1.0 / ( ((double)t1 - (double)t2)*0.001 );
+
+    	//upward trend for mic 0
+    	if(old_adc_val0 < adc_val0){
+    		look_for_peek_0 = 1;
+    	}
+    	//downward trend for mic 0
+    	if(look_for_peek_0){
+    		if(old_adc_val0 > adc_val0){
+    			look_for_peek_0 = 0;
+    			XTime_GetTime(&t0);
+    		}
+    	}
+
+    	//upward trend for mic 0
+		if(old_adc_val1 < adc_val1){
+			look_for_peek_1 = 1;
+		}
+		//downward trend for mic 0
+		if(look_for_peek_1){
+			if(old_adc_val1 > adc_val1){
+				look_for_peek_1 = 0;
+				XTime_GetTime(&t1);
+			}
+		}
+
+		//only want to calculate after both mic see a peak
+		if (look_for_peek_1 == 0 && look_for_peek_0 == 0){
+			intermediate = (t1-t0)/COUNTS_PER_SECOND * 343.0 / 0.1;
+			angle = asin( intermediate );
+		}
+
+
     	//xil_printf("adc val = %5d, reg1 = %5d, reg2 = %5d\n", adc_val, *SLV_REG(1), *SLV_REG(2));
-    	printf("mic0 = %5d, mic1 = %5d, freq0 = %5lf, %llu, %llu\n", adc_val0, adc_val1, freq0, t1, t2);
+    	printf("mic0 = %5d, mic1 = %5d, angle = %6.2lf, diff = %llu, %llu, %llu, intermediate = %lf\n", adc_val0, adc_val1, angle, t1-t0, t1, t0, intermediate);
 
     	//Use this to print to .csv
     	//xil_printf("%d, %d, %d\r\n", i++, adc_val0, adc_val1);
 
     	old_adc_val0 = adc_val0;
+    	old_adc_val1 = adc_val1;
     }
 
     return 0;

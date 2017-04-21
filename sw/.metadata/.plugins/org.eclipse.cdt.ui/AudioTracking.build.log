@@ -1,25 +1,6 @@
-19:05:53 **** Auto Build of configuration Debug for project AudioTracking ****
+13:38:05 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:122:13: warning: unused variable 'look_for_peek' [-Wunused-variable]
-../src/helloworld.c:121:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-../src/helloworld.c:154:36: warning: 't2' may be used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  64268	   2272	  29852	  96392	  17888	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
+make: Nothing to be done for `all'.
 
-19:05:54 Build Finished (took 1s.260ms)
+13:38:05 Build Finished (took 170ms)
 
