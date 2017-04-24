@@ -1,0 +1,10 @@
+-batch 
+-create axi_pmic 
+-ver 1.00.a 
+-dir "U:\Documents\cpre488AudioTracking\system" 
+-lang vhdl 
+-bus axi4lite s 
+-rst 
+-reg 32 
+-xps 
+-ise 

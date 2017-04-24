@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\devl\synthesis\axi_pmic_xst.prj"
+-top axi_pmic
+-p virtex6
+-ofn "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a\devl\synthesis\axi_pmic_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib axi_pmic_v1_00_a

@@ -19,94 +19,15 @@
 
 /******************************************************************/
 
-/* Definitions for driver SPI */
-#define XPAR_XSPI_NUM_INSTANCES 1
 
-/* Definitions for peripheral AXI_SPI_0 */
-#define XPAR_AXI_SPI_0_DEVICE_ID 0
-#define XPAR_AXI_SPI_0_BASEADDR 0x42000000
-#define XPAR_AXI_SPI_0_HIGHADDR 0x4200ffff
-#define XPAR_AXI_SPI_0_FIFO_EXIST 1
-#define XPAR_AXI_SPI_0_SPI_SLAVE_ONLY 0
-#define XPAR_AXI_SPI_0_NUM_SS_BITS 2
-#define XPAR_AXI_SPI_0_NUM_TRANSFER_BITS 16
-#define XPAR_AXI_SPI_0_SPI_MODE 0
-#define XPAR_AXI_SPI_0_TYPE_OF_AXI4_INTERFACE 0
-#define XPAR_AXI_SPI_0_AXI4_BASEADDR 0
-#define XPAR_AXI_SPI_0_AXI4_HIGHADDR 0
-#define XPAR_AXI_SPI_0_XIP_MODE 0
-
-/* Canonical definitions for peripheral AXI_SPI_0 */
-#define XPAR_SPI_0_DEVICE_ID 0
-#define XPAR_SPI_0_BASEADDR 0x42000000
-#define XPAR_SPI_0_HIGHADDR 0x4200ffff
-#define XPAR_SPI_0_FIFO_EXIST 1
-#define XPAR_SPI_0_SPI_SLAVE_ONLY 0
-#define XPAR_SPI_0_NUM_SS_BITS 2
-#define XPAR_SPI_0_NUM_TRANSFER_BITS 16
-#define XPAR_SPI_0_SPI_MODE 0
-#define XPAR_SPI_0_TYPE_OF_AXI4_INTERFACE 0
-#define XPAR_SPI_0_AXI4_BASEADDR 0
-#define XPAR_SPI_0_AXI4_HIGHADDR 0
-#define XPAR_SPI_0_XIP_MODE 0
-#define XPAR_SPI_0_USE_STARTUP 0
+/* Definitions for peripheral AXI_PMIC_0 */
+#define XPAR_AXI_PMIC_0_BASEADDR 0x7C400000
+#define XPAR_AXI_PMIC_0_HIGHADDR 0x7C40FFFF
 
 
-
-/******************************************************************/
-
-/* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 3
-
-/* Definitions for peripheral BTNS_5BITS */
-#define XPAR_BTNS_5BITS_BASEADDR 0x41240000
-#define XPAR_BTNS_5BITS_HIGHADDR 0x4124FFFF
-#define XPAR_BTNS_5BITS_DEVICE_ID 0
-#define XPAR_BTNS_5BITS_INTERRUPT_PRESENT 0
-#define XPAR_BTNS_5BITS_IS_DUAL 0
-
-
-/* Definitions for peripheral LEDS_8BITS */
-#define XPAR_LEDS_8BITS_BASEADDR 0x41220000
-#define XPAR_LEDS_8BITS_HIGHADDR 0x4122FFFF
-#define XPAR_LEDS_8BITS_DEVICE_ID 1
-#define XPAR_LEDS_8BITS_INTERRUPT_PRESENT 0
-#define XPAR_LEDS_8BITS_IS_DUAL 0
-
-
-/* Definitions for peripheral SWS_8BITS */
-#define XPAR_SWS_8BITS_BASEADDR 0x41200000
-#define XPAR_SWS_8BITS_HIGHADDR 0x4120FFFF
-#define XPAR_SWS_8BITS_DEVICE_ID 2
-#define XPAR_SWS_8BITS_INTERRUPT_PRESENT 0
-#define XPAR_SWS_8BITS_IS_DUAL 0
-
-
-/******************************************************************/
-
-/* Canonical definitions for peripheral BTNS_5BITS */
-#define XPAR_GPIO_0_BASEADDR 0x41240000
-#define XPAR_GPIO_0_HIGHADDR 0x4124FFFF
-#define XPAR_GPIO_0_DEVICE_ID XPAR_BTNS_5BITS_DEVICE_ID
-#define XPAR_GPIO_0_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_0_IS_DUAL 0
-
-/* Canonical definitions for peripheral LEDS_8BITS */
-#define XPAR_GPIO_1_BASEADDR 0x41220000
-#define XPAR_GPIO_1_HIGHADDR 0x4122FFFF
-#define XPAR_GPIO_1_DEVICE_ID XPAR_LEDS_8BITS_DEVICE_ID
-#define XPAR_GPIO_1_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_1_IS_DUAL 0
-
-/* Canonical definitions for peripheral SWS_8BITS */
-#define XPAR_GPIO_2_BASEADDR 0x41200000
-#define XPAR_GPIO_2_HIGHADDR 0x4120FFFF
-#define XPAR_GPIO_2_DEVICE_ID XPAR_SWS_8BITS_DEVICE_ID
-#define XPAR_GPIO_2_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_2_IS_DUAL 0
-
-
-/******************************************************************/
+/* Definitions for peripheral AXI_PMIC_1 */
+#define XPAR_AXI_PMIC_1_BASEADDR 0x7C420000
+#define XPAR_AXI_PMIC_1_HIGHADDR 0x7C42FFFF
 
 
 /* Definitions for peripheral PS7_AFI_0 */
@@ -218,6 +139,59 @@
 /* Definitions for peripheral PS7_SLCR_0 */
 #define XPAR_PS7_SLCR_0_S_AXI_BASEADDR 0xF8000000
 #define XPAR_PS7_SLCR_0_S_AXI_HIGHADDR 0xF8000FFF
+
+
+/******************************************************************/
+
+/* Definitions for driver GPIO */
+#define XPAR_XGPIO_NUM_INSTANCES 3
+
+/* Definitions for peripheral BTNS_5BITS */
+#define XPAR_BTNS_5BITS_BASEADDR 0x41240000
+#define XPAR_BTNS_5BITS_HIGHADDR 0x4124FFFF
+#define XPAR_BTNS_5BITS_DEVICE_ID 0
+#define XPAR_BTNS_5BITS_INTERRUPT_PRESENT 0
+#define XPAR_BTNS_5BITS_IS_DUAL 0
+
+
+/* Definitions for peripheral LEDS_8BITS */
+#define XPAR_LEDS_8BITS_BASEADDR 0x41220000
+#define XPAR_LEDS_8BITS_HIGHADDR 0x4122FFFF
+#define XPAR_LEDS_8BITS_DEVICE_ID 1
+#define XPAR_LEDS_8BITS_INTERRUPT_PRESENT 0
+#define XPAR_LEDS_8BITS_IS_DUAL 0
+
+
+/* Definitions for peripheral SWS_8BITS */
+#define XPAR_SWS_8BITS_BASEADDR 0x41200000
+#define XPAR_SWS_8BITS_HIGHADDR 0x4120FFFF
+#define XPAR_SWS_8BITS_DEVICE_ID 2
+#define XPAR_SWS_8BITS_INTERRUPT_PRESENT 0
+#define XPAR_SWS_8BITS_IS_DUAL 0
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral BTNS_5BITS */
+#define XPAR_GPIO_0_BASEADDR 0x41240000
+#define XPAR_GPIO_0_HIGHADDR 0x4124FFFF
+#define XPAR_GPIO_0_DEVICE_ID XPAR_BTNS_5BITS_DEVICE_ID
+#define XPAR_GPIO_0_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_0_IS_DUAL 0
+
+/* Canonical definitions for peripheral LEDS_8BITS */
+#define XPAR_GPIO_1_BASEADDR 0x41220000
+#define XPAR_GPIO_1_HIGHADDR 0x4122FFFF
+#define XPAR_GPIO_1_DEVICE_ID XPAR_LEDS_8BITS_DEVICE_ID
+#define XPAR_GPIO_1_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_1_IS_DUAL 0
+
+/* Canonical definitions for peripheral SWS_8BITS */
+#define XPAR_GPIO_2_BASEADDR 0x41200000
+#define XPAR_GPIO_2_HIGHADDR 0x4120FFFF
+#define XPAR_GPIO_2_DEVICE_ID XPAR_SWS_8BITS_DEVICE_ID
+#define XPAR_GPIO_2_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_2_IS_DUAL 0
 
 
 /******************************************************************/

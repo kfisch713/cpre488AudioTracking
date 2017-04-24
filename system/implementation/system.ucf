@@ -25,14 +25,11 @@ NET SWs_8Bits_TRI_IO[7] LOC = "M15"  |  IOSTANDARD = "LVCMOS25";
 #
 # additional constraints
 #
-
-#JA Top Row
-NET axi_spi_0_SCK_pin LOC = "AA9" 	|  IOSTANDARD = "LVCMOS33"; # pin 4 on microphone
-NET axi_spi_0_MOSI_pin LOC = "AA11" |  IOSTANDARD = "LVCMOS33"; # pin 3 on microphone
-NET axi_spi_0_MISO_pin LOC = "Y10" 	|  IOSTANDARD = "LVCMOS33"; # pin 2 on microphone
-NET axi_spi_0_SS_pin[0] LOC = "Y11" 	|  IOSTANDARD = "LVCMOS33"; # pin 1 on microphone
-#JA Bottom Row
-NET axi_spi_0_SCK_pin LOC = "AA8" 	|  IOSTANDARD = "LVCMOS33"; # pin 4 on microphone
-NET axi_spi_0_MOSI_pin LOC = "AB10"	|  IOSTANDARD = "LVCMOS33"; # pin 3 on microphone
-NET axi_spi_0_MISO_pin LOC = "AB9" 	|  IOSTANDARD = "LVCMOS33"; # pin 2 on microphone
-NET axi_spi_0_SS_pin[1] LOC = "AB11"	|  IOSTANDARD = "LVCMOS33"; # pin 1 on microphone
+# Top mic
+NET "Pmic_sdata"		LOC = Y10 | IOSTANDARD = "LVCMOS33"; # JA3 pmic miso
+NET "Pmic_sclk" 		LOC = AA9 | IOSTANDARD = "LVCMOS33"; # JA4 pmic clk
+NET "Pmic_ncs"			LOC = Y11 | IOSTANDARD = "LVCMOS33"; # JA1 pmic slave select
+# Bottom mic
+NET "Pmic_sdata_1"	LOC = AB9 | IOSTANDARD = "LVCMOS33"; # JA9 pmic miso
+NET "Pmic_sclk_1" 	LOC = AA8 | IOSTANDARD = "LVCMOS33"; # JA10 pmic clk
+NET "Pmic_ncs_1"		LOC = AB11 | IOSTANDARD = "LVCMOS33"; # JA7 pmic slave select

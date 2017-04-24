@@ -1,8 +1,9 @@
-U:\Desktop\cpre488AudioTracking\system\implementation\system.ngc 1491846077
-U:/Desktop/cpre488AudioTracking/system/implementation/system_processing_system7_0_wrapper.ngc 1491846043
-U:/Desktop/cpre488AudioTracking/system/implementation/system_axi4lite_0_wrapper.ngc 1491846062
-U:/Desktop/cpre488AudioTracking/system/implementation/system_sws_8bits_wrapper.ngc 1491846008
-U:/Desktop/cpre488AudioTracking/system/implementation/system_leds_8bits_wrapper.ngc 1491846020
-U:/Desktop/cpre488AudioTracking/system/implementation/system_btns_5bits_wrapper.ngc 1491846031
-U:/Desktop/cpre488AudioTracking/system/implementation/system_axi_spi_0_wrapper.ngc 1491846056
+U:\Documents\cpre488AudioTracking\system\implementation\system.ngc 1492723927
+U:/Documents/cpre488AudioTracking/system/implementation/system_processing_system7_0_wrapper.ngc 1492723737
+U:/Documents/cpre488AudioTracking/system/implementation/system_axi_pmic_0_wrapper.ngc 1492723883
+U:/Documents/cpre488AudioTracking/system/implementation/system_axi_pmic_1_wrapper.ngc 1492723904
+U:/Documents/cpre488AudioTracking/system/implementation/system_axi4lite_0_wrapper.ngc 1492723910
+U:/Documents/cpre488AudioTracking/system/implementation/system_sws_8bits_wrapper.ngc 1492723737
+U:/Documents/cpre488AudioTracking/system/implementation/system_leds_8bits_wrapper.ngc 1492723737
+U:/Documents/cpre488AudioTracking/system/implementation/system_btns_5bits_wrapper.ngc 1492723737
 OK

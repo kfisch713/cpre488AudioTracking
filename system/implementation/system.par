@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-CO2041-14::  Mon Apr 10 12:42:06 2017
+CO2041-11::  Thu Apr 20 16:33:24 2017
 
 par -w -ol high system_map.ncd system.ncd system.pcf 
 
@@ -35,24 +35,24 @@ Device speed data version:  "PRODUCTION 1.08 2013-10-13".
 
 Device Utilization Summary:
 
-   Number of BUFGs                           1 out of 32      3%
-   Number of ILOGICE2s                       3 out of 200     1%
-   Number of External IOB33s                26 out of 200    13%
-      Number of LOCed IOB33s                26 out of 26    100%
+   Number of BUFGs                           4 out of 32     12%
+   Number of ILOGICE2s                       2 out of 200     1%
+   Number of External IOB33s                27 out of 200    13%
+      Number of LOCed IOB33s                27 out of 27    100%
 
    Number of External IOPADs               130 out of 130   100%
       Number of LOCed IOPADs               127 out of 130    97%
 
-   Number of OLOGICE2s                      10 out of 200     5%
+   Number of OLOGICE2s                       7 out of 200     3%
    Number of PS7s                            1 out of 1     100%
-   Number of Slices                        327 out of 13300   2%
-   Number of Slice Registers               614 out of 106400  1%
-      Number used as Flip Flops            614
+   Number of Slices                       1890 out of 13300  14%
+   Number of Slice Registers              2578 out of 106400  2%
+      Number used as Flip Flops           2578
       Number used as Latches                 0
       Number used as LatchThrus              0
 
-   Number of Slice LUTS                    773 out of 53200   1%
-   Number of Slice LUT-Flip Flop pairs     885 out of 53200   1%
+   Number of Slice LUTS                   3339 out of 53200   6%
+   Number of Slice LUT-Flip Flop pairs    4064 out of 53200   7%
 
 
 Overall effort level (-ol):   High 
@@ -60,18 +60,21 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
    Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 10 secs 
-Finished initial Timing Analysis.  REAL time: 10 secs 
+Starting initial Timing Analysis.  REAL time: 12 secs 
+Finished initial Timing Analysis.  REAL time: 12 secs 
 
+WARNING:Par:288 - The signal
+   axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread
+   _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread
    _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread
-   _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread
-   _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread
    _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
@@ -80,34 +83,31 @@ WARNING:Par:288 - The signal
    _axid<0> has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread
-   _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread
-   _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   _ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 6382 unrouted;      REAL time: 11 secs 
+Phase  1  : 21859 unrouted;      REAL time: 13 secs 
 
-Phase  2  : 4016 unrouted;      REAL time: 11 secs 
+Phase  2  : 18853 unrouted;      REAL time: 13 secs 
 
-Phase  3  : 1351 unrouted;      REAL time: 12 secs 
+Phase  3  : 7035 unrouted;      REAL time: 20 secs 
 
-Phase  4  : 1351 unrouted; (Setup:0, Hold:13001, Component Switching Limit:0)     REAL time: 15 secs 
+Phase  4  : 6975 unrouted; (Setup:0, Hold:8223, Component Switching Limit:0)     REAL time: 26 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 16 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:7779, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 16 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:7779, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 16 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:7779, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:12400, Component Switching Limit:0)     REAL time: 16 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:7779, Component Switching Limit:0)     REAL time: 36 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 16 secs 
-Total REAL time to Router completion: 16 secs 
-Total CPU time to Router completion: 15 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 37 secs 
+Total REAL time to Router completion: 37 secs 
+Total CPU time to Router completion: 37 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -126,7 +126,18 @@ Generating Clock Report
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
 |processing_system7_0 |              |      |      |            |             |
-|          _FCLK_CLK0 |BUFGCTRL_X0Y31| No   |  283 |  0.346     |  1.978      |
+|          _FCLK_CLK0 |BUFGCTRL_X0Y31| No   |  727 |  0.437     |  2.056      |
++---------------------+--------------+------+------+------------+-------------+
+|axi_pmic_1/axi_pmic_ |              |      |      |            |             |
+|1/USER_LOGIC_I/P1/cl |              |      |      |            |             |
+|    k_counter_1_BUFG | BUFGCTRL_X0Y0| No   |   10 |  0.198     |  1.849      |
++---------------------+--------------+------+------+------------+-------------+
+|axi_pmic_0/axi_pmic_ |              |      |      |            |             |
+|0/USER_LOGIC_I/P1/cl |              |      |      |            |             |
+|    k_counter_1_BUFG | BUFGCTRL_X0Y1| No   |   10 |  0.100     |  1.845      |
++---------------------+--------------+------+------+------------+-------------+
+|processing_system7_0 |              |      |      |            |             |
+|          _FCLK_CLK3 |BUFGCTRL_X0Y30| No   |    2 |  0.000     |  1.654      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -146,10 +157,13 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     1.717ns|     8.283ns|       0|           0
-  0" 100 MHz HIGH 50%                       | HOLD        |     0.000ns|            |       0|           0
+  TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     0.008ns|     9.992ns|       0|           0
+  0" 100 MHz HIGH 50%                       | HOLD        |     0.009ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_axi4lite_0_reset_resync_path" TI | SETUP       |         N/A|     1.096ns|     N/A|           0
+  TS_clk_fpga_3 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |    18.737ns|     1.263ns|       0|           0
+  3" 50 MHz HIGH 50%                        | HOLD        |     0.262ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi4lite_0_reset_resync_path" TI | SETUP       |         N/A|     1.092ns|     N/A|           0
   G                                         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
@@ -168,10 +182,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 7 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 31 secs 
-Total CPU time to PAR completion: 17 secs 
+Total REAL time to PAR completion: 50 secs 
+Total CPU time to PAR completion: 39 secs 
 
-Peak Memory Usage:  734 MB
+Peak Memory Usage:  832 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -23,7 +23,7 @@ WARNING:EDK - INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable
    qualify for Xilinx software updates or new releases.
 
 
-Parse U:/Desktop/cpre488AudioTracking/system/system.mhs ...
+Parse U:/Documents/cpre488AudioTracking/system/system.mhs ...
 
 Read MPD definitions ...
 
@@ -75,12 +75,13 @@ Address Map for Processor processing_system7_0
   (0x41200000-0x4120ffff) SWs_8Bits	axi4lite_0
   (0x41220000-0x4122ffff) LEDs_8Bits	axi4lite_0
   (0x41240000-0x4124ffff) BTNs_5Bits	axi4lite_0
-  (0x42000000-0x4200ffff) axi_spi_0	axi4lite_0
+  (0x7c400000-0x7c40ffff) axi_pmic_0	axi4lite_0
+  (0x7c420000-0x7c42ffff) axi_pmic_1	axi4lite_0
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 4 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 5 slave(s) 
 
 Checking port drivers...
 
@@ -103,10 +104,6 @@ INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
    is overriding PARAMETER C_FCLK_CLK2_BUF value to FALSE -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
    4_03_a\data\processing_system7_v2_1_0.mpd line 352 
-INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
-   is overriding PARAMETER C_FCLK_CLK3_BUF value to FALSE -
-   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
-   4_03_a\data\processing_system7_v2_1_0.mpd line 353 
 
 Running system level update procedures...
 
@@ -133,6 +130,21 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:axi_gpio INSTANCE:sws_8bits -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 54 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:leds_8bits -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 68 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:btns_5bits -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 82 - Copying cache
+implementation netlist
+IPNAME:processing_system7 INSTANCE:processing_system7_0 -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 96 - Copying cache
+implementation netlist
+IPNAME:axi_pmic INSTANCE:axi_pmic_0 -
+U:\Documents\cpre488AudioTracking\system\system.mhs line 183 - Copying cache
+implementation netlist
 
 Elaborating instances ...
 
@@ -155,27 +167,20 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:axi4lite_0 - U:\Desktop\cpre488AudioTracking\system\system.mhs line 44
-- Running XST synthesis
-INSTANCE:sws_8bits - U:\Desktop\cpre488AudioTracking\system\system.mhs line 52 -
-Running XST synthesis
-INSTANCE:leds_8bits - U:\Desktop\cpre488AudioTracking\system\system.mhs line 66
-- Running XST synthesis
-INSTANCE:btns_5bits - U:\Desktop\cpre488AudioTracking\system\system.mhs line 80
-- Running XST synthesis
-INSTANCE:processing_system7_0 -
-U:\Desktop\cpre488AudioTracking\system\system.mhs line 94 - Running XST
-synthesis
-INSTANCE:axi_spi_0 - U:\Desktop\cpre488AudioTracking\system\system.mhs line 180
-- Running XST synthesis
+INSTANCE:axi4lite_0 - U:\Documents\cpre488AudioTracking\system\system.mhs line
+46 - Running XST synthesis
+INSTANCE:axi_pmic_0 - U:\Documents\cpre488AudioTracking\system\system.mhs line
+183 - Running XST synthesis
+INSTANCE:axi_pmic_1 - U:\Documents\cpre488AudioTracking\system\system.mhs line
+197 - Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
-U:\Desktop\cpre488AudioTracking\system\system.mhs line 44 - Running NGCBUILD
+U:\Documents\cpre488AudioTracking\system\system.mhs line 46 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 187.00 seconds
+Total run time: 193.00 seconds

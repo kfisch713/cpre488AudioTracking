@@ -1,0 +1,4 @@
+
+NET "Pmic_sdata"		LOC = Y10 | IOSTANDARD=LVCMOS33; # JA3 pmic miso
+NET "Pmic_sclk" 		LOC = AA9 | IOSTANDARD=LVCMOS33; # JA4 pmic clk
+NET "Pmic_ncs"			LOC = Y11 | IOSTANDARD=LVCMOS33; # JA1 pmic slave select

@@ -13,8 +13,10 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="global" key="selection"/>
+		<item value="t2" key="selection"/>
 		<list key="findhistory">
+			<item value="t2"/>
+			<item value="sleep"/>
 			<item value="global"/>
 			<item value="set_op"/>
 		</list>

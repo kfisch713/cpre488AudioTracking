@@ -1,0 +1,179 @@
+Release 14.7 - Bitgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '7z020.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+   "axi_pmic" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+Opened constraints file axi_pmic.pcf.
+
+Mon Apr 17 12:12:46 2017
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g Binary:no -g CRC:Enable -g ProgPin:PullUp -g InitPin:Pullup -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g Disable_JTAG:No -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_XADC:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g Match_cycle:Auto -g Security:None -g ICAP_select:Auto -g DonePipe:Yes -g DriveDone:No axi_pmic.ncd 
+
+ERROR:Bitgen:342 - This design contains pins which have locations (LOC) that are
+   not user-assigned or I/O Standards (IOSTANDARD) that are not user-assigned. 
+   This may cause I/O contention or incompatibility with the board power or
+   connectivity affecting performance, signal integrity or in extreme cases
+   cause damage to the device or the components to which it is connected.  To
+   prevent this error, it is highly suggested to specify all pin locations and
+   I/O standards to avoid potential contention or conflicts and allow proper
+   bitstream creation.  To demote this error to a warning and allow bitstream
+   creation with unspecified I/O location or standards, you may apply the
+   following bitgen switch: -g UnconstrainedPins:Allow
+This message applies to the following I/O ports:
+   S_AXI_AWADDR<1>
+   S_AXI_AWVALID
+   S_AXI_RREADY
+   S_AXI_WDATA<3>
+   S_AXI_WVALID
+   S_AXI_WDATA<2>
+   S_AXI_WDATA<0>
+   S_AXI_BVALID
+   S_AXI_WDATA<1>
+   S_AXI_ARREADY
+   S_AXI_RVALID
+   S_AXI_BRESP<1>
+   S_AXI_BREADY
+   S_AXI_AWREADY
+   S_AXI_WREADY
+   S_AXI_BRESP<0>
+   S_AXI_ARESETN
+   S_AXI_RRESP<0>
+   S_AXI_RRESP<1>
+   S_AXI_RDATA<0>
+   S_AXI_RDATA<1>
+   S_AXI_RDATA<2>
+   S_AXI_RDATA<3>
+   S_AXI_RDATA<4>
+   S_AXI_RDATA<5>
+   S_AXI_RDATA<6>
+   S_AXI_RDATA<7>
+   S_AXI_RDATA<8>
+   S_AXI_RDATA<9>
+   S_AXI_RDATA<10>
+   S_AXI_RDATA<11>
+   S_AXI_RDATA<12>
+   S_AXI_RDATA<13>
+   S_AXI_RDATA<14>
+   S_AXI_RDATA<15>
+   S_AXI_RDATA<16>
+   S_AXI_RDATA<17>
+   S_AXI_RDATA<18>
+   S_AXI_RDATA<19>
+   S_AXI_RDATA<20>
+   S_AXI_RDATA<21>
+   S_AXI_RDATA<22>
+   S_AXI_RDATA<23>
+   S_AXI_RDATA<24>
+   S_AXI_RDATA<25>
+   S_AXI_RDATA<26>
+   S_AXI_RDATA<27>
+   S_AXI_RDATA<28>
+   S_AXI_RDATA<29>
+   S_AXI_RDATA<30>
+   S_AXI_RDATA<31>
+   S_AXI_ARADDR<0>
+   S_AXI_ARADDR<1>
+   S_AXI_ARADDR<2>
+   S_AXI_ARADDR<3>
+   S_AXI_ARADDR<4>
+   S_AXI_ARADDR<5>
+   S_AXI_ARADDR<6>
+   S_AXI_ARADDR<7>
+   S_AXI_ARADDR<8>
+   S_AXI_AWADDR<0>
+   S_AXI_AWADDR<4>
+   S_AXI_AWADDR<2>
+   S_AXI_AWADDR<3>
+   S_AXI_AWADDR<8>
+   S_AXI_AWADDR<5>
+   S_AXI_AWADDR<6>
+   S_AXI_AWADDR<7>
+   S_AXI_ARVALID
+   S_AXI_ACLK
+   Pmic_clk
+INFO:Bitgen:40 - Replacing "Auto" with "NoWait" for option "Match_cycle".  Most
+   commonly, bitgen has determined and will use a specific value instead of the
+   generic command-line value of "Auto".  Alternately, this message appears if
+   the same option is specified multiple times on the command-line.  In this
+   case, the option listed last will be used.
+ERROR:Bitgen:157 - Bitgen will terminate because of the above errors.
+Summary of Bitgen Options:
++----------------------+----------------------+
+| Option Name          | Current Setting      |
++----------------------+----------------------+
+| Compress             | (Not Specified)*     |
++----------------------+----------------------+
+| Readback             | (Not Specified)*     |
++----------------------+----------------------+
+| CRC                  | Enable**             |
++----------------------+----------------------+
+| StartupClk           | Cclk**               |
++----------------------+----------------------+
+| DonePin              | Pullup*              |
++----------------------+----------------------+
+| ProgPin              | Pullup**             |
++----------------------+----------------------+
+| InitPin              | Pullup**             |
++----------------------+----------------------+
+| TckPin               | Pullup**             |
++----------------------+----------------------+
+| TdiPin               | Pullup**             |
++----------------------+----------------------+
+| TdoPin               | Pullup**             |
++----------------------+----------------------+
+| TmsPin               | Pullup**             |
++----------------------+----------------------+
+| UnusedPin            | Pulldown**           |
++----------------------+----------------------+
+| GWE_cycle            | 6**                  |
++----------------------+----------------------+
+| GTS_cycle            | 5**                  |
++----------------------+----------------------+
+| OverTempPowerDown    | Disable**            |
++----------------------+----------------------+
+| LCK_cycle            | NoWait*              |
++----------------------+----------------------+
+| Match_cycle          | NoWait               |
++----------------------+----------------------+
+| DONE_cycle           | 4**                  |
++----------------------+----------------------+
+| DonePipe             | Yes**                |
++----------------------+----------------------+
+| Security             | None**               |
++----------------------+----------------------+
+| UserID               | 0xFFFFFFFF**         |
++----------------------+----------------------+
+| ActiveReconfig       | No*                  |
++----------------------+----------------------+
+| DCIUpdateMode        | AsRequired**         |
++----------------------+----------------------+
+| ICAP_Select          | Auto**               |
++----------------------+----------------------+
+| InitSignalsError     | Enable*              |
++----------------------+----------------------+
+| XADCPartialReconfig  | Disable*             |
++----------------------+----------------------+
+| XADCEnhancedLinearity | Off*                 |
++----------------------+----------------------+
+| JTAG_XADC            | Enable**             |
++----------------------+----------------------+
+| Disable_JTAG         | No**                 |
++----------------------+----------------------+
+| XADCPowerDown        | Disable*             |
++----------------------+----------------------+
+| Partial              | (Not Specified)*     |
++----------------------+----------------------+
+| USR_ACCESS           | None**               |
++----------------------+----------------------+
+| TimeStamp            | Default*             |
++----------------------+----------------------+
+| IEEE1532             | No*                  |
++----------------------+----------------------+
+| Binary               | No**                 |
++----------------------+----------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+There were 0 CONFIG constraint(s) processed from axi_pmic.pcf.
+
+
