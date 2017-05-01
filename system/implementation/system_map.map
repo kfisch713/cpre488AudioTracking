@@ -9,7 +9,7 @@ Target Device  : xc7z020
 Target Package : clg484
 Target Speed   : -1
 Mapper Version : zynq -- $Revision: 1.55 $
-Mapped Date    : Thu Apr 20 16:32:30 2017
+Mapped Date    : Mon May 01 13:36:16 2017
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
@@ -48,130 +48,95 @@ INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
 Total REAL time at the beginning of Placer: 24 secs 
-Total CPU  time at the beginning of Placer: 19 secs 
+Total CPU  time at the beginning of Placer: 20 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:7827b423) REAL time: 26 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:4fe8dfab) REAL time: 26 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:7827b423) REAL time: 26 secs 
+Phase 2.7  Design Feasibility Check (Checksum:4fe8dfab) REAL time: 26 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:7827b423) REAL time: 26 secs 
+Phase 3.31  Local Placement Optimization (Checksum:4fe8dfab) REAL time: 26 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:3cf8869f) REAL time: 31 secs 
+(Checksum:92d1e757) REAL time: 31 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:3cf8869f) REAL time: 31 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:92d1e757) REAL time: 31 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:3cf8869f) REAL time: 31 secs 
+Phase 6.3  Local Placement Optimization (Checksum:92d1e757) REAL time: 31 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:3cf8869f) REAL time: 31 secs 
+Phase 7.5  Local Placement Optimization (Checksum:92d1e757) REAL time: 31 secs 
 
 Phase 8.8  Global Placement
-..........................................
-....................................................................................................................................................................
-..............................................................................................................................
-Phase 8.8  Global Placement (Checksum:953cd53f) REAL time: 40 secs 
+........................................
+..
+.............................................
+.................................................................................................................
+......................................................................................................................
+Phase 8.8  Global Placement (Checksum:67f0877d) REAL time: 1 mins 3 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:953cd53f) REAL time: 41 secs 
+Phase 9.5  Local Placement Optimization (Checksum:67f0877d) REAL time: 1 mins 4 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:d86eed17) REAL time: 46 secs 
+Phase 10.18  Placement Optimization (Checksum:e885a666) REAL time: 1 mins 10 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:d86eed17) REAL time: 46 secs 
+Phase 11.5  Local Placement Optimization (Checksum:e885a666) REAL time: 1 mins 10 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:d86eed17) REAL time: 46 secs 
+Phase 12.34  Placement Validation (Checksum:e885a666) REAL time: 1 mins 10 secs 
 
-Total REAL time to Placer completion: 47 secs 
-Total CPU  time to Placer completion: 41 secs 
+Total REAL time to Placer completion: 1 mins 10 secs 
+Total CPU  time to Placer completion: 1 mins 4 secs 
 Running post-placement packing...
 Writing output files...
-WARNING:PhysDesignRules:367 - The signal
-   <axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_
-   fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_r
-   dch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_
-   fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_r
-   dch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_
-   fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_r
-   dch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_
-   fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_r
-   dch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_
-   fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_r
-   dch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_co
-   nv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/s_axid<0>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <axi4lite_0/axi4lite_0/mi_data_fifo_bank/gen_fifo_slot[3].data_fifo_inst/gen_
-   fifo.fifo_gen_inst/U0/xst_fifo_generator/gaxi_full_lite.gread_ch.grdch2.axi_r
-   dch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:   13
+Number of warnings:    6
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,578 out of 106,400    2%
-    Number used as Flip Flops:               2,578
+  Number of Slice Registers:                 2,670 out of 106,400    2%
+    Number used as Flip Flops:               2,670
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      3,339 out of  53,200    6%
-    Number used as logic:                    3,292 out of  53,200    6%
-      Number using O6 output only:           2,939
+  Number of Slice LUTs:                      3,390 out of  53,200    6%
+    Number used as logic:                    3,357 out of  53,200    6%
+      Number using O6 output only:           2,951
       Number using O5 output only:               0
-      Number using O5 and O6:                  353
+      Number using O5 and O6:                  406
       Number used as ROM:                        0
-    Number used as Memory:                      45 out of  17,400    1%
-      Number used as Dual Port RAM:             24
-        Number using O6 output only:             0
-        Number using O5 output only:             1
-        Number using O5 and O6:                 23
+    Number used as Memory:                      21 out of  17,400    1%
+      Number used as Dual Port RAM:              0
       Number used as Single Port RAM:            0
       Number used as Shift Register:            21
         Number using O6 output only:            21
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:      2
-      Number with same-slice register load:      1
+    Number used exclusively as route-thrus:     12
+      Number with same-slice register load:     11
       Number with same-slice carry load:         0
       Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,890 out of  13,300   14%
-  Number of LUT Flip Flop pairs used:        4,137
-    Number with an unused Flip Flop:         1,791 out of   4,137   43%
-    Number with an unused LUT:                 798 out of   4,137   19%
-    Number of fully used LUT-FF pairs:       1,548 out of   4,137   37%
-    Number of unique control sets:              95
+  Number of occupied Slices:                 1,898 out of  13,300   14%
+  Number of LUT Flip Flop pairs used:        4,229
+    Number with an unused Flip Flop:         1,795 out of   4,229   42%
+    Number with an unused LUT:                 839 out of   4,229   19%
+    Number of fully used LUT-FF pairs:       1,595 out of   4,229   37%
+    Number of unique control sets:              93
     Number of slice register sites lost
-      to control set restrictions:             290 out of 106,400    1%
+      to control set restrictions:             277 out of 106,400    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -188,7 +153,9 @@ IO Utilization:
     IOB Flip Flops:                              7
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                  0 out of     140    0%
+  Number of RAMB36E1/FIFO36E1s:                  2 out of     140    1%
+    Number using RAMB36E1 only:                  2
+    Number using FIFO36E1 only:                  0
   Number of RAMB18E1/FIFO18E1s:                  0 out of     280    0%
   Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
     Number used as BUFGs:                        4
@@ -225,11 +192,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.43
+Average Fanout of Non-Clock Nets:                4.37
 
-Peak Memory Usage:  944 MB
-Total REAL time to MAP completion:  50 secs 
-Total CPU time to MAP completion:   44 secs 
+Peak Memory Usage:  918 MB
+Total REAL time to MAP completion:  1 mins 13 secs 
+Total CPU time to MAP completion:   1 mins 7 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.

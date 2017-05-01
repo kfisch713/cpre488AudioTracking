@@ -1,0 +1,6 @@
+18:28:59 **** Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+
+18:28:59 Build Finished (took 140ms)
+

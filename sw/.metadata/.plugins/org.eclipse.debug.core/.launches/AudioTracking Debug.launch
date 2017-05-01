@@ -6,13 +6,13 @@
 <stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.xilinx.sdk.debug.core.XMDDebuggerId"/>
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="U:\Desktop\cpre488AudioTracking\sw\AudioTracking\Debug\AudioTracking.elf"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="AudioTracking"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug\TrackingWithSPI.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="TrackingWithSPI"/>
 <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="xilinx.gnu.arm.exe.debug.526561623"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="xilinx.gnu.arm.exe.debug.730762379"/>
 <booleanAttribute key="org.eclipse.cdt.launch.use_terminal" value="true"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/AudioTracking"/>
+<listEntry value="/TrackingWithSPI"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
@@ -27,7 +27,7 @@
 <stringAttribute key="xilinx.romem.size" value=""/>
 <stringAttribute key="xilinx.stdio.baud" value="115200"/>
 <booleanAttribute key="xilinx.stdio.connect" value="true"/>
-<stringAttribute key="xilinx.stdio.port" value="COM33"/>
+<stringAttribute key="xilinx.stdio.port" value="COM19"/>
 <booleanAttribute key="xilinx.xmd.crosstrigger" value="false"/>
 <booleanAttribute key="xilinx.xmd.safe.mode" value="false"/>
 </launchConfiguration>

@@ -6,8 +6,8 @@ xc7z020clg484-1 -intstyle silent -i -sd .. system_axi4lite_0_wrapper.ngc
 ../system_axi4lite_0_wrapper
 
 Reading NGO file
-"U:/Documents/cpre488AudioTracking/system/implementation/axi4lite_0_wrapper/syst
-em_axi4lite_0_wrapper.ngc" ...
+"U:/Desktop/cpre488AudioTracking/system/implementation/axi4lite_0_wrapper/system
+_axi4lite_0_wrapper.ngc" ...
 Loading design module "../system_axi4lite_0_wrapper_fifo_generator_v9_1.ngc"...
 
 Partition Implementation Status
@@ -21,7 +21,7 @@ NGCBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 229164 kilobytes
+Total memory usage is 230188 kilobytes
 
 Writing NGC file "../system_axi4lite_0_wrapper.ngc" ...
 Total REAL time to NGCBUILD completion:  4 sec

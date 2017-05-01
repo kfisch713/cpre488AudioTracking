@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-04-20T16:51:13</DateModified>
+  <DateModified>2017-05-01T12:59:04</DateModified>
   <ModuleName>system</ModuleName>
-  <SummaryTimeStamp>2017-04-20T16:51:13</SummaryTimeStamp>
-  <SavedFilePath>U:/Documents/cpre488AudioTracking/system/__xps/ise/system.xreport</SavedFilePath>
+  <SummaryTimeStamp>2017-05-01T12:59:04</SummaryTimeStamp>
+  <SavedFilePath>U:/Desktop/cpre488AudioTracking/system/__xps/ise/system.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
-  <SavedFilterFilePath>U:/Documents/cpre488AudioTracking/system/__xps/ise</SavedFilterFilePath>
+  <SavedFilterFilePath>U:/Desktop/cpre488AudioTracking/system/__xps/ise</SavedFilterFilePath>
   <DateInitialized>2017-04-07T11:08:51</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
@@ -20,7 +20,7 @@
     <toc-item title="Detailed Reports" target="Detailed Reports" />
    </view>
    <view inputState="Unknown" program="implementation" contextTags="FPGA_ONLY" hidden="true" type="HTML" file="implementation\system_envsettings.html" label="System Settings" />
-   <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="implementation\system_map.xrpt" label="IOB Properties" />
+   <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="implementation\system_map.xrpt" showConstraints="0" label="IOB Properties" />
    <view inputState="Translated" program="map" contextTags="FPGA_ONLY" hidden="true" type="Control_Sets" file="implementation\system_map.xrpt" label="Control Set Information" />
    <view inputState="Translated" program="map" locator="MAP_MODULE_HIERARCHY" contextTags="FPGA_ONLY" type="Module_Utilization" file="implementation\system_map.xrpt" label="Module Level Utilization" />
    <view inputState="Mapped" program="par" locator="CONSTRAINT_TABLE" contextTags="FPGA_ONLY" type="ConstraintsData" file="implementation\system.ptwx" label="Timing Constraints" translator="ptwxToTableXML.xslt" />

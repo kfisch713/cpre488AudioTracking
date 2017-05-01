@@ -1,6 +1,6 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to U:\Documents\cpre488AudioTracking\system\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to U:\Desktop\cpre488AudioTracking\system\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -35,7 +35,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_axi_pmic_1_wrapper_xst.prj"
-Verilog Include Directory          : {"U:\Documents\cpre488AudioTracking\system\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"U:\Desktop\cpre488AudioTracking\system\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc7z020clg484-1
@@ -427,16 +427,16 @@ Parsing architecture <imp> of entity <slave_attachment>.
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v1_01_a
 Parsing entity <axi_lite_ipif>.
 Parsing architecture <imp> of entity <axi_lite_ipif>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd" into library axi_pmic_v1_00_a
+Parsing VHDL file "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd" into library axi_pmic_v1_00_a
 Parsing entity <PmodMICRefComp>.
 Parsing architecture <PmodMic> of entity <pmodmicrefcomp>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" into library axi_pmic_v1_00_a
+Parsing VHDL file "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" into library axi_pmic_v1_00_a
 Parsing entity <user_logic>.
 Parsing architecture <IMP> of entity <user_logic>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd" into library axi_pmic_v1_00_a
+Parsing VHDL file "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd" into library axi_pmic_v1_00_a
 Parsing entity <axi_pmic>.
 Parsing architecture <IMP> of entity <axi_pmic>.
-Parsing VHDL file "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\hdl\system_axi_pmic_1_wrapper.vhd" into library work
+Parsing VHDL file "\\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\hdl\system_axi_pmic_1_wrapper.vhd" into library work
 Parsing entity <system_axi_pmic_1_wrapper>.
 Parsing architecture <STRUCTURE> of entity <system_axi_pmic_1_wrapper>.
 
@@ -526,24 +526,24 @@ INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores
 Elaborating entity <soft_reset> (architecture <implementation>) with generics from library <proc_common_v3_00_a>.
 
 Elaborating entity <user_logic> (architecture <IMP>) with generics from library <axi_pmic_v1_00_a>.
-WARNING:HDLCompiler:871 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 177: Using initial value '0' for zero since it is never assigned
+WARNING:HDLCompiler:871 - "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 177: Using initial value '0' for zero since it is never assigned
 
 Elaborating entity <PmodMICRefComp> (architecture <PmodMic>) from library <axi_pmic_v1_00_a>.
-INFO:HDLCompiler:679 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd" Line 245. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:634 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 140: Net <slv_reg2[31]> does not have a driver.
+INFO:HDLCompiler:679 - "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd" Line 245. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:634 - "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd" Line 140: Net <slv_reg2[31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <system_axi_pmic_1_wrapper>.
-    Related source file is "\\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\hdl\system_axi_pmic_1_wrapper.vhd".
+    Related source file is "\\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\hdl\system_axi_pmic_1_wrapper.vhd".
     Summary:
 	no macro.
 Unit <system_axi_pmic_1_wrapper> synthesized.
 
 Synthesizing Unit <axi_pmic>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd".
+    Related source file is "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd".
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
         C_S_AXI_DATA_WIDTH = 32
@@ -562,9 +562,9 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
     Set property "MAX_FANOUT = 10000" for signal <S_AXI_ARESETN>.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
-INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd" line 263: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd" line 263: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd" line 314: Output port <Reset2Bus_ToutSup> of the instance <SOFT_RESET_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd" line 263: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd" line 263: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd" line 314: Output port <Reset2Bus_ToutSup> of the instance <SOFT_RESET_I> is unconnected or connected to loadless signal.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <axi_pmic> synthesized.
@@ -1030,7 +1030,7 @@ WARNING:Xst:647 - Input <Bus2IP_BE<0:2>> is never used. This port will be preser
 Unit <soft_reset> synthesized.
 
 Synthesizing Unit <user_logic>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd".
+    Related source file is "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd".
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
         C_NUM_REG = 32
@@ -1074,7 +1074,7 @@ WARNING:Xst:653 - Signal <slv_reg2<31:1>> is used but never assigned. This sourc
 Unit <user_logic> synthesized.
 
 Synthesizing Unit <PmodMICRefComp>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd".
+    Related source file is "//my.files.iastate.edu/users/kfisch13/Desktop/cpre488AudioTracking/system/pcores/axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd".
     Found 16-bit register for signal <temp>.
     Found 4-bit register for signal <shiftCounter>.
     Found 12-bit register for signal <DATA>.
@@ -1538,12 +1538,12 @@ axi_pmic_1/USER_LOGIC_I/P1/clk_counter_1|    1.767|         |         |         
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 20.63 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.75 secs
  
 --> 
 
-Total memory usage is 540040 kilobytes
+Total memory usage is 479304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   25 (   0 filtered)

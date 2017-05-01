@@ -1,0 +1,4 @@
+NET "S_AXI_ACLK" TNM_NET = "S_AXI_ACLK_axi_intc_0";
+NET "Processor_clk" TNM_NET = "Processor_clk_axi_intc_0";
+TIMESPEC "TS_MB_AXI_FP_axi_intc_0" = FROM "Processor_clk_axi_intc_0" TO "S_AXI_ACLK_axi_intc_0" TIG;
+TIMESPEC "TS_AXI_MB_FP_axi_intc_0" = FROM "S_AXI_ACLK_axi_intc_0" TO "Processor_clk_axi_intc_0" TIG;

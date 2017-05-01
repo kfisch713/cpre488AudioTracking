@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TrackingWithSPI/src/helloworld.c&apos; to &apos;It_is_gonna_work_this_time_I_swear.c&apos;" description="Rename resource &apos;helloworld.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/helloworld.c" name="It_is_gonna_work_this_time_I_swear.c" stamp="1493671768399" updateReferences="true"/>
+</session>

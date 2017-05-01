@@ -23,7 +23,7 @@ WARNING:EDK - INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable
    qualify for Xilinx software updates or new releases.
 
 
-Parse U:/Documents/cpre488AudioTracking/system/system.mhs ...
+Parse U:/Desktop/cpre488AudioTracking/system/system.mhs ...
 
 Read MPD definitions ...
 
@@ -131,19 +131,22 @@ Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
 IPNAME:axi_gpio INSTANCE:sws_8bits -
-U:\Documents\cpre488AudioTracking\system\system.mhs line 54 - Copying cache
+U:\Desktop\cpre488AudioTracking\system\system.mhs line 54 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:leds_8bits -
-U:\Documents\cpre488AudioTracking\system\system.mhs line 68 - Copying cache
+U:\Desktop\cpre488AudioTracking\system\system.mhs line 68 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:btns_5bits -
-U:\Documents\cpre488AudioTracking\system\system.mhs line 82 - Copying cache
+U:\Desktop\cpre488AudioTracking\system\system.mhs line 82 - Copying cache
 implementation netlist
 IPNAME:processing_system7 INSTANCE:processing_system7_0 -
-U:\Documents\cpre488AudioTracking\system\system.mhs line 96 - Copying cache
+U:\Desktop\cpre488AudioTracking\system\system.mhs line 96 - Copying cache
 implementation netlist
 IPNAME:axi_pmic INSTANCE:axi_pmic_0 -
-U:\Documents\cpre488AudioTracking\system\system.mhs line 183 - Copying cache
+U:\Desktop\cpre488AudioTracking\system\system.mhs line 183 - Copying cache
+implementation netlist
+IPNAME:axi_pmic INSTANCE:axi_pmic_1 -
+U:\Desktop\cpre488AudioTracking\system\system.mhs line 197 - Copying cache
 implementation netlist
 
 Elaborating instances ...
@@ -151,7 +154,7 @@ Elaborating instances ...
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -167,20 +170,20 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:axi4lite_0 - U:\Documents\cpre488AudioTracking\system\system.mhs line
-46 - Running XST synthesis
-INSTANCE:axi_pmic_0 - U:\Documents\cpre488AudioTracking\system\system.mhs line
-183 - Running XST synthesis
-INSTANCE:axi_pmic_1 - U:\Documents\cpre488AudioTracking\system\system.mhs line
-197 - Running XST synthesis
+INSTANCE:axi4lite_0 - U:\Desktop\cpre488AudioTracking\system\system.mhs line 46
+- Running XST synthesis
+INSTANCE:axi_pmic_0 - U:\Desktop\cpre488AudioTracking\system\system.mhs line 183
+- Running XST synthesis
+INSTANCE:axi_pmic_1 - U:\Desktop\cpre488AudioTracking\system\system.mhs line 197
+- Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
-U:\Documents\cpre488AudioTracking\system\system.mhs line 46 - Running NGCBUILD
+U:\Desktop\cpre488AudioTracking\system\system.mhs line 46 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 193.00 seconds
+Total run time: 197.00 seconds

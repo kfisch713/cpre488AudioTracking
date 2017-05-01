@@ -1,0 +1,37 @@
+#
+# pin constraints
+#
+NET BTNs_5Bits_TRI_IO[0] LOC = "P16"  |  IOSTANDARD = "LVCMOS25";
+NET BTNs_5Bits_TRI_IO[1] LOC = "R16"  |  IOSTANDARD = "LVCMOS25";
+NET BTNs_5Bits_TRI_IO[2] LOC = "N15"  |  IOSTANDARD = "LVCMOS25";
+NET BTNs_5Bits_TRI_IO[3] LOC = "R18"  |  IOSTANDARD = "LVCMOS25";
+NET BTNs_5Bits_TRI_IO[4] LOC = "T18"  |  IOSTANDARD = "LVCMOS25";
+NET LEDs_8Bits_TRI_IO[0] LOC = "T22"  |  IOSTANDARD = "LVCMOS33";
+NET LEDs_8Bits_TRI_IO[1] LOC = "T21"  |  IOSTANDARD = "LVCMOS33";
+NET LEDs_8Bits_TRI_IO[2] LOC = "U22"  |  IOSTANDARD = "LVCMOS33";
+NET LEDs_8Bits_TRI_IO[3] LOC = "U21"  |  IOSTANDARD = "LVCMOS33";
+NET LEDs_8Bits_TRI_IO[4] LOC = "V22"  |  IOSTANDARD = "LVCMOS33";
+NET LEDs_8Bits_TRI_IO[5] LOC = "W22"  |  IOSTANDARD = "LVCMOS33";
+NET LEDs_8Bits_TRI_IO[6] LOC = "U19"  |  IOSTANDARD = "LVCMOS33";
+NET LEDs_8Bits_TRI_IO[7] LOC = "U14"  |  IOSTANDARD = "LVCMOS33";
+NET SWs_8Bits_TRI_IO[0] LOC = "F22"  |  IOSTANDARD = "LVCMOS25";
+NET SWs_8Bits_TRI_IO[1] LOC = "G22"  |  IOSTANDARD = "LVCMOS25";
+NET SWs_8Bits_TRI_IO[2] LOC = "H22"  |  IOSTANDARD = "LVCMOS25";
+NET SWs_8Bits_TRI_IO[3] LOC = "F21"  |  IOSTANDARD = "LVCMOS25";
+NET SWs_8Bits_TRI_IO[4] LOC = "H19"  |  IOSTANDARD = "LVCMOS25";
+NET SWs_8Bits_TRI_IO[5] LOC = "H18"  |  IOSTANDARD = "LVCMOS25";
+NET SWs_8Bits_TRI_IO[6] LOC = "H17"  |  IOSTANDARD = "LVCMOS25";
+NET SWs_8Bits_TRI_IO[7] LOC = "M15"  |  IOSTANDARD = "LVCMOS25";
+#
+# additional constraints
+#
+
+NET axi_spi_0_MISO_pin      LOC = Y10 | IOSTANDARD = "LVCMOS33"; # JA3 pmic miso
+NET axi_spi_0_SCK_pin 		 LOC = AA9 | IOSTANDARD = "LVCMOS33"; # JA4 pmic clk
+NET axi_spi_0_SS_pin[0]     LOC = Y11 | IOSTANDARD = "LVCMOS33"; # JA1 pmic slave select
+NET axi_spi_0_MOSI_pin 		 LOC = AA11 | IOSTANDARD = "LVCMOS33"; # JA2 MOSI pin but this isn't used
+
+NET axi_spi_0_MISO_pin   	 LOC = AB9 | IOSTANDARD = "LVCMOS33"; # JA9 pmic miso
+NET axi_spi_0_SCK_pin 		 LOC = AA8 | IOSTANDARD = "LVCMOS33"; # JA10 pmic clk
+NET axi_spi_0_SS_pin[1] 	 LOC = AB11 | IOSTANDARD = "LVCMOS33"; # JA7 pmic slave select
+NET axi_spi_0_MOSI_pin 		 LOC = AB10 | IOSTANDARD = "LVCMOS33"; # JA8 MOSI pin but this isn't used

@@ -1,977 +1,1519 @@
-12:10:44 **** Incremental Build of configuration Debug for project AudioTracking ****
+16:31:50 **** Build of project system_bsp_spi ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling spi"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+16:33:04 **** Build of configuration Debug for project TrackingWithSPI ****
 make all 
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-./src/helloworld.o: In function `main':
-U:\Desktop\cpre488AudioTracking\sw\AudioTracking\Debug/../src/helloworld.c:165: undefined reference to `asin'
-collect2.exe: error: ld returned 1 exit status
-make: *** [AudioTracking.elf] Error 1
-12:13:55 **** Clean-only build of configuration Debug for project AudioTracking ****
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:36:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:33:06 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:36:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:40:06 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:37:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:53:28 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:37:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:54:24 **** Clean-only build of configuration Debug for project TrackingWithSPI ****
+make clean 
+rm -rf  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o  ./src/It_is_gonna_work_this_time_I_swear.d ./src/platform.d  TrackingWithSPI.elf.size  TrackingWithSPI.elf
+' '
+16:54:25 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:37:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:55:26 **** Clean-only build of configuration Debug for project TrackingWithSPI ****
+make clean 
+rm -rf  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o  ./src/It_is_gonna_work_this_time_I_swear.d ./src/platform.d  TrackingWithSPI.elf.size  TrackingWithSPI.elf
+' '
+16:55:27 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:37:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:55:37 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:37:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:56:10 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:37:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:56:49 **** Clean-only build of configuration Debug for project AudioTracking ****
 make clean 
 rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  AudioTracking.elf.size  AudioTracking.elf
 ' '
-12:13:56 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -lmath -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:125:12: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -lmath -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-./src/helloworld.o: In function `main':
-U:\Desktop\cpre488AudioTracking\sw\AudioTracking\Debug/../src/helloworld.c:165: undefined reference to `asin'
-collect2.exe: error: ld returned 1 exit status
-make: *** [AudioTracking.elf] Error 1
-12:15:05 **** Clean-only build of configuration Debug for project AudioTracking ****
+16:56:50 **** Clean-only build of configuration Debug for project TrackingWithSPI ****
 make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  AudioTracking.elf.size  AudioTracking.elf
+rm -rf  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o  ./src/It_is_gonna_work_this_time_I_swear.d ./src/platform.d  TrackingWithSPI.elf.size  TrackingWithSPI.elf
 ' '
-12:15:05 **** Auto Build of configuration Debug for project AudioTracking ****
+16:56:50 **** Clean-only build of project system_bsp ****
+16:56:50 **** Clean-only build of project system_bsp_spi ****
+make -k clean 
+make -k clean 
+rm -rf ps7_cortexa9_0
+rm -rf ps7_cortexa9_0
+16:57:15 **** Build of project system_bsp_spi ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling spi"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+16:58:25 **** Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:36:25: fatal error: xparameters.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+16:58:26 **** Build of project system_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+ERROR:EDK:410 - generic -
+   U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss line 21 - No IP
+   instance named axi_pmic_0 is present in the hardware!
+ERROR:EDK:410 - generic -
+   U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss line 27 - No IP
+   instance named axi_pmic_1 is present in the hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.
+make: *** [ps7_cortexa9_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+16:58:27 **** Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:125:12: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lmath -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/bin/ld.exe: cannot find -lmath
-collect2.exe: error: ld returned 1 exit status
-make: *** [AudioTracking.elf] Error 1
-12:17:05 **** Clean-only build of configuration Debug for project AudioTracking ****
-make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  AudioTracking.elf.size  AudioTracking.elf
-' '
-12:17:06 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:125:12: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65880	   2272	  29852	  98004	  17ed4	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:17:18 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:18:18 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:168:6: warning: format '%lf' expects argument of type 'double', but argument 4 has type 'XTime' [-Wformat]
-../src/helloworld.c:168:6: warning: format '%llu' expects a matching 'long long unsigned int' argument [-Wformat]
-../src/helloworld.c:168:6: warning: format '%lf' expects argument of type 'double', but argument 4 has type 'XTime' [-Wformat]
-../src/helloworld.c:168:6: warning: format '%llu' expects a matching 'long long unsigned int' argument [-Wformat]
-../src/helloworld.c:125:12: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65896	   2272	  29852	  98020	  17ee4	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:18:23 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65904	   2272	  29852	  98028	  17eec	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:18:26 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:18:53 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65904	   2272	  29852	  98028	  17eec	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:18:58 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:20:38 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65904	   2272	  29852	  98028	  17eec	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:20:43 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:22:53 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65912	   2272	  29852	  98036	  17ef4	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:22:57 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:23:35 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65912	   2272	  29852	  98036	  17ef4	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:23:40 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:29:49 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65912	   2272	  29852	  98036	  17ef4	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:29:56 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:34:16 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65896	   2272	  29852	  98020	  17ee4	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:34:21 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:35:07 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65912	   2272	  29852	  98036	  17ef4	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:36:38 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65936	   2272	  29852	  98060	  17f0c	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:36:54 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65936	   2272	  29852	  98060	  17f0c	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:36:58 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:37:33 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65920	   2272	  29852	  98044	  17efc	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:37:45 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:40:46 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65936	   2272	  29852	  98060	  17f0c	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:40:53 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:48:44 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65952	   2272	  29852	  98076	  17f1c	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:48:48 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:51:47 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:53:22 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65952	   2272	  29852	  98076	  17f1c	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:53:29 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:53:57 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65952	   2272	  29852	  98076	  17f1c	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-12:54:01 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-12:54:09 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-13:02:03 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65964	   2272	  29852	  98088	  17f28	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-13:02:08 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-13:06:04 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65964	   2272	  29852	  98088	  17f28	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-13:06:09 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-13:15:40 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-13:19:13 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65948	   2272	  29852	  98072	  17f18	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-13:19:16 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-13:20:16 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:126:12: warning: unused variable 'intermediate' [-Wunused-variable]
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65964	   2272	  29852	  98088	  17f28	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-13:20:47 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65964	   2272	  29852	  98088	  17f28	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-13:21:35 **** Auto Build of configuration Debug for project AudioTracking ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:174:150: error: 'intermidiate' undeclared (first use in this function)
-../src/helloworld.c:174:150: note: each undeclared identifier is reported only once for each function it appears in
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
 make: *** [src/helloworld.o] Error 1
-13:21:49 **** Auto Build of configuration Debug for project AudioTracking ****
+17:00:33 **** Clean-only build of configuration Debug for project TrackingWithSPI ****
+make clean 
+rm -rf  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o  ./src/It_is_gonna_work_this_time_I_swear.d ./src/platform.d  TrackingWithSPI.elf.size  TrackingWithSPI.elf
+' '
+17:00:33 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_init':
+../src/It_is_gonna_work_this_time_I_swear.c:54:2: error: expected ';' before 'Xil_Out32'
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+17:00:40 **** Auto Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:01:51 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_init':
+../src/It_is_gonna_work_this_time_I_swear.c:54:2: error: expected ';' before 'Xil_Out32'
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+17:02:05 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  26828	   1128	 398532	 426488	  681f8	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:21:53 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:04:40 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66620	   2296	 398604	 467520	  72240	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+17:06:54 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:23:53 **** Auto Build of configuration Debug for project AudioTracking ****
+17:06:55 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: AudioTracking.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
-' '
-13:23:58 **** Incremental Build of configuration Debug for project AudioTracking ****
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:08:08 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:24:57 **** Auto Build of configuration Debug for project AudioTracking ****
+17:08:08 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:09:20 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  66012	   2272	  29852	  98136	  17f58	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  66628	   2296	 398604	 467528	  72248	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:25:02 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:09:24 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:26:13 **** Auto Build of configuration Debug for project AudioTracking ****
+17:09:24 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:128:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:129:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:150:8: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:162:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:21:21 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_init':
+../src/It_is_gonna_work_this_time_I_swear.c:60:4: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'XStatus' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:4: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'XStatus' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  66012	   2272	  29852	  98136	  17f58	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  67540	   2296	 398604	 468440	  725d8	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:26:17 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:21:23 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:26:39 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-13:30:54 **** Auto Build of configuration Debug for project AudioTracking ****
+17:21:24 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:128:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:129:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:150:8: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:162:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:22:15 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_init':
+../src/It_is_gonna_work_this_time_I_swear.c:60:3: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'XStatus' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:3: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'XStatus' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  67764	   2296	 398604	 468664	  726b8	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:30:58 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:22:16 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:31:53 **** Auto Build of configuration Debug for project AudioTracking ****
+17:22:17 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:128:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:129:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:150:8: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:162:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:27:36 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:80:2: warning: statement with no effect [-Wunused-value]
+../src/It_is_gonna_work_this_time_I_swear.c:81:1: error: expected ';' before '}' token
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_init':
+../src/It_is_gonna_work_this_time_I_swear.c:98:3: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'XStatus' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:98:3: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'XStatus' [-Wformat]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+17:29:13 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_init':
+../src/It_is_gonna_work_this_time_I_swear.c:101:3: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'XStatus' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:101:3: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'XStatus' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  68148	   2296	 398700	 469144	  72898	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:31:58 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:30:04 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68148	   2296	 398700	 469144	  72898	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+17:37:05 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:86:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:86:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:87:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:87:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68928	   2296	 398700	 469924	  72ba4	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+17:37:36 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:86:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:86:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:87:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:87:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  68824	   2296	 398700	 469820	  72b3c	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+17:38:01 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:32:42 **** Auto Build of configuration Debug for project AudioTracking ****
+17:38:02 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:128:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:129:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:150:8: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:162:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:38:28 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:58:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:58:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:59:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:59:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  68824	   2296	 398604	 469724	  72adc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:32:49 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:38:31 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:33:06 **** Incremental Build of configuration Debug for project AudioTracking ****
-make all 
-make: Nothing to be done for `all'.
-13:35:57 **** Auto Build of configuration Debug for project AudioTracking ****
+17:38:32 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:128:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:129:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:150:8: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:162:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:38:56 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:58:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:58:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:59:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:59:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  68824	   2296	 398604	 469724	  72adc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:36:00 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:38:58 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:36:54 **** Auto Build of configuration Debug for project AudioTracking ****
+17:38:59 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:128:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:129:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:150:8: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:162:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:40:12 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:58:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:58:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:59:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:59:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  68816	   2296	 398604	 469716	  72ad4	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:36:58 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:40:14 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:37:26 **** Auto Build of configuration Debug for project AudioTracking ****
+17:40:15 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:128:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:129:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:150:8: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:162:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:48:51 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  69048	   2296	 398604	 469948	  72bbc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:37:29 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:48:55 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
-13:37:59 **** Auto Build of configuration Debug for project AudioTracking ****
+17:48:55 **** Incremental Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:128:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:129:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:150:8: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:162:5: warning: passing argument 1 of 'XTime_GetTime' discards 'volatile' qualifier from pointer target type [enabled by default]
-In file included from ../src/helloworld.c:39:0:
-../../system_bsp/ps7_cortexa9_0/include/xtime_l.h:90:6: note: expected 'XTime *' but argument is of type 'volatile XTime *'
-../src/helloworld.c:124:12: warning: unused variable 'freq0' [-Wunused-variable]
-../src/helloworld.c:122:23: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-'Finished building: ../src/helloworld.c'
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:53:28 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
 ' '
-'Building target: AudioTracking.elf'
+'Building target: TrackingWithSPI.elf'
 'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "AudioTracking.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: AudioTracking.elf'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
 ' '
 'Invoking: ARM Print Size'
-arm-xilinx-eabi-size AudioTracking.elf  |tee "AudioTracking.elf.size"
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65996	   2272	  29852	  98120	  17f48	AudioTracking.elf
-'Finished building: AudioTracking.elf.size'
+  69064	   2296	 398604	 469964	  72bcc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
 ' '
-13:38:05 **** Incremental Build of configuration Debug for project AudioTracking ****
+17:53:32 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
+17:53:33 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:54:28 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  69064	   2296	 398604	 469964	  72bcc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+17:54:31 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+17:54:31 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:55:18 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:49:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:49:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  69064	   2296	 398604	 469964	  72bcc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+17:55:20 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+17:55:20 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:56:25 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:49:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:49:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  69088	   2296	 398604	 469988	  72be4	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+17:56:27 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+17:56:28 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+18:05:40 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:49:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:49:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  69240	   2296	 398604	 470140	  72c7c	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+18:05:52 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+18:05:53 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+18:06:21 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:49:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:49:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:60:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  69208	   2296	 398604	 470108	  72c5c	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+18:06:24 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+18:06:25 **** Incremental Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+18:16:21 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:39:61: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:17:38 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+18:17:38 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+18:17:39 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+18:17:39 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+18:17:40 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:39:61: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:17:40 **** Auto Build of project system_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+ERROR:EDK:410 - generic -
+   U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss line 21 - No IP
+   instance named axi_pmic_0 is present in the hardware!
+ERROR:EDK:410 - generic -
+   U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss line 27 - No IP
+   instance named axi_pmic_1 is present in the hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.
+make: *** [ps7_cortexa9_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+18:17:41 **** Auto Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+18:18:32 **** Clean-only build of project system_bsp_spi ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+18:18:53 **** Build of project system_bsp_spi ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling spi"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+18:20:04 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:39:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:25:56 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c:39:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:26:59 **** Clean-only build of project system_bsp_spi ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+18:27:10 **** Build of project system_bsp_spi ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+Command canceled
+18:27:44 **** Build of project system_bsp_spi ****
+18:28:59 **** Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+18:29:00 **** Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:111:36: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c:111:53: error: 'INTC_DEVICE_ID' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:112:33: error: 'SpiIntrId' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:114:14: error: 'SpiInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:29:00 **** Build of project system_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+ERROR:EDK:410 - generic -
+   U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss line 21 - No IP
+   instance named axi_pmic_0 is present in the hardware!
+ERROR:EDK:410 - generic -
+   U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss line 27 - No IP
+   instance named axi_pmic_1 is present in the hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.
+make: *** [ps7_cortexa9_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+18:29:01 **** Build of configuration Debug for project AudioTracking ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:36:24: fatal error: xil_printf.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+18:30:07 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:111:36: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c:112:33: error: 'SpiIntrId' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:114:14: error: 'SpiInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:30:26 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:111:37: error: 'intr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:37: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c:112:33: error: 'SpiIntrId' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:114:14: error: 'SpiInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:116:23: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:32:31 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:114:14: error: 'SpiInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:114:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c:116:23: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:117:32: error: 'SpiIntrId' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:32:51 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:116:23: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:116:23: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c:117:32: error: 'SpiIntrId' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:33:05 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:117:15: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:117:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c:117:32: error: 'SpiIntrId' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:33:20 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:122:5: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:122:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:33:37 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/bin/ld.exe: warning: cannot find entry symbol _vector_table; defaulting to 00100000
+./src/It_is_gonna_work_this_time_I_swear.o: In function `spi_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:86: undefined reference to `XSpi_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:88: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:91: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:92: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:95: undefined reference to `XSpi_SelfTest'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:103: undefined reference to `XSpi_SetStatusHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `intr_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:111: undefined reference to `XIntc_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XIntc_Connect'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:116: undefined reference to `XIntc_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:117: undefined reference to `XIntc_Enable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:118: undefined reference to `Xil_ExceptionInit'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `Xil_ExceptionRegisterHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `main':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:135: undefined reference to `XSpi_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:143: undefined reference to `XSpi_Transfer'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:144: undefined reference to `sleep'
+./src/platform.o: In function `disable_caches':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:78: undefined reference to `Xil_DCacheDisable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:79: undefined reference to `Xil_ICacheDisable'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-sbrkr.o): In function `_sbrk_r':
+sbrkr.c:(.text+0x1c): undefined reference to `_sbrk'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-writer.o): In function `_write_r':
+writer.c:(.text+0x24): undefined reference to `_write'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-closer.o): In function `_close_r':
+closer.c:(.text+0x1c): undefined reference to `_close'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-fstatr.o): In function `_fstat_r':
+fstatr.c:(.text+0x20): undefined reference to `_fstat'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-isattyr.o): In function `_isatty_r':
+isattyr.c:(.text+0x1c): undefined reference to `_isatty'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-lseekr.o): In function `_lseek_r':
+lseekr.c:(.text+0x24): undefined reference to `_lseek'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-readr.o): In function `_read_r':
+readr.c:(.text+0x24): undefined reference to `_read'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TrackingWithSPI.elf] Error 1
+18:33:58 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/bin/ld.exe: warning: cannot find entry symbol _vector_table; defaulting to 00100000
+./src/It_is_gonna_work_this_time_I_swear.o: In function `spi_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:86: undefined reference to `XSpi_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:88: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:91: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:92: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:95: undefined reference to `XSpi_SelfTest'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:103: undefined reference to `XSpi_SetStatusHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `intr_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:111: undefined reference to `XIntc_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XIntc_Connect'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:116: undefined reference to `XIntc_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:117: undefined reference to `XIntc_Enable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:118: undefined reference to `Xil_ExceptionInit'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `Xil_ExceptionRegisterHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `main':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:135: undefined reference to `XSpi_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:143: undefined reference to `XSpi_Transfer'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:144: undefined reference to `sleep'
+./src/platform.o: In function `disable_caches':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:78: undefined reference to `Xil_DCacheDisable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:79: undefined reference to `Xil_ICacheDisable'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-sbrkr.o): In function `_sbrk_r':
+sbrkr.c:(.text+0x1c): undefined reference to `_sbrk'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-writer.o): In function `_write_r':
+writer.c:(.text+0x24): undefined reference to `_write'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-closer.o): In function `_close_r':
+closer.c:(.text+0x1c): undefined reference to `_close'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-fstatr.o): In function `_fstat_r':
+fstatr.c:(.text+0x20): undefined reference to `_fstat'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-isattyr.o): In function `_isatty_r':
+isattyr.c:(.text+0x1c): undefined reference to `_isatty'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-lseekr.o): In function `_lseek_r':
+lseekr.c:(.text+0x24): undefined reference to `_lseek'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-readr.o): In function `_read_r':
+readr.c:(.text+0x24): undefined reference to `_read'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TrackingWithSPI.elf] Error 1
+18:34:56 **** Clean-only build of configuration Debug for project TrackingWithSPI ****
+make clean 
+rm -rf  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o  ./src/It_is_gonna_work_this_time_I_swear.d ./src/platform.d  TrackingWithSPI.elf.size  TrackingWithSPI.elf
+' '
+18:34:57 **** Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/bin/ld.exe: warning: cannot find entry symbol _vector_table; defaulting to 00100000
+./src/It_is_gonna_work_this_time_I_swear.o: In function `spi_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:86: undefined reference to `XSpi_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:88: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:91: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:92: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:95: undefined reference to `XSpi_SelfTest'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:103: undefined reference to `XSpi_SetStatusHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `intr_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:111: undefined reference to `XIntc_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XIntc_Connect'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:116: undefined reference to `XIntc_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:117: undefined reference to `XIntc_Enable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:118: undefined reference to `Xil_ExceptionInit'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `Xil_ExceptionRegisterHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `main':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:135: undefined reference to `XSpi_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:143: undefined reference to `XSpi_Transfer'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:144: undefined reference to `sleep'
+./src/platform.o: In function `disable_caches':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:78: undefined reference to `Xil_DCacheDisable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:79: undefined reference to `Xil_ICacheDisable'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-sbrkr.o): In function `_sbrk_r':
+sbrkr.c:(.text+0x1c): undefined reference to `_sbrk'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-writer.o): In function `_write_r':
+writer.c:(.text+0x24): undefined reference to `_write'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-closer.o): In function `_close_r':
+closer.c:(.text+0x1c): undefined reference to `_close'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-fstatr.o): In function `_fstat_r':
+fstatr.c:(.text+0x20): undefined reference to `_fstat'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-isattyr.o): In function `_isatty_r':
+isattyr.c:(.text+0x1c): undefined reference to `_isatty'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-lseekr.o): In function `_lseek_r':
+lseekr.c:(.text+0x24): undefined reference to `_lseek'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-readr.o): In function `_read_r':
+readr.c:(.text+0x24): undefined reference to `_read'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TrackingWithSPI.elf] Error 1
+18:35:35 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/bin/ld.exe: warning: cannot find entry symbol _vector_table; defaulting to 00100000
+./src/It_is_gonna_work_this_time_I_swear.o: In function `spi_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:86: undefined reference to `XSpi_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:88: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:91: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:92: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:95: undefined reference to `XSpi_SelfTest'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:103: undefined reference to `XSpi_SetStatusHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `intr_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:111: undefined reference to `XIntc_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XIntc_Connect'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:116: undefined reference to `XIntc_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:117: undefined reference to `XIntc_Enable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:118: undefined reference to `Xil_ExceptionInit'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `Xil_ExceptionRegisterHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `main':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:135: undefined reference to `XSpi_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:143: undefined reference to `XSpi_Transfer'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:144: undefined reference to `sleep'
+./src/platform.o: In function `disable_caches':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:78: undefined reference to `Xil_DCacheDisable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:79: undefined reference to `Xil_ICacheDisable'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-sbrkr.o): In function `_sbrk_r':
+sbrkr.c:(.text+0x1c): undefined reference to `_sbrk'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-writer.o): In function `_write_r':
+writer.c:(.text+0x24): undefined reference to `_write'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-closer.o): In function `_close_r':
+closer.c:(.text+0x1c): undefined reference to `_close'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-fstatr.o): In function `_fstat_r':
+fstatr.c:(.text+0x20): undefined reference to `_fstat'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-isattyr.o): In function `_isatty_r':
+isattyr.c:(.text+0x1c): undefined reference to `_isatty'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-lseekr.o): In function `_lseek_r':
+lseekr.c:(.text+0x24): undefined reference to `_lseek'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-readr.o): In function `_read_r':
+readr.c:(.text+0x24): undefined reference to `_read'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TrackingWithSPI.elf] Error 1
+18:36:18 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_init':
+../src/It_is_gonna_work_this_time_I_swear.c:86:2: error: incompatible type for argument 1 of 'XSpi_Initialize'
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:795:5: note: expected 'struct XSpi *' but argument is of type 'XSpi'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+18:36:32 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:53:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:64:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:65:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:111:10: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/bin/ld.exe: warning: cannot find entry symbol _vector_table; defaulting to 00100000
+./src/It_is_gonna_work_this_time_I_swear.o: In function `spi_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:86: undefined reference to `XSpi_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:88: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:90: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:91: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:92: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_In32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:93: undefined reference to `Xil_Out32'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:95: undefined reference to `XSpi_SelfTest'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:103: undefined reference to `XSpi_SetStatusHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `intr_init':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:111: undefined reference to `XIntc_Initialize'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XSpi_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:112: undefined reference to `XIntc_Connect'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:116: undefined reference to `XIntc_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:117: undefined reference to `XIntc_Enable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:118: undefined reference to `Xil_ExceptionInit'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `XIntc_InterruptHandler'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:119: undefined reference to `Xil_ExceptionRegisterHandler'
+./src/It_is_gonna_work_this_time_I_swear.o: In function `main':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:135: undefined reference to `XSpi_Start'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:143: undefined reference to `XSpi_Transfer'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:144: undefined reference to `sleep'
+./src/platform.o: In function `disable_caches':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:78: undefined reference to `Xil_DCacheDisable'
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/platform.c:79: undefined reference to `Xil_ICacheDisable'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-sbrkr.o): In function `_sbrk_r':
+sbrkr.c:(.text+0x1c): undefined reference to `_sbrk'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-writer.o): In function `_write_r':
+writer.c:(.text+0x24): undefined reference to `_write'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-closer.o): In function `_close_r':
+closer.c:(.text+0x1c): undefined reference to `_close'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-fstatr.o): In function `_fstat_r':
+fstatr.c:(.text+0x20): undefined reference to `_fstat'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-isattyr.o): In function `_isatty_r':
+isattyr.c:(.text+0x1c): undefined reference to `_isatty'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-lseekr.o): In function `_lseek_r':
+lseekr.c:(.text+0x24): undefined reference to `_lseek'
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/lib\libc.a(lib_a-readr.o): In function `_read_r':
+readr.c:(.text+0x24): undefined reference to `_read'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TrackingWithSPI.elf] Error 1

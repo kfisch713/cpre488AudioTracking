@@ -119,7 +119,7 @@ vhdl proc_common_v3_00_a C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcore
 vhdl axi_lite_ipif_v1_01_a C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd
 vhdl axi_lite_ipif_v1_01_a C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd
 vhdl axi_lite_ipif_v1_01_a C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd
-vhdl axi_pmic_v1_00_a \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd
-vhdl axi_pmic_v1_00_a \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd
-vhdl axi_pmic_v1_00_a \\my.files.iastate.edu\users\burneykb\Documents\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd
+vhdl axi_pmic_v1_00_a \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a/hdl/vhdl/PmodMicRefComp.vhd
+vhdl axi_pmic_v1_00_a \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a/hdl/vhdl/user_logic.vhd
+vhdl axi_pmic_v1_00_a \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\pcores\axi_pmic_v1_00_a/hdl/vhdl/axi_pmic.vhd
 vhdl work ../hdl/system_axi_pmic_1_wrapper.vhd
