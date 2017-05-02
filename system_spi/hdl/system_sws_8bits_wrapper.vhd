@@ -104,7 +104,7 @@ begin
       C_GPIO2_WIDTH => 32,
       C_ALL_INPUTS => 1,
       C_ALL_INPUTS_2 => 0,
-      C_INTERRUPT_PRESENT => 0,
+      C_INTERRUPT_PRESENT => 1,
       C_DOUT_DEFAULT => X"00000000",
       C_TRI_DEFAULT => X"ffffffff",
       C_IS_DUAL => 0,

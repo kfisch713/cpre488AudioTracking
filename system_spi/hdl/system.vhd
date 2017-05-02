@@ -1081,7 +1081,7 @@ architecture STRUCTURE of system is
       S_AXI_RRESP : out std_logic_vector(1 downto 0);
       S_AXI_RVALID : out std_logic;
       S_AXI_RREADY : in std_logic;
-      Intr : in std_logic_vector(0 downto 0);
+      Intr : in std_logic_vector(2 downto 0);
       Irq : out std_logic;
       Interrupt_address : out std_logic_vector(31 downto 0);
       Processor_ack : in std_logic_vector(1 downto 0);
@@ -1103,9 +1103,11 @@ architecture STRUCTURE of system is
 
   -- Internal signals
 
+  signal BTNs_5Bits_IP2INTC_Irpt : std_logic;
   signal BTNs_5Bits_TRI_IO_I : std_logic_vector(4 downto 0);
   signal BTNs_5Bits_TRI_IO_O : std_logic_vector(4 downto 0);
   signal BTNs_5Bits_TRI_IO_T : std_logic_vector(4 downto 0);
+  signal SWs_8Bits_IP2INTC_Irpt : std_logic;
   signal SWs_8Bits_TRI_IO_I : std_logic_vector(7 downto 0);
   signal SWs_8Bits_TRI_IO_O : std_logic_vector(7 downto 0);
   signal SWs_8Bits_TRI_IO_T : std_logic_vector(7 downto 0);
@@ -1165,7 +1167,7 @@ architecture STRUCTURE of system is
   signal axi4lite_0_S_WREADY : std_logic_vector(0 to 0);
   signal axi4lite_0_S_WSTRB : std_logic_vector(3 downto 0);
   signal axi4lite_0_S_WVALID : std_logic_vector(0 to 0);
-  signal axi_spi_0_IP2INTC_Irpt : std_logic_vector(0 downto 0);
+  signal axi_spi_0_IP2INTC_Irpt : std_logic;
   signal axi_spi_0_MISO_I : std_logic;
   signal axi_spi_0_MISO_O : std_logic;
   signal axi_spi_0_MISO_T : std_logic;
@@ -1192,6 +1194,7 @@ architecture STRUCTURE of system is
   signal net_gnd64 : std_logic_vector(63 downto 0);
   signal net_vcc0 : std_logic;
   signal pgassign1 : std_logic_vector(4 downto 0);
+  signal pgassign2 : std_logic_vector(2 downto 0);
   signal processing_system7_0_DDR_WEB : std_logic;
   signal processing_system7_0_FCLK_CLK0 : std_logic_vector(0 to 0);
   signal processing_system7_0_FCLK_CLK1 : std_logic;
@@ -1217,6 +1220,9 @@ begin
   pgassign1(2 downto 2) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign1(1 downto 1) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign1(0 downto 0) <= processing_system7_0_FCLK_CLK0(0 to 0);
+  pgassign2(2) <= SWs_8Bits_IP2INTC_Irpt;
+  pgassign2(1) <= BTNs_5Bits_IP2INTC_Irpt;
+  pgassign2(0) <= axi_spi_0_IP2INTC_Irpt;
   net_gnd0 <= '0';
   net_gnd1(0 to 0) <= B"0";
   net_gnd12(11 downto 0) <= B"000000000000";
@@ -1460,7 +1466,7 @@ begin
       S_AXI_RRESP => axi4lite_0_M_RRESP(1 downto 0),
       S_AXI_RVALID => axi4lite_0_M_RVALID(0),
       S_AXI_RREADY => axi4lite_0_M_RREADY(0),
-      IP2INTC_Irpt => open,
+      IP2INTC_Irpt => SWs_8Bits_IP2INTC_Irpt,
       GPIO_IO_I => SWs_8Bits_TRI_IO_I,
       GPIO_IO_O => SWs_8Bits_TRI_IO_O,
       GPIO_IO_T => SWs_8Bits_TRI_IO_T,
@@ -1520,7 +1526,7 @@ begin
       S_AXI_RRESP => axi4lite_0_M_RRESP(5 downto 4),
       S_AXI_RVALID => axi4lite_0_M_RVALID(2),
       S_AXI_RREADY => axi4lite_0_M_RREADY(2),
-      IP2INTC_Irpt => open,
+      IP2INTC_Irpt => BTNs_5Bits_IP2INTC_Irpt,
       GPIO_IO_I => BTNs_5Bits_TRI_IO_I,
       GPIO_IO_O => BTNs_5Bits_TRI_IO_O,
       GPIO_IO_T => BTNs_5Bits_TRI_IO_T,
@@ -2240,7 +2246,7 @@ begin
       SS_I => axi_spi_0_SS_I,
       SS_O => axi_spi_0_SS_O,
       SS_T => axi_spi_0_SS_T,
-      IP2INTC_Irpt => axi_spi_0_IP2INTC_Irpt(0)
+      IP2INTC_Irpt => axi_spi_0_IP2INTC_Irpt
     );
 
   axi_intc_0 : system_axi_intc_0_wrapper
@@ -2264,7 +2270,7 @@ begin
       S_AXI_RRESP => axi4lite_0_M_RRESP(9 downto 8),
       S_AXI_RVALID => axi4lite_0_M_RVALID(4),
       S_AXI_RREADY => axi4lite_0_M_RREADY(4),
-      Intr => axi_spi_0_IP2INTC_Irpt(0 downto 0),
+      Intr => pgassign2,
       Irq => open,
       Interrupt_address => open,
       Processor_ack => net_gnd2,

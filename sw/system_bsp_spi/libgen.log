@@ -17,3 +17,4 @@ Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
 Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
 "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
 "EXTRA_COMPILER_FLAGS=-g"'.
+Running execs_generate.

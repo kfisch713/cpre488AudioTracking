@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon May 01 18:24:16 2017
+// Written by: Map P.20131013 on Tue May 02 14:02:47 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -386,6 +386,8 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
         BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2"
+        BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
@@ -423,7 +425,8 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
@@ -435,7 +438,14 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
         BEL
@@ -444,10 +454,24 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
+        BEL "SWs_8Bits/SWs_8Bits/IP2INTC_Irpt" BEL
+        "SWs_8Bits/SWs_8Bits/ip2Bus_RdAck_intr_reg_hole_d1" BEL
+        "SWs_8Bits/SWs_8Bits/ip2Bus_WrAck_intr_reg_hole_d1" BEL
+        "SWs_8Bits/SWs_8Bits/ip2bus_wrack_i_D1" BEL
+        "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_0" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_24" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_25" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_26" BEL
@@ -456,9 +480,12 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_29" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_30" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_31" BEL
+        "SWs_8Bits/SWs_8Bits/ip2bus_rdack_i_D1" BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_7"
         BEL
@@ -476,9 +503,66 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
         BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_19"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_18"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_17"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
+        BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0"
-        BEL "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        BEL "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_31" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_30" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_29" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_28" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_26" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_25" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_27" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_24" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_0" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_1" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_2" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_3" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_4" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_5" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_6" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_7" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_0" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_1" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_2" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_3" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_4" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_5" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_6" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_7" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/iGPIO_xferAck" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_intr" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_OE_0" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_OE_1" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_OE_2" BEL
@@ -495,12 +579,32 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_Out_5" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_Out_6" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_Out_7" BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irpt_rdack_d1"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[0].GEN_POS_EDGE_DETECT.irpt_dly2"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irpt_wrack_d1"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_irpt_status_reg_0"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[0].GEN_POS_EDGE_DETECT.irpt_dly1"
+        BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
-        BEL "SWs_8Bits/SWs_8Bits/ip2bus_wrack_i_D1" BEL
-        "SWs_8Bits/SWs_8Bits/ip2bus_rdack_i_D1" BEL
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipif_glbl_irpt_enable_reg"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_irpt_enable_reg_0"
+        BEL "SWs_8Bits/SWs_8Bits/ip2Bus_WrAck_intr_reg_hole" BEL
+        "SWs_8Bits/SWs_8Bits/ip2Bus_RdAck_intr_reg_hole" BEL
         "SWs_8Bits/SWs_8Bits/bus2ip_reset" BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/Intr2Bus_RdAck"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/Intr2Bus_WrAck"
+        BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
@@ -508,30 +612,22 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_31" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_29" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_28" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_30" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_27" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_26" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_24" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_25" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_0" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_0" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_1" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_1" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_2" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_2" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_3" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_3" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_4" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_4" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_5" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_5" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_6" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_6" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_7" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_7" BEL
+        BEL "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_0" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_0" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_1" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_1" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_2" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_2" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_3" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_3" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_4" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_4" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_5" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_5" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_6" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_6" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_7" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_7" BEL
         "LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_24" BEL
         "LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_25" BEL
         "LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_26" BEL
@@ -616,14 +712,22 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_6" BEL
         "LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_7" BEL
         "LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_7" BEL
+        "BTNs_5Bits/BTNs_5Bits/IP2INTC_Irpt" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2Bus_RdAck_intr_reg_hole_d1" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2Bus_WrAck_intr_reg_hole_d1" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2bus_wrack_i_D1" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_0" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_27" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_28" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_29" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_30" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_31" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2bus_rdack_i_D1" BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_4"
         BEL
@@ -635,9 +739,57 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
         BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_19"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_18"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_17"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
+        BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0"
-        BEL "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        BEL "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_31" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_30" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_29" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_28" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_27" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_0" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_1" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_2" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_3" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_4" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_0" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_1" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_2" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_3" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_4" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/iGPIO_xferAck" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_intr" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_OE_0" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_OE_1" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_OE_2" BEL
@@ -648,12 +800,32 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_Out_2" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_Out_3" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_Out_4" BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irpt_rdack_d1"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[0].GEN_POS_EDGE_DETECT.irpt_dly2"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irpt_wrack_d1"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_irpt_status_reg_0"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[0].GEN_POS_EDGE_DETECT.irpt_dly1"
+        BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
-        BEL "BTNs_5Bits/BTNs_5Bits/ip2bus_wrack_i_D1" BEL
-        "BTNs_5Bits/BTNs_5Bits/ip2bus_rdack_i_D1" BEL
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipif_glbl_irpt_enable_reg"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_irpt_enable_reg_0"
+        BEL "BTNs_5Bits/BTNs_5Bits/ip2Bus_WrAck_intr_reg_hole" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2Bus_RdAck_intr_reg_hole" BEL
         "BTNs_5Bits/BTNs_5Bits/bus2ip_reset" BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/Intr2Bus_RdAck"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/Intr2Bus_WrAck"
+        BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
@@ -661,21 +833,16 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_31" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_30" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_29" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_28" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_27" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_2" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_2" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_0" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_0" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_1" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_1" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_3" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_3" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_4" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_4" BEL
+        BEL "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_2" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_2" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_0" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_0" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_1" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_1" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_3" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_3" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_4" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_4" BEL
         "axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
         BEL
         "axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
@@ -1406,6 +1573,8 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
         BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2"
+        BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
@@ -1443,7 +1612,8 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ivr_0" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
@@ -1455,7 +1625,14 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
         BEL
@@ -1464,10 +1641,24 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_2" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
+        BEL "SWs_8Bits/SWs_8Bits/IP2INTC_Irpt" BEL
+        "SWs_8Bits/SWs_8Bits/ip2Bus_RdAck_intr_reg_hole_d1" BEL
+        "SWs_8Bits/SWs_8Bits/ip2Bus_WrAck_intr_reg_hole_d1" BEL
+        "SWs_8Bits/SWs_8Bits/ip2bus_wrack_i_D1" BEL
+        "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_0" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_24" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_25" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_26" BEL
@@ -1476,9 +1667,12 @@ TIMEGRP clk_fpga_0 = BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_29" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_30" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_data_i_D1_31" BEL
+        "SWs_8Bits/SWs_8Bits/ip2bus_rdack_i_D1" BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_7"
         BEL
@@ -1496,9 +1690,66 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
         BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_19"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_18"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_17"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
+        BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
+        BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0"
-        BEL "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        BEL "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_31" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_30" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_29" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_28" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_26" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_25" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_27" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_24" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_0" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_1" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_2" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_3" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_4" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_5" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_6" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_data_in_xor_reg_7" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_0" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_1" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_2" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_3" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_4" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_5" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_6" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_7" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/iGPIO_xferAck" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_intr" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_OE_0" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_OE_1" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_OE_2" BEL
@@ -1515,12 +1766,32 @@ TIMEGRP clk_fpga_0 = BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_Out_5" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_Out_6" BEL
         "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_Out_7" BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irpt_rdack_d1"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[0].GEN_POS_EDGE_DETECT.irpt_dly2"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irpt_wrack_d1"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_irpt_status_reg_0"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[0].GEN_POS_EDGE_DETECT.irpt_dly1"
+        BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
-        BEL "SWs_8Bits/SWs_8Bits/ip2bus_wrack_i_D1" BEL
-        "SWs_8Bits/SWs_8Bits/ip2bus_rdack_i_D1" BEL
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipif_glbl_irpt_enable_reg"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_irpt_enable_reg_0"
+        BEL "SWs_8Bits/SWs_8Bits/ip2Bus_WrAck_intr_reg_hole" BEL
+        "SWs_8Bits/SWs_8Bits/ip2Bus_RdAck_intr_reg_hole" BEL
         "SWs_8Bits/SWs_8Bits/bus2ip_reset" BEL
+        "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/Intr2Bus_RdAck"
+        BEL
+        "SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/Intr2Bus_WrAck"
+        BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
@@ -1528,30 +1799,22 @@ TIMEGRP clk_fpga_0 = BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
         BEL
         "SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_31" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_29" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_28" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_30" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_27" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_26" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_24" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/GPIO_DBus_i_25" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_0" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_0" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_1" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_1" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_2" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_2" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_3" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_3" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_4" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_4" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_5" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_5" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_6" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_6" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_7" BEL
-        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_In_7" BEL
+        BEL "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_0" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_0" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_1" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_1" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_2" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_2" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_3" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_3" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_4" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_4" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_5" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_5" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_6" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_6" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/Mshreg_gpio_io_i_d2_7" BEL
+        "SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_io_i_d2_7" BEL
         "LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_24" BEL
         "LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_25" BEL
         "LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_26" BEL
@@ -1636,14 +1899,22 @@ TIMEGRP clk_fpga_0 = BEL
         "LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_6" BEL
         "LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_7" BEL
         "LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_7" BEL
+        "BTNs_5Bits/BTNs_5Bits/IP2INTC_Irpt" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2Bus_RdAck_intr_reg_hole_d1" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2Bus_WrAck_intr_reg_hole_d1" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2bus_wrack_i_D1" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_0" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_27" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_28" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_29" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_30" BEL
         "BTNs_5Bits/BTNs_5Bits/ip2bus_data_i_D1_31" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2bus_rdack_i_D1" BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_4"
         BEL
@@ -1655,9 +1926,57 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
         BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_19"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_18"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_17"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_11"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_13"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_7"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_6"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_5"
+        BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0"
-        BEL "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        BEL "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_31" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_30" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_29" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_28" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_27" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_0" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_1" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_2" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_3" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_data_in_xor_reg_4" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_0" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_1" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_2" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_3" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_4" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/iGPIO_xferAck" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_intr" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_OE_0" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_OE_1" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_OE_2" BEL
@@ -1668,12 +1987,32 @@ TIMEGRP clk_fpga_0 = BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_Out_2" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_Out_3" BEL
         "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_Out_4" BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irpt_rdack_d1"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[0].GEN_POS_EDGE_DETECT.irpt_dly2"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/irpt_wrack_d1"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_irpt_status_reg_0"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[0].GEN_POS_EDGE_DETECT.irpt_dly1"
+        BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
-        BEL "BTNs_5Bits/BTNs_5Bits/ip2bus_wrack_i_D1" BEL
-        "BTNs_5Bits/BTNs_5Bits/ip2bus_rdack_i_D1" BEL
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipif_glbl_irpt_enable_reg"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ip_irpt_enable_reg_0"
+        BEL "BTNs_5Bits/BTNs_5Bits/ip2Bus_WrAck_intr_reg_hole" BEL
+        "BTNs_5Bits/BTNs_5Bits/ip2Bus_RdAck_intr_reg_hole" BEL
         "BTNs_5Bits/BTNs_5Bits/bus2ip_reset" BEL
+        "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/Intr2Bus_RdAck"
+        BEL
+        "BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/Intr2Bus_WrAck"
+        BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
@@ -1681,21 +2020,16 @@ TIMEGRP clk_fpga_0 = BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
         BEL
         "BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_31" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_30" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_29" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_28" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/GPIO_DBus_i_27" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_2" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_2" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_0" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_0" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_1" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_1" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_3" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_3" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_Data_In_4" BEL
-        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_Data_In_4" BEL
+        BEL "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_2" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_2" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_0" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_0" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_1" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_1" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_3" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_3" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/Mshreg_gpio_io_i_d2_4" BEL
+        "BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_io_i_d2_4" BEL
         "axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
         BEL
         "axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"

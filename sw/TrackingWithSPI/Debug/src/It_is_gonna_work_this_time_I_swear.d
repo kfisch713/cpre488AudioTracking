@@ -19,7 +19,9 @@ src/It_is_gonna_work_this_time_I_swear.d: \
  ../../system_bsp_spi/ps7_cortexa9_0/include/xintc_l.h \
  ../../system_bsp_spi/ps7_cortexa9_0/include/xbasic_types.h \
  ../../system_bsp_spi/ps7_cortexa9_0/include/xil_exception.h \
- ../../system_bsp_spi/ps7_cortexa9_0/include/sleep.h
+ ../../system_bsp_spi/ps7_cortexa9_0/include/sleep.h \
+ ../../system_bsp_spi/ps7_cortexa9_0/include/xgpio.h \
+ ../../system_bsp_spi/ps7_cortexa9_0/include/xgpio_l.h
 
 ../src/platform.h:
 
@@ -62,3 +64,7 @@ src/It_is_gonna_work_this_time_I_swear.d: \
 ../../system_bsp_spi/ps7_cortexa9_0/include/xil_exception.h:
 
 ../../system_bsp_spi/ps7_cortexa9_0/include/sleep.h:
+
+../../system_bsp_spi/ps7_cortexa9_0/include/xgpio.h:
+
+../../system_bsp_spi/ps7_cortexa9_0/include/xgpio_l.h:

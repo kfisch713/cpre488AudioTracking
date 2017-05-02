@@ -53,7 +53,7 @@ INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
    4_03_a\data\processing_system7_v2_1_0.mpd line 319 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
-   PARAMETER C_NUM_INTR_INPUTS value to 1 -
+   PARAMETER C_NUM_INTR_INPUTS value to 3 -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
    a\axi_intc_v2_1_0.mpd line 85 
 
@@ -92,6 +92,9 @@ WARNING:EDK:4180 - PORT: Interrupt_address_in, CONNECTOR: Interrupt_address_in -
    No driver found. Port will be driven to GND -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
    a\axi_intc_v2_1_0.mpd line 131 
+WARNING:EDK:4181 - PORT: IRQ_P2F_GPIO, CONNECTOR:
+   processing_system7_0_IRQ_P2F_GPIO - floating connection -
+   U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 182 
 WARNING:EDK:4181 - PORT: Processor_ack_out, CONNECTOR: Processor_ack_out -
    floating connection -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
@@ -117,7 +120,7 @@ INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
    4_03_a\data\processing_system7_v2_1_0.mpd line 353 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
-   PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111110 -
+   PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111000 -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
    a\axi_intc_v2_1_0.mpd line 87 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
@@ -154,13 +157,25 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:axi_interconnect INSTANCE:axi4lite_0 -
+U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 44 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:leds_8bits -
+U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 67 - Copying cache
+implementation netlist
+IPNAME:processing_system7 INSTANCE:processing_system7_0 -
+U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 96 - Copying cache
+implementation netlist
+IPNAME:axi_spi INSTANCE:axi_spi_0 -
+U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 185 - Copying cache
+implementation netlist
 
 Elaborating instances ...
 
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -176,29 +191,18 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:axi4lite_0 - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
-44 - Running XST synthesis
 INSTANCE:sws_8bits - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
 52 - Running XST synthesis
-INSTANCE:leds_8bits - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
-66 - Running XST synthesis
 INSTANCE:btns_5bits - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
-80 - Running XST synthesis
-INSTANCE:processing_system7_0 -
-U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 94 - Running XST
-synthesis
-INSTANCE:axi_spi_0 - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
-182 - Running XST synthesis
+81 - Running XST synthesis
 INSTANCE:axi_intc_0 - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
-199 - Running XST synthesis
+202 - Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:system_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
-U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 44 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 98.00 seconds
+Total run time: 45.00 seconds

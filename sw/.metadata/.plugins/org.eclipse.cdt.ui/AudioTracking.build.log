@@ -1,4 +1,4 @@
-18:29:01 **** Build of configuration Debug for project AudioTracking ****
+13:02:56 **** Auto Build of configuration Debug for project AudioTracking ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
@@ -7,5 +7,5 @@ arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_c
 compilation terminated.
 make: *** [src/helloworld.o] Error 1
 
-18:29:01 Build Finished (took 230ms)
+13:02:56 Build Finished (took 229ms)
 
