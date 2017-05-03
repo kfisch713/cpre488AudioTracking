@@ -1,0 +1,7 @@
+INFILE=U:\Desktop\cpre488AudioTracking\system_just_button\implementation\system.ncd
+OUTFILE=U:\Desktop\cpre488AudioTracking\system_just_button\implementation\system.bit
+FAMILY=Zynq
+PART=xc7z020-1clg484
+WORKINGDIR=U:\Desktop\cpre488AudioTracking\system_just_button\implementation
+LICENSE=ISE
+USER_INFO=174156856_174156857_210589608_946

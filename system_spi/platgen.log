@@ -48,14 +48,6 @@ INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
    is overriding PARAMETER C_S_AXI_HP3_HIGHADDR value to 0x1FFFFFFF -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
    4_03_a\data\processing_system7_v2_1_0.mpd line 312 
-INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
-   is overriding PARAMETER C_NUM_F2P_INTR_INPUTS value to 1 -
-   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
-   4_03_a\data\processing_system7_v2_1_0.mpd line 319 
-INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
-   PARAMETER C_NUM_INTR_INPUTS value to 3 -
-   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
-   a\axi_intc_v2_1_0.mpd line 85 
 
 Computing clock values...
 INFO:EDK:1432 - Frequency for Top-Level Input Clock
@@ -120,7 +112,7 @@ INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
    4_03_a\data\processing_system7_v2_1_0.mpd line 353 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
-   PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111000 -
+   PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111100 -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_intc_v1_04_a\dat
    a\axi_intc_v2_1_0.mpd line 87 
 INFO:EDK:4130 - IPNAME: axi_intc, INSTANCE:axi_intc_0 - tcl is overriding
@@ -160,14 +152,17 @@ Managing cache ...
 IPNAME:axi_interconnect INSTANCE:axi4lite_0 -
 U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 44 - Copying cache
 implementation netlist
+IPNAME:axi_gpio INSTANCE:sws_8bits -
+U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 52 - Copying cache
+implementation netlist
 IPNAME:axi_gpio INSTANCE:leds_8bits -
 U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 67 - Copying cache
 implementation netlist
-IPNAME:processing_system7 INSTANCE:processing_system7_0 -
-U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 96 - Copying cache
+IPNAME:axi_gpio INSTANCE:btns_5bits -
+U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 81 - Copying cache
 implementation netlist
 IPNAME:axi_spi INSTANCE:axi_spi_0 -
-U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 185 - Copying cache
+U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 186 - Copying cache
 implementation netlist
 
 Elaborating instances ...
@@ -191,12 +186,11 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:sws_8bits - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
-52 - Running XST synthesis
-INSTANCE:btns_5bits - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
-81 - Running XST synthesis
+INSTANCE:processing_system7_0 -
+U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line 96 - Running XST
+synthesis
 INSTANCE:axi_intc_0 - U:\Desktop\cpre488AudioTracking\system_spi\system.mhs line
-202 - Running XST synthesis
+203 - Running XST synthesis
 
 Running NGCBUILD ...
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
@@ -205,4 +199,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 45.00 seconds
+Total run time: 38.00 seconds

@@ -385,6 +385,8 @@ int XIntc_Connect(XIntc * InstancePtr, u8 Id,
 		  XInterruptHandler Handler, void *CallBackRef)
 {
 	XIntc_Config *CfgPtr;
+
+	print("FLAG 1\n");
 	/*
 	 * Assert the arguments
 	 */

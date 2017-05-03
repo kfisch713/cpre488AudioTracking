@@ -15,6 +15,8 @@ Environment Variable      Effect
 NONE                      No environment variables were set
 --------------------------------------------------------------------------------
 
+WARNING:Timing:3223 - Timing constraint PATH "TS_MB_AXI_FP_axi_intc_0_path" 
+   TIG; ignored during timing analysis.
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
    information, see the TSI report.  Please consult the Xilinx Command Line 
    Tools User Guide for information on generating a TSI report.
@@ -28,6 +30,20 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    please see the device datasheet.
 
 ================================================================================
+Timing constraint: PATH "TS_MB_AXI_FP_axi_intc_0_path" TIG;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_AXI_MB_FP_axi_intc_0_path" TIG;
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
 Timing constraint: PATH "TS_axi4lite_0_reset_resync_path" TIG;
 
  2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
@@ -35,13 +51,23 @@ Timing constraint: PATH "TS_axi4lite_0_reset_resync_path" TIG;
 --------------------------------------------------------------------------------
 
 ================================================================================
+Timing constraint: TS_clk_fpga_1 = PERIOD TIMEGRP "clk_fpga_1" 142.857 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6 paths analyzed, 6 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.096ns.
+--------------------------------------------------------------------------------
+
+================================================================================
 Timing constraint: TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH 
 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 14682 paths analyzed, 3408 endpoints analyzed, 0 failing endpoints
+ 14575 paths analyzed, 3357 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   9.054ns.
+ Minimum period is   8.857ns.
 --------------------------------------------------------------------------------
 
 
@@ -59,20 +85,20 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 14684 paths, 0 nets, and 4893 connections
+Constraints cover 14585 paths, 0 nets, and 4765 connections
 
 Design statistics:
-   Minimum period:   9.054ns   (Maximum frequency: 110.448MHz)
+   Minimum period:   8.857ns   (Maximum frequency: 112.905MHz)
 
 
-Analysis completed Tue May 02 14:03:34 2017 
+Analysis completed Wed May 03 15:02:38 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 638 MB
+Peak Memory Usage: 641 MB
 
 
 

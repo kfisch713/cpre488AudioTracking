@@ -6876,3 +6876,176 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 16:26:09.069 INFO  - Processor reset is completed for ps7_cortexa9_0 
 16:28:12.485 INFO  - Processor reset is completed for ps7_cortexa9_0 
 16:28:58.136 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:16:38.294 INFO  - FPGA configured successfully with bitstream "//my.files.iastate.edu/Users/kfisch13/Desktop/cpre488AudioTracking/system_spi/SDK/SDK_Export/hw/system.bit" 
+14:18:27.638 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:18:27.738 INFO  - PS initialization will be done as it is not done before. 
+14:18:27.738 INFO  - Running PS initialization.... 
+14:18:28.238 INFO  - ps7_init is completed. 
+14:18:28.338 INFO  - ps7_post_config is completed. 
+14:18:28.438 INFO  - PS Initialization is complete. 
+14:20:58.948 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:21:28.263 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:22:21.135 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:24:12.247 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:24:14.286 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:29:08.916 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:29:55.986 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:29:57.843 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:37:09.791 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:38:12.388 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+14:38:13.331 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+14:38:14.131 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+14:38:14.801 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+14:38:16.111 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+14:38:16.411 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+14:38:16.841 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+14:38:17.131 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+14:38:17.641 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+14:38:19.576 INFO  - Updating hardware inferred compiler options for TrackingWithSPI. 
+14:38:19.576 INFO  - Clearing existing target manager status. 
+14:38:20.758 INFO  - Closing and re-opening the MSS file of ther project system_bsp_spi 
+14:38:45.692 INFO  - FPGA configured successfully with bitstream "//my.files.iastate.edu/Users/kfisch13/Desktop/cpre488AudioTracking/system_spi/SDK/SDK_Export/hw/system.bit" 
+14:39:11.580 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:39:11.680 INFO  - PS initialization will be done as it is not done before. 
+14:39:11.680 INFO  - Running PS initialization.... 
+14:39:12.180 INFO  - ps7_init is completed. 
+14:39:12.280 INFO  - ps7_post_config is completed. 
+14:39:12.380 INFO  - PS Initialization is complete. 
+14:40:27.229 INFO  - FPGA configured successfully with bitstream "//my.files.iastate.edu/Users/kfisch13/Desktop/cpre488AudioTracking/system_spi/SDK/SDK_Export/hw/system.bit" 
+14:40:35.691 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:40:35.791 INFO  - PS initialization will be done as it is not done before. 
+14:40:35.791 INFO  - Running PS initialization.... 
+14:40:36.291 INFO  - ps7_init is completed. 
+14:40:36.391 INFO  - ps7_post_config is completed. 
+14:40:36.491 INFO  - PS Initialization is complete. 
+14:41:35.224 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:48:49.356 INFO  - FPGA configured successfully with bitstream "//my.files.iastate.edu/Users/kfisch13/Desktop/cpre488AudioTracking/system_spi/SDK/SDK_Export/hw/system.bit" 
+14:48:59.076 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:48:59.176 INFO  - PS initialization will be done as it is not done before. 
+14:48:59.176 INFO  - Running PS initialization.... 
+14:48:59.676 INFO  - ps7_init is completed. 
+14:48:59.776 INFO  - ps7_post_config is completed. 
+14:48:59.876 INFO  - PS Initialization is complete. 
+14:50:01.842 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:51:00.611 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:51:03.135 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:58:49.737 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:04:55.130 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:05:40.761 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+15:05:42.968 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+15:05:43.578 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+15:05:44.248 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+15:05:45.228 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+15:05:45.468 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+15:05:45.748 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+15:05:46.710 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+15:05:46.860 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+15:07:35.812 INFO  - Updating hardware inferred compiler options for TrackingWithSPI. 
+15:07:35.812 INFO  - Clearing existing target manager status. 
+15:08:15.820 INFO  - FPGA configured successfully with bitstream "//my.files.iastate.edu/Users/kfisch13/Desktop/cpre488AudioTracking/system_spi/SDK/SDK_Export/hw/system.bit" 
+15:08:22.040 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:08:22.140 INFO  - PS initialization will be done as it is not done before. 
+15:08:22.140 INFO  - Running PS initialization.... 
+15:08:22.640 INFO  - ps7_init is completed. 
+15:08:22.740 INFO  - ps7_post_config is completed. 
+15:08:22.840 INFO  - PS Initialization is complete. 
+15:17:36.178 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:17:38.214 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:24:55.757 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:24:57.928 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:27:37.257 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:27:39.351 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:28:30.495 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:32:33.099 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:33:40.042 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:35:07.878 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:35:43.479 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:21:07.843 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:29:15.156 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\system.xml. 
+16:29:16.176 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\system.xml. 
+16:29:16.936 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+16:29:17.636 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+16:29:18.838 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+16:29:19.108 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+16:29:19.358 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+16:29:19.678 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+16:29:20.248 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+16:29:22.158 INFO  - Updating hardware inferred compiler options for TrackingWithSPI. 
+16:29:22.158 INFO  - Clearing existing target manager status. 
+16:29:41.792 INFO  - Project system_bsp_spi was a BSP project. Please update references. 
+16:29:41.792 ERROR - SDK has detected that project system_bsp_spi has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+16:33:41.140 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:33:57.621 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\system.xml. 
+16:34:12.387 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:34:21.173 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:34:21.203 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:34:21.233 WARN  - Unable to determine location of documentation for OS . 
+16:34:21.243 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:34:21.283 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:34:27.599 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:34:40.505 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:34:46.730 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:34:55.994 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss. 
+16:35:09.795 INFO  - Project JustButtons_bsp was a BSP project. Please update references. 
+16:35:09.795 ERROR - SDK has detected that project JustButtons_bsp has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+16:38:20.544 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+16:39:08.428 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:39:08.528 INFO  - PS initialization will be done as it is not done before. 
+16:39:08.528 INFO  - Running PS initialization.... 
+16:39:09.028 INFO  - ps7_init is completed. 
+16:39:09.128 INFO  - ps7_post_config is completed. 
+16:39:09.238 INFO  - PS Initialization is complete. 
+16:39:33.075 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:43:29.255 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:52:53.410 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:52:56.215 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:05:59.516 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:22:04.928 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:26:33.795 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:30:46.448 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\JustButtons.xml. 
+17:30:48.399 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\JustButtons.xml. 
+17:30:49.212 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\JustButtons.xml into \system_hw_platform\system.xml. 
+17:30:49.862 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\JustButtons.bit into \system_hw_platform\system.bit. 
+17:30:50.522 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+17:30:50.792 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+17:30:51.352 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+17:30:52.343 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+17:30:52.623 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+17:32:20.143 INFO  - Updating hardware inferred compiler options for JustButtons. 
+17:32:20.163 INFO  - Clearing existing target manager status. 
+17:35:28.748 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:35:43.284 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\JustButtons.xml. 
+17:36:00.619 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\standalone_bsp_0\system.mss. 
+17:36:16.703 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\JustButtons.xml. 
+17:36:18.693 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\standalone_bsp_0\system.mss. 
+17:36:52.469 INFO  - Project standalone_bsp_0 was a BSP project. Please update references. 
+17:36:52.469 ERROR - SDK has detected that project standalone_bsp_0 has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+17:37:48.785 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+17:38:30.936 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:38:31.046 INFO  - PS initialization will be done as it is not done before. 
+17:38:31.046 INFO  - Running PS initialization.... 
+17:38:31.546 INFO  - ps7_init is completed. 
+17:38:31.646 INFO  - ps7_post_config is completed. 
+17:38:31.754 INFO  - PS Initialization is complete. 
+17:39:30.532 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:39:32.892 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:49:37.814 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:50:32.566 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+17:50:38.991 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:50:39.091 INFO  - PS initialization will be done as it is not done before. 
+17:50:39.091 INFO  - Running PS initialization.... 
+17:50:39.591 INFO  - ps7_init is completed. 
+17:50:39.691 INFO  - ps7_post_config is completed. 
+17:50:39.801 INFO  - PS Initialization is complete. 
+17:51:27.943 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:51:30.375 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:52:17.833 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:52:19.992 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:55:58.625 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:56:38.890 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:56:41.054 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:00:33.643 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+18:02:12.419 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -19,7 +19,7 @@
 
 /******************************************************************/
 
-#define XPAR_INTC_MAX_NUM_INTR_INPUTS 3
+#define XPAR_INTC_MAX_NUM_INTR_INPUTS 2
 #define XPAR_XINTC_HAS_IPR 1
 #define XPAR_XINTC_HAS_SIE 1
 #define XPAR_XINTC_HAS_CIE 1
@@ -35,7 +35,7 @@
 #define XPAR_AXI_INTC_0_KIND_OF_INTR 0xFFFFFFFF
 #define XPAR_AXI_INTC_0_HAS_FAST 0
 #define XPAR_AXI_INTC_0_IVAR_RESET_VALUE 0x00000010
-#define XPAR_AXI_INTC_0_NUM_INTR_INPUTS 3
+#define XPAR_AXI_INTC_0_NUM_INTR_INPUTS 2
 
 
 /******************************************************************/
@@ -46,10 +46,8 @@
 #define XPAR_AXI_INTC_0_TYPE 0
 #define XPAR_AXI_SPI_0_IP2INTC_IRPT_MASK 0X000001
 #define XPAR_AXI_INTC_0_AXI_SPI_0_IP2INTC_IRPT_INTR 0
-#define XPAR_BTNS_5BITS_IP2INTC_IRPT_MASK 0X000002
-#define XPAR_AXI_INTC_0_BTNS_5BITS_IP2INTC_IRPT_INTR 1
-#define XPAR_SWS_8BITS_IP2INTC_IRPT_MASK 0X000004
-#define XPAR_AXI_INTC_0_SWS_8BITS_IP2INTC_IRPT_INTR 2
+#define XPAR_SWS_8BITS_IP2INTC_IRPT_MASK 0X000002
+#define XPAR_AXI_INTC_0_SWS_8BITS_IP2INTC_IRPT_INTR 1
 
 /******************************************************************/
 
@@ -60,11 +58,10 @@
 #define XPAR_INTC_0_KIND_OF_INTR 0xFFFFFFFF
 #define XPAR_INTC_0_HAS_FAST 0
 #define XPAR_INTC_0_IVAR_RESET_VALUE 0x00000010
-#define XPAR_INTC_0_NUM_INTR_INPUTS 3
+#define XPAR_INTC_0_NUM_INTR_INPUTS 2
 #define XPAR_INTC_0_INTC_TYPE 0
 
 #define XPAR_INTC_0_SPI_0_VEC_ID XPAR_AXI_INTC_0_AXI_SPI_0_IP2INTC_IRPT_INTR
-#define XPAR_INTC_0_GPIO_0_VEC_ID XPAR_AXI_INTC_0_BTNS_5BITS_IP2INTC_IRPT_INTR
 #define XPAR_INTC_0_GPIO_2_VEC_ID XPAR_AXI_INTC_0_SWS_8BITS_IP2INTC_IRPT_INTR
 
 /******************************************************************/
@@ -397,10 +394,14 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_AXI_INTC_0_IRQ_INTR 91
+#define XPAR_FABRIC_BTNS_5BITS_IP2INTC_IRPT_INTR 90
 
 /******************************************************************/
 
 /* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_INTC_0_VEC_ID XPAR_FABRIC_AXI_INTC_0_IRQ_INTR
+#define XPAR_FABRIC_GPIO_0_VEC_ID XPAR_FABRIC_BTNS_5BITS_IP2INTC_IRPT_INTR
 
 /******************************************************************/
 

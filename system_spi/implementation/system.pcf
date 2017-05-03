@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue May 02 14:02:47 2017
+// Written by: Map P.20131013 on Wed May 03 15:01:49 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -156,7 +156,7 @@ COMP "processing_system7_0_MIO<32>" LOCATE = SITE "C7" LEVEL 1;
 COMP "processing_system7_0_MIO<31>" LOCATE = SITE "F9" LEVEL 1;
 COMP "processing_system7_0_MIO<34>" LOCATE = SITE "B12" LEVEL 1;
 COMP "processing_system7_0_MIO<33>" LOCATE = SITE "G13" LEVEL 1;
-PIN processing_system7_0/processing_system7_0/PS7_i_pins<357> = BEL
+PIN processing_system7_0/processing_system7_0/PS7_i_pins<359> = BEL
         "processing_system7_0/processing_system7_0/PS7_i" PINNAME MAXIGP0ACLK;
 TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[4].register_slice_inst/reset"
@@ -382,11 +382,17 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
         BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_1"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
         BEL
@@ -430,44 +436,27 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_1"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_2" BEL
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_2" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_1"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
-        BEL "SWs_8Bits/SWs_8Bits/IP2INTC_Irpt" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
+        "SWs_8Bits/SWs_8Bits/IP2INTC_Irpt" BEL
         "SWs_8Bits/SWs_8Bits/ip2Bus_RdAck_intr_reg_hole_d1" BEL
         "SWs_8Bits/SWs_8Bits/ip2Bus_WrAck_intr_reg_hole_d1" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_wrack_i_D1" BEL
@@ -1344,7 +1333,7 @@ TIMEGRP S_AXI_ACLK_axi_intc_0 = BEL
         "axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/serial_dout_int"
         BEL
         "axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/Serial_Dout"
-        PIN "processing_system7_0/processing_system7_0/PS7_i_pins<357>";
+        PIN "processing_system7_0/processing_system7_0/PS7_i_pins<359>";
 TIMEGRP clk_fpga_0 = BEL
         "axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[4].register_slice_inst/reset"
         BEL
@@ -1569,11 +1558,17 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
         BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_1"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
         BEL
@@ -1617,44 +1612,27 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
         BEL
         "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_1"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
-        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
-        BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
-        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_2" BEL
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/hw_intr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_2" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_1"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_0" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_1" BEL
         "axi_intc_0/axi_intc_0/INTC_CORE_I/cie_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/isr_0" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_2" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_1" BEL
-        "axi_intc_0/axi_intc_0/INTC_CORE_I/ier_0" BEL
-        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
-        BEL "SWs_8Bits/SWs_8Bits/IP2INTC_Irpt" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/mer_int_1" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst" BEL
+        "axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/ipr_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/sie_0" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_1" BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/iar_0" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_wrack" BEL
+        "axi_intc_0/axi_intc_0/ip2bus_rdack" BEL
+        "SWs_8Bits/SWs_8Bits/IP2INTC_Irpt" BEL
         "SWs_8Bits/SWs_8Bits/ip2Bus_RdAck_intr_reg_hole_d1" BEL
         "SWs_8Bits/SWs_8Bits/ip2Bus_WrAck_intr_reg_hole_d1" BEL
         "SWs_8Bits/SWs_8Bits/ip2bus_wrack_i_D1" BEL
@@ -2531,17 +2509,42 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/serial_dout_int"
         BEL
         "axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/Serial_Dout"
-        PIN "processing_system7_0/processing_system7_0/PS7_i_pins<357>";
+        PIN "processing_system7_0/processing_system7_0/PS7_i_pins<359>";
 TIMEGRP axi4lite_0_reset_resync = BEL
         "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2"
         BEL
         "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1"
         BEL
         "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_0";
+TIMEGRP Processor_clk_axi_intc_0 = BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/IRQ_GEN_SYNC_GEN.MER_0_DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.FIRST_FLOP_i"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/IRQ_GEN_SYNC_GEN.MER_0_DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.SECOND_FLOP_i"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/MER_SYNC_EN_GEN.MER_0_DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.FIRST_FLOP_i"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/MER_SYNC_EN_GEN.MER_0_DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.SECOND_FLOP_i"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq";
+TIMEGRP clk_fpga_1 = BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/IRQ_GEN_SYNC_GEN.MER_0_DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.FIRST_FLOP_i"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/IRQ_GEN_SYNC_GEN.MER_0_DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.SECOND_FLOP_i"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/MER_SYNC_EN_GEN.MER_0_DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.FIRST_FLOP_i"
+        BEL
+        "axi_intc_0/axi_intc_0/INTC_CORE_I/MER_SYNC_EN_GEN.MER_0_DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.SECOND_FLOP_i"
+        BEL "axi_intc_0/axi_intc_0/INTC_CORE_I/Irq";
 TIMEGRP axi4lite_0_reset_source = FFS(*) PADS(*);
+PATH TS_MB_AXI_FP_axi_intc_0_path = FROM TIMEGRP "Processor_clk_axi_intc_0" TO
+        TIMEGRP "S_AXI_ACLK_axi_intc_0";
+PATH "TS_MB_AXI_FP_axi_intc_0_path" TIG;
+PATH TS_AXI_MB_FP_axi_intc_0_path = FROM TIMEGRP "S_AXI_ACLK_axi_intc_0" TO
+        TIMEGRP "Processor_clk_axi_intc_0";
+PATH "TS_AXI_MB_FP_axi_intc_0_path" TIG;
 PATH TS_axi4lite_0_reset_resync_path = FROM TIMEGRP "axi4lite_0_reset_source"
         TO TIMEGRP "axi4lite_0_reset_resync";
 PATH "TS_axi4lite_0_reset_resync_path" TIG;
+TS_clk_fpga_1 = PERIOD TIMEGRP "clk_fpga_1" 142.857 MHz HIGH 50%;
 TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

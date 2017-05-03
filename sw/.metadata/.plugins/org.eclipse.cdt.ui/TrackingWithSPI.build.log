@@ -1,6 +1,6 @@
-16:28:09 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+16:29:44 **** Auto Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
 
-16:28:09 Build Finished (took 170ms)
+16:29:44 Build Finished (took 185ms)
 

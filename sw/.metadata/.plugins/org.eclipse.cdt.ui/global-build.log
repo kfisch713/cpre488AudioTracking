@@ -3393,3 +3393,1990 @@ arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
 16:28:09 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
 make all 
 make: Nothing to be done for `all'.
+14:18:23 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:20:46 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:228:6: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:228:6: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:202:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76500	   2400	 398780	 477680	  749f0	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+14:20:57 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:21:13 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:228:6: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:228:6: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:202:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76500	   2400	 398780	 477680	  749f0	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+14:21:26 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:22:13 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:202:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:201:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76468	   2400	 398780	 477648	  749d0	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+14:22:18 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:24:07 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:202:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:201:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76444	   2400	 398780	 477624	  749b8	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+14:24:11 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:29:00 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76492	   2400	 398780	 477672	  749e8	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+14:29:05 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:29:39 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpioISR':
+../src/It_is_gonna_work_this_time_I_swear.c:158:2: warning: implicit declaration of function 'XGpio_InterurptClear' [-Wimplicit-function-declaration]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/It_is_gonna_work_this_time_I_swear.o: In function `gpioISR':
+U:\Desktop\cpre488AudioTracking\sw\TrackingWithSPI\Debug/../src/It_is_gonna_work_this_time_I_swear.c:158: undefined reference to `XGpio_InterurptClear'
+collect2.exe: error: ld returned 1 exit status
+make: *** [TrackingWithSPI.elf] Error 1
+14:29:51 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76492	   2400	 398780	 477672	  749e8	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+14:29:55 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:38:14 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+14:38:16 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+14:38:16 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+14:38:16 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+14:38:17 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+14:38:17 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:39:08 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:40:34 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:41:31 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:44:16 **** Auto Build of project system_bsp_spi ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling intc"
+"Compiling spi"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+14:45:57 **** Clean-only build of configuration Debug for project TrackingWithSPI ****
+make clean 
+rm -rf  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o  ./src/It_is_gonna_work_this_time_I_swear.d ./src/platform.d  TrackingWithSPI.elf.size  TrackingWithSPI.elf
+' '
+14:45:58 **** Clean-only build of project system_bsp_spi ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+14:46:09 **** Build of project system_bsp_spi ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling intc"
+"Compiling spi"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+14:47:27 **** Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76492	   2400	 398780	 477672	  749e8	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+14:47:57 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+14:47:57 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:48:57 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:50:00 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:50:48 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+14:50:48 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:50:59 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:53:03 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:193:76: error: 'XIntc_ExceptionHandler' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:193:76: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+14:53:13 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76492	   2400	 398780	 477672	  749e8	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+14:58:42 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+14:58:42 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+14:58:46 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:05:44 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+15:05:45 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+15:05:45 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+15:05:46 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:05:47 **** Auto Build of project system_bsp_spi ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling intc"
+"Compiling spi"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+15:07:35 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:08:20 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:17:28 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+15:17:29 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:17:35 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:23:53 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:181:33: error: 'XPAR_INTC_0_GPIO_0_VEC_ID' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:181:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:227:32: error: 'XPAR_INTC_0_GPIO_0_VEC_ID' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+15:24:00 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:181:33: error: 'XPAR_INTC_0_GPIO_0_VEC_ID' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:181:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:227:5: warning: implicit declaration of function 'XIntc_SimulateIntc' [-Wimplicit-function-declaration]
+../src/It_is_gonna_work_this_time_I_swear.c:227:32: error: 'XPAR_INTC_0_GPIO_0_VEC_ID' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+15:24:23 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:181:33: error: 'XPAR_INTC_0_GPIO_0_VEC_ID' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:181:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:227:32: error: 'XPAR_INTC_0_GPIO_0_VEC_ID' undeclared (first use in this function)
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+make: *** [src/It_is_gonna_work_this_time_I_swear.o] Error 1
+15:24:49 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+../src/It_is_gonna_work_this_time_I_swear.c:202:6: warning: variable 'buttons' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76960	   2392	 398780	 478132	  74bb4	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+15:24:55 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:26:06 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:230:6: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:230:6: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77000	   2392	 398780	 478172	  74bdc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+15:27:32 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:231:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:231:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77032	   2392	 398780	 478204	  74bfc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+15:27:36 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:28:14 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:231:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:231:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:203:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77032	   2392	 398780	 478204	  74bfc	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+15:28:28 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:32:13 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:192:2: warning: passing argument 1 of 'Xil_Out32' makes integer from pointer without a cast [enabled by default]
+In file included from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi_l.h:83:0,
+                 from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:304,
+                 from ../src/It_is_gonna_work_this_time_I_swear.c:37:
+../../system_bsp_spi/ps7_cortexa9_0/include/xil_io.h:240:6: note: expected 'u32' but argument is of type 'u32 *'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:204:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77056	   2392	 398780	 478228	  74c14	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+15:32:27 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:192:2: warning: passing argument 1 of 'Xil_Out32' makes integer from pointer without a cast [enabled by default]
+In file included from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi_l.h:83:0,
+                 from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:304,
+                 from ../src/It_is_gonna_work_this_time_I_swear.c:37:
+../../system_bsp_spi/ps7_cortexa9_0/include/xil_io.h:240:6: note: expected 'u32' but argument is of type 'u32 *'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:204:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76588	   2392	 398780	 477760	  74a40	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+15:32:30 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:33:33 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:192:2: warning: passing argument 1 of 'Xil_Out32' makes integer from pointer without a cast [enabled by default]
+In file included from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi_l.h:83:0,
+                 from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:304,
+                 from ../src/It_is_gonna_work_this_time_I_swear.c:37:
+../../system_bsp_spi/ps7_cortexa9_0/include/xil_io.h:240:6: note: expected 'u32' but argument is of type 'u32 *'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:204:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77056	   2392	 398780	 478228	  74c14	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+15:33:36 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:35:06 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+15:35:38 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:192:2: warning: passing argument 1 of 'Xil_Out32' makes integer from pointer without a cast [enabled by default]
+In file included from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi_l.h:83:0,
+                 from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:304,
+                 from ../src/It_is_gonna_work_this_time_I_swear.c:37:
+../../system_bsp_spi/ps7_cortexa9_0/include/xil_io.h:240:6: note: expected 'u32' but argument is of type 'u32 *'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:204:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77056	   2392	 398780	 478228	  74c14	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+15:35:41 **** Incremental Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+16:15:50 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+16:15:50 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+16:21:02 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+'Building file: ../src/It_is_gonna_work_this_time_I_swear.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp_spi/ps7_cortexa9_0/include -MMD -MP -MF"src/It_is_gonna_work_this_time_I_swear.d" -MT"src/It_is_gonna_work_this_time_I_swear.d" -o "src/It_is_gonna_work_this_time_I_swear.o" "../src/It_is_gonna_work_this_time_I_swear.c"
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_spi_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:61:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:72:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:73:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u8 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'print_gpio_debug':
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:82:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:83:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:84:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:85:2: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'spi_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:143:2: warning: passing argument 3 of 'XSpi_SetStatusHandler' from incompatible pointer type [enabled by default]
+In file included from ../src/It_is_gonna_work_this_time_I_swear.c:37:0:
+../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:815:6: note: expected 'XSpi_StatusHandler' but argument is of type 'void (*)(void *, u32,  u32)'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'gpio_intr_init':
+../src/It_is_gonna_work_this_time_I_swear.c:192:2: warning: passing argument 1 of 'Xil_Out32' makes integer from pointer without a cast [enabled by default]
+In file included from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi_l.h:83:0,
+                 from ../../system_bsp_spi/ps7_cortexa9_0/include/xspi.h:304,
+                 from ../src/It_is_gonna_work_this_time_I_swear.c:37:
+../../system_bsp_spi/ps7_cortexa9_0/include/xil_io.h:240:6: note: expected 'u32' but argument is of type 'u32 *'
+../src/It_is_gonna_work_this_time_I_swear.c: In function 'main':
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:232:7: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat]
+../src/It_is_gonna_work_this_time_I_swear.c:204:5: warning: variable 'write' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/It_is_gonna_work_this_time_I_swear.c'
+' '
+'Building target: TrackingWithSPI.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp_spi/ps7_cortexa9_0/lib -o "TrackingWithSPI.elf"  ./src/It_is_gonna_work_this_time_I_swear.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TrackingWithSPI.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size TrackingWithSPI.elf  |tee "TrackingWithSPI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77056	   2392	 398780	 478228	  74c14	TrackingWithSPI.elf
+'Finished building: TrackingWithSPI.elf.size'
+' '
+16:29:17 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+16:29:18 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+16:29:19 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+16:29:19 **** Auto Build of project system_bsp_spi ****
+make -k all 
+'Finished building libraries'
+16:29:20 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+16:29:44 **** Auto Build of configuration Debug for project TrackingWithSPI ****
+make all 
+make: Nothing to be done for `all'.
+16:30:30 **** Build of project JustButtons_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+ERROR:EDK:410 - intc -
+   U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss line 21 - No IP
+   instance named axi_intc_0 is present in the hardware!
+ERROR:EDK:410 - spi -
+   U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss line 27 - No IP
+   instance named axi_spi_0 is present in the hardware!
+ERROR:EDK:410 - gpio -
+   U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss line 39 - No IP
+   instance named leds_8bits is present in the hardware!
+ERROR:EDK:410 - gpio -
+   U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss line 237 - No
+   IP instance named sws_8bits is present in the hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.
+make: *** [ps7_cortexa9_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+
+**** Build of configuration Debug for project JustButtons ****
+
+Nothing to build for project JustButtons
+16:31:10 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/justButtons.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../JustButtons_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/justButtons.d" -MT"src/justButtons.d" -o "src/justButtons.o" "../src/justButtons.c"
+'Finished building: ../src/justButtons.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../JustButtons_bsp/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/justButtons.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/arm/nt/bin/../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/bin/ld.exe: cannot find -lxil
+collect2.exe: error: ld returned 1 exit status
+make: *** [JustButtons.elf] Error 1
+16:31:57 **** Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../JustButtons_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../JustButtons_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+../src/platform.c:42:25: fatal error: xparameters.h: No such file or directory
+compilation terminated.
+make: *** [src/platform.o] Error 1
+16:32:25 **** Clean-only build of configuration Debug for project JustButtons ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  JustButtons.elf.size  JustButtons.elf
+' '
+16:32:25 **** Clean-only build of project JustButtons_bsp ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+16:32:25 **** Build of project JustButtons_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+ERROR:EDK:410 - intc -
+   U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss line 21 - No IP
+   instance named axi_intc_0 is present in the hardware!
+ERROR:EDK:410 - spi -
+   U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss line 27 - No IP
+   instance named axi_spi_0 is present in the hardware!
+ERROR:EDK:410 - gpio -
+   U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss line 39 - No IP
+   instance named leds_8bits is present in the hardware!
+ERROR:EDK:410 - gpio -
+   U:\Desktop\cpre488AudioTracking\sw\JustButtons_bsp\system.mss line 237 - No
+   IP instance named sws_8bits is present in the hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.
+make: *** [ps7_cortexa9_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+16:32:26 **** Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../JustButtons_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../JustButtons_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+../src/platform.c:42:25: fatal error: xparameters.h: No such file or directory
+compilation terminated.
+make: *** [src/platform.o] Error 1
+16:33:34 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../JustButtons_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:20: fatal error: xil_io.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+16:35:11 **** Clean-only build of configuration Debug for project JustButtons ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  JustButtons.elf.size  JustButtons.elf
+' '
+16:35:12 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../JustButtons_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:20: fatal error: xil_io.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+16:35:41 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+16:36:59 **** Clean-only build of configuration Debug for project JustButtons ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  JustButtons.elf.size  JustButtons.elf
+' '
+16:36:59 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28348	   1872	  29812	  60032	   ea80	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+16:38:47 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+16:39:05 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+16:39:30 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+16:41:40 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28380	   1872	  29812	  60064	   eaa0	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+16:42:54 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28344	   1872	  29812	  60028	   ea7c	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+16:43:23 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28340	   1872	  29812	  60024	   ea78	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+16:43:26 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+16:52:50 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28380	   1872	  29812	  60064	   eaa0	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+16:52:52 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+16:56:15 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28340	   1872	  29812	  60024	   ea78	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:05:54 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28340	   1872	  29812	  60024	   ea78	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:05:56 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:20:01 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:247:35: error: 'XPAR_PUSH_BUTTONS_4BITS_DEVICE_ID' undeclared (first use in this function)
+../src/helloworld.c:247:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'SetupInterruptSystem':
+../src/helloworld.c:539:50: error: 'XPAR_INTC_0_GPIO_2_VEC_ID' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+17:20:58 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'SetupInterruptSystem':
+../src/helloworld.c:539:50: error: 'XPAR_INTC_0_GPIO_2_VEC_ID' undeclared (first use in this function)
+../src/helloworld.c:539:50: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+17:21:56 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29292	   2000	  29828	  61120	   eec0	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:22:01 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:30:49 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+'Finished building libraries'
+17:30:50 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+'Finished building libraries'
+17:30:50 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+'Finished building libraries'
+17:30:51 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+'Finished building libraries'
+17:30:53 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+17:32:20 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:33:32 **** Clean-only build of configuration Debug for project JustButtons ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  JustButtons.elf.size  JustButtons.elf
+' '
+17:33:32 **** Clean-only build of project standalone_bsp_0 ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+17:33:42 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+17:34:48 **** Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29292	   2000	  29828	  61120	   eec0	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:36:01 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+make: *** No rule to make target `system.mss', needed by `ps7_cortexa9_0/lib/libxil.a'.
+make: Target `all' not remade because of errors.
+17:36:01 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:36:54 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:37:09 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+17:38:17 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:38:27 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:39:26 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28348	   1872	  29812	  60032	   ea80	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:39:29 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:40:42 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:247:35: error: 'XPAR_PUSH_BUTTONS_4BITS_DEVICE_ID' undeclared (first use in this function)
+../src/helloworld.c:247:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'SetupInterruptSystem':
+../src/helloworld.c:539:50: error: 'XPAR_INTC_0_GPIO_2_VEC_ID' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+17:47:54 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'SetupInterruptSystem':
+../src/helloworld.c:539:50: error: 'XPAR_INTC_0_GPIO_0_VEC_ID' undeclared (first use in this function)
+../src/helloworld.c:539:50: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+17:49:32 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29376	   2032	  29828	  61236	   ef34	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:49:34 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:50:37 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:51:24 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29376	   2032	  29828	  61236	   ef34	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:51:27 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:52:14 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29376	   2032	  29828	  61236	   ef34	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:52:17 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:54:21 **** Clean-only build of configuration Debug for project JustButtons ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  JustButtons.elf.size  JustButtons.elf
+' '
+17:54:22 **** Clean-only build of project standalone_bsp_0 ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+17:54:31 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+17:55:39 **** Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29376	   2032	  29828	  61236	   ef34	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:55:57 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.
+17:56:26 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:125:2: error: #endif without #if
+make: *** [src/helloworld.o] Error 1
+17:56:33 **** Auto Build of configuration Debug for project JustButtons ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: JustButtons.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "JustButtons.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: JustButtons.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size JustButtons.elf  |tee "JustButtons.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29376	   2032	  29828	  61236	   ef34	JustButtons.elf
+'Finished building: JustButtons.elf.size'
+' '
+17:56:38 **** Incremental Build of configuration Debug for project JustButtons ****
+make all 
+make: Nothing to be done for `all'.

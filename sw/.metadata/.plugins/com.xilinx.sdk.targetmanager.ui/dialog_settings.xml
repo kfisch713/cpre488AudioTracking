@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="" key="system_hw_platform-bmmFile"/>
-	<item value="\\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.bit" key="system_hw_platform-bitFile"/>
+	<item value="U:\Desktop\cpre488AudioTracking\sw\system_hw_platform\system.bit" key="system_hw_platform-bitFile"/>
 </section>

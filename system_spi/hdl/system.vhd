@@ -960,7 +960,7 @@ architecture STRUCTURE of system is
       FCLK_RESET0_N : out std_logic;
       FPGA_IDLE_N : in std_logic;
       DDR_ARB : in std_logic_vector(3 downto 0);
-      IRQ_F2P : in std_logic_vector(0 to 0);
+      IRQ_F2P : in std_logic_vector(1 downto 0);
       Core0_nFIQ : in std_logic;
       Core0_nIRQ : in std_logic;
       Core1_nFIQ : in std_logic;
@@ -1081,7 +1081,7 @@ architecture STRUCTURE of system is
       S_AXI_RRESP : out std_logic_vector(1 downto 0);
       S_AXI_RVALID : out std_logic;
       S_AXI_RREADY : in std_logic;
-      Intr : in std_logic_vector(2 downto 0);
+      Intr : in std_logic_vector(1 downto 0);
       Irq : out std_logic;
       Interrupt_address : out std_logic_vector(31 downto 0);
       Processor_ack : in std_logic_vector(1 downto 0);
@@ -1167,6 +1167,7 @@ architecture STRUCTURE of system is
   signal axi4lite_0_S_WREADY : std_logic_vector(0 to 0);
   signal axi4lite_0_S_WSTRB : std_logic_vector(3 downto 0);
   signal axi4lite_0_S_WVALID : std_logic_vector(0 to 0);
+  signal axi_intc_0_Irq : std_logic;
   signal axi_spi_0_IP2INTC_Irpt : std_logic;
   signal axi_spi_0_MISO_I : std_logic;
   signal axi_spi_0_MISO_O : std_logic;
@@ -1194,7 +1195,8 @@ architecture STRUCTURE of system is
   signal net_gnd64 : std_logic_vector(63 downto 0);
   signal net_vcc0 : std_logic;
   signal pgassign1 : std_logic_vector(4 downto 0);
-  signal pgassign2 : std_logic_vector(2 downto 0);
+  signal pgassign2 : std_logic_vector(1 downto 0);
+  signal pgassign3 : std_logic_vector(1 downto 0);
   signal processing_system7_0_DDR_WEB : std_logic;
   signal processing_system7_0_FCLK_CLK0 : std_logic_vector(0 to 0);
   signal processing_system7_0_FCLK_CLK1 : std_logic;
@@ -1220,9 +1222,10 @@ begin
   pgassign1(2 downto 2) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign1(1 downto 1) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign1(0 downto 0) <= processing_system7_0_FCLK_CLK0(0 to 0);
-  pgassign2(2) <= SWs_8Bits_IP2INTC_Irpt;
-  pgassign2(1) <= BTNs_5Bits_IP2INTC_Irpt;
-  pgassign2(0) <= axi_spi_0_IP2INTC_Irpt;
+  pgassign2(1) <= axi_intc_0_Irq;
+  pgassign2(0) <= BTNs_5Bits_IP2INTC_Irpt;
+  pgassign3(1) <= SWs_8Bits_IP2INTC_Irpt;
+  pgassign3(0) <= axi_spi_0_IP2INTC_Irpt;
   net_gnd0 <= '0';
   net_gnd1(0 to 0) <= B"0";
   net_gnd12(11 downto 0) <= B"000000000000";
@@ -2151,7 +2154,7 @@ begin
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N_0,
       FPGA_IDLE_N => net_gnd0,
       DDR_ARB => net_gnd4,
-      IRQ_F2P => net_gnd1(0 to 0),
+      IRQ_F2P => pgassign2,
       Core0_nFIQ => net_gnd0,
       Core0_nIRQ => net_gnd0,
       Core1_nFIQ => net_gnd0,
@@ -2270,8 +2273,8 @@ begin
       S_AXI_RRESP => axi4lite_0_M_RRESP(9 downto 8),
       S_AXI_RVALID => axi4lite_0_M_RVALID(4),
       S_AXI_RREADY => axi4lite_0_M_RREADY(4),
-      Intr => pgassign2,
-      Irq => open,
+      Intr => pgassign3,
+      Irq => axi_intc_0_Irq,
       Interrupt_address => open,
       Processor_ack => net_gnd2,
       Processor_clk => processing_system7_0_FCLK_CLK1,

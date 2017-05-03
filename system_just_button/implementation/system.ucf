@@ -1,0 +1,12 @@
+#
+# pin constraints
+#
+NET BTNs_5Bits_TRI_IO[0] LOC = "P16"  |  IOSTANDARD = "LVCMOS25";
+NET BTNs_5Bits_TRI_IO[1] LOC = "R16"  |  IOSTANDARD = "LVCMOS25";
+NET BTNs_5Bits_TRI_IO[2] LOC = "N15"  |  IOSTANDARD = "LVCMOS25";
+NET BTNs_5Bits_TRI_IO[3] LOC = "R18"  |  IOSTANDARD = "LVCMOS25";
+NET BTNs_5Bits_TRI_IO[4] LOC = "T18"  |  IOSTANDARD = "LVCMOS25";
+#
+# additional constraints
+#
+

@@ -148,6 +148,7 @@ void gpioISR(void* instancePtr){
 	XGpio *GpioPtr = (XGpio *)instancePtr;
 	u32 Buttons;
 
+	printf("\nINSIDE INTERRUPT\n");
 	transfer_in_progress = 0;
 	XGpio_InterruptDisable(GpioPtr, XGPIO_IR_CH1_MASK); //buttons are channel 1
 	Buttons = XGpio_DiscreteRead(GpioPtr, GPIO_CHANNEL);
@@ -177,7 +178,7 @@ void gpio_intr_init(){
 	if (Status != XST_SUCCESS) {
 		printf("interrupt init failed\n");
 	}
-	Status = XIntc_Connect(&intr0, XPAR_INTC_0_GPIO_0_VEC_ID, (Xil_InterruptHandler) gpioISR, &gpio0);
+	Status = XIntc_Connect(&intr0, XPAR_INTC_0_GPIO_2_VEC_ID, (Xil_InterruptHandler) gpioISR, &gpio0);
 	if (Status != XST_SUCCESS) {
 		printf("interrupt connect failed\n");
 	}
@@ -188,6 +189,7 @@ void gpio_intr_init(){
 
 	XGpio_InterruptEnable(&gpio0, XGPIO_IR_MASK);
 	XGpio_InterruptGlobalEnable(&gpio0);
+	XIntc_MasterEnable(&intr0.BaseAddress);
 	Xil_ExceptionInit();
 	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XIntc_InterruptHandler, &intr0);
 	Xil_ExceptionEnable();
@@ -198,7 +200,7 @@ void gpio_intr_init(){
 int main()
 {
 	int i;
-	u32 buttons;
+	u32 buttons, old_buttons=0;
 	u8 write[BUFFER_SIZE], read[BUFFER_SIZE];
 
 
@@ -223,9 +225,13 @@ int main()
     //XSpi_Transfer(&spi0, write, read, BUFFER_SIZE);
 
     printf("entering waiting loop\n");
+    XIntc_SimulateIntr(&intr0, XPAR_INTC_0_GPIO_2_VEC_ID);
     while(transfer_in_progress){
     	buttons = XGpio_DiscreteRead(&gpio0, GPIO_CHANNEL);
-    	printf("%ld, %d\n", buttons, &gpio0.InterruptPresent);
+    	if(buttons != old_buttons){
+    		printf("%ld, 0x%x\n", buttons, &gpio0.InterruptPresent);
+    		old_buttons = buttons;
+    	}
     }
 
     for(i=0; i<BUFFER_SIZE; i++){
