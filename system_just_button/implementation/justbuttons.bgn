@@ -8,7 +8,7 @@ C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
 -1
 Opened constraints file JustButtons.pcf.
 
-Wed May 03 17:30:18 2017
+Thu May 04 13:58:09 2017
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -w JustButtons.ncd 
 

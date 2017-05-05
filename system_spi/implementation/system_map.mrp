@@ -9,23 +9,23 @@ Target Device  : xc7z020
 Target Package : clg484
 Target Speed   : -1
 Mapper Version : zynq -- $Revision: 1.55 $
-Mapped Date    : Wed May 03 15:01:21 2017
+Mapped Date    : Thu May 04 14:29:56 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    9
+Number of warnings:    8
 Slice Logic Utilization:
-  Number of Slice Registers:                   640 out of 106,400    1%
-    Number used as Flip Flops:                 640
+  Number of Slice Registers:                   626 out of 106,400    1%
+    Number used as Flip Flops:                 626
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        860 out of  53,200    1%
-    Number used as logic:                      809 out of  53,200    1%
-      Number using O6 output only:             685
+  Number of Slice LUTs:                        831 out of  53,200    1%
+    Number used as logic:                      764 out of  53,200    1%
+      Number using O6 output only:             673
       Number using O5 output only:               0
-      Number using O5 and O6:                  124
+      Number using O5 and O6:                   91
       Number used as ROM:                        0
     Number used as Memory:                      45 out of  17,400    1%
       Number used as Dual Port RAM:              0
@@ -34,20 +34,20 @@ Slice Logic Utilization:
         Number using O6 output only:            37
         Number using O5 output only:             0
         Number using O5 and O6:                  8
-    Number used exclusively as route-thrus:      6
-      Number with same-slice register load:      2
+    Number used exclusively as route-thrus:     22
+      Number with same-slice register load:     14
       Number with same-slice carry load:         2
-      Number with other load:                    2
+      Number with other load:                    6
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   325 out of  13,300    2%
-  Number of LUT Flip Flop pairs used:          964
-    Number with an unused Flip Flop:           369 out of     964   38%
-    Number with an unused LUT:                 104 out of     964   10%
-    Number of fully used LUT-FF pairs:         491 out of     964   50%
-    Number of unique control sets:              70
+  Number of occupied Slices:                   311 out of  13,300    2%
+  Number of LUT Flip Flop pairs used:          918
+    Number with an unused Flip Flop:           338 out of     918   36%
+    Number with an unused LUT:                  87 out of     918    9%
+    Number of fully used LUT-FF pairs:         493 out of     918   53%
+    Number of unique control sets:              51
     Number of slice register sites lost
-      to control set restrictions:             299 out of 106,400    1%
+      to control set restrictions:             201 out of 106,400    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -66,8 +66,8 @@ IO Utilization:
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     140    0%
   Number of RAMB18E1/FIFO18E1s:                  0 out of     280    0%
-  Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
-    Number used as BUFGs:                        2
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     200    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        2 out of     200    1%
@@ -101,11 +101,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.61
+Average Fanout of Non-Clock Nets:                3.60
 
-Peak Memory Usage:  873 MB
-Total REAL time to MAP completion:  29 secs 
-Total CPU time to MAP completion:   26 secs 
+Peak Memory Usage:  871 MB
+Total REAL time to MAP completion:  32 secs 
+Total CPU time to MAP completion:   27 secs 
 
 Table of Contents
 -----------------
@@ -160,7 +160,6 @@ WARNING:Pack:2549 - The register
    axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/SPI_TRISTATE_CONTRO
    L_IV requires general routing to fabric, but the register can only be routed
    to ILOGIC, ODELAY, and IOB.
-WARNING:Timing:3223 - Timing constraint PATH "TS_MB_AXI_FP_axi_intc_0_path" TIG ignored during timing analysis.
 
 Section 3 - Informational
 -------------------------
@@ -201,8 +200,8 @@ INFO:LIT:243 - Logical network axi4lite_0_S_AWQOS<3> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_S_AWQOS<2> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_S_AWQOS<1> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_S_AWQOS<0> has no load.
-INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<129> has no load.
-INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<0> has no load.
+INFO:LIT:243 - Logical network axi4lite_0_M_WSTRB<10> has no load.
+INFO:LIT:243 - Logical network axi4lite_0_M_WSTRB<13> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<111> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<110> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<109> has no load.
@@ -210,6 +209,8 @@ INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<108> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<107> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<106> has no load.
 INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<105> has no load.
+INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<1> has no load.
+INFO:LIT:243 - Logical network axi4lite_0_M_ARADDR<0> has no load.
 INFO:LIT:243 - Logical network axi_spi_0_SS_I<1> has no load.
 INFO:LIT:243 - Logical network axi_spi_0_SS_I<0> has no load.
 INFO:LIT:243 - Logical network N159 has no load.
@@ -2388,8 +2389,10 @@ INFO:LIT:243 - Logical network processing_system7_0/DMA3_DRREADY has no load.
 INFO:LIT:243 - Logical network processing_system7_0/DMA3_RSTN has no load.
 INFO:LIT:243 - Logical network processing_system7_0/FCLK_CLK3 has no load.
 INFO:LIT:243 - Logical network processing_system7_0/FCLK_CLK2 has no load.
+INFO:LIT:243 - Logical network processing_system7_0/FCLK_CLK1 has no load.
 INFO:LIT:243 - Logical network processing_system7_0/FCLK_RESET3_N has no load.
 INFO:LIT:243 - Logical network processing_system7_0/FCLK_RESET2_N has no load.
+INFO:LIT:243 - Logical network processing_system7_0/FCLK_RESET1_N has no load.
 INFO:LIT:243 - Logical network processing_system7_0/EVENT_EVENTO has no load.
 INFO:LIT:243 - Logical network processing_system7_0/IRQ_P2F_DMAC_ABORT has no
    load.
@@ -2516,9 +2519,6 @@ INFO:LIT:243 - Logical network axi4lite_0/DEBUG_MC_MP_RDATACONTROL<1> has no
 INFO:LIT:243 - Logical network axi4lite_0/DEBUG_MC_MP_WDATACONTROL<0> has no
    load.
 INFO:LIT:243 - Logical network
-   axi4lite_0/axi4lite_0/si_register_slice_bank/gen_reg_slot[0].register_slice_i
-   nst/reset has no load.
-INFO:LIT:243 - Logical network
    axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/s_as
    ync_conv_reset has no load.
 INFO:LIT:243 - Logical network
@@ -2561,14 +2561,8 @@ INFO:LIT:243 - Logical network
    axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/inte
    rconnect_aresetn_resync<2> has no load.
 INFO:LIT:243 - Logical network
-   axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/s_as
-   ync_conv_reset has no load.
-INFO:LIT:243 - Logical network
-   axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/m_as
-   ync_conv_reset has no load.
-INFO:LIT:243 - Logical network
-   axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/inte
-   rconnect_aresetn_resync<2> has no load.
+   axi4lite_0/axi4lite_0/si_register_slice_bank/gen_reg_slot[0].register_slice_i
+   nst/reset has no load.
 INFO:LIT:243 - Logical network
    axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.T
    RANSMIT_FIFO_I/Addr_Counters[3].MUXCY_L_I/LO has no load.
@@ -2590,9 +2584,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 206 block(s) removed
-  62 block(s) optimized away
-1469 signal(s) removed
+ 197 block(s) removed
+  61 block(s) optimized away
+1465 signal(s) removed
   33 Block(s) redundant
 
 Section 5 - Removed Logic
@@ -2614,36 +2608,6 @@ esg_mux_inst/gen_fpga.gen_mux_5_8[2].mux_s2_inst" (MUX) removed.
 Loadless block
 "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rm
 esg_mux_inst/gen_fpga.gen_mux_5_8[35].mux_s2_inst" (MUX) removed.
-Loadless block
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_SYNC_EN_GEN.ACK_OR_PULSE_SYNC_I/DOUBLE
-_SYNC_I/REG_GEN[0].BLOCK_GEN.SECOND_FLOP_i" (SFF) removed.
- The signal
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_SYNC_EN_GEN.ACK_OR_PULSE_SYNC_I/DOUBLE
-_SYNC_I/data_in_d1" is loadless and has been removed.
-  Loadless block
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_SYNC_EN_GEN.ACK_OR_PULSE_SYNC_I/DOUBLE
-_SYNC_I/REG_GEN[0].BLOCK_GEN.FIRST_FLOP_i" (SFF) removed.
-   The signal
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_SYNC_EN_GEN.ACK_OR_PULSE_SYNC_I/data_i
-n_toggle" is loadless and has been removed.
-    Loadless block
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_SYNC_EN_GEN.ACK_OR_PULSE_SYNC_I/data_i
-n_toggle" (SFF) removed.
-     The signal
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_SYNC_EN_GEN.ACK_OR_PULSE_SYNC_I/DATA_I
-N_data_in_toggle_XOR_3_o" is loadless and has been removed.
-      Loadless block
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_SYNC_EN_GEN.ACK_OR_PULSE_SYNC_I/Mxor_D
-ATA_IN_data_in_toggle_XOR_3_o_xo<0>1" (ROM) removed.
-       The signal "axi_intc_0/axi_intc_0/INTC_CORE_I/ack_or" is loadless and has been
-removed.
-        Loadless block "axi_intc_0/axi_intc_0/INTC_CORE_I/ack_or" (SFF) removed.
-         The signal
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_MULTI_INTR_GEN.ACK_OR_GEN_P.ack_or_int
-" is loadless and has been removed.
-          Loadless block
-"axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_MULTI_INTR_GEN.ACK_OR_GEN_P.ack_or_int
-1" (ROM) removed.
 The signal "processing_system7_0/GPIO_O<63>" is sourceless and has been removed.
 The signal "processing_system7_0/GPIO_O<62>" is sourceless and has been removed.
 The signal "processing_system7_0/GPIO_O<61>" is sourceless and has been removed.
@@ -4803,9 +4767,12 @@ removed.
 The signal "processing_system7_0/DMA3_RSTN" is sourceless and has been removed.
 The signal "processing_system7_0/FCLK_CLK3" is sourceless and has been removed.
 The signal "processing_system7_0/FCLK_CLK2" is sourceless and has been removed.
+The signal "processing_system7_0/FCLK_CLK1" is sourceless and has been removed.
 The signal "processing_system7_0/FCLK_RESET3_N" is sourceless and has been
 removed.
 The signal "processing_system7_0/FCLK_RESET2_N" is sourceless and has been
+removed.
+The signal "processing_system7_0/FCLK_RESET1_N" is sourceless and has been
 removed.
 The signal "processing_system7_0/EVENT_EVENTO" is sourceless and has been
 removed.
@@ -5236,8 +5203,14 @@ The signal
 reset_out_n_i" is sourceless and has been removed.
  Sourceless block
 "axi4lite_0/axi4lite_0/si_register_slice_bank/gen_reg_slot[0].register_slice_ins
-t/reset" (SFF) removed.
+t/reset_rstpot1_INV_0" (BUF) removed.
   The signal
+"axi4lite_0/axi4lite_0/si_register_slice_bank/gen_reg_slot[0].register_slice_ins
+t/reset_rstpot" is sourceless and has been removed.
+   Sourceless block
+"axi4lite_0/axi4lite_0/si_register_slice_bank/gen_reg_slot[0].register_slice_ins
+t/reset" (FF) removed.
+    The signal
 "axi4lite_0/axi4lite_0/si_register_slice_bank/gen_reg_slot[0].register_slice_ins
 t/reset" is sourceless and has been removed.
 The signal
@@ -5475,27 +5448,6 @@ onnect_aresetn_resync<0>" is sourceless and has been removed.
 "axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/interc
 onnect_aresetn_resync_1" (FF) removed.
 The signal
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/s_asyn
-c_conv_reset" is sourceless and has been removed.
-The signal
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/m_asyn
-c_conv_reset" is sourceless and has been removed.
-The signal
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/interc
-onnect_aresetn_resync<1>" is sourceless and has been removed.
- Sourceless block
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/interc
-onnect_aresetn_resync_2" (FF) removed.
-  The signal
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/interc
-onnect_aresetn_resync<2>" is sourceless and has been removed.
-The signal
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/interc
-onnect_aresetn_resync<0>" is sourceless and has been removed.
- Sourceless block
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/interc
-onnect_aresetn_resync_1" (FF) removed.
-The signal
 "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_
 arbiter_inst/s_amesg<65>" is sourceless and has been removed.
  Sourceless block
@@ -5613,7 +5565,7 @@ arbiter_inst/s_amesg<13>" is sourceless and has been removed.
  Sourceless block
 "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_
 arbiter_inst/m_amesg_i_13" (FF) removed.
-  The signal "axi4lite_0_M_ARADDR<129>" is sourceless and has been removed.
+  The signal "axi4lite_0_M_ARADDR<1>" is sourceless and has been removed.
 The signal
 "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_
 arbiter_inst/s_amesg<12>" is sourceless and has been removed.
@@ -5621,6 +5573,15 @@ arbiter_inst/s_amesg<12>" is sourceless and has been removed.
 "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_
 arbiter_inst/m_amesg_i_12" (FF) removed.
   The signal "axi4lite_0_M_ARADDR<0>" is sourceless and has been removed.
+The signal
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_aerror_i<2>" is
+sourceless and has been removed.
+ Sourceless block
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032521"
+(ROM) removed.
+ Sourceless block
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032821"
+(ROM) removed.
 The signal "axi4lite_0/N2" is sourceless and has been removed.
  Sourceless block
 "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.
@@ -5768,6 +5729,8 @@ The signal "axi4lite_0_S_AWQOS<3>" is unused and has been removed.
 The signal "axi4lite_0_S_AWQOS<2>" is unused and has been removed.
 The signal "axi4lite_0_S_AWQOS<1>" is unused and has been removed.
 The signal "axi4lite_0_S_AWQOS<0>" is unused and has been removed.
+The signal "axi4lite_0_M_WSTRB<10>" is unused and has been removed.
+The signal "axi4lite_0_M_WSTRB<13>" is unused and has been removed.
 The signal "net_vcc0" is unused and has been removed.
 The signal "axi_spi_0_SCK_I" is unused and has been removed.
  Unused block "iobuf_13/IBUF" (BUF) removed.
@@ -5776,34 +5739,28 @@ The signal "axi_spi_0_SS_I<1>" is unused and has been removed.
 The signal "axi_spi_0_SS_I<0>" is unused and has been removed.
  Unused block "iobuf_17/IBUF" (BUF) removed.
 Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032711"
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032511"
 (ROM) removed.
 Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032721"
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n0326111"
 (ROM) removed.
 Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n0328111"
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n0326121"
 (ROM) removed.
 Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n0328121"
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n0326131"
 (ROM) removed.
 Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n0328131"
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032614"
 (ROM) removed.
 Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032814"
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032621"
 (ROM) removed.
 Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032821"
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032631"
 (ROM) removed.
 Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032831"
-(ROM) removed.
-Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n033011"
-(ROM) removed.
-Unused block
-"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n033021"
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/Mmux_n032811"
 (ROM) removed.
 Unused block
 "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_
@@ -5863,6 +5820,9 @@ Unused block
 "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_
 arbiter_inst/Mmux_s_amesg621" (ROM) removed.
 Unused block
+"axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_aerror_i<2>"
+(ROM) removed.
+Unused block
 "axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_rready<0>1"
 (ROM) removed.
 Unused block
@@ -5903,15 +5863,6 @@ Unused block
 c_conv_reset" (FF) removed.
 Unused block
 "axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/s_asyn
-c_conv_reset" (FF) removed.
-Unused block
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/interc
-onnect_aresetn_resync_0" (FF) removed.
-Unused block
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/m_asyn
-c_conv_reset" (FF) removed.
-Unused block
-"axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/s_asyn
 c_conv_reset" (FF) removed.
 Unused block
 "axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.
@@ -6027,7 +5978,6 @@ LUT6
 		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_r
 mesg_mux_inst/gen_fpga.l<33>1
    optimized to 0
-GND 		axi_intc_0/XST_GND
 GND 		axi_spi_0/XST_GND
 FDR
 		axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.FI
@@ -6117,8 +6067,24 @@ CEIVE_FIFO_I/Addr_Counters[1].MUXCY_L_I/MUXCY_L_BUF
 LOCALBUF
 		axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.RE
 CEIVE_FIFO_I/Addr_Counters[0].MUXCY_L_I/MUXCY_L_BUF
-LUT3
-		axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i31
+LUT1
+		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_a
+wready_mux_inst/gen_fpga.gen_mux_5_8[0].mux_s2_inst_rt
+LUT1
+		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_w
+ready_mux_inst/gen_fpga.gen_mux_5_8[0].mux_s2_inst_rt
+LUT1
+		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_b
+valid_mux_inst/gen_fpga.gen_mux_5_8[0].mux_s2_inst_rt
+LUT1
+		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_a
+rready_mux_inst/gen_fpga.gen_mux_5_8[0].mux_s2_inst_rt
+LUT1
+		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_r
+valid_mux_inst/gen_fpga.gen_mux_5_8[0].mux_s2_inst_rt
+LUT1
+		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_r
+mesg_mux_inst/gen_fpga.gen_mux_5_8[0].mux_s2_inst_rt
 LUT3
 		SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i31
 LUT3
@@ -6128,8 +6094,6 @@ LUT3
 LUT3
 		axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i31
 LUT3
-		axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i41
-LUT3
 		SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i41
 LUT3
 		LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i41
@@ -6138,39 +6102,29 @@ LUT3
 LUT3
 		axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i41
 LUT3
-		axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i51
-LUT3
 		SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i51
+LUT3
+		LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i51
 LUT3
 		BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i51
 LUT3
 		axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i51
 LUT3
-		axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i61
-LUT3
 		SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i61
+LUT3
+		LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i61
 LUT3
 		BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i61
 LUT3
 		axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i61
 LUT3
-		axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i71
-LUT3
-		axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i71
-LUT3
-		axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i81
-LUT3
-		axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i91
-LUT3
 		SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i91
 LUT3
+		LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i91
+LUT3
 		BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i91
-LUT2
-		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_r
-mesg_mux_inst/Mmux_gen_fpga.hh121
-LUT2
-		axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_b
-mesg_mux_inst/Mmux_gen_fpga.hh11
+LUT3
+		axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i71
 LUT5
 		axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/Mmux_Shift_Reg[0]_GN
 D_49_o_mux_52_OUT7_SW0
@@ -6389,65 +6343,48 @@ Section 12 - Control Set Information
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Clock Signal                   | Reset Signal                                                                                                                                        | Set Signal | Enable Signal                                                                                                      | Slice Load Count | Bel Load Count |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            |                                                                                                                    | 58               | 115            |
+| processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            |                                                                                                                    | 56               | 113            |
 | processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            | GLOBAL_LOGIC1                                                                                                      | 6                | 21             |
 | processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_inv      | 11               | 41             |
-| processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.RECEIVE_FIFO_I/valid_Write             | 4                | 16             |
+| processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.RECEIVE_FIFO_I/valid_Write             | 7                | 16             |
 | processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.TRANSMIT_FIFO_I/valid_Write            | 2                | 16             |
 | processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/SPIXfer_done_int_pulse_d1                                | 8                | 16             |
 | processing_system7_0_FCLK_CLK0 |                                                                                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/_n0372_inv                                               | 5                | 16             |
 | processing_system7_0_FCLK_CLK0 | BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr                                                                        |            | BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/start                                                     | 6                | 17             |
-| processing_system7_0_FCLK_CLK0 | BTNs_5Bits/BTNs_5Bits/bus2ip_reset                                                                                                                  |            |                                                                                                                    | 16               | 30             |
+| processing_system7_0_FCLK_CLK0 | BTNs_5Bits/BTNs_5Bits/bus2ip_reset                                                                                                                  |            |                                                                                                                    | 17               | 30             |
 | processing_system7_0_FCLK_CLK0 | BTNs_5Bits/BTNs_5Bits/bus2ip_reset                                                                                                                  |            | BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_15_o_state[1]_equal_14_o                              | 2                | 6              |
 | processing_system7_0_FCLK_CLK0 | BTNs_5Bits/BTNs_5Bits/bus2ip_reset                                                                                                                  |            | BTNs_5Bits/BTNs_5Bits/gpio_core_1/gpio_OE_Select[0]_RNW_Reg_AND_69_o                                               | 2                | 5              |
 | processing_system7_0_FCLK_CLK0 | BTNs_5Bits/BTNs_5Bits/gpio_core_1/Read_Reg_Rst                                                                                                      |            |                                                                                                                    | 2                | 5              |
-| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr                                                                        |            | LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/start                                                     | 1                | 1              |
-| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/bus2ip_reset                                                                                                                  |            |                                                                                                                    | 5                | 14             |
-| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/bus2ip_reset                                                                                                                  |            | LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_15_o_state[1]_equal_14_o                              | 2                | 8              |
-| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/bus2ip_reset                                                                                                                  |            | LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0                                      | 11               | 16             |
+| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr                                                                        |            | LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/start                                                     | 6                | 17             |
+| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/bus2ip_reset                                                                                                                  |            |                                                                                                                    | 15               | 36             |
+| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/bus2ip_reset                                                                                                                  |            | LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_15_o_state[1]_equal_14_o                              | 3                | 9              |
+| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/bus2ip_reset                                                                                                                  |            | LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Select[0]_RNW_Reg_AND_68_o1                                            | 8                | 16             |
+| processing_system7_0_FCLK_CLK0 | LEDs_8Bits/LEDs_8Bits/gpio_core_1/Read_Reg_Rst                                                                                                      |            |                                                                                                                    | 2                | 8              |
 | processing_system7_0_FCLK_CLK0 | SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr                                                                          |            | SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/start                                                       | 6                | 17             |
-| processing_system7_0_FCLK_CLK0 | SWs_8Bits/SWs_8Bits/bus2ip_reset                                                                                                                    |            |                                                                                                                    | 16               | 36             |
-| processing_system7_0_FCLK_CLK0 | SWs_8Bits/SWs_8Bits/bus2ip_reset                                                                                                                    |            | SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_15_o_state[1]_equal_14_o                                | 3                | 9              |
+| processing_system7_0_FCLK_CLK0 | SWs_8Bits/SWs_8Bits/bus2ip_reset                                                                                                                    |            |                                                                                                                    | 18               | 36             |
+| processing_system7_0_FCLK_CLK0 | SWs_8Bits/SWs_8Bits/bus2ip_reset                                                                                                                    |            | SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_15_o_state[1]_equal_14_o                                | 2                | 9              |
 | processing_system7_0_FCLK_CLK0 | SWs_8Bits/SWs_8Bits/bus2ip_reset                                                                                                                    |            | SWs_8Bits/SWs_8Bits/gpio_core_1/gpio_Data_Select[0]_RNW_Reg_AND_68_o1                                              | 5                | 16             |
 | processing_system7_0_FCLK_CLK0 | SWs_8Bits/SWs_8Bits/gpio_core_1/Read_Reg_Rst                                                                                                        |            |                                                                                                                    | 2                | 8              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/aa_grant_any_0                                                                         |            |                                                                                                                    | 2                | 6              |
+| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/aa_grant_any_0                                                                         |            |                                                                                                                    | 2                | 5              |
 | processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/Reset_OR_DriverANDClockEnable                           |            | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/_n0076_inv             | 1                | 2              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_0                                             |            |                                                                                                                    | 1                | 1              |
 | processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_ready_i_0                                             |            |                                                                                                                    | 2                | 2              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/reset                                                                                  |            |                                                                                                                    | 4                | 7              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/reset                                                                                  |            | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/_n0138_inv  | 1                | 1              |
+| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/reset                                                                                  |            |                                                                                                                    | 7                | 9              |
 | processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/reset                                                                                  |            | axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/_n0181_inv  | 1                | 4              |
 | processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[0].clock_conv_inst/INTERCONNECT_ARESETN_inv                                                   |            |                                                                                                                    | 1                | 3              |
 | processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/ARESETN_inv |            |                                                                                                                    | 1                | 3              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/ARESETN_inv |            |                                                                                                                    | 2                | 3              |
+| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/ARESETN_inv |            |                                                                                                                    | 3                | 3              |
 | processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/ARESETN_inv |            |                                                                                                                    | 2                | 3              |
 | processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/ARESETN_inv |            |                                                                                                                    | 3                | 3              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[4].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/ARESETN_inv |            |                                                                                                                    | 3                | 3              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe<2>                                               |            |                                                                                                                    | 1                | 1              |
 | processing_system7_0_FCLK_CLK0 | axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync<2>_inv                                         |            |                                                                                                                    | 1                | 3              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0_M_ARESETN<0>                                                                                                                             |            |                                                                                                                    | 1                | 1              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0_M_ARESETN<1>                                                                                                                             |            |                                                                                                                    | 1                | 1              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0_M_ARESETN<2>                                                                                                                             |            |                                                                                                                    | 1                | 1              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0_M_ARESETN<3>                                                                                                                             |            |                                                                                                                    | 1                | 1              |
-| processing_system7_0_FCLK_CLK0 | axi4lite_0_M_ARESETN<4>                                                                                                                             |            |                                                                                                                    | 1                | 1              |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_18_o_PWR_18_o_OR_85_o                                                                  |            |                                                                                                                    | 1                | 4              |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr                                                                        |            | axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/start                                                     | 3                | 17             |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst                                                                                        |            |                                                                                                                    | 3                | 5              |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst                                                                                        |            | axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_18_o_state[1]_equal_14_o                              | 2                | 4              |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_rstpot                                                                                 |            |                                                                                                                    | 2                | 6              |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/INTC_CORE_I/Rst_n_cie[0]_OR_40_o                                                                                              |            |                                                                                                                    | 1                | 2              |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/INTC_CORE_I/Rst_n_cie[1]_OR_41_o                                                                                              |            |                                                                                                                    | 1                | 2              |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/INTC_CORE_I/Rst_n_iar[0]_OR_43_o                                                                                              |            |                                                                                                                    | 2                | 2              |
-| processing_system7_0_FCLK_CLK0 | axi_intc_0/axi_intc_0/INTC_CORE_I/Rst_n_iar[1]_OR_46_o                                                                                              |            |                                                                                                                    | 2                | 2              |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_14_o_PWR_14_o_OR_20_o                                                                    |            |                                                                                                                    | 1                | 4              |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr                                                                          |            | axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/start                                                       | 7                | 25             |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/CONTROL_REG_I/control_bits34_Reset                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/CONTROL_REG_I/Wr_ce_reduce_ack_gen_Bus2IP_Control_Reg_WrCE_AND_135_o  | 1                | 2              |
-| processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/Reset_transfer_start_OR_116_o                                                             |            |                                                                                                                    | 2                | 5              |
-| processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            |                                                                                                                    | 15               | 28             |
+| processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/Reset_transfer_start_OR_116_o                                                             |            |                                                                                                                    | 3                | 5              |
+| processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            |                                                                                                                    | 16               | 28             |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/CONTROL_REG_I/Wr_ce_reduce_ack_gen_Bus2IP_Control_Reg_WrCE_AND_135_o  | 3                | 8              |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/INTERRUPT_CONTROL_I/Interrupt_WrCE[10]_column_sel[0]_AND_251_o        | 3                | 9              |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/_n0408_inv                                               | 2                | 6              |
-| processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/sck_fe1_transfer_start_AND_189_o                         | 4                | 16             |
+| processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/sck_fe1_transfer_start_AND_189_o                         | 3                | 16             |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I/sck_rising_edge_transfer_start_AND_187_o                 | 4                | 16             |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/STATUS_REG_I/Wr_ce_reduce_ack_gen_Bus2IP_Slave_Sel_Reg_WrCE_AND_161_o | 1                | 2              |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/reset2ip_reset_int                                                                                     |            | axi_spi_0/axi_spi_0/bus2ip_wrce_int<7>                                                                             | 1                | 2              |
@@ -6458,21 +6395,18 @@ Section 12 - Control Set Information
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/bus2ip_reset_int_core                                                                                                           |            |                                                                                                                    | 6                | 14             |
 | processing_system7_0_FCLK_CLK0 | axi_spi_0/axi_spi_0/bus2ip_reset_int_core                                                                                                           |            | axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/GND_14_o_state[1]_equal_14_o                                | 7                | 18             |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| processing_system7_0_FCLK_CLK1 | axi_intc_0/axi_intc_0/INTC_CORE_I/processor_rst_n_irq_gen_sync_OR_55_o                                                                              |            |                                                                                                                    | 1                | 1              |
-| processing_system7_0_FCLK_CLK1 | processing_system7_0_FCLK_RESET1_N                                                                                                                  |            |                                                                                                                    | 2                | 4              |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 13 - Utilization by Hierarchy
 -------------------------------------
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module                                                                                        | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48E1 | BUFG  | BUFIO | BUFR  | MMCME2_AD | Full Hierarchical Name                                                                                                                                                                                                                 |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| system/                                                                                       |           | 0/325         | 0/640         | 0/860         | 0/45          | 0/0       | 0/0     | 0/2   | 0/0   | 0/0   | 0/0       | system                                                                                                                                                                                                                                 |
-| +BTNs_5Bits                                                                                   |           | 0/43          | 0/83          | 0/77          | 0/5           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits                                                                                                                                                                                                                      |
-| ++BTNs_5Bits                                                                                  |           | 11/43         | 14/83         | 18/77         | 0/5           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits                                                                                                                                                                                                           |
-| +++AXI_LITE_IPIF_I                                                                            |           | 0/17          | 0/32          | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I                                                                                                                                                                                           |
-| ++++I_SLAVE_ATTACHMENT                                                                        |           | 9/17          | 14/32         | 12/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                        |
-| +++++I_DECODER                                                                                |           | 8/8           | 18/18         | 3/20          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                                                                                              |
+| system/                                                                                       |           | 0/311         | 0/626         | 0/831         | 0/45          | 0/0       | 0/0     | 0/1   | 0/0   | 0/0   | 0/0       | system                                                                                                                                                                                                                                 |
+| +BTNs_5Bits                                                                                   |           | 0/45          | 0/83          | 0/79          | 0/5           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits                                                                                                                                                                                                                      |
+| ++BTNs_5Bits                                                                                  |           | 11/45         | 14/83         | 18/79         | 0/5           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits                                                                                                                                                                                                           |
+| +++AXI_LITE_IPIF_I                                                                            |           | 0/16          | 0/32          | 0/34          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I                                                                                                                                                                                           |
+| ++++I_SLAVE_ATTACHMENT                                                                        |           | 9/16          | 14/32         | 14/34         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                        |
+| +++++I_DECODER                                                                                |           | 7/7           | 18/18         | 3/20          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                                                                                              |
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
@@ -6490,19 +6424,37 @@ Section 13 - Utilization by Hierarchy
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| +++INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                                         |           | 3/3           | 9/9           | 7/7           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                                                                                                                                                        |
-| +++gpio_core_1                                                                                |           | 12/12         | 28/28         | 20/20         | 5/5           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/gpio_core_1                                                                                                                                                                                               |
-| +LEDs_8Bits                                                                                   |           | 0/27          | 0/62          | 0/68          | 0/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits                                                                                                                                                                                                                      |
-| ++LEDs_8Bits                                                                                  |           | 4/27          | 11/62         | 3/68          | 0/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits                                                                                                                                                                                                           |
-| +++AXI_LITE_IPIF_I                                                                            |           | 0/7           | 0/17          | 0/13          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I                                                                                                                                                                                           |
-| ++++I_SLAVE_ATTACHMENT                                                                        |           | 7/7           | 16/17         | 12/13         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                        |
-| +++++I_DECODER                                                                                |           | 0/0           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                                                                                              |
-| +++gpio_core_1                                                                                |           | 16/16         | 34/34         | 52/52         | 8/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/gpio_core_1                                                                                                                                                                                               |
-| +SWs_8Bits                                                                                    |           | 0/46          | 0/112         | 0/98          | 0/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits                                                                                                                                                                                                                       |
-| ++SWs_8Bits                                                                                   |           | 9/46          | 17/112        | 13/98         | 0/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits                                                                                                                                                                                                             |
-| +++AXI_LITE_IPIF_I                                                                            |           | 0/19          | 0/35          | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I                                                                                                                                                                                             |
-| ++++I_SLAVE_ATTACHMENT                                                                        |           | 11/19         | 17/35         | 12/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                          |
-| +++++I_DECODER                                                                                |           | 8/8           | 18/18         | 3/20          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                                                                                                |
+| +++INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                                         |           | 5/5           | 9/9           | 7/7           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                                                                                                                                                        |
+| +++gpio_core_1                                                                                |           | 13/13         | 28/28         | 20/20         | 5/5           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/BTNs_5Bits/BTNs_5Bits/gpio_core_1                                                                                                                                                                                               |
+| +LEDs_8Bits                                                                                   |           | 0/42          | 0/112         | 0/105         | 0/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits                                                                                                                                                                                                                      |
+| ++LEDs_8Bits                                                                                  |           | 10/42         | 17/112        | 13/105        | 0/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits                                                                                                                                                                                                           |
+| +++AXI_LITE_IPIF_I                                                                            |           | 0/14          | 0/35          | 0/33          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I                                                                                                                                                                                           |
+| ++++I_SLAVE_ATTACHMENT                                                                        |           | 8/14          | 17/35         | 13/33         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                        |
+| +++++I_DECODER                                                                                |           | 6/6           | 18/18         | 3/20          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                                                                                              |
+| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[11].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[11].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[12].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[12].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[13].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[13].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[14].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[14].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[15].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[15].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[3].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[3].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| ++++++MEM_DECODE_GEN[1].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
+| +++INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                                         |           | 1/1           | 9/9           | 9/9           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                                                                                                                                                        |
+| +++gpio_core_1                                                                                |           | 17/17         | 51/51         | 50/50         | 8/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/LEDs_8Bits/LEDs_8Bits/gpio_core_1                                                                                                                                                                                               |
+| +SWs_8Bits                                                                                    |           | 0/45          | 0/112         | 0/102         | 0/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits                                                                                                                                                                                                                       |
+| ++SWs_8Bits                                                                                   |           | 10/45         | 17/112        | 13/102        | 0/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits                                                                                                                                                                                                             |
+| +++AXI_LITE_IPIF_I                                                                            |           | 0/16          | 0/35          | 0/36          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I                                                                                                                                                                                             |
+| ++++I_SLAVE_ATTACHMENT                                                                        |           | 9/16          | 17/35         | 16/36         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                          |
+| +++++I_DECODER                                                                                |           | 7/7           | 18/18         | 3/20          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                                                                                                |
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                  |
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                  |
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                 |
@@ -6521,14 +6473,14 @@ Section 13 - Utilization by Hierarchy
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                  |
 | ++++++MEM_DECODE_GEN[1].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                  |
 | +++INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                                         |           | 2/2           | 9/9           | 7/7           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I                                                                                                                                                                          |
-| +++gpio_core_1                                                                                |           | 16/16         | 51/51         | 46/46         | 8/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/gpio_core_1                                                                                                                                                                                                 |
-| +axi4lite_0                                                                                   |           | 0/92          | 0/109         | 0/295         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0                                                                                                                                                                                                                      |
-| ++axi4lite_0                                                                                  |           | 0/92          | 0/109         | 0/295         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0                                                                                                                                                                                                           |
-| +++crossbar_samd                                                                              |           | 0/74          | 0/73          | 0/214         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd                                                                                                                                                                                             |
-| ++++gen_sasd.crossbar_sasd_0                                                                  |           | 25/74         | 10/73         | 34/214        | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0                                                                                                                                                                    |
-| +++++gen_crossbar.addr_arbiter_inst                                                           |           | 18/18         | 48/48         | 55/55         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst                                                                                                                                     |
-| +++++gen_crossbar.gen_addr_decoder.addr_decoder_inst                                          |           | 0/5           | 0/0           | 1/21          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst                                                                                                                    |
-| ++++++gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator |           | 5/5           | 0/0           | 14/14         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator                            |
+| +++gpio_core_1                                                                                |           | 17/17         | 51/51         | 46/46         | 8/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/SWs_8Bits/SWs_8Bits/gpio_core_1                                                                                                                                                                                                 |
+| +axi4lite_0                                                                                   |           | 0/80          | 0/103         | 0/282         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0                                                                                                                                                                                                                      |
+| ++axi4lite_0                                                                                  |           | 0/80          | 0/103         | 0/282         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0                                                                                                                                                                                                           |
+| +++crossbar_samd                                                                              |           | 0/73          | 0/73          | 0/208         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd                                                                                                                                                                                             |
+| ++++gen_sasd.crossbar_sasd_0                                                                  |           | 24/73         | 9/73          | 40/208        | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0                                                                                                                                                                    |
+| +++++gen_crossbar.addr_arbiter_inst                                                           |           | 19/19         | 49/49         | 65/65         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst                                                                                                                                     |
+| +++++gen_crossbar.gen_addr_decoder.addr_decoder_inst                                          |           | 0/4           | 0/0           | 0/16          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst                                                                                                                    |
+| ++++++gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator |           | 4/4           | 0/0           | 11/11         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator                            |
 | +++++++LUT_LEVEL[3].compare_inst                                                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/LUT_LEVEL[3].compare_inst  |
 | ++++++gen_target[1].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator |           | 0/0           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[1].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator                            |
 | +++++++LUT_LEVEL[3].compare_inst                                                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[1].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/LUT_LEVEL[3].compare_inst  |
@@ -6536,73 +6488,41 @@ Section 13 - Utilization by Hierarchy
 | +++++++LUT_LEVEL[3].compare_inst                                                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[2].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/LUT_LEVEL[3].compare_inst  |
 | ++++++gen_target[3].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[3].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator                            |
 | +++++++LUT_LEVEL[3].compare_inst                                                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[3].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/LUT_LEVEL[3].compare_inst  |
-| ++++++gen_target[4].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[4].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator                            |
-| +++++++LUT_LEVEL[3].compare_inst                                                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_addr_decoder.addr_decoder_inst/gen_target[4].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/LUT_LEVEL[3].compare_inst  |
-| +++++gen_crossbar.gen_decerr.decerr_slave_inst                                                |           | 4/4           | 10/10         | 18/18         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst                                                                                                                          |
-| +++++gen_crossbar.mi_arready_mux_inst                                                         |           | 2/2           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_arready_mux_inst                                                                                                                                   |
-| +++++gen_crossbar.mi_awready_mux_inst                                                         |           | 0/0           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_awready_mux_inst                                                                                                                                   |
-| +++++gen_crossbar.mi_bmesg_mux_inst                                                           |           | 2/2           | 0/0           | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_bmesg_mux_inst                                                                                                                                     |
-| +++++gen_crossbar.mi_bvalid_mux_inst                                                          |           | 0/0           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_bvalid_mux_inst                                                                                                                                    |
-| +++++gen_crossbar.mi_rmesg_mux_inst                                                           |           | 12/12         | 0/0           | 48/48         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rmesg_mux_inst                                                                                                                                     |
-| +++++gen_crossbar.mi_rvalid_mux_inst                                                          |           | 2/2           | 0/0           | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rvalid_mux_inst                                                                                                                                    |
-| +++++gen_crossbar.mi_wready_mux_inst                                                          |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst                                                                                                                                    |
-| +++++gen_crossbar.splitter_ar                                                                 |           | 2/2           | 2/2           | 9/9           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar                                                                                                                                           |
+| +++++gen_crossbar.gen_decerr.decerr_slave_inst                                                |           | 3/3           | 10/10         | 17/17         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst                                                                                                                          |
+| +++++gen_crossbar.mi_arready_mux_inst                                                         |           | 3/3           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_arready_mux_inst                                                                                                                                   |
+| +++++gen_crossbar.mi_awready_mux_inst                                                         |           | 1/1           | 0/0           | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_awready_mux_inst                                                                                                                                   |
+| +++++gen_crossbar.mi_bmesg_mux_inst                                                           |           | 1/1           | 0/0           | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_bmesg_mux_inst                                                                                                                                     |
+| +++++gen_crossbar.mi_bvalid_mux_inst                                                          |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_bvalid_mux_inst                                                                                                                                    |
+| +++++gen_crossbar.mi_rmesg_mux_inst                                                           |           | 16/16         | 0/0           | 38/38         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rmesg_mux_inst                                                                                                                                     |
+| +++++gen_crossbar.mi_rvalid_mux_inst                                                          |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rvalid_mux_inst                                                                                                                                    |
+| +++++gen_crossbar.mi_wready_mux_inst                                                          |           | 0/0           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst                                                                                                                                    |
+| +++++gen_crossbar.splitter_ar                                                                 |           | 0/0           | 2/2           | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar                                                                                                                                           |
 | +++++gen_crossbar.splitter_aw                                                                 |           | 0/0           | 3/3           | 9/9           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw                                                                                                                                           |
-| +++mi_converter_bank                                                                          |           | 0/0           | 0/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_converter_bank                                                                                                                                                                                         |
+| +++mi_converter_bank                                                                          |           | 0/0           | 0/4           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_converter_bank                                                                                                                                                                                         |
 | ++++gen_conv_slot[0].clock_conv_inst                                                          |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[0].clock_conv_inst                                                                                                                                                        |
 | ++++gen_conv_slot[1].clock_conv_inst                                                          |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[1].clock_conv_inst                                                                                                                                                        |
 | ++++gen_conv_slot[2].clock_conv_inst                                                          |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[2].clock_conv_inst                                                                                                                                                        |
 | ++++gen_conv_slot[3].clock_conv_inst                                                          |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[3].clock_conv_inst                                                                                                                                                        |
-| ++++gen_conv_slot[4].clock_conv_inst                                                          |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[4].clock_conv_inst                                                                                                                                                        |
-| +++mi_protocol_conv_bank                                                                      |           | 0/16          | 0/20          | 0/78          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank                                                                                                                                                                                     |
-| ++++gen_protocol_slot[0].gen_prot_conv.conv_inst                                              |           | 0/2           | 0/4           | 0/18          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst                                                                                                                                        |
-| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 2/2           | 4/4           | 18/18         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
-| ++++gen_protocol_slot[1].gen_prot_conv.conv_inst                                              |           | 0/3           | 0/4           | 0/16          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst                                                                                                                                        |
-| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 3/3           | 4/4           | 16/16         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
-| ++++gen_protocol_slot[2].gen_prot_conv.conv_inst                                              |           | 0/1           | 0/4           | 0/14          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst                                                                                                                                        |
-| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 1/1           | 4/4           | 14/14         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
-| ++++gen_protocol_slot[3].gen_prot_conv.conv_inst                                              |           | 0/4           | 0/4           | 0/15          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst                                                                                                                                        |
-| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 4/4           | 4/4           | 15/15         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
-| ++++gen_protocol_slot[4].gen_prot_conv.conv_inst                                              |           | 0/6           | 0/4           | 0/15          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[4].gen_prot_conv.conv_inst                                                                                                                                        |
-| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 6/6           | 4/4           | 15/15         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[4].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
-| +++mi_register_slice_bank                                                                     |           | 0/1           | 0/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank                                                                                                                                                                                    |
-| ++++gen_reg_slot[0].register_slice_inst                                                       |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[0].register_slice_inst                                                                                                                                                |
-| ++++gen_reg_slot[1].register_slice_inst                                                       |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[1].register_slice_inst                                                                                                                                                |
-| ++++gen_reg_slot[2].register_slice_inst                                                       |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[2].register_slice_inst                                                                                                                                                |
-| ++++gen_reg_slot[3].register_slice_inst                                                       |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[3].register_slice_inst                                                                                                                                                |
-| ++++gen_reg_slot[4].register_slice_inst                                                       |           | 0/0           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[4].register_slice_inst                                                                                                                                                |
-| +++si_converter_bank                                                                          |           | 0/1           | 0/6           | 0/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/si_converter_bank                                                                                                                                                                                         |
-| ++++gen_conv_slot[0].clock_conv_inst                                                          |           | 1/1           | 6/6           | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst                                                                                                                                                        |
-| +axi_intc_0                                                                                   |           | 0/14          | 0/58          | 0/67          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0                                                                                                                                                                                                                      |
-| ++axi_intc_0                                                                                  |           | 6/14          | 4/58          | 11/67         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0                                                                                                                                                                                                           |
-| +++AXI_LITE_IPIF_I                                                                            |           | 0/3           | 0/32          | 0/24          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I                                                                                                                                                                                           |
-| ++++I_SLAVE_ATTACHMENT                                                                        |           | 1/3           | 14/32         | 13/24         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                        |
-| +++++I_DECODER                                                                                |           | 2/2           | 18/18         | 1/11          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                                                                                              |
-| ++++++MEM_DECODE_GEN[0].GEN_FOR_MULTI_CS.MEM_SELECT_I                                         |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_FOR_MULTI_CS.MEM_SELECT_I                                                                                                              |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[11].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[11].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[12].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[12].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[13].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[13].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[14].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[14].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[15].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[15].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                               |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[3].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[3].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[0].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                |
-| ++++++MEM_DECODE_GEN[1].GEN_FOR_MULTI_CS.MEM_SELECT_I                                         |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].GEN_FOR_MULTI_CS.MEM_SELECT_I                                                                                                              |
-| +++INTC_CORE_I                                                                                |           | 5/5           | 18/22         | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/INTC_CORE_I                                                                                                                                                                                               |
-| ++++IRQ_GEN_SYNC_GEN.MER_0_DOUBLE_SYNC_I                                                      |           | 0/0           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/INTC_CORE_I/IRQ_GEN_SYNC_GEN.MER_0_DOUBLE_SYNC_I                                                                                                                                                          |
-| ++++MER_SYNC_EN_GEN.MER_0_DOUBLE_SYNC_I                                                       |           | 0/0           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_intc_0/axi_intc_0/INTC_CORE_I/MER_SYNC_EN_GEN.MER_0_DOUBLE_SYNC_I                                                                                                                                                           |
-| +axi_spi_0                                                                                    |           | 0/103         | 0/216         | 0/255         | 0/24          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0                                                                                                                                                                                                                       |
-| ++axi_spi_0                                                                                   |           | 0/103         | 1/216         | 1/255         | 0/24          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0                                                                                                                                                                                                             |
-| +++AXI_LITE_IPIF_I                                                                            |           | 0/27          | 0/53          | 0/51          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I                                                                                                                                                                                             |
-| ++++I_SLAVE_ATTACHMENT                                                                        |           | 13/27         | 27/53         | 16/51         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                          |
+| +++mi_protocol_conv_bank                                                                      |           | 0/6           | 0/16          | 0/66          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank                                                                                                                                                                                     |
+| ++++gen_protocol_slot[0].gen_prot_conv.conv_inst                                              |           | 0/3           | 0/4           | 0/17          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst                                                                                                                                        |
+| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 3/3           | 4/4           | 17/17         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
+| ++++gen_protocol_slot[1].gen_prot_conv.conv_inst                                              |           | 0/1           | 0/4           | 0/17          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst                                                                                                                                        |
+| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 1/1           | 4/4           | 17/17         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
+| ++++gen_protocol_slot[2].gen_prot_conv.conv_inst                                              |           | 0/0           | 0/4           | 0/16          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst                                                                                                                                        |
+| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 0/0           | 4/4           | 16/16         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
+| ++++gen_protocol_slot[3].gen_prot_conv.conv_inst                                              |           | 0/2           | 0/4           | 0/16          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst                                                                                                                                        |
+| +++++gen_axilite.gen_axilite_conv.axilite_conv_inst                                           |           | 2/2           | 4/4           | 16/16         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst                                                                                         |
+| +++mi_register_slice_bank                                                                     |           | 0/1           | 0/4           | 0/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank                                                                                                                                                                                    |
+| ++++gen_reg_slot[0].register_slice_inst                                                       |           | 0/0           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[0].register_slice_inst                                                                                                                                                |
+| ++++gen_reg_slot[1].register_slice_inst                                                       |           | 0/0           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[1].register_slice_inst                                                                                                                                                |
+| ++++gen_reg_slot[2].register_slice_inst                                                       |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[2].register_slice_inst                                                                                                                                                |
+| ++++gen_reg_slot[3].register_slice_inst                                                       |           | 0/0           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[3].register_slice_inst                                                                                                                                                |
+| +++si_converter_bank                                                                          |           | 0/0           | 0/6           | 0/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/si_converter_bank                                                                                                                                                                                         |
+| ++++gen_conv_slot[0].clock_conv_inst                                                          |           | 0/0           | 6/6           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst                                                                                                                                                        |
+| +axi_spi_0                                                                                    |           | 0/99          | 0/216         | 0/263         | 0/24          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0                                                                                                                                                                                                                       |
+| ++axi_spi_0                                                                                   |           | 1/99          | 1/216         | 1/263         | 0/24          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0                                                                                                                                                                                                             |
+| +++AXI_LITE_IPIF_I                                                                            |           | 0/26          | 0/53          | 0/52          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I                                                                                                                                                                                             |
+| ++++I_SLAVE_ATTACHMENT                                                                        |           | 12/26         | 27/53         | 17/52         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT                                                                                                                                                                          |
 | +++++I_DECODER                                                                                |           | 14/14         | 26/26         | 10/35         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                                                                                                |
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                  |
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                 |
@@ -6629,17 +6549,17 @@ Section 13 - Utilization by Hierarchy
 | ++++++MEM_DECODE_GEN[2].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[2].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                  |
 | ++++++MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                  |
 | ++++++MEM_DECODE_GEN[2].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                           |           | 0/0           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[2].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                                                                                                  |
-| +++AXI_SPI_CORE_INTERFACE_I                                                                   |           | 11/76         | 9/162         | 44/203        | 0/24          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I                                                                                                                                                                                    |
+| +++AXI_SPI_CORE_INTERFACE_I                                                                   |           | 8/72          | 9/162         | 45/210        | 0/24          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I                                                                                                                                                                                    |
 | ++++CONTROL_REG_I                                                                             |           | 4/4           | 12/12         | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/CONTROL_REG_I                                                                                                                                                                      |
-| ++++INTERRUPT_CONTROL_I                                                                       |           | 8/8           | 23/23         | 20/20         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/INTERRUPT_CONTROL_I                                                                                                                                                                |
+| ++++INTERRUPT_CONTROL_I                                                                       |           | 8/8           | 23/23         | 21/21         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/INTERRUPT_CONTROL_I                                                                                                                                                                |
 | ++++MAP_SIGNALS_AND_REG_WITH_FIFOS.FIFO_IF_MODULE_I                                           |           | 2/2           | 6/6           | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.FIFO_IF_MODULE_I                                                                                                                                    |
-| ++++MAP_SIGNALS_AND_REG_WITH_FIFOS.RECEIVE_FIFO_I                                             |           | 6/6           | 5/5           | 24/24         | 16/16         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.RECEIVE_FIFO_I                                                                                                                                      |
+| ++++MAP_SIGNALS_AND_REG_WITH_FIFOS.RECEIVE_FIFO_I                                             |           | 8/8           | 5/5           | 24/24         | 16/16         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.RECEIVE_FIFO_I                                                                                                                                      |
 | ++++MAP_SIGNALS_AND_REG_WITH_FIFOS.TRANSMIT_FIFO_I                                            |           | 3/3           | 5/5           | 17/17         | 8/8           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/MAP_SIGNALS_AND_REG_WITH_FIFOS.TRANSMIT_FIFO_I                                                                                                                                     |
-| ++++SOFT_RESET_I                                                                              |           | 4/4           | 11/11         | 9/9           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SOFT_RESET_I                                                                                                                                                                       |
-| ++++SPI_MODULE_I                                                                              |           | 37/37         | 88/88         | 81/81         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I                                                                                                                                                                       |
-| ++++STATUS_REG_I                                                                              |           | 1/1           | 3/3           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/STATUS_REG_I                                                                                                                                                                       |
-| +processing_system7_0                                                                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/2   | 0/0   | 0/0   | 0/0       | system/processing_system7_0                                                                                                                                                                                                            |
-| ++processing_system7_0                                                                        |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 2/2   | 0/0   | 0/0   | 0/0       | system/processing_system7_0/processing_system7_0                                                                                                                                                                                       |
+| ++++SOFT_RESET_I                                                                              |           | 3/3           | 11/11         | 10/10         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SOFT_RESET_I                                                                                                                                                                       |
+| ++++SPI_MODULE_I                                                                              |           | 36/36         | 88/88         | 85/85         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/SPI_MODULE_I                                                                                                                                                                       |
+| ++++STATUS_REG_I                                                                              |           | 0/0           | 3/3           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | system/axi_spi_0/axi_spi_0/AXI_SPI_CORE_INTERFACE_I/STATUS_REG_I                                                                                                                                                                       |
+| +processing_system7_0                                                                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/1   | 0/0   | 0/0   | 0/0       | system/processing_system7_0                                                                                                                                                                                                            |
+| ++processing_system7_0                                                                        |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0       | system/processing_system7_0/processing_system7_0                                                                                                                                                                                       |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Slices can be packed with basic elements from multiple hierarchies.

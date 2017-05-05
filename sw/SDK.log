@@ -7049,3 +7049,333 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 17:56:41.054 INFO  - Processor reset is completed for ps7_cortexa9_0 
 18:00:33.643 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
 18:02:12.419 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:58:57.740 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_just_button\SDK\SDK_Export\hw\JustButtons.xml. 
+14:01:37.503 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+14:01:45.904 ERROR - No such port: COM19 
+14:01:46.104 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:01:46.204 INFO  - PS initialization will be done as it is not done before. 
+14:01:46.204 INFO  - Running PS initialization.... 
+14:01:46.664 INFO  - ps7_init is completed. 
+14:01:46.764 INFO  - ps7_post_config is completed. 
+14:01:46.874 INFO  - PS Initialization is complete. 
+14:04:11.859 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:05:14.924 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:09:47.107 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:09:49.631 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:10:32.522 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:10:34.773 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:11:42.097 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:11:44.228 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:13:06.821 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:17:17.738 ERROR - No such port: COM39 
+14:17:18.128 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:17:40.902 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:17:42.859 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:18:05.279 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:18:07.151 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:19:42.102 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:32:58.121 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+14:33:00.392 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+14:33:01.102 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+14:33:01.792 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+14:33:02.482 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+14:33:02.862 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+14:33:03.072 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+14:33:04.016 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+14:33:04.168 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+14:34:31.217 INFO  - Updating hardware inferred compiler options for JustButtons. 
+14:34:31.227 INFO  - Clearing existing target manager status. 
+14:35:02.674 ERROR - FPGA Configuration failed.Failed to download the bit file
+
+    Failed to verify DONE bit after programming FPGA
+ 
+14:35:40.579 ERROR - FPGA Configuration failed.Failed to download the bit file
+
+    Failed to verify DONE bit after programming FPGA
+ 
+14:38:21.233 ERROR - FPGA Configuration failed.Failed to download the bit file
+
+    Failed to verify DONE bit after programming FPGA
+ 
+14:39:10.994 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+14:39:36.257 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:39:36.367 INFO  - PS initialization will be done as it is not done before. 
+14:39:36.367 INFO  - Running PS initialization.... 
+14:39:36.827 INFO  - ps7_init is completed. 
+14:39:36.927 INFO  - ps7_post_config is completed. 
+14:39:37.027 INFO  - PS Initialization is complete. 
+14:39:48.873 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:39:54.176 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:41:16.789 INFO  - Project standalone_bsp_0 was a BSP project. Please update references. 
+14:41:16.789 ERROR - SDK has detected that project standalone_bsp_0 has been deleted (or renamed).
+If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+14:43:22.849 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:43:50.285 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+14:44:13.589 INFO  - Settings changed on project standalone_bsp_0. Triggering a rebuild... 
+14:44:23.649 INFO  - Refreshed build settings on project JustButtons 
+14:46:02.641 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+14:49:41.141 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:50:19.614 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+14:51:45.883 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+14:51:52.574 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:51:52.684 INFO  - PS initialization will be done as it is not done before. 
+14:51:52.684 INFO  - Running PS initialization.... 
+14:51:53.144 INFO  - ps7_init is completed. 
+14:51:53.244 INFO  - ps7_post_config is completed. 
+14:51:53.344 INFO  - PS Initialization is complete. 
+14:53:05.784 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:56:32.946 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:56:36.768 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:02:52.657 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:03:20.839 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+15:03:20.840 WARN  - Terminating existing sessions on processor ps7_cortexa9_0 
+15:03:36.437 ERROR - Checking FPGA configuration failed..Lost communication with jtag cable. Run "xdisconnect -cable"
+    and start over again
+
+ 
+15:04:07.284 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:04:30.852 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system_spi\SDK\SDK_Export\hw\system.xml. 
+15:06:58.419 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:20:03.942 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+15:20:41.212 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:20:41.312 INFO  - PS initialization will be done as it is not done before. 
+15:20:41.312 INFO  - Running PS initialization.... 
+15:20:41.822 INFO  - ps7_init is completed. 
+15:20:41.922 INFO  - ps7_post_config is completed. 
+15:20:42.022 INFO  - PS Initialization is complete. 
+16:13:06.161 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:13:33.291 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:15:08.639 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:17:39.824 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:17:42.117 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:18:08.155 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:18:27.735 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:18:29.620 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:19:59.231 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:28:20.655 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:31:10.430 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:31:12.676 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:31:46.436 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:35:00.202 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:35:10.799 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:35:52.659 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:35:54.696 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:37:48.506 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:37:53.055 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:02:51.369 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:02:53.590 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:03:30.503 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:10:09.804 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:11:02.056 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:11:03.899 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:17:24.894 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:20:53.560 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:23:29.848 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:27:23.431 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:27:25.584 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:29:15.954 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:30:34.448 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:30:39.334 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:32:30.448 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:32:32.655 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:33:46.834 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:33:49.082 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:38:27.541 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:38:29.636 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:39:43.523 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:41:41.663 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:44:54.838 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:57:38.038 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:57:49.594 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:58:15.330 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:58:38.290 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:14:57.789 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:16:09.091 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:17:31.805 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:17:34.508 ERROR - No such port: COM19 
+18:17:34.918 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:20:10.195 ERROR - No such port: COM19 
+18:20:10.505 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:45:44.093 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:45:48.088 ERROR - No such port: COM19 
+18:45:48.508 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:47:59.390 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+18:48:05.309 ERROR - No such port: COM19 
+18:48:05.719 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:48:05.829 INFO  - PS initialization will be done as it is not done before. 
+18:48:05.829 INFO  - Running PS initialization.... 
+18:48:06.349 INFO  - ps7_init is completed. 
+18:48:06.449 INFO  - ps7_post_config is completed. 
+18:48:06.549 INFO  - PS Initialization is complete. 
+19:05:08.182 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:05:09.385 ERROR - No such port: COM19 
+19:05:09.785 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:11:09.183 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:11:09.703 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:11:15.853 ERROR - No such port: COM19 
+19:11:16.253 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:11:17.833 ERROR - Unexpected error while launching program. java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.TM.terminateCurrentLaunch(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
+
+19:11:21.493 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+19:11:42.044 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:14:43.831 ERROR - No such port: COM19 
+19:14:44.151 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:15:45.924 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+19:15:45.928 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:44:47.548 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+19:44:49.526 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+19:44:50.316 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+19:44:50.916 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+19:44:52.077 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+19:44:52.117 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+19:44:52.637 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+19:44:52.737 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+19:44:52.867 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+19:44:55.677 INFO  - Updating hardware inferred compiler options for TrackingWithSPI. 
+19:44:55.687 INFO  - Clearing existing target manager status. 
+19:46:30.696 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss. 
+19:46:38.087 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss. 
+19:46:43.431 ERROR - Unable to read in MSS file U:\Desktop\cpre488AudioTracking\sw\system_bsp\system.mss. 
+19:46:50.947 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+19:47:10.213 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+19:51:32.032 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+19:52:30.788 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:52:30.898 INFO  - PS initialization will be done as it is not done before. 
+19:52:30.898 INFO  - Running PS initialization.... 
+19:52:31.418 INFO  - ps7_init is completed. 
+19:52:31.518 INFO  - ps7_post_config is completed. 
+19:52:31.628 INFO  - PS Initialization is complete. 
+19:56:22.846 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:57:38.012 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:58:31.969 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:58:46.726 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:58:48.872 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:00:01.753 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:00:03.453 ERROR - Port COM19 is already in use. 
+20:00:03.763 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:00:08.539 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Debug Operation Not Supported on the Target
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+20:00:27.841 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:02:47.622 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488AudioTracking\system\SDK\SDK_Export\hw\system.xml. 
+20:03:51.263 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+20:04:00.600 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:04:00.710 INFO  - PS initialization will be done as it is not done before. 
+20:04:00.710 INFO  - Running PS initialization.... 
+20:04:01.230 INFO  - ps7_init is completed. 
+20:04:01.330 INFO  - ps7_post_config is completed. 
+20:04:01.440 INFO  - PS Initialization is complete. 
+20:06:12.846 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:07:01.956 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:08:48.647 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:30:26.336 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:32:01.306 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:33:55.478 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:35:56.097 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:38:39.070 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:39:17.704 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:40:25.920 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:42:41.193 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:43:22.976 INFO  - Processor reset is completed for ps7_cortexa9_0 
+20:43:58.695 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:12:15.930 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:16:30.378 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+21:16:37.643 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:16:37.743 INFO  - PS initialization will be done as it is not done before. 
+21:16:37.743 INFO  - Running PS initialization.... 
+21:16:38.273 INFO  - ps7_init is completed. 
+21:16:38.373 INFO  - ps7_post_config is completed. 
+21:16:38.475 INFO  - PS Initialization is complete. 
+21:20:09.369 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:20:10.301 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+21:20:14.082 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+21:20:48.988 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+21:21:06.909 ERROR - Port COM19 is already in use. 
+21:21:07.289 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:21:07.389 INFO  - PS initialization will be done as it is not done before. 
+21:21:07.389 INFO  - Running PS initialization.... 
+21:21:07.909 INFO  - ps7_init is completed. 
+21:21:08.009 INFO  - ps7_post_config is completed. 
+21:21:08.109 INFO  - PS Initialization is complete. 
+21:21:39.490 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+21:23:03.931 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+21:23:12.458 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:23:12.559 INFO  - PS initialization will be done as it is not done before. 
+21:23:12.561 INFO  - Running PS initialization.... 
+21:23:13.087 INFO  - ps7_init is completed. 
+21:23:13.187 INFO  - ps7_post_config is completed. 
+21:23:13.287 INFO  - PS Initialization is complete. 
+21:24:36.065 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:27:45.520 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:28:56.217 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:30:07.262 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+21:30:17.305 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:30:17.405 INFO  - PS initialization will be done as it is not done before. 
+21:30:17.405 INFO  - Running PS initialization.... 
+21:30:17.925 INFO  - ps7_init is completed. 
+21:30:17.945 INFO  - ps7_post_config is completed. 
+21:30:18.045 INFO  - PS Initialization is complete. 
+21:32:21.020 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:34:26.257 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:38:08.640 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:48:17.108 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:49:01.821 INFO  - Processor reset is completed for ps7_cortexa9_0 
+21:51:50.810 ERROR - No such port: COM19 
+21:51:51.220 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:01:35.911 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:01:37.562 ERROR - No such port: COM19 
+22:01:37.982 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:02:03.243 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:02:05.674 ERROR - Port COM3 is already in use. 
+22:02:06.064 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:02:10.546 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Debug Operation Not Supported on the Target
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+22:02:16.805 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+22:02:55.653 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+22:03:01.521 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:03:01.621 INFO  - PS initialization will be done as it is not done before. 
+22:03:01.621 INFO  - Running PS initialization.... 
+22:03:02.151 INFO  - ps7_init is completed. 
+22:03:02.251 INFO  - ps7_post_config is completed. 
+22:03:02.351 INFO  - PS Initialization is complete. 
+22:03:34.367 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:04:35.362 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:05:17.497 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:06:56.228 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:08:52.128 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:09:17.791 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:15:59.159 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+22:16:38.361 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488AudioTracking/sw/system_hw_platform/system.bit" 
+22:16:44.890 ERROR - No such port: COM19 
+22:16:45.220 INFO  - Processor reset is completed for ps7_cortexa9_0 
+22:16:45.330 INFO  - PS initialization will be done as it is not done before. 
+22:16:45.330 INFO  - Running PS initialization.... 
+22:16:45.850 INFO  - ps7_init is completed. 
+22:16:45.960 INFO  - ps7_post_config is completed. 
+22:16:46.060 INFO  - PS Initialization is complete. 
+23:14:29.404 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

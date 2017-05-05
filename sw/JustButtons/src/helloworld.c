@@ -118,11 +118,11 @@
 #include "xgpio.h"
 #include "xil_exception.h"
 
-//#ifdef XPAR_INTC_0_DEVICE_ID
-// #include "xintc.h"
-//#else
+#ifdef XPAR_INTC_0_DEVICE_ID
+ #include "xintc.h"
+#else
  #include "xscugic.h"
-//#endif
+#endif
 
 /************************** Constant Definitions *****************************/
 
@@ -132,7 +132,7 @@
  * a user can easily change all the needed device IDs in one place.
  */
 #define GPIO_DEVICE_ID		XPAR_BTNS_5BITS_DEVICE_ID
-#define INTC_GPIO_INTERRUPT_ID	0x0E
+#define INTC_GPIO_INTERRUPT_ID	XPAR_FABRIC_BTNS_5BITS_IP2INTC_IRPT_INTR
 
 #ifdef XPAR_INTC_0_DEVICE_ID
  #define INTC_DEVICE_ID	XPAR_INTC_0_DEVICE_ID
@@ -156,16 +156,10 @@
  * and the LEDs. They allow the channels to be reversed easily.
  */
 #define BUTTON_CHANNEL	 1	/* Channel 1 of the GPIO Device */
-#define LED_CHANNEL	 2	/* Channel 2 of the GPIO Device */
 #define BUTTON_INTERRUPT XGPIO_IR_CH1_MASK  /* Channel 1 Interrupt Mask */
 
 
-/*
- * The following constant is used to wait after an LED is turned on to make
- * sure that it is visible to the human eye.  This constant might need to be
- * tuned for faster or slower processor speeds.
- */
-#define LED_DELAY	 1000000
+char *LEDs = (char *)XPAR_LEDS_8BITS_BASEADDR;
 
 /**************************** Type Definitions *******************************/
 
@@ -179,10 +173,6 @@ typedef struct
 
 
 /************************** Function Prototypes ******************************/
-
-int MapButton2Led(u32 Buttons, u32 *ButtonFoundPtr);
-
-void SequenceLeds();
 
 void GpioIsr(void *InstancePtr);
 
@@ -201,26 +191,7 @@ static INTC Intc; /* The Instance of the Interrupt Controller Driver */
 volatile int InterruptCount; /* Count of interrupts that have occured */
 
 
-/*
- * The following table contains the masks for the buttons and LEDS
- * that are connected on the board. It's purpose is to map a button
- * to a specific LED.
- */
- MapButtonTable Button2LedTable[] =
-	{ { 0x1, 0x1 },
-	  { 0x2, 0x2 },
-	  { 0x4, 0x4 },
-	  { 0x8, 0x8 },
-	  { 0x10, 0x8 },
-	  { 0x20, 0x8 },
-	  { 0x40, 0x8 },
-	  { 0x100, 0x10 },
-	  { 0x200, 0x20 },
-	  { 0x400, 0x40 },
-	  { 0x800, 0x80 },
-	  { 0x1000, 0x80 },
-	  { 0x2000, 0x80 },
-	  { 0x4000, 0x80 } };
+
 
 /****************************************************************************/
 /**
@@ -240,6 +211,8 @@ volatile int InterruptCount; /* Count of interrupts that have occured */
 *****************************************************************************/
 int main(void)
 {
+	*LEDs = 0xff;
+
 	int Status;
 
 	/* Initialize the GPIO driver. If an error occurs then exit */
@@ -248,6 +221,7 @@ int main(void)
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
+
 
 	/*
 	 * Perform a self-test on the GPIO.  This is a minimal test and only
@@ -261,11 +235,6 @@ int main(void)
 	 * an output of the GPIO
 	 */
 	XGpio_SetDataDirection(&Gpio, BUTTON_CHANNEL, GPIO_ALL_BUTTONS);
-	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~GPIO_ALL_LEDS);
-
-	/* Sequence the LEDs to show this example is starting to run */
-
-	SequenceLeds();
 
 	/*
 	 * Setup the interrupts such that interrupt processing can occur. If
@@ -280,104 +249,14 @@ int main(void)
 	 * Loop forever while the button changes are handled by the interrupt
 	 * level processing
 	 */
+	printf("entering loop\n");
 	while (1) {
+		printf("loop\n");
 	}
 
 	return XST_SUCCESS;
 }
 
-/****************************************************************************/
-/**
-* This function sequences the LEDs by turning them all on, the turning each
-* one on individually, then turning them all on, and finally off.
-*
-* @param	None.
-*
-* @return	None.
-*
-* @note		None.
-*
-*****************************************************************************/
-void SequenceLeds()
-{
-	u32 Mask = 0x8000;
-	int Led;
-	volatile int Delay;
-
-	/* Turn on all the LEDS to show starting the sequence */
-
-	XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, GPIO_ALL_LEDS);
-	for (Delay = 0; Delay < LED_DELAY; Delay++);
-
-	/* Sequence thru turning each LED on one at a time */
-
-	for (Led = 1; Led <= 16; Led++) {
-		XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, Mask);
-		Mask >>= 1;
-
-		/* Wait a small amount of time so the LED is visible */
-
-		for (Delay = 0; Delay < LED_DELAY; Delay++);
-	}
-
-	/* Turn on all LEDS to show stopping the sequence */
-
-	XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, GPIO_ALL_LEDS);
-	for (Delay = 0; Delay < LED_DELAY; Delay++);
-
-	/* Turn off all the LEDs */
-
-	XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, 0);
-
-	XGpio_InterruptClear(&Gpio, XGPIO_IR_MASK);
-}
-
-/****************************************************************************/
-/**
-* This function maps each button on the board to an LED.
-*
-* @param	Buttons contains the buttons that have changed.
-* @param	ButtonFoundPtr is a pointer to allow this function to indicate
-*		the button that was associated with the returned LED. This
-*		input is needed to allow muliple buttons to change
-*		simulataneously.
-*
-* @return
-*
-* The Led that is associated with the first button that was found to be
-* changed.  A value of zero indicates no LED was found.
-*
-* @note		None.
-*
-*****************************************************************************/
-int MapButton2Led(u32 Buttons, u32 *ButtonFoundPtr)
-{
-	int Index;
-
-	/* Look thru the table to map the button to an LED */
-
-	for (Index = 0; Index < sizeof(Button2LedTable)/ sizeof(MapButtonTable);
-		Index++) {
-
-		/*
-		 * Determine which LED corresponds to the button being careful
-		 * because more than one button could have changed
-		 */
-		if (Button2LedTable[Index].ButtonMask ==
-			(Buttons & Button2LedTable[Index].ButtonMask)) {
-			/*
-			 * If the button was found then return the
-			 * associated LED
-			 */
-			*ButtonFoundPtr = Button2LedTable[Index].ButtonMask;
-			return Button2LedTable[Index].LedMask;
-		}
-	}
-
-	/* If no button was found in the table, then indicate no LED */
-
-	return 0;
-}
 
 /****************************************************************************/
 /**
@@ -400,12 +279,8 @@ int MapButton2Led(u32 Buttons, u32 *ButtonFoundPtr)
 void GpioIsr(void *InstancePtr)
 {
 	XGpio *GpioPtr = (XGpio *)InstancePtr;
-	u32 Led;
-	u32 LedState;
-	u32 Buttons;
-	u32 ButtonFound;
-	u32 ButtonsChanged = 0;
-	static u32 PreviousButtons;
+
+	xil_printf("INTERRUT\n");
 
 	/*
 	 * Disable the interrupt
@@ -425,41 +300,7 @@ void GpioIsr(void *InstancePtr)
 		return;
 	}
 
-
-	/*
-	 * Read state of push buttons and determine which ones changed
-	 * states from the previous interrupt. Save a copy of the buttons
-	 * for the next interrupt
-	 */
-	Buttons = XGpio_DiscreteRead(GpioPtr, BUTTON_CHANNEL);
-	ButtonsChanged = Buttons ^ PreviousButtons;
-	PreviousButtons = Buttons;
-
-	/*
-	 * Handle all button state changes that occurred since the last
-	 * interrupt
-	 */
-	while (ButtonsChanged != 0) {
-		/*
-		 * Determine which button changed state and then get
-		 * the current state of the associated LED
-		 */
-		 Led = MapButton2Led(ButtonsChanged, &ButtonFound);
-		 LedState = XGpio_DiscreteRead(GpioPtr, LED_CHANNEL) & Led;
-
-		 /*
-		  * Clear the button that is being processed so that it is
-		  * done and others can be handled also
-		  */
-		 ButtonsChanged &= ~ButtonFound;
-
-		 /* Toggle the state of the LED */
-		 if (LedState) {
-			 XGpio_DiscreteClear(GpioPtr, LED_CHANNEL, Led);
-		 } else {
-			 XGpio_DiscreteSet(GpioPtr, LED_CHANNEL, Led);
-		 }
-	 }
+	*LEDs = XGpio_DiscreteRead(GpioPtr, BUTTON_CHANNEL);
 
 	 /* Clear the interrupt such that it is no longer pending in the GPIO */
 

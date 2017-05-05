@@ -19,6 +19,42 @@
 
 /******************************************************************/
 
+/* Definitions for driver SPI */
+#define XPAR_XSPI_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_SPI_0 */
+#define XPAR_AXI_SPI_0_DEVICE_ID 0
+#define XPAR_AXI_SPI_0_BASEADDR 0x42000000
+#define XPAR_AXI_SPI_0_HIGHADDR 0x4200ffff
+#define XPAR_AXI_SPI_0_FIFO_EXIST 1
+#define XPAR_AXI_SPI_0_SPI_SLAVE_ONLY 0
+#define XPAR_AXI_SPI_0_NUM_SS_BITS 2
+#define XPAR_AXI_SPI_0_NUM_TRANSFER_BITS 16
+#define XPAR_AXI_SPI_0_SPI_MODE 0
+#define XPAR_AXI_SPI_0_TYPE_OF_AXI4_INTERFACE 0
+#define XPAR_AXI_SPI_0_AXI4_BASEADDR 0
+#define XPAR_AXI_SPI_0_AXI4_HIGHADDR 0
+#define XPAR_AXI_SPI_0_XIP_MODE 0
+
+/* Canonical definitions for peripheral AXI_SPI_0 */
+#define XPAR_SPI_0_DEVICE_ID 0
+#define XPAR_SPI_0_BASEADDR 0x42000000
+#define XPAR_SPI_0_HIGHADDR 0x4200ffff
+#define XPAR_SPI_0_FIFO_EXIST 1
+#define XPAR_SPI_0_SPI_SLAVE_ONLY 0
+#define XPAR_SPI_0_NUM_SS_BITS 2
+#define XPAR_SPI_0_NUM_TRANSFER_BITS 16
+#define XPAR_SPI_0_SPI_MODE 0
+#define XPAR_SPI_0_TYPE_OF_AXI4_INTERFACE 0
+#define XPAR_SPI_0_AXI4_BASEADDR 0
+#define XPAR_SPI_0_AXI4_HIGHADDR 0
+#define XPAR_SPI_0_XIP_MODE 0
+#define XPAR_SPI_0_USE_STARTUP 0
+
+
+
+/******************************************************************/
+
 /* Definitions for driver GPIO */
 #define XPAR_XGPIO_NUM_INSTANCES 3
 
@@ -311,16 +347,18 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_BTNS_5BITS_IP2INTC_IRPT_INTR 91
+#define XPAR_FABRIC_LEDS_8BITS_IP2INTC_IRPT_INTR 91
 #define XPAR_FABRIC_SWS_8BITS_IP2INTC_IRPT_INTR 90
-#define XPAR_FABRIC_LEDS_8BITS_IP2INTC_IRPT_INTR 89
+#define XPAR_FABRIC_BTNS_5BITS_IP2INTC_IRPT_INTR 89
+#define XPAR_FABRIC_AXI_SPI_0_IP2INTC_IRPT_INTR 88
 
 /******************************************************************/
 
 /* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_GPIO_0_VEC_ID XPAR_FABRIC_BTNS_5BITS_IP2INTC_IRPT_INTR
-#define XPAR_FABRIC_GPIO_2_VEC_ID XPAR_FABRIC_SWS_8BITS_IP2INTC_IRPT_INTR
 #define XPAR_FABRIC_GPIO_1_VEC_ID XPAR_FABRIC_LEDS_8BITS_IP2INTC_IRPT_INTR
+#define XPAR_FABRIC_GPIO_2_VEC_ID XPAR_FABRIC_SWS_8BITS_IP2INTC_IRPT_INTR
+#define XPAR_FABRIC_GPIO_0_VEC_ID XPAR_FABRIC_BTNS_5BITS_IP2INTC_IRPT_INTR
+#define XPAR_FABRIC_SPI_0_VEC_ID XPAR_FABRIC_AXI_SPI_0_IP2INTC_IRPT_INTR
 
 /******************************************************************/
 

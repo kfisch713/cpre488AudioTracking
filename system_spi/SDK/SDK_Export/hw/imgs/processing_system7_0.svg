@@ -120,7 +120,7 @@
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="48" y="502" xlink:href="#IPD_PortClk"/>
   <text x="60" y="510" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">23</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="40" y="528" xlink:href="#IPD_SPort"/>
-  <text x="60" y="534" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">27</text>
+  <text x="60" y="534" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">25</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="24" xlink:href="#IPD_SPort"/>
   <text x="216" y="30" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">10</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="48" xlink:href="#IPD_SPort"/>
@@ -129,10 +129,6 @@
   <text x="216" y="78" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">22</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="96" xlink:href="#IPD_SPort"/>
   <text x="216" y="102" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">24</text>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="120" xlink:href="#IPD_SPort"/>
-  <text x="216" y="126" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">25</text>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="144" xlink:href="#IPD_SPort"/>
-  <text x="216" y="150" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">26</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="560" xlink:href="#AXI_busconn_MASTER"/>
   <text x="154" y="574" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" font-family="Verdana Arial Helvetica san-serif">M_AXI_GP0</text>
 </svg>

@@ -1,6 +1,6 @@
-17:56:38 **** Incremental Build of configuration Debug for project JustButtons ****
+16:17:39 **** Incremental Build of configuration Debug for project JustButtons ****
 make all 
 make: Nothing to be done for `all'.
 
-17:56:38 Build Finished (took 190ms)
+16:17:39 Build Finished (took 130ms)
 

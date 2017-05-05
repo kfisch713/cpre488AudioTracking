@@ -32,9 +32,6 @@
 <msg type="warning" file="ConstraintSystem" num="194" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">axi4lite_0_reset_resync</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMs and is not actively used by any referencing constraint.
  </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">axi_intc_0/axi_intc_0/INTC_CORE_I/ACK_OR_SYNC_EN_GEN.ACK_OR_PULSE_SYNC_I/DOUBLE_SYNC_I/REG_GEN[0].BLOCK_GEN.SECOND_FLOP_i</arg>&apos; has unconnected output pin
-</msg>
-
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N159</arg>&apos; has no driver
 </msg>
 

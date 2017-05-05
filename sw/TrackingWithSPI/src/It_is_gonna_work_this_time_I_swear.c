@@ -36,7 +36,7 @@
 #include "xparameters.h"
 #include "xspi.h"
 #include "xstatus.h"
-#include "xintc.h"
+#include "xscugic.h"
 #include "xil_exception.h"
 #include "sleep.h"
 #include "xgpio.h"
@@ -48,16 +48,27 @@
 #define GPIO_ALL_LEDS		0xFFFF
 #define GPIO_ALL_BUTTONS	0xFFFF
 
+#define BTN_DEVICE_ID		XPAR_BTNS_5BITS_DEVICE_ID
+#define BTN_INTR_VEC_ID 	XPAR_FABRIC_BTNS_5BITS_IP2INTC_IRPT_INTR
+#define SPI_DEVICE_ID       XPAR_SPI_0_DEVICE_ID
+#define SPI_INTR_VEC_ID     XPAR_FABRIC_AXI_SPI_0_IP2INTC_IRPT_INTR
+#define INTR_DEVICE_ID	    XPAR_SCUGIC_SINGLE_DEVICE_ID
+
+
 #define BUFFER_SIZE 10
 
 XSpi spi0;   // spi instance
-XIntc intr0; // interrupt instance
+XScuGic intr0; // interrupt instance
 XGpio gpio0; // gpio instance
 
 volatile int transfer_in_progress = 0;
+volatile int ss = 1;
+volatile int angle = 0;
+volatile int distance = 0;
 
 //see XSpi data type
 void print_spi_debug(){
+	printf("SPI\n");
 	printf("base address: 0x%x\n", spi0.BaseAddr);
 	printf("is ready: 0x%x\n", spi0.IsReady);
 	printf("is started: 0x%x\n", spi0.IsStarted);
@@ -68,7 +79,6 @@ void print_spi_debug(){
 	printf("spi mode: %d\n", spi0.SpiMode);
 	printf("slave select mask: %ld\n", spi0.SlaveSelectMask);
 	printf("slave select reg %ld\n", spi0.SlaveSelectReg);
-	printf("\n");
 	printf("send buffer address %d\n", spi0.SendBufferPtr);
 	printf("receive buffer address: %d\n", spi0.RecvBufferPtr);
 	printf("total bytes to transfer: %u\n", spi0.RequestedBytes);
@@ -79,6 +89,7 @@ void print_spi_debug(){
 
 //see XGpio data type
 void print_gpio_debug(){
+	printf("GPIO\n");
 	printf("base address: 0x%x\n", &gpio0.BaseAddress);
 	printf("is ready: 0x%x\n", &gpio0.IsReady);
 	printf("interrupts present: 0x%x\n", &gpio0.InterruptPresent);
@@ -86,84 +97,136 @@ void print_gpio_debug(){
 	printf("\n");
 }
 
-void SpiIntrHandler(void *CallBackRef, u32 StatusEvent, u32 ByteCount)
+void spiISR(void* instancePtr)
 {
+	XSpi *spiPtr = (XSpi *)instancePtr;
+
+	//XScuGic_IntrDisable(spiPtr);
+
 	transfer_in_progress = 0;
-	if (StatusEvent != XST_SPI_TRANSFER_DONE) {
-		printf("some weird status event\n");
-	}
-	else{
-		printf("transfer complete\n");
-	}
+
+	printf("SPI INTERRUPT\n");
+
+}
+
+void spiHandler(void *CallBackRef, u32 StatusEvent, unsigned int ByteCount){
+	transfer_in_progress = 0;
+	xil_printf("SPI HANDLER\n");
 }
 
 //TODO check LSB/MSB
 //TODO check Control Reg again. All items are default low.
 XStatus spi_init(){
 
-	XSpi_Initialize(&spi0, XPAR_SPI_0_DEVICE_ID);
+	XSpi_Initialize(&spi0, SPI_DEVICE_ID);
 
 	XSpi_IntrGlobalEnable(&spi0); //enable interrupts
-	//XSpi_IntrEnable(&spi0, XSP_INTR_RX_OVERRUN_MASK | XSP_INTR_RX_FULL_MASK); //enable receive data overrun interrupt and receiver buffer full interrupt
-	XSpi_IntrEnable(&spi0, XSP_INTR_RX_FULL_MASK); //enable receiver buffer full interrupt
+	XSpi_IntrEnable(&spi0, XSP_INTR_RX_OVERRUN_MASK | XSP_INTR_RX_FULL_MASK); //enable receive data overrun interrupt and receiver buffer full interrupt
+	//XSpi_IntrEnable(&spi0, XSP_INTR_RX_FULL_MASK); //enable receiver buffer full interrupt
 	XSpi_SetControlReg(&spi0, XSP_CR_TXFIFO_RESET_MASK | XSP_CR_RXFIFO_RESET_MASK | XSP_CR_MASTER_MODE_MASK | XSP_CR_ENABLE_MASK); // reset FIFOs, spi set to master, system enabled
-	XSpi_SetSlaveSelectReg(&spi0, SS_0); // defautl to reading slave select 1
+	XSpi_SetSlaveSelectReg(&spi0, ss); // default ss reg
 	XSpi_Enable(&spi0); //enable spi
 
 	XStatus status = XSpi_SelfTest(&spi0);
 	if (status != XST_SUCCESS) {
 		printf("self test failed. Error code %d.\n look up error code in xstatus.h\n", status);
 	}
-	else{
-		printf("self test success\n");
+
+
+	status = XSpi_SetOptions(&spi0, XSP_MASTER_OPTION);
+	if (status != XST_SUCCESS) {
+		printf("set options failed\n");
 	}
 
 	return status;
 }
 
-void spi_intr_init(){
-	//TODO this function needs work. Check the documentation and examples in mss or mhs.
-	XStatus Status = XIntc_Initialize(&intr0, XPAR_AXI_INTC_0_DEVICE_ID);
-	if (Status != XST_SUCCESS) {
-		printf("interrupt init failed\n");
+XStatus spi_intr_init(XScuGic* intr, u16 deviceId, u32 int_vec_id){
+
+	XScuGic_Config *IntcConfig = XScuGic_LookupConfig(deviceId);
+	if (NULL == IntcConfig) {
+		return XST_FAILURE;
 	}
-	Status = XIntc_Connect(&intr0, XPAR_INTC_0_SPI_0_VEC_ID, (XInterruptHandler) XSpi_InterruptHandler, (void *)&spi0);
-	if (Status != XST_SUCCESS) {
+
+	int result = XScuGic_CfgInitialize(intr, IntcConfig, IntcConfig->CpuBaseAddress);
+	if (result != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+
+	XScuGic_SetPriorityTriggerType(intr, int_vec_id, 0xA0, 0x3);
+
+	result = XScuGic_Connect(intr, int_vec_id, XSpi_InterruptHandler, &spi0);
+	if (result != XST_SUCCESS) {
 		printf("interrupt connect failed\n");
 	}
-	Status = XIntc_Start(&intr0, XIN_REAL_MODE);
-	if (Status != XST_SUCCESS) {
-		printf("interrupt start failed\n");
-	}
-	XIntc_Enable(&intr0, XPAR_INTC_0_SPI_0_VEC_ID);
+
+	XScuGic_Enable(intr, int_vec_id);
+
+
+	//XIntc_MasterEnable(intr.BaseAddress);
 	Xil_ExceptionInit();
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XIntc_InterruptHandler, &intr0);
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, intr);
 	Xil_ExceptionEnable();
 
-	XSpi_SetStatusHandler(&spi0, &spi0, SpiIntrHandler);
+
+
+
+	return XST_SUCCESS;
 }
 
 
-void gpioISR(void* instancePtr){
+void btnISR(void* instancePtr){
 	XGpio *GpioPtr = (XGpio *)instancePtr;
-	u32 Buttons;
+	u32 buttons;
 
-	printf("\nINSIDE INTERRUPT\n");
-	transfer_in_progress = 0;
-	XGpio_InterruptDisable(GpioPtr, XGPIO_IR_CH1_MASK); //buttons are channel 1
-	Buttons = XGpio_DiscreteRead(GpioPtr, GPIO_CHANNEL);
+	XGpio_InterruptDisable(GpioPtr, GPIO_CHANNEL); //buttons are channel 1
 
-	printf("button data: %ld\n", Buttons);
+	/*
+	printf("\nBUTTON INTERRUPT\n");
+	printf("ss = %ld\n", XSpi_GetSlaveSelectReg(&spi0));
+
+	if(ss==0){
+		ss=1;
+	}
+	else{
+		ss=0;
+	}
+
+	XSpi_SetSlaveSelectReg(&spi0, ss);
+
+
+
+
+	//transfer_in_progress = 0;
+
+	//Buttons = XGpio_DiscreteRead(GpioPtr, GPIO_CHANNEL);
+
+	//printf("button data: %ld\n", Buttons);
+	print_spi_debug();
+	 */
+
+	buttons = XGpio_DiscreteRead(&gpio0, GPIO_CHANNEL);
+	//center button controls angle
+	if(buttons & 0x1){
+		angle = angle + 5;
+		if(angle > 90) angle = -90;
+	}
+
+	if(buttons & 0x2){
+		distance++;
+		if(distance > 10) distance = 0;
+	}
 
 	(void)XGpio_InterruptClear(GpioPtr, XGPIO_IR_CH1_MASK);
 	XGpio_InterruptEnable(GpioPtr, XGPIO_IR_CH1_MASK);
 
 }
 
-void gpio_init(){
-	XStatus Status = XGpio_Initialize(&gpio0, XPAR_BTNS_5BITS_DEVICE_ID);
+void btn_init(){
+	XStatus Status = XGpio_Initialize(&gpio0, BTN_DEVICE_ID);
 	if (Status != XST_SUCCESS) {
-		printf("gpio init failure\n");
+		printf("btn init failure\n");
 	}
 	Status = XGpio_SelfTest(&gpio0);
 	if (Status != XST_SUCCESS) {
@@ -172,27 +235,34 @@ void gpio_init(){
 	XGpio_SetDataDirection(&gpio0, GPIO_CHANNEL, GPIO_ALL_BUTTONS);
 }
 
-void gpio_intr_init(){
-	//TODO this function needs work. Check the documentation and examples in mss or mhs.
-	XStatus Status = XIntc_Initialize(&intr0, XPAR_AXI_INTC_0_DEVICE_ID);
-	if (Status != XST_SUCCESS) {
-		printf("interrupt init failed\n");
+XStatus btn_intr_init(XScuGic* intr, u16 deviceId, u32 int_vec_id){
+	XScuGic_Config *IntcConfig = XScuGic_LookupConfig(deviceId);
+	if (NULL == IntcConfig) {
+		return XST_FAILURE;
 	}
-	Status = XIntc_Connect(&intr0, XPAR_INTC_0_GPIO_2_VEC_ID, (Xil_InterruptHandler) gpioISR, &gpio0);
-	if (Status != XST_SUCCESS) {
+
+	int result = XScuGic_CfgInitialize(intr, IntcConfig, IntcConfig->CpuBaseAddress);
+	if (result != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XScuGic_SetPriorityTriggerType(intr, int_vec_id, 0xA0, 0x3);
+
+	result = XScuGic_Connect(intr, int_vec_id, btnISR, &gpio0);
+	if (result != XST_SUCCESS) {
 		printf("interrupt connect failed\n");
 	}
-	Status = XIntc_Start(&intr0, XIN_REAL_MODE);
-	if (Status != XST_SUCCESS) {
-		printf("interrupt start failed\n");
-	}
+
+	XScuGic_Enable(intr, int_vec_id);
 
 	XGpio_InterruptEnable(&gpio0, XGPIO_IR_MASK);
 	XGpio_InterruptGlobalEnable(&gpio0);
-	XIntc_MasterEnable(&intr0.BaseAddress);
+	//XIntc_MasterEnable(intr.BaseAddress);
 	Xil_ExceptionInit();
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XIntc_InterruptHandler, &intr0);
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, intr);
 	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
 }
 
 
@@ -205,16 +275,16 @@ int main()
 
 
     init_platform();
-    print_gpio_debug();
-    //spi_init();
-    //spi_intr_init();
-    gpio_init();
-    gpio_intr_init();
-    print_gpio_debug();
-    //print_spi_debug();
+    spi_init();
+    //spi_intr_init(&intr0, SPI_DEVICE_ID, SPI_INTR_VEC_ID);
+    XSpi_IntrGlobalDisable(&spi0);
+    XSpi_SetStatusHandler(&spi0, &spi0, spiHandler);
     //XSpi_Start(&spi0);
+    btn_init();
+    btn_intr_init(&intr0, BTN_DEVICE_ID, BTN_INTR_VEC_ID);
+    //print_gpio_debug();
     //print_spi_debug();
-    XGpio_InterruptClear(&gpio0, XGPIO_IR_MASK);
+
 
     for(i=0; i<BUFFER_SIZE; i++){
     	write[i] = i;
@@ -222,16 +292,22 @@ int main()
     }
 
     transfer_in_progress = 1;
-    //XSpi_Transfer(&spi0, write, read, BUFFER_SIZE);
+    XSpi_Transfer(&spi0, write, read, BUFFER_SIZE);
 
-    printf("entering waiting loop\n");
-    XIntc_SimulateIntr(&intr0, XPAR_INTC_0_GPIO_2_VEC_ID);
+    //printf("entering waiting loop\n");
+    //print_spi_debug();
     while(transfer_in_progress){
-    	buttons = XGpio_DiscreteRead(&gpio0, GPIO_CHANNEL);
-    	if(buttons != old_buttons){
-    		printf("%ld, 0x%x\n", buttons, &gpio0.InterruptPresent);
-    		old_buttons = buttons;
-    	}
+    	//XSpi_Transfer(&spi0, write, read, BUFFER_SIZE);
+    	//printf("loop ");
+//    	buttons = XGpio_DiscreteRead(&gpio0, GPIO_CHANNEL);
+//    	if(buttons != old_buttons){
+//    		printf("%ld, 0x%x\n", buttons, &gpio0.InterruptPresent);
+//    		old_buttons = buttons;
+//    	}
+    	printf("%d, %d, %d, %d\n", angle, distance, 0, 0);
+    	fflush(stdout);
+    	sleep(1);
+
     }
 
     for(i=0; i<BUFFER_SIZE; i++){

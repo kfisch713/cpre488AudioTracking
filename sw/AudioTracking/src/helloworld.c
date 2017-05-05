@@ -41,12 +41,16 @@
 
 char *SWs = (char *)XPAR_SWS_8BITS_BASEADDR;
 char *BTNs = (char *)XPAR_BTNS_5BITS_BASEADDR;
+char *LEDs = (char *)XPAR_LEDS_8BITS_BASEADDR;
 
 #define KILL_SWITCH 7
 #define MIC_SPACING 0.010
 #define SPEED_OF_SOUND 343.2
 #define tau MIC_SPACING / SPEED_OF_SOUND
 #define BUFFER_SIZE 3000
+
+#define MIC_THRESHOLD 1000
+#define T_MAX_VALUE 4285714416
 
 enum button_val {
 	BTN_L,
@@ -62,6 +66,15 @@ int SW(unsigned int x) {
 
 int BTN(unsigned int x) {
 	return ((*BTNs >> x) & 0x01);
+}
+
+void LED(int on, int LEDBit) {
+	if(on){
+		*LEDs = *LEDs | (1 << LEDBit);
+	}
+	else{
+		*LEDs = *LEDs & ~(1 << LEDBit);
+	}
 }
 
 int * SLV_REG0(unsigned int x){
@@ -132,8 +145,9 @@ int main()
 
     for(i=0; i<BUFFER_SIZE; i++) time[i] = 0;
 
-    XTime_GetTime(&t0);
-    XTime_GetTime(&t1);
+    //XTime_GetTime(&t0);
+    //XTime_GetTime(&t1);
+    t0 = t1 = 0;
 
     *SLV_REG0(1) = 1;
     *SLV_REG1(1) = 1;
@@ -143,7 +157,7 @@ int main()
 
     while(!SW(KILL_SWITCH)) {
 
-    	//take data
+    	/*//take data
     	i=0;
     	overflow=0;
     	XTime_GetTime(&A);
@@ -159,14 +173,35 @@ int main()
     	printf("%14.3lf Hz, overflows: %d\n", BUFFER_SIZE*1.0 / ((B-A) * 1.0/COUNTS_PER_SECOND), overflow );
 
     	if( SW(KILL_SWITCH) ) break;
+		*/
 
+    	read_mic(&adc_val0, &adc_val1, &A);
+
+    	if (A-B > (10 / COUNTS_PER_SECOND)){
+			B = A;
+    		LED(0,1);
+    		LED(0,0);
+
+    		if(SW(0)){
+    			t1+=1000000;
+    			if(t1 > T_MAX_VALUE){
+    				t1 = 0;
+    			}
+    		}
+
+    	}
+    	if(adc_val0 > MIC_THRESHOLD){
+			LED(1, 1);
+		}
+		if(adc_val1 > MIC_THRESHOLD){
+			LED(1, 0);
+		}
 
     	//analyze data
-    	i=1;
+    	//i=1;
     	//while(i < BUFFER_SIZE){
-    	while(0){
+    	//while(1){
 
-    		/*
 			//upward trend for mic 0
 			if(old_adc_val0 < adc_val0){
 				look_for_peek_0 = 1;
@@ -175,7 +210,7 @@ int main()
 			if(look_for_peek_0){
 				if(old_adc_val0 > adc_val0){
 					look_for_peek_0 = 0;
-					XTime_GetTime(&t0);
+					//XTime_GetTime(&t0);
 				}
 			}
 
@@ -187,17 +222,20 @@ int main()
 			if(look_for_peek_1){
 				if(old_adc_val1 > adc_val1){
 					look_for_peek_1 = 0;
-					XTime_GetTime(&t1);
+					//XTime_GetTime(&t1);
 				}
 			}
 
+
+
 			//only want to calculate after both mic see a peak
 			if (look_for_peek_1 == 0 && look_for_peek_0 == 0){
-				intermediate = (t1-t0)/COUNTS_PER_SECOND * 343.0 / 0.1;
+				intermediate = (t1-t0)/COUNTS_PER_SECOND * 343.0 / 0.1 / 44100;
 				angle = asin( intermediate );
+				angle = 180.0/3.14 * angle;
 			}
-			*/
 
+			/*
     		if(mic0[i-1] < mic0[i]){
 				look_for_peek_0 = 1;
 			}
@@ -221,22 +259,27 @@ int main()
 				}
 			}
 
+
 			//only want to calculate after both mic see a peak
 			if (look_for_peek_1 == 0 && look_for_peek_0 == 0){
 				intermediate = (t1-t0)/COUNTS_PER_SECOND * 343.0 / 0.1;
 				angle = asin( intermediate );
 			}
+			*/
 
 			//xil_printf("adc val = %5d, reg1 = %5d, reg2 = %5d\n", adc_val, *SLV_REG(1), *SLV_REG(2));
-			//printf("mic0 = %5d, mic1 = %5d, angle = %6.2lf, diff = %lld, %llu, %llu, intermediate = %lf\n", mic0[i], mic1[i], angle, t1-t0, t1, t0, intermediate);
+			//printf("mic0 = %5d, mic1 = %5d, angle = %6.4lf, diff = %lld, %llu, %llu, intermediate = %lf\n", adc_val0, adc_val1, angle, t1-t0, t1, t0, intermediate);
+			//printf("mic0 = %5d,     mic1 = %5d,     angle = %6.4lf\n", adc_val0, adc_val1, angle);
 
 			//Use this to print to .csv
-			xil_printf("%d, %d\r\n", mic0[i], mic1[i]);
-			i++;
-    	}
+			//xil_printf("%d, %d\r\n", mic0, mic1);
 
-//    	old_adc_val0 = adc_val0;
-//    	old_adc_val1 = adc_val1;
+			printf("%lf, %d, %d, %d\n", angle, 3, 0, 0);
+			i++;
+    	//}
+
+    	old_adc_val0 = adc_val0;
+    	old_adc_val1 = adc_val1;
     }
 
     return 0;

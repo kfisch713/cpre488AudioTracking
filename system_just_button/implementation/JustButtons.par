@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-CO2041-11::  Wed May 03 17:29:29 2017
+CO2041-03::  Thu May 04 13:57:18 2017
 
 par -w -ol high JustButtons_map.ncd JustButtons.ncd JustButtons.pcf 
 
@@ -59,32 +59,32 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
    Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 9 secs 
-Finished initial Timing Analysis.  REAL time: 9 secs 
+Starting initial Timing Analysis.  REAL time: 10 secs 
+Finished initial Timing Analysis.  REAL time: 10 secs 
 
 Starting Router
 
 
-Phase  1  : 4638 unrouted;      REAL time: 10 secs 
+Phase  1  : 4638 unrouted;      REAL time: 11 secs 
 
-Phase  2  : 2543 unrouted;      REAL time: 10 secs 
+Phase  2  : 2543 unrouted;      REAL time: 11 secs 
 
-Phase  3  : 880 unrouted;      REAL time: 11 secs 
+Phase  3  : 880 unrouted;      REAL time: 12 secs 
 
-Phase  4  : 880 unrouted; (Setup:0, Hold:4147, Component Switching Limit:0)     REAL time: 13 secs 
+Phase  4  : 880 unrouted; (Setup:0, Hold:4147, Component Switching Limit:0)     REAL time: 15 secs 
 
 Updating file: JustButtons.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:3502, Component Switching Limit:0)     REAL time: 14 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:3502, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:3502, Component Switching Limit:0)     REAL time: 14 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:3502, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:3502, Component Switching Limit:0)     REAL time: 14 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:3502, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:3502, Component Switching Limit:0)     REAL time: 14 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:3502, Component Switching Limit:0)     REAL time: 15 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 14 secs 
-Total REAL time to Router completion: 14 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 15 secs 
+Total REAL time to Router completion: 15 secs 
 Total CPU time to Router completion: 14 secs 
 
 Partition Implementation Status
@@ -145,7 +145,7 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 28 secs 
-Total CPU time to PAR completion: 15 secs 
+Total CPU time to PAR completion: 16 secs 
 
 Peak Memory Usage:  729 MB
 

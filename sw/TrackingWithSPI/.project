@@ -3,6 +3,7 @@
 	<name>TrackingWithSPI</name>
 	<comment></comment>
 	<projects>
+		<project>standalone_bsp_0</project>
 		<project>system_bsp_spi</project>
 		<project>system_hw_platform</project>
 	</projects>

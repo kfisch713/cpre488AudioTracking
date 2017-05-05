@@ -130,24 +130,6 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
-IPNAME:axi_gpio INSTANCE:sws_8bits -
-U:\Desktop\cpre488AudioTracking\system\system.mhs line 54 - Copying cache
-implementation netlist
-IPNAME:axi_gpio INSTANCE:leds_8bits -
-U:\Desktop\cpre488AudioTracking\system\system.mhs line 68 - Copying cache
-implementation netlist
-IPNAME:axi_gpio INSTANCE:btns_5bits -
-U:\Desktop\cpre488AudioTracking\system\system.mhs line 82 - Copying cache
-implementation netlist
-IPNAME:processing_system7 INSTANCE:processing_system7_0 -
-U:\Desktop\cpre488AudioTracking\system\system.mhs line 96 - Copying cache
-implementation netlist
-IPNAME:axi_pmic INSTANCE:axi_pmic_0 -
-U:\Desktop\cpre488AudioTracking\system\system.mhs line 183 - Copying cache
-implementation netlist
-IPNAME:axi_pmic INSTANCE:axi_pmic_1 -
-U:\Desktop\cpre488AudioTracking\system\system.mhs line 197 - Copying cache
-implementation netlist
 
 Elaborating instances ...
 
@@ -172,6 +154,15 @@ INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
 INSTANCE:axi4lite_0 - U:\Desktop\cpre488AudioTracking\system\system.mhs line 46
 - Running XST synthesis
+INSTANCE:sws_8bits - U:\Desktop\cpre488AudioTracking\system\system.mhs line 54 -
+Running XST synthesis
+INSTANCE:leds_8bits - U:\Desktop\cpre488AudioTracking\system\system.mhs line 68
+- Running XST synthesis
+INSTANCE:btns_5bits - U:\Desktop\cpre488AudioTracking\system\system.mhs line 82
+- Running XST synthesis
+INSTANCE:processing_system7_0 -
+U:\Desktop\cpre488AudioTracking\system\system.mhs line 96 - Running XST
+synthesis
 INSTANCE:axi_pmic_0 - U:\Desktop\cpre488AudioTracking\system\system.mhs line 183
 - Running XST synthesis
 INSTANCE:axi_pmic_1 - U:\Desktop\cpre488AudioTracking\system\system.mhs line 197
@@ -186,4 +177,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 197.00 seconds
+Total run time: 236.00 seconds

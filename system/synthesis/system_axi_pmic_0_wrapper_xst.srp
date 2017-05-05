@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 TABLE OF CONTENTS
@@ -1538,12 +1538,12 @@ axi_pmic_0/USER_LOGIC_I/P1/clk_counter_1|    1.767|         |         |         
 =========================================================================
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 21.21 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.47 secs
  
 --> 
 
-Total memory usage is 480008 kilobytes
+Total memory usage is 480328 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   25 (   0 filtered)

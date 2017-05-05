@@ -5,8 +5,6 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Timing" num="3223" delta="old" >Timing constraint <arg fmt="%s" index="1">PATH &quot;TS_MB_AXI_FP_axi_intc_0_path&quot; TIG;</arg> ignored during timing analysis.</msg>
-
 <msg type="info" file="Timing" num="3386" delta="old" >Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.</msg>
 
 <msg type="info" file="Timing" num="3412" delta="old" >To improve timing, see the Timing Closure User Guide (UG612).</msg>

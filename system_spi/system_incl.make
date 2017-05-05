@@ -67,8 +67,7 @@ implementation/system_sws_8bits_wrapper.ngc \
 implementation/system_leds_8bits_wrapper.ngc \
 implementation/system_btns_5bits_wrapper.ngc \
 implementation/system_processing_system7_0_wrapper.ngc \
-implementation/system_axi_spi_0_wrapper.ngc \
-implementation/system_axi_intc_0_wrapper.ngc
+implementation/system_axi_spi_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

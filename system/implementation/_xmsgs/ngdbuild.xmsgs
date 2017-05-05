@@ -413,13 +413,13 @@
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">axi4lite_0/axi4lite_0/cb_mf_ruser&lt;3&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">axi4lite_0/axi4lite_0/cb_mf_ruser&lt;4&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">axi4lite_0/axi4lite_0/cb_mf_ruser&lt;4&gt;</arg>&apos; has no driver
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">axi4lite_0/axi4lite_0/cb_mf_buser&lt;3&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">axi4lite_0/axi4lite_0/cb_mf_buser&lt;4&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">axi4lite_0/axi4lite_0/cb_mf_buser&lt;4&gt;</arg>&apos; has no driver
 </msg>
 
 </messages>
